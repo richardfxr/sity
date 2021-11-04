@@ -153,7 +153,8 @@ body, button {
    INDEX PAGE
    ============================================ */
 main {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 50px 0;
   background-color: var(--clr-0);
   /* flexbox */
   display: flex;
@@ -168,5 +169,5 @@ main h1, main p {
 
 svg {
   height: 260px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=main.css.map */
