@@ -1,0 +1,21 @@
+// Partial SCSS file containing CSS styles for index.html
+
+
+
+/* ============================================
+   INDEX PAGE
+   ============================================ */
+
+main{
+    height: 100vh;
+    background-color: var(--clr-0);
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1, main p{
+    color: var(--clr-900);
+}

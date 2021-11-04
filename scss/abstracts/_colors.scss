@@ -8,13 +8,15 @@
 
 // light theme
 $light: (
-    0: #FFFFFF,                /* default background color */
+    900: #272e00,              /* active text color */
+    0: #fff4d9,                /* default background color */
 );
 
 
 
 // dark mode
 $dark: (
+    900: #FFFFFF,              /* active text color */
     0: #000000,                /* default background color */
 );
 
@@ -22,5 +24,6 @@ $dark: (
 
 // high contrast mode
 $hc: (
+    900: #FFFFFF,              /* active text color */
     0: #FFFFFF,                /* default background color */
 );
