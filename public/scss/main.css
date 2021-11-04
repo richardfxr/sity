@@ -164,4 +164,9 @@ main {
 
 main h1, main p {
   color: var(--clr-900);
+}
+
+svg {
+  height: 260px;
+  margin-bottom: 50px;
 }/*# sourceMappingURL=main.css.map */
