@@ -1,0 +1,42 @@
+// Partial SCSS file containing :root styling
+
+
+
+// === USE ====================================
+@use '../abstracts' as a;
+
+
+/* ============================================
+   ROOT
+   ============================================ */
+
+:root {
+    /* ========================================
+       VARIABLES
+       ======================================== */
+
+    /* === COLORS ============================= */
+
+    /* light theme (default) */
+    // parse $colors into CSS variables
+    @each $name, $value in a.$light {
+        --clr-#{$name}: #{$value};
+    }
+
+    /* dark theme */
+    [data-theme="dark"] {
+        // parse $colors into CSS variables
+        @each $name, $value in a.$dark {
+            --clr-#{$name}: #{$value};
+        }
+    }
+
+    /* high contrast theme */
+    [data-theme="hc"] {
+        // parse $colors into CSS variables
+        @each $name, $value in a.$hc {
+            --clr-#{$name}: #{$value};
+        }
+    }
+
+}

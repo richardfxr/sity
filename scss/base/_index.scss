@@ -1,0 +1,10 @@
+// Partial SCSS file forwarding all partials under 'base'
+
+
+
+// === FORWARD ================================
+
+@forward 'global';
+@forward 'resets';
+@forward 'root';
+@forward 'typography';

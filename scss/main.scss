@@ -1,0 +1,8 @@
+// main SCSS file which uses all partials in all sub-folders
+
+
+// === USE ====================================
+@use 'abstracts' as a;
+@use 'base' as b;
+@use 'components' as c;
+@use 'layouts' as l;
