@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__light">
+    <defs>
+        <style>.cls-1{fill:#c9debf;}.cls-2{fill:#1c1912;}.cls-3{fill:#a9c2b1;}</style>
+    </defs>
+    <g>
+        <circle class="themepicker__light--0" cx="18" cy="18" r="18"/>
+        <ellipse class="themepicker__light--800" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+        <path class="themepicker__light--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+    </g>
+</svg>

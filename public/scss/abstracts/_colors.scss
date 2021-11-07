@@ -9,7 +9,9 @@
 // light theme
 $light: (
     900: #272e00,              /* active text color */
-    0: #fff4d9,                /* default background color */
+    800: #1c1912,              /* default text color */
+    100: #a9c2b1,              /* secondary background color */
+    0: #c9debf,                /* default background color */
 );
 
 
@@ -17,13 +19,17 @@ $light: (
 // dark mode
 $dark: (
     900: #FFFFFF,              /* active text color */
-    0: #000000,                /* default background color */
+    800: #dae8e2,              /* default text color */
+    100: #252933,              /* secondary background color */
+    0: #4f695d,                /* default background color */
 );
 
 
 
 // high contrast mode
 $hc: (
-    900: #FFFFFF,              /* active text color */
+    900: #000000,              /* active text color */
+    800: #000000,              /* default text color */
+    100: #FFFFFF,              /* secondary background color */
     0: #FFFFFF,                /* default background color */
 );

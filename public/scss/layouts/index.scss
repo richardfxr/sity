@@ -1,7 +1,102 @@
-// Partial SCSS file containing CSS styles for index.html
+// SCSS file containing CSS styles for index.html
+
+
+
+// === USE ====================================
+@use "sass:map";
+@use '../abstracts' as a;
+@use '../base' as b;
+@use '../components' as c;
+
+
+/* === VARIABLES ============================== */
+body{
+   --topbar-pad-vrt: 1rem;
+   --topbar-pad-hrz: 1.5rem;
+   --topbar-height: calc(3rem + (var(--topbar-pad-vrt) * 2));
+   --topbar-item-pad: 0.5rem;
+   --topbar-item-height: calc(var(--topbar-height) - (var(--topbar-pad-vrt) * 2) - (var(--topbar-item-pad) * 2));
+}
 
 
 
 /* ============================================
    INDEX PAGE
    ============================================ */
+
+/* whole page */
+html, body{
+   background-color: var(--clr-0);
+}
+
+/* top bar */
+.topbar{
+   height: var(--topbar-height);
+   padding: 1rem;
+   /* flexbox */
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: flex-end;
+   align-items: stretch;
+}
+
+
+/* theme picker */
+.themepicker{
+   &__list{
+      padding: var(--topbar-item-pad);
+      border-radius:  calc(var(--topbar-height) - (var(--topbar-pad-vrt) * 2));;
+      background-color: var(--clr-100);
+      /* flexbox */
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: stretch;
+   }
+
+   &__item{
+      margin-right: var(--topbar-item-pad);
+
+      &:last-child{
+         margin-right: 0;
+      }
+   }
+
+   &__btn{
+      display: block;
+      font-size: 0;
+      padding: 0;
+      border-radius: var(--topbar-item-height);
+      border: solid 1px black;
+      svg{
+         height: var(--topbar-item-height);
+      }
+   }
+
+   &__light{
+      &--0{
+         fill: map.get(a.$light, 0);
+      }
+
+      &--100{
+         fill: map.get(a.$light, 100);
+      }
+
+      &--800{
+         fill: map.get(a.$light, 800);
+      }
+   }
+
+   &__hc{
+      &--0{
+         fill: map.get(a.$hc, 0);
+      }
+
+      &--100{
+         fill: map.get(a.$hc, 100);
+      }
+
+      &--900{
+         fill: map.get(a.$hc, 900);
+      }
+   }
+}

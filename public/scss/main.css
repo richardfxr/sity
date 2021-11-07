@@ -128,16 +128,22 @@ ol, ul {
   /* === COLORS ============================= */
   /* light theme (default) */
   --clr-900: #272e00;
-  --clr-0: #fff4d9;
+  --clr-800: #1c1912;
+  --clr-100: #a9c2b1;
+  --clr-0: #c9debf;
   /* dark theme */
   /* high contrast theme */
 }
 :root [data-theme=dark] {
   --clr-900: #FFFFFF;
-  --clr-0: #000000;
+  --clr-800: #dae8e2;
+  --clr-100: #252933;
+  --clr-0: #4f695d;
 }
 :root [data-theme=hc] {
-  --clr-900: #FFFFFF;
+  --clr-900: #000000;
+  --clr-800: #000000;
+  --clr-100: #FFFFFF;
   --clr-0: #FFFFFF;
 }
 

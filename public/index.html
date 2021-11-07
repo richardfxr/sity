@@ -6,11 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sity</title>
 
-    <!-- link main CSS file (Sass compiled) -->
-    <link rel="stylesheet" href="scss/main.css">
+    <!-- link main CSS files (Sass compiled) -->
     <link rel="stylesheet" href="scss/layouts/index.css">
 </head>
 <body>
-    
+    <!-- top bar -->
+    <div class="topbar">
+
+        <!-- theme picker-->
+        <ul class="themepicker__list">
+            <!-- light theme -->
+            <li class="themepicker__item">
+                <button class="themepicker__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__light">
+                        <g>
+                            <circle class="themepicker__light--0" cx="18" cy="18" r="18"/>
+                            <ellipse class="themepicker__light--800" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+                            <path class="themepicker__light--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+                        </g>
+                    </svg>
+                </button>
+            </li>
+            <!-- dark theme -->
+            <li class="themepicker__item">
+                <button class="themepicker__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__dark">
+                        <g>
+                            <circle class="themepicker__dark--0" cx="18" cy="18" r="18"/>
+                            <ellipse class="themepicker__dark--800" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+                            <path class="themepicker__dark--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+                        </g>
+                    </svg>
+                </button>
+            </li>
+            <!-- high contrast theme -->
+            <li class="themepicker__item">
+                <button class="themepicker__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__hc">
+                        <g>
+                            <circle class="themepicker__hc--900" cx="18" cy="18" r="18"/>
+                            <ellipse class="themepicker__hc--0" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+                            <path class="themepicker__hc--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+                        </g>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+
+    </div>
 </body>
 </html>
