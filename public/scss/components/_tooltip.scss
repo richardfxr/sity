@@ -1,0 +1,21 @@
+// Partial SCSS file containing tooltip styling
+
+
+
+/* ============================================
+   TOOLTIP
+   ============================================ */
+
+.tooltip::after{
+    // add content
+    width: max-content;
+    position: absolute;
+    // add position (top, right, bottom, or left)
+    font-size: var(--fs-9);
+    padding: var(--tooltip-pad-vrt) var(--tooltip-pad-hrz);
+    border-radius: calc(var(--tooltip-pad-vrt) + var(--fs-9));
+    background-color: var(--clr-100);
+    transform: scale(0);
+    // add transform-origin
+    transition: transform var(--transition-50);
+ }
