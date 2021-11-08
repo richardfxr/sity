@@ -93,7 +93,8 @@ html, body{
          top: 0;
          height: var(--topbar-item-height);
          border-radius: 50%;
-         border: var(--border-main);
+         /* border: var(--border-main); */
+         box-shadow: var(--border-main);
          transition: top var(--transition-100);
       }
    }
@@ -135,8 +136,8 @@ html, body{
          fill: map.get(a.$hc, 100);
       }
 
-      &--900{
-         fill: map.get(a.$hc, 900);
+      &--800{
+         fill: map.get(a.$hc, 800);
       }
    }
 }

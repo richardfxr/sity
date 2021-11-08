@@ -12,6 +12,7 @@ $light: (
     800: #1c1912,              /* default text color */
     100: #a9c2b1,              /* secondary background color */
     0: #c9debf,                /* default background color */
+    border: #272e00,           /* border color */
 );
 
 
@@ -20,8 +21,9 @@ $light: (
 $dark: (
     900: #FFFFFF,              /* active text color */
     800: #dae8e2,              /* default text color */
-    100: #252933,              /* secondary background color */
+    100: #3f544f,              /* secondary background color */
     0: #4f695d,                /* default background color */
+    border: #111715,           /* border color */
 );
 
 
@@ -30,6 +32,7 @@ $dark: (
 $hc: (
     900: #000000,              /* active text color */
     800: #000000,              /* default text color */
-    100: #FFFFFF,              /* secondary background color */
-    0: #FFFFFF,                /* default background color */
+    100: #d5e8dc,              /* secondary background color */
+    0: #f7fff2,                /* default background color */
+    border: #000000,           /* border color */
 );

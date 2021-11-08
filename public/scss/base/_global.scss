@@ -10,3 +10,12 @@
 /* ============================================
    GLOBAL
    ============================================ */
+
+body{
+   /* transition during theme switch
+   transition: color var(--transition-100),
+               background-color var(--transition-100),
+               border-color var(--transition-100),
+               fill var(--transition-100),
+               stroke var(--transition-100);
+}

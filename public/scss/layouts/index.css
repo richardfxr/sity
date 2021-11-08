@@ -6,6 +6,10 @@
 /* ============================================
    GLOBAL
    ============================================ */
+body {
+  transition: color var(--transition-100), background-color var(--transition-100), border-color var(--transition-100), fill var(--transition-100), stroke var(--transition-100);
+}
+
 /* ============================================
    RESET
    ============================================ */
@@ -125,10 +129,10 @@ ol, ul {
   /* ========================================
      VARIABLES
      ======================================== */
-  --border-main: solid 1px var(--clr-900);
+  --border-main: 0 0 1.5px 1.5px var(--clr-border);
   --tooltip-pad-vrt: 0.2rem;
   --tooltip-pad-hrz: 0.65rem;
-  --transition-50: 20ms ease;
+  --transition-50: 50ms ease;
   --transition-100: 100ms ease;
   /* === COLORS ============================= */
   /* light theme (default) */
@@ -136,20 +140,25 @@ ol, ul {
   --clr-800: #1c1912;
   --clr-100: #a9c2b1;
   --clr-0: #c9debf;
-  /* dark theme */
-  /* high contrast theme */
+  --clr-border: #272e00;
 }
-:root [data-theme=dark] {
+
+/* dark theme */
+[data-theme=dark] {
   --clr-900: #FFFFFF;
   --clr-800: #dae8e2;
-  --clr-100: #252933;
+  --clr-100: #3f544f;
   --clr-0: #4f695d;
+  --clr-border: #111715;
 }
-:root [data-theme=hc] {
+
+/* high contrast theme */
+[data-theme=hc] {
   --clr-900: #000000;
   --clr-800: #000000;
-  --clr-100: #FFFFFF;
-  --clr-0: #FFFFFF;
+  --clr-100: #d5e8dc;
+  --clr-0: #f7fff2;
+  --clr-border: #000000;
 }
 
 /* ============================================
@@ -252,7 +261,8 @@ html, body {
   top: 0;
   height: var(--topbar-item-height);
   border-radius: 50%;
-  border: var(--border-main);
+  /* border: var(--border-main); */
+  box-shadow: var(--border-main);
   transition: top var(--transition-100);
 }
 .themepicker__light--0 {
@@ -268,17 +278,17 @@ html, body {
   fill: #4f695d;
 }
 .themepicker__dark--100 {
-  fill: #252933;
+  fill: #3f544f;
 }
 .themepicker__dark--800 {
   fill: #dae8e2;
 }
 .themepicker__hc--0 {
-  fill: #FFFFFF;
+  fill: #f7fff2;
 }
 .themepicker__hc--100 {
-  fill: #FFFFFF;
+  fill: #d5e8dc;
 }
-.themepicker__hc--900 {
+.themepicker__hc--800 {
   fill: #000000;
 }/*# sourceMappingURL=index.css.map */

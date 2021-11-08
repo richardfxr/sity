@@ -15,12 +15,12 @@
        VARIABLES
        ======================================== */
 
-    --border-main: solid 1px var(--clr-900);
+    --border-main: 0 0 1.5px 1.5px var(--clr-border);
 
     --tooltip-pad-vrt: 0.2rem;
     --tooltip-pad-hrz: 0.65rem;
 
-    --transition-50: 20ms ease;
+    --transition-50: 50ms ease;
     --transition-100: 100ms ease;
 
     /* === COLORS ============================= */
@@ -30,21 +30,20 @@
     @each $name, $value in a.$light {
         --clr-#{$name}: #{$value};
     }
+}
 
-    /* dark theme */
-    [data-theme="dark"] {
-        // parse $colors into CSS variables
-        @each $name, $value in a.$dark {
-            --clr-#{$name}: #{$value};
-        }
+/* dark theme */
+[data-theme="dark"] {
+    // parse $colors into CSS variables
+    @each $name, $value in a.$dark {
+        --clr-#{$name}: #{$value};
     }
+}
 
-    /* high contrast theme */
-    [data-theme="hc"] {
-        // parse $colors into CSS variables
-        @each $name, $value in a.$hc {
-            --clr-#{$name}: #{$value};
-        }
+/* high contrast theme */
+[data-theme="hc"] {
+    // parse $colors into CSS variables
+    @each $name, $value in a.$hc {
+        --clr-#{$name}: #{$value};
     }
-
 }
