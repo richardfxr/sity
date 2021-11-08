@@ -125,6 +125,11 @@ ol, ul {
   /* ========================================
      VARIABLES
      ======================================== */
+  --border-main: solid 1px var(--clr-900);
+  --tooltip-pad-vrt: 0.2rem;
+  --tooltip-pad-hrz: 0.65rem;
+  --transition-50: 20ms ease;
+  --transition-100: 100ms ease;
   /* === COLORS ============================= */
   /* light theme (default) */
   --clr-900: #272e00;
@@ -155,13 +160,36 @@ body, button {
   color: var(--clr-900);
 }
 
+:root {
+  --fs-9: 0.9rem;
+  --fs-10: 1rem;
+}
+
+/* ============================================
+   TOOLTIP
+   ============================================ */
+.tooltip::after {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  font-size: var(--fs-9);
+  padding: var(--tooltip-pad-vrt) var(--tooltip-pad-hrz);
+  border-radius: calc(var(--tooltip-pad-vrt) + var(--fs-9));
+  background-color: var(--clr-100);
+  transform: scale(0);
+  transition: transform var(--transition-50);
+}
+
 /* === VARIABLES ============================== */
 body {
   --topbar-pad-vrt: 1rem;
   --topbar-pad-hrz: 1.5rem;
-  --topbar-height: calc(3rem + (var(--topbar-pad-vrt) * 2));
+  --topbar-height: calc(3.3rem + (var(--topbar-pad-vrt) * 2));
   --topbar-item-pad: 0.5rem;
   --topbar-item-height: calc(var(--topbar-height) - (var(--topbar-pad-vrt) * 2) - (var(--topbar-item-pad) * 2));
+  --themepicker-movement: -0.3rem;
+  --themepicker-tooltip-top: 1rem;
 }
 
 /* ============================================
@@ -201,13 +229,31 @@ html, body {
 }
 .themepicker__btn {
   display: block;
+  position: relative;
   font-size: 0;
   padding: 0;
-  border-radius: var(--topbar-item-height);
-  border: solid 1px black;
+  /* tooltip */
+}
+.themepicker__btn::after {
+  content: attr(aria-label);
+  top: calc(100% + var(--themepicker-tooltip-top));
+  right: calc(-1 * var(--topbar-item-pad));
+  transform-origin: top right;
+}
+.themepicker__btn:hover svg, .themepicker__btn:focus-visible svg {
+  top: var(--themepicker-movement);
+}
+.themepicker__btn:hover::after, .themepicker__btn:focus-visible::after {
+  transform: scale(1);
+  transition: transform var(--transition-100);
 }
 .themepicker__btn svg {
+  position: relative;
+  top: 0;
   height: var(--topbar-item-height);
+  border-radius: 50%;
+  border: var(--border-main);
+  transition: top var(--transition-100);
 }
 .themepicker__light--0 {
   fill: #c9debf;
@@ -217,6 +263,15 @@ html, body {
 }
 .themepicker__light--800 {
   fill: #1c1912;
+}
+.themepicker__dark--0 {
+  fill: #4f695d;
+}
+.themepicker__dark--100 {
+  fill: #252933;
+}
+.themepicker__dark--800 {
+  fill: #dae8e2;
 }
 .themepicker__hc--0 {
   fill: #FFFFFF;
