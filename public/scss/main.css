@@ -7,6 +7,7 @@
    GLOBAL
    ============================================ */
 body {
+  /* transition during theme switch */
   transition: color var(--transition-100), background-color var(--transition-100), border-color var(--transition-100), fill var(--transition-100), stroke var(--transition-100);
 }
 
@@ -129,7 +130,7 @@ ol, ul {
   /* ========================================
      VARIABLES
      ======================================== */
-  --border-main: 0 0 1.5px 1.5px var(--clr-border);
+  --border-main: 0 0 0 1px var(--clr-border);
   --tooltip-pad-vrt: 0.2rem;
   --tooltip-pad-hrz: 0.65rem;
   --transition-50: 50ms ease;
