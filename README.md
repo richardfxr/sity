@@ -19,4 +19,4 @@ A site to help make recycling a little less painful.
 
 https://sity-earth--dev-vc9f6b05.web.app/
 
-THe link above is for the current development preview. New code will be deployed to this channel before it is ready for the actual site. For development use only.
+The link above is the current development preview. New code will be deployed to this channel before it is ready for the actual site. For development use only.
