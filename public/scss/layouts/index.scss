@@ -33,8 +33,10 @@ html, body{
 
 /* === TOP BAR ================================ */
 .topbar{
+   max-width: var(--main-max-width);
    height: var(--topbar-height);
-   padding: 1rem;
+   padding: 1rem var(--main-pad-hrz);
+   margin: auto;
    /* flexbox */
    display: flex;
    flex-flow: row nowrap;
@@ -146,14 +148,13 @@ html, body{
 /* === MAIN =================================== */
 
 main{
-   padding: 6rem 10rem;
+   max-width: 2200px;
+   padding: var(--main-pad-vrt) var(--main-pad-hrz);
+   margin: auto;
 }
 
 /* hero text */
 .hero{
-   letter-spacing: 0.01em;
-   line-height: 0.95em;
-
    &__city{
       color: var(--clr-800a);
       text-decoration: underline;

@@ -22,11 +22,35 @@ h1{
     color: var(--clr-800);
 
     &.hero{
-        font-size: 11rem;
+        font-size: min(8vw, 176px);
+        letter-spacing: 0.01em;
+        line-height: 0.95em;
     }
 }
 
 :root{
     --fs-9: 0.9rem;
     --fs-10: 1rem;
+}
+
+
+/* ========================================
+    BREAKPOINTS
+    ======================================== */
+
+@media only screen and (max-width: 1200px){
+    h1{
+        &.hero{
+            font-size: 11vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    h1{
+        &.hero{
+            font-size: 13.6vw;
+            line-height: 1em;
+        }
+    }
 }

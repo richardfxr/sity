@@ -139,6 +139,9 @@ ol, ul {
      VARIABLES
      ======================================== */
   --border-main: 0 0 0 1px var(--clr-border);
+  --main-max-width: 2200px;
+  --main-pad-vrt: min(5vw, calc(var(--main-max-width) * 0.05));
+  --main-pad-hrz: min(5vw, calc(var(--main-max-width) * 0.05));
   --tooltip-pad-vrt: 0.2rem;
   --tooltip-pad-hrz: 0.65rem;
   --transition-50: 50ms ease;
@@ -187,7 +190,9 @@ h1 {
   color: var(--clr-800);
 }
 h1.hero {
-  font-size: 11rem;
+  font-size: min(8vw, 176px);
+  letter-spacing: 0.01em;
+  line-height: 0.95em;
 }
 
 :root {
@@ -195,6 +200,20 @@ h1.hero {
   --fs-10: 1rem;
 }
 
+/* ========================================
+    BREAKPOINTS
+    ======================================== */
+@media only screen and (max-width: 1200px) {
+  h1.hero {
+    font-size: 11vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  h1.hero {
+    font-size: 13.6vw;
+    line-height: 1em;
+  }
+}
 /* ============================================
    TOOLTIP
    ============================================ */
@@ -232,8 +251,10 @@ html, body {
 
 /* === TOP BAR ================================ */
 .topbar {
+  max-width: var(--main-max-width);
   height: var(--topbar-height);
-  padding: 1rem;
+  padding: 1rem var(--main-pad-hrz);
+  margin: auto;
   /* flexbox */
   display: flex;
   flex-flow: row nowrap;
@@ -316,14 +337,12 @@ html, body {
 
 /* === MAIN =================================== */
 main {
-  padding: 6rem 10rem;
+  max-width: 2200px;
+  padding: var(--main-pad-vrt) var(--main-pad-hrz);
+  margin: auto;
 }
 
 /* hero text */
-.hero {
-  letter-spacing: 0.01em;
-  line-height: 0.95em;
-}
 .hero__city {
   color: var(--clr-800a);
   text-decoration: underline;

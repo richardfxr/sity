@@ -17,6 +17,9 @@
 
     --border-main: 0 0 0 1px var(--clr-border);
 
+    --main-max-width: 2200px;
+    --main-pad-vrt: min(5vw, calc(var(--main-max-width) * 0.05));
+    --main-pad-hrz: min(5vw, calc(var(--main-max-width) * 0.05));
     --tooltip-pad-vrt: 0.2rem;
     --tooltip-pad-hrz: 0.65rem;
 
