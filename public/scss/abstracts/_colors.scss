@@ -22,7 +22,7 @@ $light: (
 $dark: (
     900: #FFFFFF,              /* active text color */
     800: #dae8e2,              /* default text color */
-    800a: #d48d1c,             /* default accent color */
+    800a: #eda12b,             /* default accent color */
     100: #3f544f,              /* secondary background color */
     0: #4f695d,                /* default background color */
     border: #111715,           /* border color */
@@ -33,8 +33,8 @@ $dark: (
 // high contrast mode
 $hc: (
     900: #000000,              /* active text color */
-    800: #000000,              /* default text color */
-    800a: #d48d1c,             /* default accent color */
+    800: #255232,              /* default text color */
+    800a: #ab6800,             /* default accent color */
     100: #d5e8dc,              /* secondary background color */
     0: #f7fff2,                /* default background color */
     border: #000000,           /* border color */

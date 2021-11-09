@@ -157,7 +157,7 @@ ol, ul {
 [data-theme=dark] {
   --clr-900: #FFFFFF;
   --clr-800: #dae8e2;
-  --clr-800a: #d48d1c;
+  --clr-800a: #eda12b;
   --clr-100: #3f544f;
   --clr-0: #4f695d;
   --clr-border: #111715;
@@ -166,8 +166,8 @@ ol, ul {
 /* high contrast theme */
 [data-theme=hc] {
   --clr-900: #000000;
-  --clr-800: #000000;
-  --clr-800a: #d48d1c;
+  --clr-800: #255232;
+  --clr-800a: #ab6800;
   --clr-100: #d5e8dc;
   --clr-0: #f7fff2;
   --clr-border: #000000;
