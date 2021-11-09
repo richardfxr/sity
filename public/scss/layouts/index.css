@@ -184,6 +184,10 @@ body, button {
 h1 {
   font-family: "Doughy", sans-serif;
   font-size: 5rem;
+  color: var(--clr-800);
+}
+h1.hero {
+  font-size: 11rem;
 }
 
 :root {
@@ -221,12 +225,12 @@ body {
 /* ============================================
    INDEX PAGE
    ============================================ */
-/* whole page */
+/* === WHOLE PAGE ============================= */
 html, body {
   background-color: var(--clr-0);
 }
 
-/* top bar */
+/* === TOP BAR ================================ */
 .topbar {
   height: var(--topbar-height);
   padding: 1rem;
@@ -308,4 +312,19 @@ html, body {
 }
 .themepicker__hc--800 {
   fill: #000000;
+}
+
+/* === MAIN =================================== */
+main {
+  padding: 6rem 10rem;
+}
+
+/* hero text */
+.hero {
+  letter-spacing: 0.01em;
+  line-height: 0.95em;
+}
+.hero__city {
+  color: var(--clr-800a);
+  text-decoration: underline;
 }/*# sourceMappingURL=index.css.map */

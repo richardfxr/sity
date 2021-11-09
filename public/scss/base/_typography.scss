@@ -19,6 +19,11 @@ body, button {
 h1{
     font-family: 'Doughy', sans-serif;
     font-size: 5rem;
+    color: var(--clr-800);
+
+    &.hero{
+        font-size: 11rem;
+    }
 }
 
 :root{

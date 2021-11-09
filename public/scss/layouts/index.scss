@@ -26,12 +26,12 @@ body{
    INDEX PAGE
    ============================================ */
 
-/* whole page */
+/* === WHOLE PAGE ============================= */
 html, body{
    background-color: var(--clr-0);
 }
 
-/* top bar */
+/* === TOP BAR ================================ */
 .topbar{
    height: var(--topbar-height);
    padding: 1rem;
@@ -139,5 +139,23 @@ html, body{
       &--800{
          fill: map.get(a.$hc, 800);
       }
+   }
+}
+
+
+/* === MAIN =================================== */
+
+main{
+   padding: 6rem 10rem;
+}
+
+/* hero text */
+.hero{
+   letter-spacing: 0.01em;
+   line-height: 0.95em;
+
+   &__city{
+      color: var(--clr-800a);
+      text-decoration: underline;
    }
 }
