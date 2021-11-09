@@ -4,6 +4,14 @@
 /* Lexend Deca */
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /* ============================================
+   WEB FONTS
+   ============================================ */
+@font-face {
+  /* Doughy */
+  font-family: "Doughy";
+  src: local("Doughy"), url(../../assets/typefaces/Doughy-Regular.woff2) format("woff");
+}
+/* ============================================
    GLOBAL
    ============================================ */
 body {
@@ -168,6 +176,11 @@ ol, ul {
 body, button {
   font-family: "Lexend Deca", sans-serif;
   color: var(--clr-900);
+}
+
+h1 {
+  font-family: "Doughy", sans-serif;
+  font-size: 5rem;
 }
 
 :root {
