@@ -146,8 +146,9 @@ ol, ul {
   /* === COLORS ============================= */
   /* light theme (default) */
   --clr-900: #272e00;
-  --clr-800: #1c1912;
-  --clr-100: #a9c2b1;
+  --clr-800: #4a7055;
+  --clr-800a: #d48d1c;
+  --clr-100: #9bbda2;
   --clr-0: #c9debf;
   --clr-border: #272e00;
 }
@@ -156,6 +157,7 @@ ol, ul {
 [data-theme=dark] {
   --clr-900: #FFFFFF;
   --clr-800: #dae8e2;
+  --clr-800a: #d48d1c;
   --clr-100: #3f544f;
   --clr-0: #4f695d;
   --clr-border: #111715;
@@ -165,6 +167,7 @@ ol, ul {
 [data-theme=hc] {
   --clr-900: #000000;
   --clr-800: #000000;
+  --clr-800a: #d48d1c;
   --clr-100: #d5e8dc;
   --clr-0: #f7fff2;
   --clr-border: #000000;
@@ -283,10 +286,10 @@ html, body {
   fill: #c9debf;
 }
 .themepicker__light--100 {
-  fill: #a9c2b1;
+  fill: #9bbda2;
 }
 .themepicker__light--800 {
-  fill: #1c1912;
+  fill: #4a7055;
 }
 .themepicker__dark--0 {
   fill: #4f695d;

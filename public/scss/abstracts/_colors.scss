@@ -9,8 +9,9 @@
 // light theme
 $light: (
     900: #272e00,              /* active text color */
-    800: #1c1912,              /* default text color */
-    100: #a9c2b1,              /* secondary background color */
+    800: #4a7055,              /* default text color */
+    800a: #d48d1c,             /* default accent color */
+    100: #9bbda2,              /* secondary background color */
     0: #c9debf,                /* default background color */
     border: #272e00,           /* border color */
 );
@@ -21,6 +22,7 @@ $light: (
 $dark: (
     900: #FFFFFF,              /* active text color */
     800: #dae8e2,              /* default text color */
+    800a: #d48d1c,             /* default accent color */
     100: #3f544f,              /* secondary background color */
     0: #4f695d,                /* default background color */
     border: #111715,           /* border color */
@@ -32,6 +34,7 @@ $dark: (
 $hc: (
     900: #000000,              /* active text color */
     800: #000000,              /* default text color */
+    800a: #d48d1c,             /* default accent color */
     100: #d5e8dc,              /* secondary background color */
     0: #f7fff2,                /* default background color */
     border: #000000,           /* border color */
