@@ -359,4 +359,22 @@ main {
 .hero__city {
   color: var(--clr-800a);
   text-decoration: underline;
+}
+
+/* recycle categories */
+.recycleCat__container {
+  padding-top: 10rem;
+  /* grid */
+  display: grid;
+  grid-template-columns: 3;
+}
+.recycleCat__item {
+  width: 50vw;
+  height: 50vw;
+  background-color: var(--clr-100);
+  -webkit-clip-path: url(#testClip);
+          clip-path: url(#testClip);
+  transition: -webkit-clip-path 0.7s;
+  transition: clip-path 0.7s;
+  transition: clip-path 0.7s, -webkit-clip-path 0.7s;
 }/*# sourceMappingURL=index.css.map */

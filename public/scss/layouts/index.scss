@@ -160,3 +160,21 @@ main{
       text-decoration: underline;
    }
 }
+
+/* recycle categories */
+.recycleCat{
+   &__container{
+      padding-top: 10rem;
+      /* grid */
+      display: grid;
+      grid-template-columns: 3;
+   }
+
+   &__item{
+      width: 50vw;
+      height: 50vw;
+      background-color: var(--clr-100);
+      clip-path: url(#testClip);
+      transition: clip-path 0.7s;
+   }
+}
