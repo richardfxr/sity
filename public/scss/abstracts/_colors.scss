@@ -14,6 +14,21 @@ $light: (
     100: #9bbda2,              /* secondary background color */
     0: #c9debf,                /* default background color */
     border: #272e00,           /* border color */
+
+    /* illustrations */
+    stroke: #202220,
+
+    carton-offwhite-3: #e0ddca,
+    carton-offwhite-4: #c5c9b5,
+    carton-blue-1: #93ded7,
+    carton-blue-2: #5db9cf,
+    carton-blue-3: #5f95ba,
+    carton-blue-4: #5f7fb3,
+    carton-white-1: #f2f2f2,
+    carton-white-2: #d6d6d6,
+    carton-white-3: #b5b5b5,
+    carton-bg: #86c2b9,
+    carton-h2: #144352,
 );
 
 
@@ -26,6 +41,21 @@ $dark: (
     100: #3f544f,              /* secondary background color */
     0: #4f695d,                /* default background color */
     border: #111715,           /* border color */
+
+    /* illustrations */
+    stroke: #202220,
+
+    carton-offwhite-3: #b5b2a3,
+    carton-offwhite-4: #9fa393,
+    carton-blue-1: #7fbfba,
+    carton-blue-2: #51a1b5,
+    carton-blue-3: #5382a1,
+    carton-blue-4: #536e9c,
+    carton-white-1: #e0e0e0,
+    carton-white-2: #c4c4c4,
+    carton-white-3: #9e9e9e,
+    carton-bg: #5c8783,
+    carton-h2: #d6faff,
 );
 
 
@@ -38,4 +68,19 @@ $hc: (
     100: #d5e8dc,              /* secondary background color */
     0: #f7fff2,                /* default background color */
     border: #000000,           /* border color */
+
+    /* illustrations */
+    stroke: #000000,
+
+    carton-offwhite-3: #f0edd8,
+    carton-offwhite-4: #c0c4b1,
+    carton-blue-1: #FFFFFF,
+    carton-blue-2: #7fdaf0,
+    carton-blue-3: #6fadd9,
+    carton-blue-4: #5a79a8,
+    carton-white-1: #FFFFFF,
+    carton-white-2: #e6e6e6,
+    carton-white-3: #a6a6a6,
+    carton-bg: #b9ede5,
+    carton-h2: #0a242b,
 );

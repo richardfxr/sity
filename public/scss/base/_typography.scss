@@ -18,7 +18,7 @@ body, button {
 
 h1{
     font-family: 'Doughy', sans-serif;
-    font-size: 5rem;
+    font-size: 7rem;
     color: var(--clr-800);
 
     &.hero{
@@ -26,6 +26,12 @@ h1{
         letter-spacing: 0.01em;
         line-height: 0.95em;
     }
+}
+
+h2{
+    font-family: 'Doughy', sans-serif;
+    font-size: 5rem;
+    color: var(--clr-800);
 }
 
 :root{
@@ -49,7 +55,7 @@ h1{
 @media only screen and (max-width: 600px){
     h1{
         &.hero{
-            font-size: 13.6vw;
+            font-size: 14vw;
             line-height: 1em;
         }
     }

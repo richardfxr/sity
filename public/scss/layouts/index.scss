@@ -164,17 +164,110 @@ main{
 /* recycle categories */
 .recycleCat{
    &__container{
-      padding-top: 10rem;
+      padding-top: var(--main-pad-lg);
       /* grid */
       display: grid;
-      grid-template-columns: 3;
+      grid-template-columns: 1fr 1fr 1fr;
    }
 
    &__item{
-      width: 50vw;
-      height: 50vw;
-      background-color: var(--clr-100);
-      clip-path: url(#testClip);
-      transition: clip-path 0.7s;
+
+   }
+
+   &__link{
+      display: block;
+      z-index: 1000;
+   }
+
+   &__parallaxContainer{
+      position: relative;
+   }
+
+   &__illu{
+      width: min(13.5vw, calc(var(--main-max-width) * 0.135));
+      top: min(8vw, calc(var(--main-max-width) * 0.08)) !important;
+      left: min(7vw, calc(var(--main-max-width) * 0.07)) !important;
+   }
+
+   &__h2{
+      font-size: min(5vw, calc(var(--main-max-width) * 0.05));
+      display: block;
+      top: min(18vw, calc(var(--main-max-width) * 0.18)) !important;
+      left: min(4.5vw, calc(var(--main-max-width) * 0.045)) !important;
+   }
+
+   // &__item{
+   //    width: 50vw;
+   //    height: 50vw;
+   //    display: flex;
+   //    flex-flow: row nowrap;
+   //    justify-content: center;
+   //    align-items: center;
+   //    background-color: var(--clr-100);
+   //    clip-path: url(#testClip);
+   //    transition: transform 1s;
+
+   //    h2{
+   //       transition: transform 1s;
+   //    }
+
+   //    &:hover{
+   //       // clip-path: path("M375.41,96.93l44.69,10.24a37.57,37.57,0,0,1,24.61,54.58L422.78,202A37.57,37.57,0,0,0,424,240l24.36,38.84a37.57,37.57,0,0,1-21.19,56l-44,13a37.58,37.58,0,0,0-26,27.65L346.91,420.1a37.58,37.58,0,0,1-54.59,24.61l-40.27-21.93A37.57,37.57,0,0,0,214.13,424l-38.85,24.36a37.56,37.56,0,0,1-56-21.19l-13-44a37.57,37.57,0,0,0-27.64-26L34,346.91A37.57,37.57,0,0,1,9.37,292.32l21.92-40.27a37.55,37.55,0,0,0-1.17-37.92L5.76,175.28a37.56,37.56,0,0,1,21.2-56l44-13a37.57,37.57,0,0,0,26-27.64L107.17,34A37.56,37.56,0,0,1,161.75,9.37L202,31.29A37.55,37.55,0,0,0,240,30.12L278.79,5.76a37.57,37.57,0,0,1,56,21.2l13,44A37.58,37.58,0,0,0,375.41,96.93Z");
+   //       transform: rotate(30deg);
+
+   //       h2{
+   //          transform: rotate(-30deg);
+   //       }
+   //    }
+   // }
+
+}
+
+
+/* ========================================
+   BREAKPOINTS
+   ======================================== */
+
+@media only screen and (max-width: 1200px){
+   .recycleCat{
+      &__container{
+         grid-template-columns: 1fr 1fr;
+      }
+
+      &__illu{
+         width: 20vw;
+         top: 12vw !important;
+         left: 10vw !important;
+      }
+   
+      &__h2{
+         font-size: 8vw;
+         top: 27vw !important;
+         left: 6vw !important;
+      }
+   }
+}
+
+@media only screen and (max-width: 600px){
+   .recycleCat{
+      &__container{
+         grid-template-columns: 1fr;
+      }
+
+      &__illu{
+         width: 40vw;
+         top: 24vw !important;
+         left: 24vw !important;
+      }
+   
+      &__h2{
+         font-size: 16vw;
+         top: 54vw !important;
+         left: 14.5vw !important;
+      }
+   }
+
+   #carton{
+      margin: 0 10vw 0 -10vw;
    }
 }
