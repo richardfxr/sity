@@ -168,10 +168,11 @@ main{
       /* grid */
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      gap: min(5vw, calc(var(--main-max-width) * 0.05));
    }
 
    &__item{
-
+      position: relative;
    }
 
    &__link{
@@ -183,17 +184,9 @@ main{
       position: relative;
    }
 
-   &__illu{
-      width: min(13.5vw, calc(var(--main-max-width) * 0.135));
-      top: min(8vw, calc(var(--main-max-width) * 0.08)) !important;
-      left: min(7vw, calc(var(--main-max-width) * 0.07)) !important;
-   }
-
    &__h2{
-      font-size: min(5vw, calc(var(--main-max-width) * 0.05));
+      font-size: min(4.5vw, calc(var(--main-max-width) * 0.045));
       display: block;
-      top: min(18vw, calc(var(--main-max-width) * 0.18)) !important;
-      left: min(4.5vw, calc(var(--main-max-width) * 0.045)) !important;
    }
 
    // &__item{
@@ -223,6 +216,60 @@ main{
 
 }
 
+.carton{
+   &-link{
+      position: relative;
+      top: 0;
+   }
+
+   &-illu{
+      width: min(11.5vw, calc(var(--main-max-width) * 0.115));
+      top: min(7vw, calc(var(--main-max-width) * 0.07)) !important;
+      left: min(7vw, calc(var(--main-max-width) * 0.07)) !important;
+   }
+
+   &-h2{
+      top: min(15vw, calc(var(--main-max-width) * 0.15)) !important;
+      left: min(4vw, calc(var(--main-max-width) * 0.04)) !important;
+   }
+}
+
+.cardboard{
+   &-link{
+      position: relative;
+      top: max(calc(var(--main-max-width) * -0.02), -2vw);
+   }
+
+   &-h2{
+      top: min(16vw, calc(var(--main-max-width) * 0.16)) !important;
+      left: min(2vw, calc(var(--main-max-width) * 0.02)) !important;
+   }
+}
+
+.paper{
+   &-link{
+      position: relative;
+      top: max(calc(var(--main-max-width) * -0.08), -8vw);
+   }
+
+   &-h2{
+      top: min(18vw, calc(var(--main-max-width) * 0.18)) !important;
+      left: min(8vw, calc(var(--main-max-width) * 0.08)) !important;
+   }
+}
+
+.metal{
+   &-link{
+      position: relative;
+      top: 0;
+   }
+
+   &-h2{
+      top: min(18vw, calc(var(--main-max-width) * 0.18)) !important;
+      left: min(7vw, calc(var(--main-max-width) * 0.07)) !important;
+   }
+}
+
 
 /* ========================================
    BREAKPOINTS
@@ -232,18 +279,54 @@ main{
    .recycleCat{
       &__container{
          grid-template-columns: 1fr 1fr;
-      }
-
-      &__illu{
-         width: 20vw;
-         top: 12vw !important;
-         left: 10vw !important;
+         gap: 8vw;
       }
    
       &__h2{
-         font-size: 8vw;
-         top: 27vw !important;
-         left: 6vw !important;
+         font-size: 6.8vw;
+      }
+   }
+
+   .carton{
+      &-illu{
+         width: 17.5vw;
+         top: 10vw !important;
+         left: 11vw !important;
+      }
+   
+      &-h2{
+         top: 22vw !important;
+         left: 7vw !important;
+      }
+   }
+   
+   .cardboard{
+      &-link{
+         top: -2vw;
+      }
+      &-h2{
+         top: 24vw !important;
+         left: 3vw !important;
+      }
+   }
+   
+   .paper{
+      &-link{
+         top: 0;
+      }
+      &-h2{
+         top: 26vw !important;
+         left: 12vw !important;
+      }
+   }
+   
+   .metal{
+      &-link{
+         top: 0;
+      }
+      &-h2{
+         top: 28vw !important;
+         left: 10vw !important;
       }
    }
 }
@@ -252,22 +335,63 @@ main{
    .recycleCat{
       &__container{
          grid-template-columns: 1fr;
-      }
-
-      &__illu{
-         width: 40vw;
-         top: 24vw !important;
-         left: 24vw !important;
+         gap: 20vw;
+         margin: 0 calc(-1 * var(--main-pad-hrz));
+         overflow: hidden;
       }
    
       &__h2{
          font-size: 16vw;
-         top: 54vw !important;
-         left: 14.5vw !important;
       }
    }
 
-   #carton{
-      margin: 0 10vw 0 -10vw;
+   .carton{
+      &-link{
+         left: -10vw;
+      }
+
+      &-illu{
+         width: 42vw;
+         top: 25vw !important;
+         left: 27vw !important;
+      }
+   
+      &-h2{
+         top: 56vw !important;
+         left: 18vw !important;
+      }
+   }
+   
+   .cardboard{
+      &-link{
+         top: 0;
+         right: -10vw;
+      }
+      &-h2{
+         top: 60vw !important;
+         left: 7vw !important;
+      }
+   }
+   
+   .paper{
+      &-link{
+         top: -7vw;
+         left: -12vw;
+      }
+      &-h2{
+         top: 65vw !important;
+         left: 23vw !important;
+      }
+   }
+   
+   .metal{
+      &-link{
+         top: -10vw;
+         left: 10vw;
+      }
+      &-h2{
+         top: 65vw !important;
+         left: 20vw !important;
+      }
    }
 }

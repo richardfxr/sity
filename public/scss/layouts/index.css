@@ -31,45 +31,65 @@ body {
 .carton-offwhite-3 {
   fill: var(--clr-carton-offwhite-3);
 }
-
 .carton-offwhite-4 {
   fill: var(--clr-carton-offwhite-4);
 }
-
 .carton-blue-1 {
   fill: var(--clr-carton-blue-1);
 }
-
 .carton-blue-2 {
   fill: var(--clr-carton-blue-2);
 }
-
 .carton-blue-3 {
   fill: var(--clr-carton-blue-3);
 }
-
 .carton-blue-4 {
   fill: var(--clr-carton-blue-4);
 }
-
 .carton-white-1 {
   fill: var(--clr-carton-white-1);
 }
-
 .carton-white-2 {
   fill: var(--clr-carton-white-2);
 }
-
 .carton-white-3 {
   fill: var(--clr-carton-white-3);
 }
-
 .carton-bg {
   fill: var(--clr-carton-bg);
 }
-
-#carton h2 {
+.carton-h2 {
   color: var(--clr-carton-h2);
+}
+
+.cardboard-bg {
+  fill: var(--clr-cardboard-bg);
+  stroke: var(--clr-cardboard-bg);
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+.cardboard-h2 {
+  color: var(--clr-cardboard-h2);
+}
+
+.paper-bg {
+  fill: var(--clr-paper-bg);
+  stroke: var(--clr-paper-bg);
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+.paper-h2 {
+  color: var(--clr-paper-h2);
+}
+
+.metal-bg {
+  fill: var(--clr-metal-bg);
+  stroke: var(--clr-metal-bg);
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+.metal-h2 {
+  color: var(--clr-metal-h2);
 }
 
 /* ============================================
@@ -220,6 +240,12 @@ ol, ul {
   --clr-carton-white-3: #b5b5b5;
   --clr-carton-bg: #86c2b9;
   --clr-carton-h2: #144352;
+  --clr-cardboard-bg: #d4b796;
+  --clr-cardboard-h2: #543c1e;
+  --clr-paper-bg: #cecfa8;
+  --clr-paper-h2: #494a34;
+  --clr-metal-bg: #d6b5a7;
+  --clr-metal-h2: #593426;
 }
 
 /* dark theme */
@@ -242,6 +268,12 @@ ol, ul {
   --clr-carton-white-3: #9e9e9e;
   --clr-carton-bg: #4f7572;
   --clr-carton-h2: #d6faff;
+  --clr-cardboard-bg: #736555;
+  --clr-cardboard-h2: #ffecd6;
+  --clr-paper-bg: #6e7056;
+  --clr-paper-h2: #fdffcf;
+  --clr-metal-bg: #7a625b;
+  --clr-metal-h2: #ffe0d4;
 }
 
 /* high contrast theme */
@@ -264,6 +296,12 @@ ol, ul {
   --clr-carton-white-3: #a6a6a6;
   --clr-carton-bg: #b9ede5;
   --clr-carton-h2: #0f3845;
+  --clr-cardboard-bg: #f2dbc2;
+  --clr-cardboard-h2: #452d0f;
+  --clr-paper-bg: #eff0c2;
+  --clr-paper-h2: #42450f;
+  --clr-metal-bg: #f0d2c5;
+  --clr-metal-h2: #451f10;
 }
 
 /* ========================================
@@ -465,6 +503,10 @@ main {
   /* grid */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: min(5vw, calc(var(--main-max-width) * 0.05));
+}
+.recycleCat__item {
+  position: relative;
 }
 .recycleCat__link {
   display: block;
@@ -473,16 +515,50 @@ main {
 .recycleCat__parallaxContainer {
   position: relative;
 }
-.recycleCat__illu {
-  width: min(13.5vw, calc(var(--main-max-width) * 0.135));
-  top: min(8vw, calc(var(--main-max-width) * 0.08)) !important;
+.recycleCat__h2 {
+  font-size: min(4.5vw, calc(var(--main-max-width) * 0.045));
+  display: block;
+}
+
+.carton-link {
+  position: relative;
+  top: 0;
+}
+.carton-illu {
+  width: min(11.5vw, calc(var(--main-max-width) * 0.115));
+  top: min(7vw, calc(var(--main-max-width) * 0.07)) !important;
   left: min(7vw, calc(var(--main-max-width) * 0.07)) !important;
 }
-.recycleCat__h2 {
-  font-size: min(5vw, calc(var(--main-max-width) * 0.05));
-  display: block;
+.carton-h2 {
+  top: min(15vw, calc(var(--main-max-width) * 0.15)) !important;
+  left: min(4vw, calc(var(--main-max-width) * 0.04)) !important;
+}
+
+.cardboard-link {
+  position: relative;
+  top: max(calc(var(--main-max-width) * -0.02), -2vw);
+}
+.cardboard-h2 {
+  top: min(16vw, calc(var(--main-max-width) * 0.16)) !important;
+  left: min(2vw, calc(var(--main-max-width) * 0.02)) !important;
+}
+
+.paper-link {
+  position: relative;
+  top: max(calc(var(--main-max-width) * -0.08), -8vw);
+}
+.paper-h2 {
   top: min(18vw, calc(var(--main-max-width) * 0.18)) !important;
-  left: min(4.5vw, calc(var(--main-max-width) * 0.045)) !important;
+  left: min(8vw, calc(var(--main-max-width) * 0.08)) !important;
+}
+
+.metal-link {
+  position: relative;
+  top: 0;
+}
+.metal-h2 {
+  top: min(18vw, calc(var(--main-max-width) * 0.18)) !important;
+  left: min(7vw, calc(var(--main-max-width) * 0.07)) !important;
 }
 
 /* ========================================
@@ -491,34 +567,94 @@ main {
 @media only screen and (max-width: 1200px) {
   .recycleCat__container {
     grid-template-columns: 1fr 1fr;
-  }
-  .recycleCat__illu {
-    width: 20vw;
-    top: 12vw !important;
-    left: 10vw !important;
+    gap: 8vw;
   }
   .recycleCat__h2 {
-    font-size: 8vw;
-    top: 27vw !important;
-    left: 6vw !important;
+    font-size: 6.8vw;
+  }
+
+  .carton-illu {
+    width: 17.5vw;
+    top: 10vw !important;
+    left: 11vw !important;
+  }
+  .carton-h2 {
+    top: 22vw !important;
+    left: 7vw !important;
+  }
+
+  .cardboard-link {
+    top: -2vw;
+  }
+  .cardboard-h2 {
+    top: 24vw !important;
+    left: 3vw !important;
+  }
+
+  .paper-link {
+    top: 0;
+  }
+  .paper-h2 {
+    top: 26vw !important;
+    left: 12vw !important;
+  }
+
+  .metal-link {
+    top: 0;
+  }
+  .metal-h2 {
+    top: 28vw !important;
+    left: 10vw !important;
   }
 }
 @media only screen and (max-width: 600px) {
   .recycleCat__container {
     grid-template-columns: 1fr;
-  }
-  .recycleCat__illu {
-    width: 40vw;
-    top: 24vw !important;
-    left: 24vw !important;
+    gap: 20vw;
+    margin: 0 calc(-1 * var(--main-pad-hrz));
+    overflow: hidden;
   }
   .recycleCat__h2 {
     font-size: 16vw;
-    top: 54vw !important;
-    left: 14.5vw !important;
   }
 
-  #carton {
-    margin: 0 10vw 0 -10vw;
+  .carton-link {
+    left: -10vw;
+  }
+  .carton-illu {
+    width: 42vw;
+    top: 25vw !important;
+    left: 27vw !important;
+  }
+  .carton-h2 {
+    top: 56vw !important;
+    left: 18vw !important;
+  }
+
+  .cardboard-link {
+    top: 0;
+    right: -10vw;
+  }
+  .cardboard-h2 {
+    top: 60vw !important;
+    left: 7vw !important;
+  }
+
+  .paper-link {
+    top: -7vw;
+    left: -12vw;
+  }
+  .paper-h2 {
+    top: 65vw !important;
+    left: 23vw !important;
+  }
+
+  .metal-link {
+    top: -10vw;
+    left: 10vw;
+  }
+  .metal-h2 {
+    top: 65vw !important;
+    left: 20vw !important;
   }
 }/*# sourceMappingURL=index.css.map */
