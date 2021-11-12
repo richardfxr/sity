@@ -19,6 +19,15 @@ body {
   transition: color var(--transition-100), background-color var(--transition-100), border-color var(--transition-100), fill var(--transition-100), stroke var(--transition-100);
 }
 
+/* logos */
+.clr-800 {
+  fill: var(--clr-800);
+}
+
+.clr-800a {
+  fill: var(--clr-800a);
+}
+
 /* illustrations */
 .illu-stroke {
   fill: none;
@@ -381,7 +390,7 @@ h2 {
 
 /* === VARIABLES ============================== */
 body {
-  --topbar-pad-vrt: 1rem;
+  --topbar-pad-vrt: 1.5rem;
   --topbar-pad-hrz: 1.5rem;
   --topbar-height: calc(3.3rem + (var(--topbar-pad-vrt) * 2));
   --topbar-item-pad: 0.5rem;
@@ -402,13 +411,20 @@ html, body {
 .topbar {
   max-width: var(--main-max-width);
   height: var(--topbar-height);
-  padding: 1rem var(--main-pad-hrz);
+  padding: var(--topbar-pad-vrt) var(--main-pad-hrz);
   margin: auto;
   /* flexbox */
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-end;
   align-items: stretch;
+}
+
+/* logotype */
+.logotype {
+  /* flexbox */
+  display: flex;
+  align-items: center;
+  width: 5.5rem;
 }
 
 /* theme picker */
@@ -416,6 +432,7 @@ html, body {
   padding: var(--topbar-item-pad);
   border-radius: calc(var(--topbar-height) - (var(--topbar-pad-vrt) * 2));
   background-color: var(--clr-100);
+  margin-left: auto;
   /* flexbox */
   display: flex;
   flex-flow: row nowrap;
