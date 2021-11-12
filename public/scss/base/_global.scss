@@ -31,12 +31,19 @@ body{
 
 
 /* illustrations */
-.illu-stroke{
-   fill: none;
-   stroke: var(--clr-stroke);
-   stroke-linecap: round;
-   stroke-linejoin: round;
-   stroke-width: 1.25px;
+.illu{
+   &__stroke{
+      fill: none;
+      stroke: var(--clr-stroke);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.25px;
+   }
+
+   &__bg{
+      stroke-miterlimit: 10;
+      stroke-width: 2px;
+   }
 }
 
 .carton{
@@ -90,8 +97,6 @@ body{
    &-bg{
       fill: var(--clr-cardboard-bg);
       stroke: var(--clr-cardboard-bg);
-      stroke-miterlimit: 10;
-      stroke-width: 2px;
    }
 
    &-h2{
@@ -103,8 +108,6 @@ body{
    &-bg{
       fill: var(--clr-paper-bg);
       stroke: var(--clr-paper-bg);
-      stroke-miterlimit: 10;
-      stroke-width: 2px;
    }
 
    &-h2{
@@ -116,11 +119,42 @@ body{
    &-bg{
       fill: var(--clr-metal-bg);
       stroke: var(--clr-metal-bg);
-      stroke-miterlimit: 10;
-      stroke-width: 2px;
    }
 
    &-h2{
       color: var(--clr-metal-h2);
+   }
+}
+
+.aluminum{
+   &-bg{
+      fill: var(--clr-aluminum-bg);
+      stroke: var(--clr-aluminum-bg);
+   }
+
+   &-h2{
+      color: var(--clr-aluminum-h2);
+   }
+}
+
+.glass{
+   &-bg{
+      fill: var(--clr-glass-bg);
+      stroke: var(--clr-glass-bg);
+   }
+
+   &-h2{
+      color: var(--clr-glass-h2);
+   }
+}
+
+.plastic{
+   &-bg{
+      fill: var(--clr-plastic-bg);
+      stroke: var(--clr-plastic-bg);
+   }
+
+   &-h2{
+      color: var(--clr-plastic-h2);
    }
 }

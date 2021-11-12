@@ -279,6 +279,42 @@ main{
    }
 }
 
+.aluminum{
+   &-link{
+      position: relative;
+      top: max(calc(var(--main-max-width) * -0.03), -3vw);
+   }
+
+   &-h2{
+      top: min(15vw, calc(var(--main-max-width) * 0.15)) !important;
+      left: min(4vw, calc(var(--main-max-width) * 0.04)) !important;
+   }
+}
+
+.glass{
+   &-link{
+      position: relative;
+      top: max(calc(var(--main-max-width) * -0.06), -6vw);
+   }
+
+   &-h2{
+      top: min(20vw, calc(var(--main-max-width) * 0.2)) !important;
+      left: min(10vw, calc(var(--main-max-width) * 0.1)) !important;
+   }
+}
+
+.plastic{
+   &-link{
+      position: relative;
+      top: 0;
+   }
+
+   &-h2{
+      top: min(17vw, calc(var(--main-max-width) * 0.17)) !important;
+      left: min(5vw, calc(var(--main-max-width) * 0.05)) !important;
+   }
+}
+
 
 /* ========================================
    BREAKPOINTS
