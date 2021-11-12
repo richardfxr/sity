@@ -274,7 +274,7 @@ main{
    }
 
    &-h2{
-      top: min(18vw, calc(var(--main-max-width) * 0.18)) !important;
+      top: min(16vw, calc(var(--main-max-width) * 0.16)) !important;
       left: min(7vw, calc(var(--main-max-width) * 0.07)) !important;
    }
 }
@@ -286,7 +286,7 @@ main{
    }
 
    &-h2{
-      top: min(15vw, calc(var(--main-max-width) * 0.15)) !important;
+      top: min(14vw, calc(var(--main-max-width) * 0.14)) !important;
       left: min(4vw, calc(var(--main-max-width) * 0.04)) !important;
    }
 }
@@ -298,7 +298,7 @@ main{
    }
 
    &-h2{
-      top: min(20vw, calc(var(--main-max-width) * 0.2)) !important;
+      top: min(16vw, calc(var(--main-max-width) * 0.16)) !important;
       left: min(10vw, calc(var(--main-max-width) * 0.1)) !important;
    }
 }
@@ -310,7 +310,7 @@ main{
    }
 
    &-h2{
-      top: min(17vw, calc(var(--main-max-width) * 0.17)) !important;
+      top: min(15vw, calc(var(--main-max-width) * 0.15)) !important;
       left: min(5vw, calc(var(--main-max-width) * 0.05)) !important;
    }
 }
@@ -367,11 +367,41 @@ main{
    
    .metal{
       &-link{
+         top: -2vw;
+      }
+      &-h2{
+         top: 24vw !important;
+         left: 10vw !important;
+      }
+   }
+
+   .aluminum{
+      &-link{
          top: 0;
       }
       &-h2{
-         top: 28vw !important;
-         left: 10vw !important;
+         top: 21vw !important;
+         left: 6vw !important;
+      }
+   }
+
+   .glass{
+      &-link{
+         top: -5vw;
+      }
+      &-h2{
+         top: 24vw !important;
+         left: 15vw !important;
+      }
+   }
+
+   .plastic{
+      &-link{
+         top: 0;
+      }
+      &-h2{
+         top: 21vw !important;
+         left: 8vw !important;
       }
    }
 }
@@ -425,7 +455,7 @@ main{
       }
       &-h2{
          top: 65vw !important;
-         left: 23vw !important;
+         left: 30vw !important;
       }
    }
    
@@ -435,8 +465,41 @@ main{
          left: 10vw;
       }
       &-h2{
-         top: 65vw !important;
-         left: 20vw !important;
+         top: 57vw !important;
+         left: 23vw !important;
+      }
+   }
+
+   .aluminum{
+      &-link{
+         top: -12vw;
+         left: -10vw;
+      }
+      &-h2{
+         top: 50vw !important;
+         left: 15vw !important;
+      }
+   }
+
+   .glass{
+      &-link{
+         top: -10vw;
+         left: 6vw;
+      }
+      &-h2{
+         top: 60vw !important;
+         left: 35vw !important;
+      }
+   }
+
+   .plastic{
+      &-link{
+         top: -10vw;
+         left: -10vw;
+      }
+      &-h2{
+         top: 55vw !important;
+         left: 15vw !important;
       }
    }
 }
