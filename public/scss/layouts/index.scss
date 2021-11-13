@@ -316,6 +316,18 @@ main{
 }
 
 
+/* === FOOTER ================================= */
+footer{
+   background-color: var(--clr-50);
+}
+
+.footer{
+   &__transition{
+      background-color: var(--clr-0);
+   }
+}
+
+
 /* ========================================
    BREAKPOINTS
    ======================================== */

@@ -123,6 +123,140 @@ body {
   color: var(--clr-plastic-h2);
 }
 
+/* footer */
+.footer__transition {
+  height: var(--main-pad-hrz);
+  border-bottom-right-radius: var(--main-pad-hrz);
+  border-bottom-left-radius: var(--main-pad-hrz);
+}
+.footer__container {
+  max-width: var(--main-max-width);
+  padding: var(--main-pad-vrt) var(--main-pad-hrz);
+  margin: auto;
+}
+.footer__flexbox {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.footer__main {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.footer__suggestions {
+  width: min(35vw, calc(var(--main-max-width) * 0.35));
+  color: var(--clr-800);
+}
+.footer__suggestions a {
+  color: var(--clr-800a);
+  text-decoration: underline;
+}
+.footer__credits {
+  padding-right: min(5vw, calc(var(--main-max-width) * 0.05));
+  margin-top: auto;
+}
+.footer__credits a {
+  text-decoration: underline;
+}
+.footer__nav {
+  margin-left: auto;
+  padding-right: min(12vw, calc(var(--main-max-width) * 0.12));
+}
+.footer__nav li {
+  padding-bottom: 1rem;
+}
+.footer__nav li:last-child {
+  padding-bottom: 0;
+}
+.footer__otherlinks li {
+  padding-bottom: 1rem;
+}
+.footer__otherlinks li:last-child {
+  padding-bottom: 0;
+}
+.footer__version {
+  padding-top: min(1vw, calc(var(--main-max-width) * 0.01));
+}
+
+/* ========================================
+    BREAKPOINTS
+    ======================================== */
+@media only screen and (max-width: 1200px) {
+  /* footer */
+  .footer__transition {
+    height: 8vw;
+    border-bottom-right-radius: 8vw;
+    border-bottom-left-radius: 8vw;
+  }
+  .footer__container {
+    padding: 8vw var(--main-pad-hrz);
+  }
+  .footer__suggestions {
+    width: 42vw;
+    padding-bottom: 8vw;
+  }
+  .footer__nav {
+    padding-right: 7vw;
+  }
+  .footer__nav li {
+    padding-bottom: 0.8rem;
+  }
+  .footer__nav li:last-child {
+    padding-bottom: 0;
+  }
+  .footer__otherlinks li {
+    padding-bottom: 0.8rem;
+  }
+  .footer__otherlinks li:last-child {
+    padding-bottom: 0;
+  }
+  .footer__version {
+    padding-top: 5vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* footer */
+  .footer__transition {
+    height: 17vw;
+    border-bottom-right-radius: 17vw;
+    border-bottom-left-radius: 17vw;
+  }
+  .footer__container {
+    padding: 15vw var(--main-pad-hrz);
+  }
+  .footer__flexbox {
+    flex-flow: row wrap;
+  }
+  .footer__suggestions {
+    flex-basis: 100%;
+    width: 100%;
+    padding-bottom: 15vw;
+  }
+  .footer__credits {
+    padding-bottom: 15vw;
+  }
+  .footer__nav {
+    flex-basis: 50%;
+    padding-right: 7vw;
+  }
+  .footer__nav li {
+    padding-bottom: 1rem;
+  }
+  .footer__nav li:last-child {
+    padding-bottom: 0;
+  }
+  .footer__otherlinks {
+    flex-basis: 50%;
+  }
+  .footer__otherlinks li {
+    padding-bottom: 1rem;
+  }
+  .footer__otherlinks li:last-child {
+    padding-bottom: 0;
+  }
+  .footer__version {
+    padding-top: 15vw;
+  }
+}
 /* ============================================
    RESET
    ============================================ */
@@ -257,6 +391,7 @@ ol, ul {
   --clr-800: #4a7055;
   --clr-800a: #d48d1c;
   --clr-100: #9bbda2;
+  --clr-50: #acd1b2;
   --clr-0: #c9debf;
   --clr-border: #272e00;
   --clr-stroke: #202220;
@@ -382,7 +517,7 @@ h1 {
   color: var(--clr-800);
 }
 h1.hero {
-  font-size: min(8vw, 176px);
+  font-size: min(8vw, calc(var(--main-max-width) * 0.08));
   letter-spacing: 0.01em;
   line-height: 0.95em;
 }
@@ -398,18 +533,45 @@ h2 {
   --fs-10: 1rem;
 }
 
+/* footer */
+.footer__suggestions {
+  font-family: "Doughy", sans-serif;
+  font-size: min(4vw, calc(var(--main-max-width) * 0.04));
+  line-height: 1em;
+}
+.footer__credits, .footer__nav a, .footer__otherlinks a, .footer__version {
+  font-size: 1.15rem;
+  line-height: 1.3em;
+}
+
 /* ========================================
     BREAKPOINTS
     ======================================== */
 @media only screen and (max-width: 1200px) {
   h1.hero {
-    font-size: 11vw;
+    font-size: 10vw;
+  }
+
+  /* footer */
+  .footer__suggestions {
+    font-size: 5vw;
+  }
+  .footer__credits, .footer__nav a, .footer__otherlinks a, .footer__version {
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: 600px) {
   h1.hero {
     font-size: 14vw;
     line-height: 1em;
+  }
+
+  /* footer */
+  .footer__suggestions {
+    font-size: 9vw;
+  }
+  .footer__credits, .footer__nav a, .footer__otherlinks a, .footer__version {
+    font-size: 1.2rem;
   }
 }
 /* ============================================
