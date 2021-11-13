@@ -11,13 +11,51 @@
 
 /* === VARIABLES ============================== */
 body{
+   /* top bar */
    --topbar-pad-vrt: 1.5rem;
    --topbar-pad-hrz: 1.5rem;
    --topbar-height: calc(3.3rem + (var(--topbar-pad-vrt) * 2));
    --topbar-item-pad: 0.5rem;
    --topbar-item-height: calc(var(--topbar-height) - (var(--topbar-pad-vrt) * 2) - (var(--topbar-item-pad) * 2));
    --themepicker-movement: -0.3rem;
-   --themepicker-tooltip-top: 1rem;
+   --themepicker-tooltip-pad-top: 1rem;
+
+   /* recycle categories */
+   --recycleCat-grid: 1fr 1fr 1fr;
+   --recycleCat-grid-gap: min(5vw, calc(var(--main-max-width) * 0.05));
+   --recycleCat-h2-fontsize: min(4.5vw, calc(var(--main-max-width) * 0.045));
+}
+
+@media only screen and (max-width: 1200px){
+   body{
+      /* top bar */
+      --topbar-pad-vrt: 1.5rem;
+      --topbar-pad-hrz: 1.5rem;
+      --topbar-item-pad: 0.5rem;
+      --themepicker-movement: -0.3rem;
+      --themepicker-tooltip-pad-top: 1rem;
+
+      /* recycle categories */
+      --recycleCat-grid: 1fr 1fr;
+      --recycleCat-grid-gap: 8vw;
+      --recycleCat-h2-fontsize: 6.8vw;
+   }
+}
+
+@media only screen and (max-width: 600px){
+   body{
+      /* top bar */
+      --topbar-pad-vrt: 1.5rem;
+      --topbar-pad-hrz: 1.5rem;
+      --topbar-item-pad: 0.5rem;
+      --themepicker-movement: -0.3rem;
+      --themepicker-tooltip-pad-top: 1rem;
+
+      /* recycle categories */
+      --recycleCat-grid: 1fr;
+      --recycleCat-grid-gap: 20vw;
+      --recycleCat-h2-fontsize: 16vw;
+   }
 }
 
 
@@ -83,7 +121,8 @@ html, body{
       /* tooltip */
       &::after{
          content: attr(aria-label);
-         top: calc(100% + var(--themepicker-tooltip-top));
+         color: var(--clr-900);
+         top: calc(100% + var(--themepicker-tooltip-pad-top));
          right: calc(-1 * var(--topbar-item-pad));
          transform-origin: top right;
       }
@@ -176,8 +215,8 @@ main{
       padding-top: var(--main-pad-lg);
       /* grid */
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: min(5vw, calc(var(--main-max-width) * 0.05));
+      grid-template-columns: var(--recycleCat-grid);
+      gap: var(--recycleCat-grid-gap);
    }
 
    &__item{
@@ -194,7 +233,7 @@ main{
    }
 
    &__h2{
-      font-size: min(4.5vw, calc(var(--main-max-width) * 0.045));
+      font-size: var(--recycleCat-h2-fontsize);
       display: block;
    }
 
@@ -333,17 +372,6 @@ footer{
    ======================================== */
 
 @media only screen and (max-width: 1200px){
-   .recycleCat{
-      &__container{
-         grid-template-columns: 1fr 1fr;
-         gap: 8vw;
-      }
-   
-      &__h2{
-         font-size: 6.8vw;
-      }
-   }
-
    .carton{
       &-illu{
          width: 17.5vw;
@@ -421,14 +449,8 @@ footer{
 @media only screen and (max-width: 600px){
    .recycleCat{
       &__container{
-         grid-template-columns: 1fr;
-         gap: 20vw;
          margin: 0 calc(-1 * var(--main-pad-hrz));
          overflow: hidden;
-      }
-   
-      &__h2{
-         font-size: 16vw;
       }
    }
 
