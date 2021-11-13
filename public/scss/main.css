@@ -422,10 +422,11 @@ ol, ul {
 
 /* dark theme */
 [data-theme=dark] {
-  --clr-900: #FFFFFF;
+  --clr-900: #e7f5ef;
   --clr-800: #dae8e2;
   --clr-800a: #eda12b;
   --clr-100: #567366;
+  --clr-50: #435e58;
   --clr-0: #3f544f;
   --clr-border: #111715;
   --clr-stroke: #202220;
@@ -456,10 +457,11 @@ ol, ul {
 
 /* high contrast theme */
 [data-theme=hc] {
-  --clr-900: #000000;
+  --clr-900: #1f452a;
   --clr-800: #255232;
   --clr-800a: #ab6800;
   --clr-100: #d5e8dc;
+  --clr-50: #dff2e6;
   --clr-0: #f7fff2;
   --clr-border: #000000;
   --clr-stroke: #000000;
