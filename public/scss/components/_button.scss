@@ -1,0 +1,45 @@
+// Partial SCSS file containing button styling
+
+
+
+/* ============================================
+   BUTTON
+   ============================================ */
+
+.button{
+    &--lg{
+        /* variables */
+        --button-lg-pad-vrt: min(0.3vw, calc(var(--main-max-width) * 0.003));
+        --button-lg-pad-hrz: min(2vw, calc(var(--main-max-width) * 0.02));
+        --button-lg-borderradius: min(3vw, calc(var(--main-max-width) * 0.03));
+
+        display: block;
+        padding: var(--button-lg-pad-vrt) var(--button-lg-pad-hrz) calc(var(--button-lg-pad-vrt) * 1.5) var(--button-lg-pad-hrz);
+        border-radius: var(--button-lg-borderradius);
+    }
+}
+
+
+/* === BREAKPOINTS ============================ */
+
+@media only screen and (max-width: 1200px){
+    .button{
+        &--lg{
+            /* variables */
+            --button-lg-pad-vrt: 0.6vw;
+            --button-lg-pad-hrz: 3vw;
+            --button-lg-borderradius: 4vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .button{
+        &--lg{
+            /* variables */
+            --button-lg-pad-vrt: 1vw;
+            --button-lg-pad-hrz: 4.5vw;
+            --button-lg-borderradius: 6vw;
+        }
+    }
+}
