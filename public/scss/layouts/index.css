@@ -239,7 +239,7 @@ body {
     padding-right: 7vw;
   }
   .footer__nav li {
-    padding-bottom: 1rem;
+    padding-bottom: 0.9rem;
   }
   .footer__nav li:last-child {
     padding-bottom: 0;
@@ -248,7 +248,7 @@ body {
     flex-basis: 50%;
   }
   .footer__otherlinks li {
-    padding-bottom: 1rem;
+    padding-bottom: 0.9rem;
   }
   .footer__otherlinks li:last-child {
     padding-bottom: 0;
@@ -568,10 +568,10 @@ h2 {
 
   /* footer */
   .footer__suggestions {
-    font-size: 9vw;
+    font-size: 9.5vw;
   }
   .footer__credits, .footer__nav a, .footer__otherlinks a, .footer__version {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 /* ============================================
