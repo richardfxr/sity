@@ -19,6 +19,15 @@ body {
   transition: color var(--transition-100), background-color var(--transition-100), border-color var(--transition-100), fill var(--transition-100), stroke var(--transition-100);
 }
 
+/* link highlights on focus */
+.a--highlight {
+  text-decoration: underline;
+}
+.a--highlight:focus-visible {
+  -webkit-text-decoration-color: var(--clr-border);
+          text-decoration-color: var(--clr-border);
+}
+
 /* logos */
 .clr-800 {
   fill: var(--clr-800);
@@ -36,11 +45,11 @@ body {
   stroke-linejoin: round;
   stroke-width: 1.25px;
 }
-.illu__bg {
-  stroke-miterlimit: 10;
-  stroke-width: 2px;
-}
 
+.carton-bg {
+  fill: var(--clr-carton-bg);
+  stroke: var(--clr-carton-bg);
+}
 .carton-offwhite-3 {
   fill: var(--clr-carton-offwhite-3);
 }
@@ -245,7 +254,8 @@ ol, ul {
   /* ========================================
      VARIABLES
      ======================================== */
-  --border-main: 0 0 0 1px var(--clr-border);
+  --border-main: solid 2px;
+  --border-main-ds: 0 0 0 1px var(--clr-stroke);
   --main-max-width: 2200px;
   --main-pad-vrt: min(5vw, calc(var(--main-max-width) * 0.05));
   --main-pad-hrz: min(5vw, calc(var(--main-max-width) * 0.05));
@@ -300,7 +310,7 @@ ol, ul {
   --clr-100: #567366;
   --clr-50: #435e58;
   --clr-0: #3f544f;
-  --clr-border: #111715;
+  --clr-border: #cfffe9;
   --clr-stroke: #202220;
   --clr-carton-offwhite-3: #b5b2a3;
   --clr-carton-offwhite-4: #9fa393;
@@ -368,12 +378,14 @@ ol, ul {
     ======================================== */
 @media only screen and (max-width: 1200px) {
   :root {
+    --border-main: solid 1.5px;
     --main-pad-vrt: 7vw;
     --main-pad-lg: 13vw;
   }
 }
 @media only screen and (max-width: 600px) {
   :root {
+    --border-main: solid 2px;
     --main-pad-vrt: 17vw;
     --main-pad-lg: 23vw;
   }
@@ -499,7 +511,9 @@ h2 {
 .button--lg {
   display: block;
   padding: var(--button-lg-pad-vrt) var(--button-lg-pad-hrz) calc(var(--button-lg-pad-vrt) * 1.5) var(--button-lg-pad-hrz);
+  border: var(--border-main);
   border-radius: calc(var(--button-lg-pad-hrz) * 1.5);
+  transition: color var(--transition-100), border-color var(--transition-100);
 }
 
 /* ============================================
@@ -561,14 +575,8 @@ footer {
 .footer__suggestions {
   width: var(--footer-suggestions-width);
 }
-.footer__suggestions a {
-  text-decoration: underline;
-}
 .footer__credits {
   padding-top: var(--footer-pad-vrt);
-}
-.footer__credits a {
-  text-decoration: underline;
 }
 .footer__title {
   padding-top: calc(var(--footer-pad-vrt) - var(--footer-title-pad-bottom));

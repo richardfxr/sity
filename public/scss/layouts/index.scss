@@ -143,8 +143,7 @@ html, body{
          top: 0;
          height: var(--topbar-item-height);
          border-radius: 50%;
-         /* border: var(--border-main); */
-         box-shadow: var(--border-main);
+         box-shadow: var(--border-main-ds);
          transition: top var(--transition-100);
       }
    }
@@ -221,16 +220,27 @@ main{
 
    &__item{
       position: relative;
+
+      .illu__bg{
+         stroke-miterlimit: 10;
+         stroke-width: 2px;
+      }
    }
 
    &__link{
       display: block;
       z-index: 1000;
+
+      &:focus-visible .illu__bg{
+         stroke: var(--clr-border) !important;
+      }
    }
 
    &__parallaxContainer{
       position: relative;
    }
+
+   
 
    &__h2{
       font-size: var(--recycleCat-h2-fontsize);
@@ -332,6 +342,23 @@ main{
 /* === FOOTER ================================= */
 footer{
    background-color: var(--clr-50);
+
+   .button{
+      &--lg{
+         color: var(--clr-800);
+         background-color: var(--clr-0);
+         border-color: var(--clr-0);
+
+         &:hover{
+            color: var(--clr-1000);
+         }
+
+         &:focus-visible{
+            border-color: var(--clr-border);
+            color: var(--clr-1000);
+         }
+      }
+   }
 }
 
 .footer{
@@ -345,15 +372,6 @@ footer{
       a{
          color: var(--clr-800a);
       }
-   }
-
-   &__link{
-      color: var(--clr-800);
-      background-color: var(--clr-0);
-
-      &:hover{
-         color: var(--clr-1000);
-     }
    }
 }
 

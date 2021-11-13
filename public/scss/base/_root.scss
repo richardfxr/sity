@@ -16,7 +16,8 @@
        VARIABLES
        ======================================== */
 
-    --border-main: 0 0 0 1px var(--clr-border);
+    --border-main: solid 2px;
+    --border-main-ds: 0 0 0 1px var(--clr-stroke);
 
     --main-max-width: 2200px;
     --main-pad-vrt: min(5vw, calc(var(--main-max-width) * 0.05));
@@ -61,6 +62,7 @@
 
 @media only screen and (max-width: g.$breakpoint-tablet){
     :root{
+        --border-main: solid 1.5px;
         --main-pad-vrt: 7vw;
         --main-pad-lg: 13vw;
     }
@@ -68,6 +70,7 @@
 
 @media only screen and (max-width: g.$breakpoint-mobile){
     :root{
+        --border-main: solid 2px;
         --main-pad-vrt: 17vw;
         --main-pad-lg: 23vw;
     }

@@ -24,6 +24,15 @@ body{
                stroke var(--transition-100);
 }
 
+/* link highlights on focus */
+.a--highlight{
+   text-decoration: underline;
+
+   &:focus-visible{
+      text-decoration-color: var(--clr-border);
+   }
+}
+
 /* logos */
 .clr-800{
    fill: var(--clr-800);
@@ -43,14 +52,13 @@ body{
       stroke-linejoin: round;
       stroke-width: 1.25px;
    }
-
-   &__bg{
-      stroke-miterlimit: 10;
-      stroke-width: 2px;
-   }
 }
 
 .carton{
+   &-bg{
+      fill: var(--clr-carton-bg);
+      stroke: var(--clr-carton-bg);
+   }
 
    &-offwhite-3{
       fill: var(--clr-carton-offwhite-3);

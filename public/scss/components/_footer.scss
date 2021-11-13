@@ -74,18 +74,10 @@ footer{
  
     &__suggestions{
        width: var(--footer-suggestions-width);
-       
-       a{
-          text-decoration: underline;
-       }
     }
  
     &__credits{
        padding-top: var(--footer-pad-vrt);
-
-       a{
-          text-decoration: underline;
-       }
     }
  
     &__title{

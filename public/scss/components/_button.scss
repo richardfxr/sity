@@ -46,6 +46,9 @@
     &--lg{
         display: block;
         padding: var(--button-lg-pad-vrt) var(--button-lg-pad-hrz) calc(var(--button-lg-pad-vrt) * 1.5) var(--button-lg-pad-hrz);
+        border: var(--border-main);
         border-radius: calc(var(--button-lg-pad-hrz) * 1.5);
+        transition: color var(--transition-100),
+                    border-color var(--transition-100);
     }
 }
