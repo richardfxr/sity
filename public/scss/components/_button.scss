@@ -2,6 +2,11 @@
 
 
 
+// === USE ====================================
+@use '../base' as b;
+
+
+
 /* ============================================
    BUTTON
    ============================================ */
@@ -15,7 +20,7 @@
     }
 }
 
-@media only screen and (max-width: $breakpoint-tablet){
+@media only screen and (max-width: b.$breakpoint-tablet){
     .button{
         &--lg{
             /* variables */
@@ -25,7 +30,7 @@
     }
 }
 
-@media only screen and (max-width: $breakpoint-mobile){
+@media only screen and (max-width: b.$breakpoint-mobile){
     .button{
         &--lg{
             /* variables */

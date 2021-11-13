@@ -2,6 +2,11 @@
 
 
 
+// === USE ====================================
+@use '../base' as b;
+
+
+
 /* ============================================
    FOOTER
    ============================================ */
@@ -18,7 +23,7 @@ footer{
     --footer-link-pad-bottom: min(1.3vw, calc(var(--main-max-width) * 0.013));
 }
 
-@media only screen and (max-width: $breakpoint-tablet){
+@media only screen and (max-width: b.$breakpoint-tablet){
     footer{
         /* varaibles */
         --footer-pad-vrt: 8vw;
@@ -31,7 +36,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: $breakpoint-mobile){
+@media only screen and (max-width: b.$breakpoint-mobile){
     footer{
         /* varaibles */
         --footer-pad-vrt: 15vw;
@@ -69,15 +74,15 @@ footer{
  
     &__suggestions{
        width: var(--footer-suggestions-width);
-       color: var(--clr-800);
+       
        a{
-          color: var(--clr-800a);
           text-decoration: underline;
        }
     }
  
     &__credits{
        padding-top: var(--footer-pad-vrt);
+
        a{
           text-decoration: underline;
        }
@@ -99,13 +104,7 @@ footer{
     }
  
     &__link{
-        color: var(--clr-800);
-        background-color: var(--clr-0);
         transition: color var(--transition-200);
-
-        &:hover{
-            color: var(--clr-900);
-        }
     }
 
     &__btp{
