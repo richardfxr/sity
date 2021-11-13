@@ -11,6 +11,10 @@
    GLOBAL
    ============================================ */
 
+// === BREAKPOIONTS ===========================
+$breakpoint-tablet: 1200px;
+$breakpoint-mobile: 600px;
+
 body{
    /* transition during theme switch */
    transition: color var(--transition-100),
@@ -165,8 +169,8 @@ body{
     BREAKPOINTS
     ======================================== */
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: $breakpoint-tablet){
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: $breakpoint-mobile){
 }

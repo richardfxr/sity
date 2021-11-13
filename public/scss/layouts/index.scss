@@ -26,7 +26,7 @@ body{
    --recycleCat-h2-fontsize: min(4.5vw, calc(var(--main-max-width) * 0.045));
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: $breakpoint-tablet){
    body{
       /* top bar */
       --topbar-pad-vrt: 1.5rem;
@@ -42,7 +42,7 @@ body{
    }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: $breakpoint-mobile){
    body{
       /* top bar */
       --topbar-pad-vrt: 1.5rem;
@@ -345,7 +345,7 @@ footer{
    BREAKPOINTS
    ======================================== */
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: $breakpoint-tablet){
    .carton{
       &-illu{
          width: 17.5vw;
@@ -420,7 +420,7 @@ footer{
    }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: $breakpoint-mobile){
    .recycleCat{
       &__container{
          margin: 0 calc(-1 * var(--main-pad-hrz));

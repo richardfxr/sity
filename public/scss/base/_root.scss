@@ -58,14 +58,14 @@
     BREAKPOINTS
     ======================================== */
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: $breakpoint-tablet){
     :root{
         --main-pad-vrt: 7vw;
         --main-pad-lg: 13vw;
     }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: $breakpoint-mobile){
     :root{
         --main-pad-vrt: 17vw;
         --main-pad-lg: 23vw;

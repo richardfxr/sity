@@ -18,7 +18,7 @@ footer{
     --footer-link-pad-bottom: min(1.3vw, calc(var(--main-max-width) * 0.013));
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: $breakpoint-tablet){
     footer{
         /* varaibles */
         --footer-pad-vrt: 8vw;
@@ -31,7 +31,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: $breakpoint-mobile){
     footer{
         /* varaibles */
         --footer-pad-vrt: 15vw;

@@ -15,7 +15,7 @@
     }
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: $breakpoint-tablet){
     .button{
         &--lg{
             /* variables */
@@ -25,7 +25,7 @@
     }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: $breakpoint-mobile){
     .button{
         &--lg{
             /* variables */
