@@ -1,0 +1,120 @@
+// Partial SCSS file containing footer styling
+
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer{
+    /* varaibles */
+    --footer-pad-vrt: var(--main-pad-vrt);
+    --footer-transition-height: var(--main-pad-hrz);
+    --footer-container-grid: 60% 40%;
+    --footer-suggestions-width: min(35vw, calc(var(--main-max-width) * 0.35));
+    --footer-title-pad-bottom: min(1vw, calc(var(--main-max-width) * 0.01));
+    --footer-link-pad-right: min(1.1vw, calc(var(--main-max-width) * 0.011));
+    --footer-link-pad-bottom: min(1.3vw, calc(var(--main-max-width) * 0.013));
+}
+
+
+/* === BREAKPOINTS ============================ */
+@media only screen and (max-width: 1200px){
+    footer{
+        /* varaibles */
+        --footer-pad-vrt: 8vw;
+        --footer-transition-height: 8vw;
+        --footer-container-grid: 1fr;
+        --footer-suggestions-width: 70vw;
+        --footer-title-pad-bottom: 1.5vw;
+        --footer-link-pad-right: 1.6vw;
+        --footer-link-pad-bottom: 2vw;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    footer{
+        /* varaibles */
+        --footer-pad-vrt: 15vw;
+        --footer-transition-height: 17vw;
+        --footer-container-grid: 1fr;
+        --footer-suggestions-width: 100%;
+        --footer-title-pad-bottom: 1.5vw;
+        --footer-link-pad-right: 2.5vw;
+        --footer-link-pad-bottom: 3vw;
+    }
+}
+
+
+/* === ACTUAL CODE ============================ */
+.footer{
+    &__transition{
+       height: var(--footer-transition-height);
+       border-bottom-right-radius: var(--footer-transition-height);
+       border-bottom-left-radius: var(--footer-transition-height);
+    }
+ 
+    &__container{
+       max-width: var(--main-max-width);
+       padding: var(--footer-pad-vrt) var(--main-pad-hrz);
+       margin: auto;
+       /* grid */
+       display: grid;
+       grid-template-columns: var(--footer-container-grid);
+    }
+ 
+    &__flexbox{
+       display: flex;
+       flex-flow: column nowrap;
+    }
+ 
+    &__suggestions{
+       width: var(--footer-suggestions-width);
+       color: var(--clr-800);
+       a{
+          color: var(--clr-800a);
+          text-decoration: underline;
+       }
+    }
+ 
+    &__credits{
+       padding-top: var(--footer-pad-vrt);
+       a{
+          text-decoration: underline;
+       }
+    }
+ 
+    &__title{
+       padding-top: calc(var(--footer-pad-vrt) - var(--footer-title-pad-bottom));
+       padding-bottom: var(--footer-title-pad-bottom);
+    }
+ 
+    &__linklist{
+       display: flex;
+       flex-flow: row wrap;
+ 
+       li{
+          padding-right: var(--footer-link-pad-right);
+          padding-bottom: var(--footer-link-pad-bottom);
+       }
+    }
+ 
+    &__link{
+        color: var(--clr-800);
+        background-color: var(--clr-0);
+        transition: color var(--transition-200);
+
+        &:hover{
+            color: var(--clr-900);
+        }
+    }
+
+    &__btp{
+        width: max-content;
+        margin-top: calc(var(--footer-pad-vrt) - var(--footer-title-pad-bottom));
+    }
+ 
+    &__version{
+        padding-top: calc(var(--footer-pad-vrt) / 2);
+    }
+ }

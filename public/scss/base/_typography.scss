@@ -11,7 +11,7 @@
    TYPOGRAPHY
    ============================================ */
 
-body, button {
+body {
     font-family: 'Lexend Deca', sans-serif;
     color: var(--clr-900);
 }
@@ -30,13 +30,22 @@ h1{
 
 h2{
     font-family: 'Doughy', sans-serif;
-    font-size: 5rem;
+    font-size: min(4vw, calc(var(--main-max-width) * 0.04));
     color: var(--clr-800);
 }
 
 :root{
     --fs-9: 0.9rem;
     --fs-10: 1rem;
+}
+
+/* button */
+.button{
+    &--lg{
+        font-family: 'Doughy', sans-serif;
+        font-size: min(2.8vw, calc(var(--main-max-width) * 0.028));
+        line-height: 1.3em;
+    }
 }
 
 /* footer */
@@ -47,9 +56,15 @@ h2{
         line-height: 1em;
     }
 
-    &__credits, &__nav a, &__otherlinks a, &__version{
+    &__credits, &__version{
         font-size: 1.15rem;
         line-height: 1.3em;
+    }
+
+    &__title{
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 1.5rem;
+        color: var(--clr-900);
     }
 }
 
@@ -65,14 +80,21 @@ h2{
         }
     }
 
+    /* button */
+    .button{
+        &--lg{
+            font-size: 4vw;
+        }
+    }
+
     /* footer */
     .footer{
         &__suggestions{
-            font-size: 5vw;
+            font-size: 6.8vw;
         }
 
-        &__credits, &__nav a, &__otherlinks a, &__version{
-            font-size: 1rem;
+        &__credits, &__version{
+            font-size: 1.1rem;
         }
     }
 }
@@ -85,13 +107,22 @@ h2{
         }
     }
 
+
+    /* button */
+    .button{
+        &--lg{
+            font-size: 7vw;
+        }
+    }
+
+
     /* footer */
     .footer{
         &__suggestions{
             font-size: 9.5vw;
         }
 
-        &__credits, &__nav a, &__otherlinks a, &__version{
+        &__credits, &__version{
             font-size: 1.1rem;
         }
     }
