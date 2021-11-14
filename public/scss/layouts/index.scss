@@ -24,6 +24,11 @@ body{
    --recycleCat-grid: 1fr 1fr 1fr;
    --recycleCat-grid-gap: min(5vw, calc(var(--main-max-width) * 0.05));
    --recycleCat-h2-fontsize: min(4.5vw, calc(var(--main-max-width) * 0.045));
+
+   /* map */
+   --map-illu-pad-left: min(10vw, calc(var(--main-max-width) * 0.1));
+   --map-categories-position: absolute;
+   --map-categories-flex: column nowrap;
 }
 
 @media only screen and (max-width: b.$breakpoint-tablet){
@@ -39,6 +44,12 @@ body{
       --recycleCat-grid: 1fr 1fr;
       --recycleCat-grid-gap: 8vw;
       --recycleCat-h2-fontsize: 6.8vw;
+
+      /* map */
+      --map-illu-pad-left: 0;
+      --map-categories-position: static;
+      --map-categories-flex: row nowrap;
+      --map-categories-top: 5vw;
    }
 }
 
@@ -55,6 +66,7 @@ body{
       --recycleCat-grid: 1fr;
       --recycleCat-grid-gap: 20vw;
       --recycleCat-h2-fontsize: 16vw;
+      --map-categories-top: 10vw;
    }
 }
 
@@ -67,6 +79,12 @@ body{
 /* === WHOLE PAGE ============================= */
 html, body{
    background-color: var(--clr-0);
+}
+
+.text{
+   &--accent{
+      color: var(--clr-800a);
+   }
 }
 
 /* === TOP BAR ================================ */
@@ -212,6 +230,7 @@ main{
 .recycleCat{
    &__container{
       padding-top: var(--main-pad-lg);
+      padding-bottom: var(--main-pad-lg);
       /* grid */
       display: grid;
       grid-template-columns: var(--recycleCat-grid);
@@ -339,6 +358,94 @@ main{
 }
 
 
+/* === MAP ==================================== */
+.map{
+   position: relative;
+   padding: var(--main-pad-vrt) 0;
+
+   &__main{
+      padding-left: var(--map-illu-pad-left);
+   }
+
+   &__illu{
+      fill: var(--clr-100);
+   }
+
+   &__categories{
+      position: var(--map-categories-position);
+      bottom: min(4vw, calc(var(--main-max-width) * 0.04));
+      left: 0;
+      /* flexbox */
+      display: flex;
+      flex-flow: var(--map-categories-flex);
+      
+      li{
+         padding-bottom: var(--footer-link-pad-bottom);
+      }
+
+      button#paper{
+         color: var(--clr-paper-h2);
+         background-color: var(--clr-paper-bg);
+         border-color: rgba(0, 0, 0, 0);
+
+         &:hover{
+            color: var(--clr-1000);
+         }
+
+         &:focus-visible, .paper button#paper{
+            border-color: var(--clr-border);
+            color: var(--clr-1000);
+         }
+      }
+
+      button#metal{
+         color: var(--clr-metal-h2);
+         background-color: var(--clr-metal-bg);
+         border-color: rgba(0, 0, 0, 0);
+
+         &:hover{
+            color: var(--clr-1000);
+         }
+
+         &:focus-visible, .paper button#paper{
+            border-color: var(--clr-border);
+            color: var(--clr-1000);
+         }
+      }
+
+      button#glass{
+         color: var(--clr-glass-h2);
+         background-color: var(--clr-glass-bg);
+         border-color: rgba(0, 0, 0, 0);
+
+         &:hover{
+            color: var(--clr-1000);
+         }
+
+         &:focus-visible, .paper button#paper{
+            border-color: var(--clr-border);
+            color: var(--clr-1000);
+         }
+      }
+
+      button#plastic{
+         color: var(--clr-plastic-h2);
+         background-color: var(--clr-plastic-bg);
+         border-color: rgba(0, 0, 0, 0);
+
+         &:hover{
+            color: var(--clr-1000);
+         }
+
+         &:focus-visible, .paper button#paper{
+            border-color: var(--clr-border);
+            color: var(--clr-1000);
+         }
+      }
+   }
+}
+
+
 /* === FOOTER ================================= */
 footer{
    background-color: var(--clr-50);
@@ -453,6 +560,17 @@ footer{
          left: 8vw !important;
       }
    }
+
+   /* map */
+   .map{
+      &__categories{
+         padding-top: var(--map-categories-top);
+
+         li{
+            padding-right: var(--footer-link-pad-right);
+         }
+      }
+   }
 }
 
 @media only screen and (max-width: b.$breakpoint-mobile){
@@ -543,6 +661,26 @@ footer{
       &-h2{
          top: 55vw !important;
          left: 15vw !important;
+      }
+   }
+
+   /* map */
+   .map{
+      margin:0 calc(-1 * var(--main-pad-hrz));
+      overflow: hidden;
+
+      &__main{
+         position: relative;
+         left: -10vw;
+         width: 120vw;
+      }
+      &__catwrapper{
+         overflow: auto;
+      }
+
+      &__categories{
+         padding-left: var(--main-pad-hrz);
+         padding-right: var(--main-pad-hrz);
       }
    }
 }

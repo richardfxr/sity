@@ -400,19 +400,20 @@ body {
 
 h1 {
   font-family: "Doughy", sans-serif;
-  font-size: 7rem;
+  font-size: min(6vw, calc(var(--main-max-width) * 0.06));
   color: var(--clr-800);
-}
-h1.hero {
-  font-size: min(8vw, calc(var(--main-max-width) * 0.08));
-  letter-spacing: 0.01em;
-  line-height: 0.95em;
 }
 
 h2 {
   font-family: "Doughy", sans-serif;
   font-size: min(4vw, calc(var(--main-max-width) * 0.04));
   color: var(--clr-800);
+}
+
+.text--hero {
+  font-size: min(8vw, calc(var(--main-max-width) * 0.08));
+  letter-spacing: 0.01em;
+  line-height: 0.95em;
 }
 
 :root {
@@ -447,7 +448,7 @@ h2 {
     BREAKPOINTS
     ======================================== */
 @media only screen and (max-width: 1200px) {
-  h1.hero {
+  .text--hero {
     font-size: 10vw;
   }
 
@@ -465,7 +466,7 @@ h2 {
   }
 }
 @media only screen and (max-width: 600px) {
-  h1.hero {
+  .text--hero {
     font-size: 14vw;
     line-height: 1em;
   }
@@ -520,7 +521,7 @@ h2 {
    FOOTER
    ============================================ */
 /* === VARIABLES ============================== */
-footer {
+body {
   --footer-pad-vrt: var(--main-pad-vrt);
   --footer-transition-height: var(--main-pad-hrz);
   --footer-container-grid: 60% 40%;
@@ -531,7 +532,7 @@ footer {
 }
 
 @media only screen and (max-width: 1200px) {
-  footer {
+  body {
     /* varaibles */
     --footer-pad-vrt: 8vw;
     --footer-transition-height: 8vw;
@@ -543,7 +544,7 @@ footer {
   }
 }
 @media only screen and (max-width: 600px) {
-  footer {
+  body {
     /* varaibles */
     --footer-pad-vrt: 15vw;
     --footer-transition-height: 17vw;
@@ -633,6 +634,10 @@ body {
   --recycleCat-grid: 1fr 1fr 1fr;
   --recycleCat-grid-gap: min(5vw, calc(var(--main-max-width) * 0.05));
   --recycleCat-h2-fontsize: min(4.5vw, calc(var(--main-max-width) * 0.045));
+  /* map */
+  --map-illu-pad-left: min(10vw, calc(var(--main-max-width) * 0.1));
+  --map-categories-position: absolute;
+  --map-categories-flex: column nowrap;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -647,6 +652,11 @@ body {
     --recycleCat-grid: 1fr 1fr;
     --recycleCat-grid-gap: 8vw;
     --recycleCat-h2-fontsize: 6.8vw;
+    /* map */
+    --map-illu-pad-left: 0;
+    --map-categories-position: static;
+    --map-categories-flex: row nowrap;
+    --map-categories-top: 5vw;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -661,6 +671,7 @@ body {
     --recycleCat-grid: 1fr;
     --recycleCat-grid-gap: 20vw;
     --recycleCat-h2-fontsize: 16vw;
+    --map-categories-top: 10vw;
   }
 }
 /* ============================================
@@ -669,6 +680,10 @@ body {
 /* === WHOLE PAGE ============================= */
 html, body {
   background-color: var(--clr-0);
+}
+
+.text--accent {
+  color: var(--clr-800a);
 }
 
 /* === TOP BAR ================================ */
@@ -781,6 +796,7 @@ main {
 /* recycle categories */
 .recycleCat__container {
   padding-top: var(--main-pad-lg);
+  padding-bottom: var(--main-pad-lg);
   /* grid */
   display: grid;
   grid-template-columns: var(--recycleCat-grid);
@@ -876,6 +892,77 @@ main {
   left: min(5vw, calc(var(--main-max-width) * 0.05)) !important;
 }
 
+/* === MAP ==================================== */
+.map {
+  position: relative;
+  padding: var(--main-pad-vrt) 0;
+}
+.map__main {
+  padding-left: var(--map-illu-pad-left);
+}
+.map__illu {
+  fill: var(--clr-100);
+}
+.map__categories {
+  position: var(--map-categories-position);
+  bottom: min(4vw, calc(var(--main-max-width) * 0.04));
+  left: 0;
+  /* flexbox */
+  display: flex;
+  flex-flow: var(--map-categories-flex);
+}
+.map__categories li {
+  padding-bottom: var(--footer-link-pad-bottom);
+}
+.map__categories button#paper {
+  color: var(--clr-paper-h2);
+  background-color: var(--clr-paper-bg);
+  border-color: rgba(0, 0, 0, 0);
+}
+.map__categories button#paper:hover {
+  color: var(--clr-1000);
+}
+.map__categories button#paper:focus-visible, .map__categories button#paper .paper button#paper {
+  border-color: var(--clr-border);
+  color: var(--clr-1000);
+}
+.map__categories button#metal {
+  color: var(--clr-metal-h2);
+  background-color: var(--clr-metal-bg);
+  border-color: rgba(0, 0, 0, 0);
+}
+.map__categories button#metal:hover {
+  color: var(--clr-1000);
+}
+.map__categories button#metal:focus-visible, .map__categories button#metal .paper button#paper {
+  border-color: var(--clr-border);
+  color: var(--clr-1000);
+}
+.map__categories button#glass {
+  color: var(--clr-glass-h2);
+  background-color: var(--clr-glass-bg);
+  border-color: rgba(0, 0, 0, 0);
+}
+.map__categories button#glass:hover {
+  color: var(--clr-1000);
+}
+.map__categories button#glass:focus-visible, .map__categories button#glass .paper button#paper {
+  border-color: var(--clr-border);
+  color: var(--clr-1000);
+}
+.map__categories button#plastic {
+  color: var(--clr-plastic-h2);
+  background-color: var(--clr-plastic-bg);
+  border-color: rgba(0, 0, 0, 0);
+}
+.map__categories button#plastic:hover {
+  color: var(--clr-1000);
+}
+.map__categories button#plastic:focus-visible, .map__categories button#plastic .paper button#paper {
+  border-color: var(--clr-border);
+  color: var(--clr-1000);
+}
+
 /* === FOOTER ================================= */
 footer {
   background-color: var(--clr-50);
@@ -964,6 +1051,14 @@ footer .button--lg:focus-visible {
     top: 21vw !important;
     left: 8vw !important;
   }
+
+  /* map */
+  .map__categories {
+    padding-top: var(--map-categories-top);
+  }
+  .map__categories li {
+    padding-right: var(--footer-link-pad-right);
+  }
 }
 @media only screen and (max-width: 600px) {
   .recycleCat__container {
@@ -1036,5 +1131,23 @@ footer .button--lg:focus-visible {
   .plastic-h2 {
     top: 55vw !important;
     left: 15vw !important;
+  }
+
+  /* map */
+  .map {
+    margin: 0 calc(-1 * var(--main-pad-hrz));
+    overflow: hidden;
+  }
+  .map__main {
+    position: relative;
+    left: -10vw;
+    width: 120vw;
+  }
+  .map__catwrapper {
+    overflow: auto;
+  }
+  .map__categories {
+    padding-left: var(--main-pad-hrz);
+    padding-right: var(--main-pad-hrz);
   }
 }/*# sourceMappingURL=index.css.map */

@@ -13,7 +13,7 @@
 
 
 /* === VARIABLES ============================== */
-footer{
+body{
     --footer-pad-vrt: var(--main-pad-vrt);
     --footer-transition-height: var(--main-pad-hrz);
     --footer-container-grid: 60% 40%;
@@ -24,7 +24,7 @@ footer{
 }
 
 @media only screen and (max-width: b.$breakpoint-tablet){
-    footer{
+    body{
         /* varaibles */
         --footer-pad-vrt: 8vw;
         --footer-transition-height: 8vw;
@@ -37,7 +37,7 @@ footer{
 }
 
 @media only screen and (max-width: b.$breakpoint-mobile){
-    footer{
+    body{
         /* varaibles */
         --footer-pad-vrt: 15vw;
         --footer-transition-height: 17vw;

@@ -19,20 +19,22 @@ body {
 
 h1{
     font-family: 'Doughy', sans-serif;
-    font-size: 7rem;
+    font-size: min(6vw, calc(var(--main-max-width) * 0.06));
     color: var(--clr-800);
-
-    &.hero{
-        font-size: min(8vw, calc(var(--main-max-width) * 0.08));
-        letter-spacing: 0.01em;
-        line-height: 0.95em;
-    }
 }
 
 h2{
     font-family: 'Doughy', sans-serif;
     font-size: min(4vw, calc(var(--main-max-width) * 0.04));
     color: var(--clr-800);
+}
+
+.text{
+    &--hero{
+        font-size: min(8vw, calc(var(--main-max-width) * 0.08));
+        letter-spacing: 0.01em;
+        line-height: 0.95em;
+    }
 }
 
 :root{
@@ -75,8 +77,8 @@ h2{
     ======================================== */
 
 @media only screen and (max-width: g.$breakpoint-tablet){
-    h1{
-        &.hero{
+    .text{
+        &--hero{
             font-size: 10vw;
         }
     }
@@ -101,8 +103,8 @@ h2{
 }
 
 @media only screen and (max-width: g.$breakpoint-mobile){
-    h1{
-        &.hero{
+    .text{
+        &--hero{
             font-size: 14vw;
             line-height: 1em;
         }
