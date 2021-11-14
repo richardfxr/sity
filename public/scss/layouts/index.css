@@ -1148,6 +1148,8 @@ footer .button--lg:focus-visible {
   }
   .map__categories {
     padding-left: var(--main-pad-hrz);
+  }
+  .map__categories li:last-child {
     padding-right: var(--main-pad-hrz);
   }
 }/*# sourceMappingURL=index.css.map */

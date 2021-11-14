@@ -680,7 +680,10 @@ footer{
 
       &__categories{
          padding-left: var(--main-pad-hrz);
-         padding-right: var(--main-pad-hrz);
+
+         li:last-child{
+            padding-right: var(--main-pad-hrz);
+         }
       }
    }
 }
