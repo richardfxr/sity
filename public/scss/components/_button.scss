@@ -44,6 +44,7 @@
 /* === ACTUAL CODE ============================ */
 .button {
     &--lg{
+        box-sizing: border-box;
         display: block;
         padding: var(--button-lg-pad-vrt) var(--button-lg-pad-hrz) calc(var(--button-lg-pad-vrt) * 1.5) var(--button-lg-pad-hrz);
         border: var(--border-main);

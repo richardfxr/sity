@@ -26,10 +26,11 @@ body{
    --recycleCat-h2-fontsize: min(4.5vw, calc(var(--main-max-width) * 0.045));
 
    /* map */
-   --map-illu-pad-left: min(10vw, calc(var(--main-max-width) * 0.1));
+   --map-illu-pad-left: min(13vw, calc(var(--main-max-width) * 0.13));
    --map-route-strokewidth: 8px;
    --map-categories-position: absolute;
    --map-categories-flex: column nowrap;
+   --map-button-borderwidth: min(0.4vw, calc(var(--main-max-width) * 0.004));
 }
 
 @media only screen and (max-width: b.$breakpoint-tablet){
@@ -48,9 +49,11 @@ body{
 
       /* map */
       --map-illu-pad-left: 0;
+      --map-route-strokewidth: 9px;
       --map-categories-position: static;
       --map-categories-flex: row nowrap;
-      --map-categories-top: 5vw;
+      --map-categories-top: 3vw;
+      --map-button-borderwidth: 0.5vw;
    }
 }
 
@@ -67,7 +70,11 @@ body{
       --recycleCat-grid: 1fr;
       --recycleCat-grid-gap: 20vw;
       --recycleCat-h2-fontsize: 16vw;
-      --map-categories-top: 10vw;
+
+      /* map */
+      --map-route-strokewidth: 13px;
+      --map-categories-top: 7vw;
+      --map-button-borderwidth: 1vw;
    }
 }
 
@@ -382,17 +389,55 @@ main{
 
       &--path{
          fill: none;
-         stroke: #29abe2;
          stroke-linecap: round;
          stroke-linejoin: round;
          stroke-width: var(--map-route-strokewidth);
       }
    }
 
-   &__categories{
+   #routePaper{
+      stroke: var(--clr-paper-500);
+      /* both values should be the length of the SVG path, see data-length attribute for the path */
+      stroke-dasharray: 1301.9189453125;
+      stroke-dashoffset: 1301.9189453125;
+      transition: stroke-dashoffset 1.3s;
+   }
+
+   #routeMetal{
+      stroke: var(--clr-metal-500);
+      /* both values should be the length of the SVG path, see data-length attribute for the path */
+      stroke-dasharray: 976.490966796875;
+      stroke-dashoffset: 976.490966796875;
+      transition: stroke-dashoffset 1s;
+   }
+
+   #routeGlass{
+      stroke: var(--clr-glass-500);
+      /* both values should be the length of the SVG path, see data-length attribute for the path */
+      stroke-dasharray: 458.63262939453125;
+      stroke-dashoffset: 458.63262939453125;
+      transition: stroke-dashoffset 0.5s;
+   }
+
+   #routePlastic{
+      stroke: var(--clr-plastic-500);
+      /* both values should be the length of the SVG path, see data-length attribute for the path */
+      stroke-dasharray: 1159.812255859375;
+      stroke-dashoffset: 1159.812255859375;
+      transition: stroke-dashoffset 1.2s;
+   }
+
+   &__menu{
       position: var(--map-categories-position);
       bottom: min(4vw, calc(var(--main-max-width) * 0.04));
       left: 0;
+   }
+
+   &__cattitle{
+      padding-bottom: var(--footer-link-pad-bottom);
+   }
+
+   &__categories{
       /* flexbox */
       display: flex;
       flex-flow: var(--map-categories-flex);
@@ -401,18 +446,22 @@ main{
          padding-bottom: var(--footer-link-pad-bottom);
       }
 
+      .button--lg{
+         border-width: var(--map-button-borderwidth);
+      }
+
       button#mapPaper{
          color: var(--clr-paper-900);
          background-color: var(--clr-paper-100);
          border-color: rgba(0, 0, 0, 0);
 
          &:hover{
-            color: var(--clr-1000);
+            color: var(--clr-paper-1000);
          }
 
-         &:focus-visible, .paper button#paper{
-            border-color: var(--clr-border);
-            color: var(--clr-1000);
+         &:focus-visible{
+            border-color: var(--clr-paper-500);
+            color: var(--clr-paper-1000);
          }
       }
 
@@ -422,12 +471,12 @@ main{
          border-color: rgba(0, 0, 0, 0);
 
          &:hover{
-            color: var(--clr-1000);
+            color: var(--clr-metal-1000);
          }
 
-         &:focus-visible, .paper button#paper{
-            border-color: var(--clr-border);
-            color: var(--clr-1000);
+         &:focus-visible{
+            border-color: var(--clr-metal-500);
+            color: var(--clr-metal-1000);
          }
       }
 
@@ -437,12 +486,12 @@ main{
          border-color: rgba(0, 0, 0, 0);
 
          &:hover{
-            color: var(--clr-1000);
+            color: var(--clr-glass-1000);
          }
 
          &:focus-visible, .paper button#paper{
-            border-color: var(--clr-border);
-            color: var(--clr-1000);
+            border-color: var(--clr-glass-500);
+            color: var(--clr-glass-1000);
          }
       }
 
@@ -452,15 +501,39 @@ main{
          border-color: rgba(0, 0, 0, 0);
 
          &:hover{
-            color: var(--clr-1000);
+            color: var(--clr-plastic-1000);
          }
 
          &:focus-visible, .paper button#paper{
-            border-color: var(--clr-border);
-            color: var(--clr-1000);
+            border-color: var(--clr-plastic-500);
+            color: var(--clr-plastic-1000);
          }
       }
    }
+}
+
+/* show routes if appropriate class is present */
+.paper #routePaper,
+.metal #routeMetal,
+.glass #routeGlass,
+.plastic #routePlastic{
+   stroke-dashoffset: 0;
+}
+
+.paper button#mapPaper{
+   border-color: var(--clr-paper-500);
+}
+
+.metal button#mapMetal{
+   border-color: var(--clr-metal-500);
+}
+
+.glass button#mapGlass{
+   border-color: var(--clr-glass-500);
+}
+
+.plastic button#mapPlastic{
+   border-color: var(--clr-plastic-500);
 }
 
 
@@ -581,9 +654,11 @@ footer{
 
    /* map */
    .map{
-      &__categories{
+      &__menu{
          padding-top: var(--map-categories-top);
+      }
 
+      &__categories{
          li{
             padding-right: var(--footer-link-pad-right);
          }
@@ -692,6 +767,11 @@ footer{
          left: -10vw;
          width: 120vw;
       }
+
+      &__cattitle{
+         padding-left: var(--main-pad-hrz);
+      }
+
       &__catwrapper{
          overflow: auto;
       }

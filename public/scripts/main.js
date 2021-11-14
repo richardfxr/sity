@@ -1,13 +1,6 @@
 // main JavaScript file which imports all other scripts
 
-
-// === IMPORTS ================================
-// import './modules/themeswitcher'
-
-// Theme swithcer JavaScript file
-
-
-// ThemeSwitcher class. Code by Max Böck
+// ThemeSwitcher class. Based on code by Max Böck
 class ThemeSwitcher {
     constructor() {
         // default theme
@@ -64,4 +57,21 @@ class ThemeSwitcher {
 // check custom property support before creation
 if (window.CSS && CSS.supports('color', 'var(--fake-var)')) {
     theme = new ThemeSwitcher()
+}
+
+
+
+// index page map route toggle
+function toggleRoute(category) {
+    // get map div
+    let map = document.getElementById("map")
+
+    // toggle category class
+    if (map.classList.contains(category)) {
+        // remove class if it already exists
+        map.classList.remove(category)
+    } else {
+        // add class otherwise
+        map.classList.add(category)
+    }
 }

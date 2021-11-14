@@ -286,16 +286,23 @@ ol, ul {
   --clr-carton-100: #86c2b9;
   --clr-cardboard-900: #543c1e;
   --clr-cardboard-100: #d4b796;
+  --clr-paper-1000: #323323;
   --clr-paper-900: #494a34;
-  --clr-paper-500: #998b29;
+  --clr-paper-500: #9e8846;
   --clr-paper-100: #cecfa8;
+  --clr-metal-1000: #331e16;
   --clr-metal-900: #593426;
+  --clr-metal-500: #a65c4a;
   --clr-metal-100: #d6b5a7;
   --clr-aluminum-900: #404f4f;
   --clr-aluminum-100: #b4cccb;
+  --clr-glass-1000: #27332c;
   --clr-glass-900: #36473d;
+  --clr-glass-500: #469c6a;
   --clr-glass-100: #9dcfb2;
+  --clr-plastic-1000: #2a2533;
   --clr-plastic-900: #433b52;
+  --clr-plastic-500: #75619c;
   --clr-plastic-100: #c0b6d1;
 }
 
@@ -323,16 +330,23 @@ ol, ul {
   --clr-carton-100: #4f7572;
   --clr-cardboard-900: #ffecd6;
   --clr-cardboard-100: #736555;
+  --clr-paper-1000: #feffed;
   --clr-paper-900: #fdffcf;
-  --clr-paper-500: #998b29;
+  --clr-paper-500: #d6b85f;
   --clr-paper-100: #6e7056;
+  --clr-metal-1000: #fff2ed;
   --clr-metal-900: #ffe0d4;
+  --clr-metal-500: #de795f;
   --clr-metal-100: #7a625b;
   --clr-aluminum-900: #d6ffff;
   --clr-aluminum-100: #627575;
+  --clr-glass-1000: #edfff5;
   --clr-glass-900: #d6ffe7;
+  --clr-glass-500: #60d692;
   --clr-glass-100: #5a7365;
+  --clr-plastic-1000: #f3edff;
   --clr-plastic-900: #e4d6ff;
+  --clr-plastic-500: #a88fd6;
   --clr-plastic-100: #655e73;
 }
 
@@ -360,16 +374,23 @@ ol, ul {
   --clr-carton-100: #b9ede5;
   --clr-cardboard-900: #452d0f;
   --clr-cardboard-100: #f2dbc2;
+  --clr-paper-1000: #000000;
   --clr-paper-900: #42450f;
-  --clr-paper-500: #998b29;
+  --clr-paper-500: #cc9900;
   --clr-paper-100: #eff0c2;
+  --clr-metal-1000: #000000;
   --clr-metal-900: #451f10;
+  --clr-metal-500: #cc2700;
   --clr-metal-100: #f0d2c5;
   --clr-aluminum-900: #124545;
   --clr-aluminum-100: #d6f2f1;
+  --clr-glass-1000: #000000;
   --clr-glass-900: #104525;
+  --clr-glass-500: #00ab47;
   --clr-glass-100: #c2f2d6;
+  --clr-plastic-1000: #000000;
   --clr-plastic-900: #220f45;
+  --clr-plastic-500: #7e56cc;
   --clr-plastic-100: #e2d7f2;
 }
 
@@ -410,10 +431,16 @@ h2 {
   color: var(--clr-800);
 }
 
-.text--hero {
+.title--hero {
   font-size: min(8vw, calc(var(--main-max-width) * 0.08));
   letter-spacing: 0.01em;
   line-height: 0.95em;
+}
+.title--sm {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: min(1.5vw, calc(var(--main-max-width) * 0.015));
+  font-weight: 700;
+  color: var(--clr-900);
 }
 
 :root {
@@ -438,18 +465,16 @@ h2 {
   font-size: 1.15rem;
   line-height: 1.3em;
 }
-.footer__title {
-  font-family: "Lexend Deca", sans-serif;
-  font-size: 1.5rem;
-  color: var(--clr-900);
-}
 
 /* ========================================
     BREAKPOINTS
     ======================================== */
 @media only screen and (max-width: 1200px) {
-  .text--hero {
+  .title--hero {
     font-size: 10vw;
+  }
+  .title--sm {
+    font-size: 2.3vw;
   }
 
   /* button */
@@ -466,9 +491,12 @@ h2 {
   }
 }
 @media only screen and (max-width: 600px) {
-  .text--hero {
+  .title--hero {
     font-size: 14vw;
     line-height: 1em;
+  }
+  .title--sm {
+    font-size: 4.3vw;
   }
 
   /* button */
@@ -510,6 +538,7 @@ h2 {
 }
 /* === ACTUAL CODE ============================ */
 .button--lg {
+  box-sizing: border-box;
   display: block;
   padding: var(--button-lg-pad-vrt) var(--button-lg-pad-hrz) calc(var(--button-lg-pad-vrt) * 1.5) var(--button-lg-pad-hrz);
   border: var(--border-main);
