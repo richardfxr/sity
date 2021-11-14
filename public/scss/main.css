@@ -47,8 +47,11 @@ body {
 }
 
 .carton-bg {
-  fill: var(--clr-carton-bg);
-  stroke: var(--clr-carton-bg);
+  fill: var(--clr-carton-100);
+  stroke: var(--clr-carton-100);
+}
+.carton-h2 {
+  color: var(--clr-carton-900);
 }
 .carton-offwhite-3 {
   fill: var(--clr-carton-offwhite-3);
@@ -77,59 +80,53 @@ body {
 .carton-white-3 {
   fill: var(--clr-carton-white-3);
 }
-.carton-bg {
-  fill: var(--clr-carton-bg);
-}
-.carton-h2 {
-  color: var(--clr-carton-h2);
-}
 
 .cardboard-bg {
-  fill: var(--clr-cardboard-bg);
-  stroke: var(--clr-cardboard-bg);
+  fill: var(--clr-cardboard-100);
+  stroke: var(--clr-cardboard-100);
 }
 .cardboard-h2 {
-  color: var(--clr-cardboard-h2);
+  color: var(--clr-cardboard-900);
 }
 
 .paper-bg {
-  fill: var(--clr-paper-bg);
-  stroke: var(--clr-paper-bg);
+  fill: var(--clr-paper-100);
+  stroke: var(--clr-paper-100);
 }
 .paper-h2 {
-  color: var(--clr-paper-h2);
+  color: var(--clr-paper-900);
 }
 
 .metal-bg {
-  fill: var(--clr-metal-bg);
-  stroke: var(--clr-metal-bg);
+  fill: var(--clr-metal-100);
+  stroke: var(--clr-metal-100);
 }
 .metal-h2 {
-  color: var(--clr-metal-h2);
+  color: var(--clr-metal-900);
 }
 
 .aluminum-bg {
-  fill: var(--clr-aluminum-bg);
-  stroke: var(--clr-aluminum-bg);
+  fill: var(--clr-aluminum-100);
+  stroke: var(--clr-aluminum-100);
 }
 .aluminum-h2 {
-  color: var(--clr-aluminum-h2);
+  color: var(--clr-aluminum-900);
 }
 
 .glass-bg {
-  fill: var(--clr-glass-bg);
-  stroke: var(--clr-glass-bg);
+  fill: var(--clr-glass-100);
+  stroke: var(--clr-glass-100);
 }
 .glass-h2 {
-  color: var(--clr-glass-h2);
+  color: var(--clr-glass-900);
 }
 
 .plastic-bg {
-  fill: var(--clr-plastic-bg);
-  stroke: var(--clr-plastic-bg);
+  fill: var(--clr-plastic-100);
+  stroke: var(--clr-plastic-100);
 }
 .plastic-h2 {
-  color: var(--clr-plastic-h2);
+  color: var(--clr-plastic-900);
 }
 
 /* ========================================
@@ -285,20 +282,21 @@ ol, ul {
   --clr-carton-white-1: #f2f2f2;
   --clr-carton-white-2: #d6d6d6;
   --clr-carton-white-3: #b5b5b5;
-  --clr-carton-bg: #86c2b9;
-  --clr-carton-h2: #144352;
-  --clr-cardboard-bg: #d4b796;
-  --clr-cardboard-h2: #543c1e;
-  --clr-paper-bg: #cecfa8;
-  --clr-paper-h2: #494a34;
-  --clr-metal-bg: #d6b5a7;
-  --clr-metal-h2: #593426;
-  --clr-aluminum-bg: #b4cccb;
-  --clr-aluminum-h2: #404f4f;
-  --clr-glass-bg: #9dcfb2;
-  --clr-glass-h2: #36473d;
-  --clr-plastic-bg: #c0b6d1;
-  --clr-plastic-h2: #433b52;
+  --clr-carton-900: #144352;
+  --clr-carton-100: #86c2b9;
+  --clr-cardboard-900: #543c1e;
+  --clr-cardboard-100: #d4b796;
+  --clr-paper-900: #494a34;
+  --clr-paper-500: #998b29;
+  --clr-paper-100: #cecfa8;
+  --clr-metal-900: #593426;
+  --clr-metal-100: #d6b5a7;
+  --clr-aluminum-900: #404f4f;
+  --clr-aluminum-100: #b4cccb;
+  --clr-glass-900: #36473d;
+  --clr-glass-100: #9dcfb2;
+  --clr-plastic-900: #433b52;
+  --clr-plastic-100: #c0b6d1;
 }
 
 /* dark theme */
@@ -321,20 +319,21 @@ ol, ul {
   --clr-carton-white-1: #e0e0e0;
   --clr-carton-white-2: #c4c4c4;
   --clr-carton-white-3: #9e9e9e;
-  --clr-carton-bg: #4f7572;
-  --clr-carton-h2: #d6faff;
-  --clr-cardboard-bg: #736555;
-  --clr-cardboard-h2: #ffecd6;
-  --clr-paper-bg: #6e7056;
-  --clr-paper-h2: #fdffcf;
-  --clr-metal-bg: #7a625b;
-  --clr-metal-h2: #ffe0d4;
-  --clr-aluminum-bg: #627575;
-  --clr-aluminum-h2: #d6ffff;
-  --clr-glass-bg: #5a7365;
-  --clr-glass-h2: #d6ffe7;
-  --clr-plastic-bg: #655e73;
-  --clr-plastic-h2: #e4d6ff;
+  --clr-carton-900: #d6faff;
+  --clr-carton-100: #4f7572;
+  --clr-cardboard-900: #ffecd6;
+  --clr-cardboard-100: #736555;
+  --clr-paper-900: #fdffcf;
+  --clr-paper-500: #998b29;
+  --clr-paper-100: #6e7056;
+  --clr-metal-900: #ffe0d4;
+  --clr-metal-100: #7a625b;
+  --clr-aluminum-900: #d6ffff;
+  --clr-aluminum-100: #627575;
+  --clr-glass-900: #d6ffe7;
+  --clr-glass-100: #5a7365;
+  --clr-plastic-900: #e4d6ff;
+  --clr-plastic-100: #655e73;
 }
 
 /* high contrast theme */
@@ -357,20 +356,21 @@ ol, ul {
   --clr-carton-white-1: #FFFFFF;
   --clr-carton-white-2: #e6e6e6;
   --clr-carton-white-3: #a6a6a6;
-  --clr-carton-bg: #b9ede5;
-  --clr-carton-h2: #0f3845;
-  --clr-cardboard-bg: #f2dbc2;
-  --clr-cardboard-h2: #452d0f;
-  --clr-paper-bg: #eff0c2;
-  --clr-paper-h2: #42450f;
-  --clr-metal-bg: #f0d2c5;
-  --clr-metal-h2: #451f10;
-  --clr-aluminum-bg: #d6f2f1;
-  --clr-aluminum-h2: #124545;
-  --clr-glass-bg: #c2f2d6;
-  --clr-glass-h2: #104525;
-  --clr-plastic-bg: #e2d7f2;
-  --clr-plastic-h2: #220f45;
+  --clr-carton-900: #0f3845;
+  --clr-carton-100: #b9ede5;
+  --clr-cardboard-900: #452d0f;
+  --clr-cardboard-100: #f2dbc2;
+  --clr-paper-900: #42450f;
+  --clr-paper-500: #998b29;
+  --clr-paper-100: #eff0c2;
+  --clr-metal-900: #451f10;
+  --clr-metal-100: #f0d2c5;
+  --clr-aluminum-900: #124545;
+  --clr-aluminum-100: #d6f2f1;
+  --clr-glass-900: #104525;
+  --clr-glass-100: #c2f2d6;
+  --clr-plastic-900: #220f45;
+  --clr-plastic-100: #e2d7f2;
 }
 
 /* ========================================

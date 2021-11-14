@@ -27,6 +27,7 @@ body{
 
    /* map */
    --map-illu-pad-left: min(10vw, calc(var(--main-max-width) * 0.1));
+   --map-route-strokewidth: 8px;
    --map-categories-position: absolute;
    --map-categories-flex: column nowrap;
 }
@@ -364,11 +365,28 @@ main{
    padding: var(--main-pad-vrt) 0;
 
    &__main{
+      position: relative;
       padding-left: var(--map-illu-pad-left);
    }
 
    &__illu{
       fill: var(--clr-100);
+   }
+
+   &__route{
+      &--svg{
+         position: absolute;
+         top: 0;
+         left: var(--map-illu-pad-left);
+      }
+
+      &--path{
+         fill: none;
+         stroke: #29abe2;
+         stroke-linecap: round;
+         stroke-linejoin: round;
+         stroke-width: var(--map-route-strokewidth);
+      }
    }
 
    &__categories{
@@ -383,9 +401,9 @@ main{
          padding-bottom: var(--footer-link-pad-bottom);
       }
 
-      button#paper{
-         color: var(--clr-paper-h2);
-         background-color: var(--clr-paper-bg);
+      button#mapPaper{
+         color: var(--clr-paper-900);
+         background-color: var(--clr-paper-100);
          border-color: rgba(0, 0, 0, 0);
 
          &:hover{
@@ -398,9 +416,9 @@ main{
          }
       }
 
-      button#metal{
-         color: var(--clr-metal-h2);
-         background-color: var(--clr-metal-bg);
+      button#mapMetal{
+         color: var(--clr-metal-900);
+         background-color: var(--clr-metal-100);
          border-color: rgba(0, 0, 0, 0);
 
          &:hover{
@@ -413,9 +431,9 @@ main{
          }
       }
 
-      button#glass{
-         color: var(--clr-glass-h2);
-         background-color: var(--clr-glass-bg);
+      button#mapGlass{
+         color: var(--clr-glass-900);
+         background-color: var(--clr-glass-100);
          border-color: rgba(0, 0, 0, 0);
 
          &:hover{
@@ -428,9 +446,9 @@ main{
          }
       }
 
-      button#plastic{
-         color: var(--clr-plastic-h2);
-         background-color: var(--clr-plastic-bg);
+      button#mapPlastic{
+         color: var(--clr-plastic-900);
+         background-color: var(--clr-plastic-100);
          border-color: rgba(0, 0, 0, 0);
 
          &:hover{

@@ -29,26 +29,27 @@ $light: (
     carton-white-1: #f2f2f2,
     carton-white-2: #d6d6d6,
     carton-white-3: #b5b5b5,
-    carton-bg: #86c2b9,
-    carton-h2: #144352,
-
-    cardboard-bg: #d4b796,
-    cardboard-h2: #543c1e,
-
-    paper-bg: #cecfa8,
-    paper-h2: #494a34,
-
-    metal-bg: #d6b5a7,
-    metal-h2: #593426,
-
-    aluminum-bg: #b4cccb,
-    aluminum-h2: #404f4f,
-
-    glass-bg: #9dcfb2,
-    glass-h2: #36473d,
-
-    plastic-bg: #c0b6d1,
-    plastic-h2: #433b52,
+    carton-900: #144352,
+    carton-100: #86c2b9,
+    
+    cardboard-900: #543c1e,
+    cardboard-100: #d4b796,
+    
+    paper-900: #494a34,
+    paper-500: #998b29,
+    paper-100: #cecfa8,
+    
+    metal-900: #593426,
+    metal-100: #d6b5a7,
+    
+    aluminum-900: #404f4f,
+    aluminum-100: #b4cccb,
+    
+    glass-900: #36473d,
+    glass-100: #9dcfb2,
+    
+    plastic-900: #433b52,
+    plastic-100: #c0b6d1,
 );
 
 
@@ -76,26 +77,28 @@ $dark: (
     carton-white-1: #e0e0e0,
     carton-white-2: #c4c4c4,
     carton-white-3: #9e9e9e,
-    carton-bg: #4f7572,
-    carton-h2: #d6faff,
+    carton-900: #d6faff,
+    carton-100: #4f7572,
 
-    cardboard-bg: #736555,
-    cardboard-h2: #ffecd6,
+    cardboard-900: #ffecd6,
+    cardboard-100: #736555,
 
-    paper-bg: #6e7056,
-    paper-h2: #fdffcf,
+    paper-900: #fdffcf,
+    paper-500: #998b29,
+    paper-100: #6e7056,
 
-    metal-bg: #7a625b,
-    metal-h2: #ffe0d4,
+    metal-900: #ffe0d4,
+    metal-100: #7a625b,
 
-    aluminum-bg: #627575,
-    aluminum-h2: #d6ffff,
+    aluminum-900: #d6ffff,
+    aluminum-100: #627575,
 
-    glass-bg: #5a7365,
-    glass-h2: #d6ffe7,
+    glass-900: #d6ffe7,
+    glass-100: #5a7365,
 
-    plastic-bg: #655e73,
-    plastic-h2: #e4d6ff,
+    plastic-900: #e4d6ff,
+    plastic-100: #655e73,
+    
 );
 
 
@@ -123,24 +126,25 @@ $hc: (
     carton-white-1: #FFFFFF,
     carton-white-2: #e6e6e6,
     carton-white-3: #a6a6a6,
-    carton-bg: #b9ede5,
-    carton-h2: #0f3845,
-
-    cardboard-bg: #f2dbc2,
-    cardboard-h2: #452d0f,
-
-    paper-bg: #eff0c2,
-    paper-h2: #42450f,
-
-    metal-bg: #f0d2c5,
-    metal-h2: #451f10,
-
-    aluminum-bg: #d6f2f1,
-    aluminum-h2: #124545,
-
-    glass-bg: #c2f2d6,
-    glass-h2: #104525,
-
-    plastic-bg: #e2d7f2,
-    plastic-h2: #220f45,
+    carton-900: #0f3845,
+    carton-100: #b9ede5,
+    
+    cardboard-900: #452d0f,
+    cardboard-100: #f2dbc2,
+    
+    paper-900: #42450f,
+    paper-500: #998b29,
+    paper-100: #eff0c2,
+    
+    metal-900: #451f10,
+    metal-100: #f0d2c5,
+    
+    aluminum-900: #124545,
+    aluminum-100: #d6f2f1,
+    
+    glass-900: #104525,
+    glass-100: #c2f2d6,
+    
+    plastic-900: #220f45,
+    plastic-100: #e2d7f2,
 );

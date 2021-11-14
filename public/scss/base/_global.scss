@@ -56,8 +56,12 @@ body{
 
 .carton{
    &-bg{
-      fill: var(--clr-carton-bg);
-      stroke: var(--clr-carton-bg);
+      fill: var(--clr-carton-100);
+      stroke: var(--clr-carton-100);
+   }
+
+   &-h2{
+      color: var(--clr-carton-900)
    }
 
    &-offwhite-3{
@@ -95,79 +99,71 @@ body{
    &-white-3{
       fill: var(--clr-carton-white-3);
    }
-
-   &-bg{
-      fill: var(--clr-carton-bg);
-   }
-
-   &-h2{
-      color: var(--clr-carton-h2)
-   }
 }
 
 .cardboard{
    &-bg{
-      fill: var(--clr-cardboard-bg);
-      stroke: var(--clr-cardboard-bg);
+      fill: var(--clr-cardboard-100);
+      stroke: var(--clr-cardboard-100);
    }
 
    &-h2{
-      color: var(--clr-cardboard-h2);
+      color: var(--clr-cardboard-900);
    }
 }
 
 .paper{
    &-bg{
-      fill: var(--clr-paper-bg);
-      stroke: var(--clr-paper-bg);
+      fill: var(--clr-paper-100);
+      stroke: var(--clr-paper-100);
    }
 
    &-h2{
-      color: var(--clr-paper-h2);
+      color: var(--clr-paper-900);
    }
 }
 
 .metal{
    &-bg{
-      fill: var(--clr-metal-bg);
-      stroke: var(--clr-metal-bg);
+      fill: var(--clr-metal-100);
+      stroke: var(--clr-metal-100);
    }
 
    &-h2{
-      color: var(--clr-metal-h2);
+      color: var(--clr-metal-900);
    }
 }
 
 .aluminum{
    &-bg{
-      fill: var(--clr-aluminum-bg);
-      stroke: var(--clr-aluminum-bg);
+      fill: var(--clr-aluminum-100);
+      stroke: var(--clr-aluminum-100);
    }
 
    &-h2{
-      color: var(--clr-aluminum-h2);
+      color: var(--clr-aluminum-900);
    }
 }
 
 .glass{
    &-bg{
-      fill: var(--clr-glass-bg);
-      stroke: var(--clr-glass-bg);
+      fill: var(--clr-glass-100);
+      stroke: var(--clr-glass-100);
    }
 
    &-h2{
-      color: var(--clr-glass-h2);
+      color: var(--clr-glass-900);
    }
 }
 
 .plastic{
    &-bg{
-      fill: var(--clr-plastic-bg);
-      stroke: var(--clr-plastic-bg);
+      fill: var(--clr-plastic-100);
+      stroke: var(--clr-plastic-100);
    }
 
    &-h2{
-      color: var(--clr-plastic-h2);
+      color: var(--clr-plastic-900);
    }
 }
 
