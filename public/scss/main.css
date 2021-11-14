@@ -431,16 +431,25 @@ h2 {
   color: var(--clr-800);
 }
 
-.title--hero {
+.text--xl {
   font-size: min(8vw, calc(var(--main-max-width) * 0.08));
   letter-spacing: 0.01em;
   line-height: 0.95em;
 }
-.title--sm {
+.text--lg {
+  font-family: "Doughy", sans-serif;
+  font-size: min(4vw, calc(var(--main-max-width) * 0.04));
+  line-height: 1em;
+}
+.text--md {
   font-family: "Lexend Deca", sans-serif;
   font-size: min(1.5vw, calc(var(--main-max-width) * 0.015));
   font-weight: 700;
   color: var(--clr-900);
+}
+.text--sm {
+  font-size: 1.15rem;
+  line-height: 1.3em;
 }
 
 :root {
@@ -455,61 +464,46 @@ h2 {
   line-height: 1.3em;
 }
 
-/* footer */
-.footer__suggestions {
-  font-family: "Doughy", sans-serif;
-  font-size: min(4vw, calc(var(--main-max-width) * 0.04));
-  line-height: 1em;
-}
-.footer__credits, .footer__version {
-  font-size: 1.15rem;
-  line-height: 1.3em;
-}
-
 /* ========================================
     BREAKPOINTS
     ======================================== */
 @media only screen and (max-width: 1200px) {
-  .title--hero {
+  .text--xl {
     font-size: 10vw;
   }
-  .title--sm {
+  .text--lg {
+    font-size: 6.8vw;
+  }
+  .text--md {
     font-size: 2.3vw;
+  }
+  .text--sm {
+    font-size: 1.1rem;
   }
 
   /* button */
   .button--lg {
     font-size: 4vw;
   }
-
-  /* footer */
-  .footer__suggestions {
-    font-size: 6.8vw;
-  }
-  .footer__credits, .footer__version {
-    font-size: 1.1rem;
-  }
 }
 @media only screen and (max-width: 600px) {
-  .title--hero {
+  .text--xl {
     font-size: 14vw;
     line-height: 1em;
   }
-  .title--sm {
+  .text--lg {
+    font-size: 9.5vw;
+  }
+  .text--md {
     font-size: 4.3vw;
+  }
+  .text--sm {
+    font-size: 1.1rem;
   }
 
   /* button */
   .button--lg {
     font-size: 7vw;
-  }
-
-  /* footer */
-  .footer__suggestions {
-    font-size: 9.5vw;
-  }
-  .footer__credits, .footer__version {
-    font-size: 1.1rem;
   }
 }
 /* ============================================

@@ -29,18 +29,29 @@ h2{
     color: var(--clr-800);
 }
 
-.title{
-    &--hero{
+.text{
+    &--xl{
         font-size: min(8vw, calc(var(--main-max-width) * 0.08));
         letter-spacing: 0.01em;
         line-height: 0.95em;
     }
 
-    &--sm{
+    &--lg{
+        font-family: 'Doughy', sans-serif;
+        font-size: min(4vw, calc(var(--main-max-width) * 0.04));
+        line-height: 1em;
+    }
+
+    &--md{
         font-family: 'Lexend Deca', sans-serif;
         font-size: min(1.5vw, calc(var(--main-max-width) * 0.015));
         font-weight: 700;
         color: var(--clr-900);
+    }
+
+    &--sm{
+        font-size: 1.15rem;
+        line-height: 1.3em;
     }
 }
 
@@ -58,19 +69,6 @@ h2{
     }
 }
 
-/* footer */
-.footer{
-    &__suggestions{
-        font-family: 'Doughy', sans-serif;
-        font-size: min(4vw, calc(var(--main-max-width) * 0.04));
-        line-height: 1em;
-    }
-
-    &__credits, &__version{
-        font-size: 1.15rem;
-        line-height: 1.3em;
-    }
-}
 
 
 /* ========================================
@@ -78,13 +76,21 @@ h2{
     ======================================== */
 
 @media only screen and (max-width: g.$breakpoint-tablet){
-    .title{
-        &--hero{
+    .text{
+        &--xl{
             font-size: 10vw;
         }
 
-        &--sm{
+        &--lg{
+            font-size: 6.8vw;
+        }
+
+        &--md{
             font-size: 2.3vw;
+        }
+
+        &--sm{
+            font-size: 1.1rem;
         }
     }
 
@@ -94,28 +100,25 @@ h2{
             font-size: 4vw;
         }
     }
-
-    /* footer */
-    .footer{
-        &__suggestions{
-            font-size: 6.8vw;
-        }
-
-        &__credits, &__version{
-            font-size: 1.1rem;
-        }
-    }
 }
 
 @media only screen and (max-width: g.$breakpoint-mobile){
-    .title{
-        &--hero{
+    .text{
+        &--xl{
             font-size: 14vw;
             line-height: 1em;
         }
 
-        &--sm{
+        &--lg{
+            font-size: 9.5vw;
+        }
+
+        &--md{
             font-size: 4.3vw;
+        }
+
+        &--sm{
+            font-size: 1.1rem;
         }
     }
 
@@ -124,18 +127,6 @@ h2{
     .button{
         &--lg{
             font-size: 7vw;
-        }
-    }
-
-
-    /* footer */
-    .footer{
-        &__suggestions{
-            font-size: 9.5vw;
-        }
-
-        &__credits, &__version{
-            font-size: 1.1rem;
         }
     }
 }
