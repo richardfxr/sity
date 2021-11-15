@@ -90,11 +90,11 @@ h2{
 @media only screen and (max-width: g.$breakpoint-tablet){
     .text{
         &--xl{
-            font-size: 10vw;
+            font-size: 8.5vw;
         }
 
         &--lg{
-            font-size: 6.8vw;
+            font-size: 6vw;
         }
 
         &--md{
@@ -117,12 +117,12 @@ h2{
 @media only screen and (max-width: g.$breakpoint-mobile){
     .text{
         &--xl{
-            font-size: 14vw;
+            font-size: 13vw;
             line-height: 1em;
         }
 
         &--lg{
-            font-size: 9.5vw;
+            font-size: 9vw;
         }
 
         &--md{

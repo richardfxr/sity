@@ -97,7 +97,7 @@ html, body{
    &--xl a, &--lg a{
       color: var(--clr-800a);
    }
-   
+
    &--accent{
       color: var(--clr-800a);
    }
@@ -377,7 +377,7 @@ main{
 /* === MAP ==================================== */
 .map{
    position: relative;
-   padding: var(--main-pad-vrt) 0;
+   padding: var(--main-pad-vrt) 0 var(--main-pad-lg);
 
    &__main{
       position: relative;
@@ -437,7 +437,7 @@ main{
 
    &__menu{
       position: var(--map-categories-position);
-      bottom: min(4vw, calc(var(--main-max-width) * 0.04));
+      bottom: min(6vw, calc(var(--main-max-width) * 0.06));
       left: 0;
    }
 
@@ -545,6 +545,12 @@ main{
 }
 
 
+/* === OTHER THAN RECYCLE ===================== */
+#nottrash{
+   padding-top: var(--main-pad-xl);
+}
+
+
 /* === FOOTER ================================= */
 footer{
    background-color: var(--clr-50);
@@ -579,6 +585,10 @@ footer{
    ======================================== */
 
 @media only screen and (max-width: b.$breakpoint-tablet){
+   .hero{
+      width: 80%;
+   }
+   
    .carton{
       &-illu{
          width: 17.5vw;
@@ -654,6 +664,7 @@ footer{
 
    /* map */
    .map{
+      padding-bottom: calc(var(--main-pad-vrt) - var(--footer-link-pad-bottom));
       &__menu{
          padding-top: var(--map-categories-top);
       }

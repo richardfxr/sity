@@ -20,8 +20,9 @@
     --border-main-ds: 0 0 0 1px var(--clr-stroke);
 
     --main-max-width: 2200px;
-    --main-pad-vrt: min(5vw, calc(var(--main-max-width) * 0.05));
+    --main-pad-vrt: min(7vw, calc(var(--main-max-width) * 0.07));
     --main-pad-hrz: min(5vw, calc(var(--main-max-width) * 0.05));
+    --main-pad-xl: min(15vw, calc(var(--main-max-width) * 0.15));
     --main-pad-lg: min(10vw, calc(var(--main-max-width) * 0.1));
     --tooltip-pad-vrt: 0.2rem;
     --tooltip-pad-hrz: 0.65rem;
@@ -64,7 +65,8 @@
     :root{
         --border-main: solid 1.5px;
         --main-pad-vrt: 7vw;
-        --main-pad-lg: 13vw;
+        --main-pad-xl: 20vw;
+        --main-pad-lg: 15vw;
     }
 }
 
@@ -72,6 +74,7 @@
     :root{
         --border-main: solid 2px;
         --main-pad-vrt: 17vw;
+        --main-pad-xl: 30vw;
         --main-pad-lg: 23vw;
     }
 }

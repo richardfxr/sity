@@ -245,8 +245,9 @@ ol, ul {
   --border-main: solid 2px;
   --border-main-ds: 0 0 0 1px var(--clr-stroke);
   --main-max-width: 2200px;
-  --main-pad-vrt: min(5vw, calc(var(--main-max-width) * 0.05));
+  --main-pad-vrt: min(7vw, calc(var(--main-max-width) * 0.07));
   --main-pad-hrz: min(5vw, calc(var(--main-max-width) * 0.05));
+  --main-pad-xl: min(15vw, calc(var(--main-max-width) * 0.15));
   --main-pad-lg: min(10vw, calc(var(--main-max-width) * 0.1));
   --tooltip-pad-vrt: 0.2rem;
   --tooltip-pad-hrz: 0.65rem;
@@ -392,13 +393,15 @@ ol, ul {
   :root {
     --border-main: solid 1.5px;
     --main-pad-vrt: 7vw;
-    --main-pad-lg: 13vw;
+    --main-pad-xl: 20vw;
+    --main-pad-lg: 15vw;
   }
 }
 @media only screen and (max-width: 600px) {
   :root {
     --border-main: solid 2px;
     --main-pad-vrt: 17vw;
+    --main-pad-xl: 30vw;
     --main-pad-lg: 23vw;
   }
 }
@@ -470,10 +473,10 @@ h2 {
     ======================================== */
 @media only screen and (max-width: 1200px) {
   .text--xl {
-    font-size: 10vw;
+    font-size: 8.5vw;
   }
   .text--lg {
-    font-size: 6.8vw;
+    font-size: 6vw;
   }
   .text--md {
     font-size: 2.3vw;
@@ -489,11 +492,11 @@ h2 {
 }
 @media only screen and (max-width: 600px) {
   .text--xl {
-    font-size: 14vw;
+    font-size: 13vw;
     line-height: 1em;
   }
   .text--lg {
-    font-size: 9.5vw;
+    font-size: 9vw;
   }
   .text--md {
     font-size: 4.3vw;
@@ -932,7 +935,7 @@ main {
 /* === MAP ==================================== */
 .map {
   position: relative;
-  padding: var(--main-pad-vrt) 0;
+  padding: var(--main-pad-vrt) 0 var(--main-pad-lg);
 }
 .map__main {
   position: relative;
@@ -982,7 +985,7 @@ main {
 }
 .map__menu {
   position: var(--map-categories-position);
-  bottom: min(4vw, calc(var(--main-max-width) * 0.04));
+  bottom: min(6vw, calc(var(--main-max-width) * 0.06));
   left: 0;
 }
 .map__cattitle {
@@ -1072,6 +1075,11 @@ main {
   border-color: var(--clr-plastic-500);
 }
 
+/* === OTHER THAN RECYCLE ===================== */
+#nottrash {
+  padding-top: var(--main-pad-xl);
+}
+
 /* === FOOTER ================================= */
 footer {
   background-color: var(--clr-50);
@@ -1097,6 +1105,10 @@ footer .button--lg:focus-visible {
    BREAKPOINTS
    ======================================== */
 @media only screen and (max-width: 1200px) {
+  .hero {
+    width: 80%;
+  }
+
   .carton-illu {
     width: 17.5vw;
     top: 10vw !important;
@@ -1156,6 +1168,9 @@ footer .button--lg:focus-visible {
   }
 
   /* map */
+  .map {
+    padding-bottom: calc(var(--main-pad-vrt) - var(--footer-link-pad-bottom));
+  }
   .map__menu {
     padding-top: var(--map-categories-top);
   }
