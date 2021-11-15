@@ -19,15 +19,6 @@ body {
   transition: color var(--transition-100), background-color var(--transition-100), border-color var(--transition-100), fill var(--transition-100), stroke var(--transition-100);
 }
 
-/* link highlights on focus */
-.a--highlight {
-  text-decoration: underline;
-}
-.a--highlight:focus-visible {
-  -webkit-text-decoration-color: var(--clr-border);
-          text-decoration-color: var(--clr-border);
-}
-
 /* logos */
 .clr-800 {
   fill: var(--clr-800);
@@ -451,6 +442,16 @@ h2 {
   font-size: 1.15rem;
   line-height: 1.3em;
 }
+.text--xl a, .text--lg a {
+  text-decoration: underline;
+}
+.text--link {
+  text-decoration: underline;
+}
+.text--link:focus-visible {
+  -webkit-text-decoration-color: var(--clr-border);
+          text-decoration-color: var(--clr-border);
+}
 
 :root {
   --fs-9: 0.9rem;
@@ -712,6 +713,12 @@ html, body {
   background-color: var(--clr-0);
 }
 
+.text--xl, .text--lg, .text--md .text--sm {
+  color: var(--clr-800);
+}
+.text--xl a, .text--lg a {
+  color: var(--clr-800a);
+}
 .text--accent {
   color: var(--clr-800a);
 }
@@ -1084,12 +1091,6 @@ footer .button--lg:focus-visible {
 
 .footer__transition {
   background-color: var(--clr-0);
-}
-.footer__suggestions {
-  color: var(--clr-800);
-}
-.footer__suggestions a {
-  color: var(--clr-800a);
 }
 
 /* ========================================

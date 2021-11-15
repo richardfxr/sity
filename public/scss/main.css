@@ -19,15 +19,6 @@ body {
   transition: color var(--transition-100), background-color var(--transition-100), border-color var(--transition-100), fill var(--transition-100), stroke var(--transition-100);
 }
 
-/* link highlights on focus */
-.a--highlight {
-  text-decoration: underline;
-}
-.a--highlight:focus-visible {
-  -webkit-text-decoration-color: var(--clr-border);
-          text-decoration-color: var(--clr-border);
-}
-
 /* logos */
 .clr-800 {
   fill: var(--clr-800);
@@ -450,6 +441,16 @@ h2 {
 .text--sm {
   font-size: 1.15rem;
   line-height: 1.3em;
+}
+.text--xl a, .text--lg a {
+  text-decoration: underline;
+}
+.text--link {
+  text-decoration: underline;
+}
+.text--link:focus-visible {
+  -webkit-text-decoration-color: var(--clr-border);
+          text-decoration-color: var(--clr-border);
 }
 
 :root {

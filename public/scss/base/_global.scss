@@ -24,15 +24,6 @@ body{
                stroke var(--transition-100);
 }
 
-/* link highlights on focus */
-.a--highlight{
-   text-decoration: underline;
-
-   &:focus-visible{
-      text-decoration-color: var(--clr-border);
-   }
-}
-
 /* logos */
 .clr-800{
    fill: var(--clr-800);

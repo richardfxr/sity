@@ -90,6 +90,14 @@ html, body{
 }
 
 .text{
+   &--xl, &--lg, &--md &--sm{
+      color: var(--clr-800);
+   }
+
+   &--xl a, &--lg a{
+      color: var(--clr-800a);
+   }
+   
    &--accent{
       color: var(--clr-800a);
    }
@@ -562,14 +570,6 @@ footer{
 .footer{
    &__transition{
       background-color: var(--clr-0);
-   }
-
-   &__suggestions{
-      color: var(--clr-800);
-
-      a{
-         color: var(--clr-800a);
-      }
    }
 }
 
