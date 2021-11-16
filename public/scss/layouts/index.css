@@ -149,6 +149,39 @@ body {
 .plastic-h2 {
   color: var(--clr-plastic-900);
 }
+.plastic-bottle-0 {
+  fill: var(--clr-plastic-bottle-0);
+}
+.plastic-bottle-1-1 {
+  fill: var(--clr-plastic-bottle-1-1);
+}
+.plastic-bottle-1-2 {
+  fill: var(--clr-plastic-bottle-1-2);
+}
+.plastic-bottle-2 {
+  fill: var(--clr-plastic-bottle-2);
+}
+.plastic-bottle-3-1 {
+  fill: var(--clr-plastic-bottle-3-1);
+}
+.plastic-bottle-3-2 {
+  fill: var(--clr-plastic-bottle-3-2);
+}
+.plastic-bottle-4-1 {
+  fill: var(--clr-plastic-bottle-4-1);
+}
+.plastic-bottle-4-2 {
+  fill: var(--clr-plastic-bottle-4-2);
+}
+.plastic-purple-1 {
+  fill: var(--clr-plastic-purple-1);
+}
+.plastic-purple-2 {
+  fill: var(--clr-plastic-purple-2);
+}
+.plastic-purple-3 {
+  fill: var(--clr-plastic-purple-3);
+}
 
 /* ========================================
     BREAKPOINTS
@@ -332,6 +365,17 @@ ol, ul {
   --clr-glass-900: #36473d;
   --clr-glass-500: #469c6a;
   --clr-glass-100: #9dcfb2;
+  --clr-plastic-bottle-0: #DCF7D7;
+  --clr-plastic-bottle-1-1: #BDCAE6;
+  --clr-plastic-bottle-1-2: #C7CCF0;
+  --clr-plastic-bottle-2: #B5B5CF;
+  --clr-plastic-bottle-3-1: #8F99B8;
+  --clr-plastic-bottle-3-2: #8F90B8;
+  --clr-plastic-bottle-4-1: #647896;
+  --clr-plastic-bottle-4-2: #65669E;
+  --clr-plastic-purple-1: #C0AFE0;
+  --clr-plastic-purple-2: #A591C9;
+  --clr-plastic-purple-3: #917DB5;
   --clr-plastic-1000: #2a2533;
   --clr-plastic-900: #433b52;
   --clr-plastic-500: #75619c;
@@ -386,8 +430,19 @@ ol, ul {
   --clr-glass-900: #d6ffe7;
   --clr-glass-500: #60d692;
   --clr-glass-100: #5a7365;
+  --clr-plastic-bottle-0: #C2D9BF;
+  --clr-plastic-bottle-1-1: #939DB8;
+  --clr-plastic-bottle-1-2: #8F95AD;
+  --clr-plastic-bottle-2: #777794;
+  --clr-plastic-bottle-3-1: #848EAB;
+  --clr-plastic-bottle-3-2: #8788AD;
+  --clr-plastic-bottle-4-1: #5B6E8A;
+  --clr-plastic-bottle-4-2: #5D5E91;
+  --clr-plastic-purple-1: #B09FCC;
+  --clr-plastic-purple-2: #9381B3;
+  --clr-plastic-purple-3: #7C6B9C;
   --clr-plastic-1000: #f3edff;
-  --clr-plastic-900: #e4d6ff;
+  --clr-plastic-900: #E9DEFF;
   --clr-plastic-500: #a88fd6;
   --clr-plastic-100: #655e73;
 }
@@ -440,6 +495,17 @@ ol, ul {
   --clr-glass-900: #104525;
   --clr-glass-500: #00ab47;
   --clr-glass-100: #c2f2d6;
+  --clr-plastic-bottle-0: #F7FFF5;
+  --clr-plastic-bottle-1-1: #D6E3FF;
+  --clr-plastic-bottle-1-2: #E3E6FF;
+  --clr-plastic-bottle-2: #D2C7E0;
+  --clr-plastic-bottle-3-1: #AAB2CF;
+  --clr-plastic-bottle-3-2: #A5A6D4;
+  --clr-plastic-bottle-4-1: #647896;
+  --clr-plastic-bottle-4-2: #65669E;
+  --clr-plastic-purple-1: #E9DEFF;
+  --clr-plastic-purple-2: #B7A3E0;
+  --clr-plastic-purple-3: #8D7AB0;
   --clr-plastic-1000: #000000;
   --clr-plastic-900: #220f45;
   --clr-plastic-500: #7e56cc;
@@ -992,6 +1058,11 @@ main {
   position: relative;
   top: 0;
 }
+.plastic-illu {
+  width: min(7.5vw, calc(var(--main-max-width) * 0.075));
+  top: min(7vw, calc(var(--main-max-width) * 0.07)) !important;
+  left: min(9vw, calc(var(--main-max-width) * 0.09)) !important;
+}
 .plastic-h2 {
   top: min(15vw, calc(var(--main-max-width) * 0.15)) !important;
   left: min(5vw, calc(var(--main-max-width) * 0.05)) !important;
@@ -1232,6 +1303,11 @@ footer .button--lg:focus-visible {
   .plastic-link {
     top: 0;
   }
+  .plastic-illu {
+    width: 11vw;
+    top: 12vw !important;
+    left: 13.5vw !important;
+  }
   .plastic-h2 {
     top: 21vw !important;
     left: 8vw !important;
@@ -1320,6 +1396,11 @@ footer .button--lg:focus-visible {
   .plastic-link {
     top: -10vw;
     left: -10vw;
+  }
+  .plastic-illu {
+    width: 26vw;
+    top: 28vw !important;
+    left: 33vw !important;
   }
   .plastic-h2 {
     top: 55vw !important;
