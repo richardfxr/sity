@@ -976,7 +976,7 @@ main {
 }
 .aluminum-h2 {
   top: min(14vw, calc(var(--main-max-width) * 0.14)) !important;
-  left: min(4vw, calc(var(--main-max-width) * 0.04)) !important;
+  left: min(9vw, calc(var(--main-max-width) * 0.9)) !important;
 }
 
 .glass-link {
@@ -1218,7 +1218,7 @@ footer .button--lg:focus-visible {
   }
   .aluminum-h2 {
     top: 21vw !important;
-    left: 6vw !important;
+    left: 15vw !important;
   }
 
   .glass-link {
@@ -1305,7 +1305,7 @@ footer .button--lg:focus-visible {
   }
   .aluminum-h2 {
     top: 50vw !important;
-    left: 15vw !important;
+    left: 35vw !important;
   }
 
   .glass-link {
@@ -1323,7 +1323,7 @@ footer .button--lg:focus-visible {
   }
   .plastic-h2 {
     top: 55vw !important;
-    left: 15vw !important;
+    left: 20vw !important;
   }
 
   /* map */
