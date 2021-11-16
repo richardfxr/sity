@@ -343,22 +343,10 @@ main{
    }
 }
 
-.aluminum{
-   &-link{
-      position: relative;
-      top: max(calc(var(--main-max-width) * -0.03), -3vw);
-   }
-
-   &-h2{
-      top: min(14vw, calc(var(--main-max-width) * 0.14)) !important;
-      left: min(9vw, calc(var(--main-max-width) * 0.9)) !important;
-   }
-}
-
 .glass{
    &-link{
       position: relative;
-      top: max(calc(var(--main-max-width) * -0.06), -6vw);
+      top: max(calc(var(--main-max-width) * -0.03), -3vw);
    }
 
    &-h2{
@@ -370,7 +358,7 @@ main{
 .plastic{
    &-link{
       position: relative;
-      top: 0;
+      top: max(calc(var(--main-max-width) * -0.06), -6vw);
    }
 
    &-illu{
@@ -653,20 +641,9 @@ footer{
       }
    }
 
-   .aluminum{
-      &-link{
-         top: 0;
-      }
-
-      &-h2{
-         top: 21vw !important;
-         left: 15vw !important;
-      }
-   }
-
    .glass{
       &-link{
-         top: -5vw;
+         top: 0;
       }
 
       &-h2{
@@ -677,7 +654,7 @@ footer{
 
    .plastic{
       &-link{
-         top: 0;
+         top: -5vw;
       }
 
       &-illu{
@@ -774,34 +751,22 @@ footer{
       }
    }
 
-   .aluminum{
-      &-link{
-         top: -12vw;
-         left: -10vw;
-      }
-
-      &-h2{
-         top: 50vw !important;
-         left: 35vw !important;
-      }
-   }
-
    .glass{
       &-link{
-         top: -10vw;
-         left: 6vw;
+         top: -12vw;
+         left: -16vw;
       }
 
       &-h2{
          top: 60vw !important;
-         left: 35vw !important;
+         left: 38vw !important;
       }
    }
 
    .plastic{
       &-link{
          top: -10vw;
-         left: -10vw;
+         left: 6vw;
       }
 
       &-illu{
@@ -812,7 +777,7 @@ footer{
 
       &-h2{
          top: 55vw !important;
-         left: 20vw !important;
+         left: 18vw !important;
       }
    }
 
