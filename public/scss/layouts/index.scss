@@ -325,15 +325,21 @@ main{
    }
 }
 
-.metal{
+.can{
    &-link{
       position: relative;
       top: 0;
    }
 
+   &-illu{
+      width: min(8.8vw, calc(var(--main-max-width) * 0.088));
+      top: min(7.5vw, calc(var(--main-max-width) * 0.075)) !important;
+      left: min(8.5vw, calc(var(--main-max-width) * 0.085)) !important;
+   }
+
    &-h2{
       top: min(16vw, calc(var(--main-max-width) * 0.16)) !important;
-      left: min(7vw, calc(var(--main-max-width) * 0.07)) !important;
+      left: min(8vw, calc(var(--main-max-width) * 0.08)) !important;
    }
 }
 
@@ -606,6 +612,7 @@ footer{
       &-link{
          top: -2vw;
       }
+
       &-h2{
          top: 24vw !important;
          left: 3vw !important;
@@ -616,19 +623,27 @@ footer{
       &-link{
          top: 0;
       }
+
       &-h2{
          top: 26vw !important;
          left: 12vw !important;
       }
    }
    
-   .metal{
+   .can{
       &-link{
          top: -2vw;
       }
+
+      &-illu{
+         width: 13vw;
+         top: 12vw !important;
+         left: 13vw !important;
+      }
+
       &-h2{
          top: 24vw !important;
-         left: 10vw !important;
+         left: 12vw !important;
       }
    }
 
@@ -636,6 +651,7 @@ footer{
       &-link{
          top: 0;
       }
+
       &-h2{
          top: 21vw !important;
          left: 6vw !important;
@@ -646,6 +662,7 @@ footer{
       &-link{
          top: -5vw;
       }
+
       &-h2{
          top: 24vw !important;
          left: 15vw !important;
@@ -656,6 +673,7 @@ footer{
       &-link{
          top: 0;
       }
+
       &-h2{
          top: 21vw !important;
          left: 8vw !important;
@@ -707,6 +725,7 @@ footer{
          top: 0;
          right: -10vw;
       }
+
       &-h2{
          top: 60vw !important;
          left: 7vw !important;
@@ -718,20 +737,28 @@ footer{
          top: -7vw;
          left: -12vw;
       }
+
       &-h2{
          top: 65vw !important;
          left: 30vw !important;
       }
    }
    
-   .metal{
+   .can{
       &-link{
          top: -10vw;
          left: 10vw;
       }
+
+      &-illu{
+         width: 33vw;
+         top: 25vw !important;
+         left: 31vw !important;
+      }
+
       &-h2{
          top: 57vw !important;
-         left: 23vw !important;
+         left: 30vw !important;
       }
    }
 
@@ -740,6 +767,7 @@ footer{
          top: -12vw;
          left: -10vw;
       }
+
       &-h2{
          top: 50vw !important;
          left: 15vw !important;
@@ -751,6 +779,7 @@ footer{
          top: -10vw;
          left: 6vw;
       }
+
       &-h2{
          top: 60vw !important;
          left: 35vw !important;
@@ -762,6 +791,7 @@ footer{
          top: -10vw;
          left: -10vw;
       }
+
       &-h2{
          top: 55vw !important;
          left: 15vw !important;
