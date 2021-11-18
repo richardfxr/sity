@@ -100,13 +100,14 @@ body {
   color: var(--clr-paper-900);
 }
 
-.can-bg {
+.metal-bg {
   fill: var(--clr-metal-100);
   stroke: var(--clr-metal-100);
 }
-.can-h2 {
+.metal-h2 {
   color: var(--clr-metal-900);
 }
+
 .can-silver-0 {
   fill: var(--clr-can-silver-0);
 }
