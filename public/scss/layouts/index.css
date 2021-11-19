@@ -99,6 +99,18 @@ body {
 .paper-h2 {
   color: var(--clr-paper-900);
 }
+.paper-white-1 {
+  fill: var(--clr-paper-white-1);
+}
+.paper-white-2 {
+  fill: var(--clr-paper-white-2);
+}
+.paper-white-3 {
+  fill: var(--clr-paper-white-3);
+}
+.paper-white-4 {
+  fill: var(--clr-paper-white-4);
+}
 
 .metal-bg {
   fill: var(--clr-metal-100);
@@ -358,6 +370,10 @@ ol, ul {
   --clr-cardboard-brown-4: #8f7b43;
   --clr-cardboard-900: #543c1e;
   --clr-cardboard-100: #d4b796;
+  --clr-paper-white-1: #ebe9db;
+  --clr-paper-white-2: #dfe0cf;
+  --clr-paper-white-3: #c9ccb4;
+  --clr-paper-white-4: #b1b8a2;
   --clr-paper-1000: #323323;
   --clr-paper-900: #494a34;
   --clr-paper-500: #9e8846;
@@ -427,8 +443,12 @@ ol, ul {
   --clr-cardboard-brown-4: #7d6b3a;
   --clr-cardboard-900: #ffecd6;
   --clr-cardboard-100: #736555;
+  --clr-paper-white-1: #c2c1b5;
+  --clr-paper-white-2: #b7b8a9;
+  --clr-paper-white-3: #a5a894;
+  --clr-paper-white-4: #959c89;
   --clr-paper-1000: #feffed;
-  --clr-paper-900: #fdffcf;
+  --clr-paper-900: #feffe0;
   --clr-paper-500: #d6b85f;
   --clr-paper-100: #6e7056;
   --clr-can-silver-0: #d1cec5;
@@ -496,8 +516,12 @@ ol, ul {
   --clr-cardboard-brown-4: #85713d;
   --clr-cardboard-900: #452d0f;
   --clr-cardboard-100: #f2dbc2;
+  --clr-paper-white-1: #faf8ea;
+  --clr-paper-white-2: #e5e6d4;
+  --clr-paper-white-3: #b6b8a2;
+  --clr-paper-white-4: #929986;
   --clr-paper-1000: #000000;
-  --clr-paper-900: #42450f;
+  --clr-paper-900: #383b0d;
   --clr-paper-500: #cc9900;
   --clr-paper-100: #eff0c2;
   --clr-can-silver-0: #ffffff;
@@ -1047,6 +1071,11 @@ main {
   position: relative;
   top: max(calc(var(--main-max-width) * -0.08), -8vw);
 }
+.paper-illu {
+  width: min(18vw, calc(var(--main-max-width) * 0.18));
+  top: min(10vw, calc(var(--main-max-width) * 0.1)) !important;
+  left: min(5vw, calc(var(--main-max-width) * 0.05)) !important;
+}
 .paper-h2 {
   top: min(18vw, calc(var(--main-max-width) * 0.18)) !important;
   left: min(8vw, calc(var(--main-max-width) * 0.08)) !important;
@@ -1292,6 +1321,11 @@ footer .button--lg:focus-visible {
   .paper-link {
     top: 0;
   }
+  .paper-illu {
+    width: 27vw;
+    top: 16vw !important;
+    left: 8vw !important;
+  }
   .paper-h2 {
     top: 26vw !important;
     left: 12vw !important;
@@ -1378,6 +1412,11 @@ footer .button--lg:focus-visible {
   .paper-link {
     top: -7vw;
     left: -12vw;
+  }
+  .paper-illu {
+    width: 63vw;
+    top: 40vw !important;
+    left: 21vw !important;
   }
   .paper-h2 {
     top: 65vw !important;

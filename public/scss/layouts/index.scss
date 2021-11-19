@@ -325,6 +325,12 @@ main{
       top: max(calc(var(--main-max-width) * -0.08), -8vw);
    }
 
+   &-illu{
+      width: min(18vw, calc(var(--main-max-width) * 0.18));
+      top: min(10vw, calc(var(--main-max-width) * 0.1)) !important;
+      left: min(5vw, calc(var(--main-max-width) * 0.05)) !important;
+   }
+
    &-h2{
       top: min(18vw, calc(var(--main-max-width) * 0.18)) !important;
       left: min(8vw, calc(var(--main-max-width) * 0.08)) !important;
@@ -630,6 +636,12 @@ footer{
          top: 0;
       }
 
+      &-illu{
+         width: 27vw;
+         top: 16vw !important;
+         left: 8vw !important;
+      }
+
       &-h2{
          top: 26vw !important;
          left: 12vw !important;
@@ -743,6 +755,12 @@ footer{
       &-link{
          top: -7vw;
          left: -12vw;
+      }
+
+      &-illu{
+         width: 63vw;
+         top: 40vw !important;
+         left: 21vw !important;
       }
 
       &-h2{
