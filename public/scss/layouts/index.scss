@@ -351,7 +351,7 @@ main{
 
    &-h2{
       top: min(16vw, calc(var(--main-max-width) * 0.16)) !important;
-      left: min(8vw, calc(var(--main-max-width) * 0.08)) !important;
+      left: min(7.2vw, calc(var(--main-max-width) * 0.072)) !important;
    }
 }
 
@@ -661,7 +661,7 @@ footer{
 
       &-h2{
          top: 24vw !important;
-         left: 12vw !important;
+         left: 11vw !important;
       }
    }
 
@@ -783,7 +783,7 @@ footer{
 
       &-h2{
          top: 57vw !important;
-         left: 30vw !important;
+         left: 27vw !important;
       }
    }
 
