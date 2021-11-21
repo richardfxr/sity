@@ -668,9 +668,10 @@ h2 {
   line-height: 1em;
 }
 .text--md {
-  font-family: "Doughy", sans-serif;
-  font-size: min(2.8vw, calc(var(--main-max-width) * 0.028));
-  line-height: 1em;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: min(2.5vw, calc(var(--main-max-width) * 0.025));
+  font-weight: 600;
+  line-height: 1.3em;
 }
 .text--sm {
   font-family: "Lexend Deca", sans-serif;
@@ -721,7 +722,7 @@ h2 {
     font-size: 6vw;
   }
   .text--md {
-    font-size: 4vw;
+    font-size: 3vw;
   }
   .text--sm {
     font-size: 2.3vw;

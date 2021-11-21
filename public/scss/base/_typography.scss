@@ -43,9 +43,10 @@ h2{
     }
 
     &--md{
-        font-family: 'Doughy', sans-serif;
-        font-size: min(2.8vw, calc(var(--main-max-width) * 0.028));
-        line-height: 1em;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: min(2.5vw, calc(var(--main-max-width) * 0.025));
+        font-weight: 600;
+        line-height: 1.3em;
     }
 
     &--sm{
@@ -110,7 +111,7 @@ h2{
         }
 
         &--md{
-            font-size: 4vw;
+            font-size: 3vw;
         }
 
         &--sm{
