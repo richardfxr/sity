@@ -6,45 +6,57 @@
 // COLORS
 // ============================================
 
-// light theme
+// === LIGHT THEME ======================== */
 $light: (
-    1000: #304a38,             /* active text color */
-    900: #272e00,              /* slightly hidher-contrast text color */
-    800: #4a7055,              /* default text color */
-    800a: #d48d1c,             /* default accent color */
-    100: #9bbda2,              /* secondary background color */
-    50: #acd1b2,               /* footer background color */
-    0: #c9debf,                /* default background color */
-    border: #272e00,           /* border color */
+    // home
+    1000: #272e00,             // active text color
+    900: #304a38,              // slightly hidher-contrast text color
+    800: #4a7055,              // default text color
+    800a: #d48d1c,             // default accent color
+    100: #9bbda2,              // secondary background color
+    50: #acd1b2,               // footer background color
+    0: #c9debf,                // default background color
+    border: #272e00,           // border color
 
-    /* illustrations */
+    // illustrations
     stroke: #202220,
 
+    // cartons
+    carton-offwhite-1: #f7f5ed,
+    carton-offwhite-2: #f0ead5,
     carton-offwhite-3: #e0ddca,
     carton-offwhite-4: #c5c9b5,
     carton-blue-1: #93ded7,
     carton-blue-2: #5db9cf,
     carton-blue-3: #5f95ba,
     carton-blue-4: #5f7fb3,
+    carton-blue-5: #3f4b5e,
     carton-white-1: #f2f2f2,
     carton-white-2: #d6d6d6,
     carton-white-3: #b5b5b5,
-    carton-900: #144352,
+    carton-white-4: #9c9c9c,
+    carton-white-5: #8c8c8c,
+    carton-1100: #162c33,
+    carton-1000: #144352,
+    carton-900: #144757,
+    carton-800: #1e6980,
     carton-100: #86c2b9,
+    carton-50: #99d1c8,
+    carton-0: #b2ded7,
     
     cardboard-brown-1: #debb8e,
     cardboard-brown-2: #c4a370,
     cardboard-brown-3: #a68c56,
     cardboard-brown-4: #8f7b43,
-    cardboard-900: #543c1e,
+    cardboard-1000: #543c1e,
     cardboard-100: #d4b796,
     
     paper-white-1: #ebe9db,
     paper-white-2: #dfe0cf,
     paper-white-3: #c9ccb4,
     paper-white-4: #b1b8a2,
-    paper-1000: #323323,
-    paper-900: #494a34,
+    paper-1100: #323323,
+    paper-1000: #494a34,
     paper-500: #9e8846,
     paper-100: #cecfa8,
     
@@ -58,16 +70,16 @@ $light: (
     can-orange-1: #f0a68b,
     can-orange-2: #d99277,
     can-orange-3: #bf7b5e,
-    metal-1000: #331e16,
-    metal-900: #593426,
+    metal-1100: #331e16,
+    metal-1000: #593426,
     metal-500: #a65c4a,
     metal-100: #d6b5a7,
     
-    aluminum-900: #404f4f,
+    aluminum-1000: #404f4f,
     aluminum-100: #b4cccb,
     
-    glass-1000: #27332c,
-    glass-900: #36473d,
+    glass-1100: #27332c,
+    glass-1000: #36473d,
     glass-500: #469c6a,
     glass-100: #9dcfb2,
     
@@ -82,8 +94,8 @@ $light: (
     plastic-purple-1: #C0AFE0,
     plastic-purple-2: #A591C9,
     plastic-purple-3: #917DB5,
-    plastic-1000: #2a2533,
-    plastic-900: #433b52,
+    plastic-1100: #2a2533,
+    plastic-1000: #433b52,
     plastic-500: #75619c,
     plastic-100: #c0b6d1,
 );
@@ -104,31 +116,42 @@ $dark: (
     /* illustrations */
     stroke: #202220,
 
+    // cartons
+    carton-offwhite-1: #d6d5cd,
+    carton-offwhite-2: #ccc7b6,
     carton-offwhite-3: #b5b2a3,
     carton-offwhite-4: #9fa393,
     carton-blue-1: #7fbfba,
     carton-blue-2: #51a1b5,
     carton-blue-3: #5382a1,
     carton-blue-4: #536e9c,
+    carton-blue-5: #2f3947,
     carton-white-1: #e0e0e0,
     carton-white-2: #c4c4c4,
     carton-white-3: #9e9e9e,
+    carton-white-4: #8a8a8a,
+    carton-white-5: #7d7d7d,
+    carton-1100: #edfdff,
+    carton-1000: #d6faff,
     carton-900: #d6faff,
+    carton-800: #cee4e8,
     carton-100: #4f7572,
+    carton-50: #456663,
+    carton-0: #405453,
 
     cardboard-brown-1: #bda07a,
     cardboard-brown-2: #a3875c,
     cardboard-brown-3: #917a4b,
     cardboard-brown-4: #7d6b3a,
-    cardboard-900: #ffecd6,
+    cardboard-1000: #ffecd6,
     cardboard-100: #736555,
 
     paper-white-1: #c2c1b5,
     paper-white-2: #b7b8a9,
     paper-white-3: #a5a894,
     paper-white-4: #959c89,
-    paper-1000: #feffed,
-    paper-900: #feffe0,
+    paper-1100: #feffed,
+    paper-1000: #feffe0,
     paper-500: #d6b85f,
     paper-100: #6e7056,
 
@@ -142,16 +165,16 @@ $dark: (
     can-orange-1: #d9957e,
     can-orange-2: #c9876e,
     can-orange-3: #b57459,
-    metal-1000: #fff2ed,
-    metal-900: #ffede6,
+    metal-1100: #fff2ed,
+    metal-1000: #ffede6,
     metal-500: #de795f,
     metal-100: #7a625b,
 
-    aluminum-900: #d6ffff,
+    aluminum-1000: #d6ffff,
     aluminum-100: #627575,
 
-    glass-1000: #edfff5,
-    glass-900: #d6ffe7,
+    glass-1100: #edfff5,
+    glass-1000: #d6ffe7,
     glass-500: #60d692,
     glass-100: #5a7365,
 
@@ -166,8 +189,8 @@ $dark: (
     plastic-purple-1: #B09FCC,
     plastic-purple-2: #9381B3,
     plastic-purple-3: #7C6B9C,
-    plastic-1000: #f3edff,
-    plastic-900: #E9DEFF,
+    plastic-1100: #f3edff,
+    plastic-1000: #E9DEFF,
     plastic-500: #a88fd6,
     plastic-100: #655e73,
     
@@ -189,31 +212,41 @@ $hc: (
     /* illustrations */
     stroke: #000000,
 
+    // cartons
+    carton-offwhite-1: #ffffff,
+    carton-offwhite-2: #fffbeb,
     carton-offwhite-3: #f0edd8,
     carton-offwhite-4: #c0c4b1,
     carton-blue-1: #FFFFFF,
     carton-blue-2: #7fdaf0,
     carton-blue-3: #6fadd9,
     carton-blue-4: #5a79a8,
+    carton-blue-5: #222933,
     carton-white-1: #FFFFFF,
     carton-white-2: #e6e6e6,
     carton-white-3: #a6a6a6,
-    carton-900: #0f3845,
+    carton-white-4: #808080,
+    carton-white-5: #6b6b6b,
+    carton-1000: #0f3845,
+    carton-900: #173a45,
+    carton-800: #254852,
     carton-100: #b9ede5,
+    carton-50: #c6f7f0,
+    carton-0: #f2fffd,
     
     cardboard-brown-1: #fad29f,
     cardboard-brown-2: #dbb67d,
     cardboard-brown-3: #ab9059,
     cardboard-brown-4: #85713d,
-    cardboard-900: #452d0f,
+    cardboard-1000: #452d0f,
     cardboard-100: #f2dbc2,
     
     paper-white-1: #faf8ea,
     paper-white-2: #e5e6d4,
     paper-white-3: #b6b8a2,
     paper-white-4: #929986,
-    paper-1000: #000000,
-    paper-900: #383b0d,
+    paper-1100: #000000,
+    paper-1000: #383b0d,
     paper-500: #cc9900,
     paper-100: #eff0c2,
     
@@ -227,16 +260,16 @@ $hc: (
     can-orange-1: #ffbca3,
     can-orange-2: #e69a7e,
     can-orange-3: #b57559,
-    metal-1000: #000000,
-    metal-900: #451f10,
+    metal-1100: #000000,
+    metal-1000: #451f10,
     metal-500: #cc2700,
     metal-100: #f0d2c5,
     
-    aluminum-900: #124545,
+    aluminum-1000: #124545,
     aluminum-100: #d6f2f1,
     
-    glass-1000: #000000,
-    glass-900: #104525,
+    glass-1100: #000000,
+    glass-1000: #104525,
     glass-500: #00ab47,
     glass-100: #c2f2d6,
     
@@ -251,8 +284,8 @@ $hc: (
     plastic-purple-1: #E9DEFF,
     plastic-purple-2: #B7A3E0,
     plastic-purple-3: #8D7AB0,
-    plastic-1000: #000000,
-    plastic-900: #220f45,
+    plastic-1100: #000000,
+    plastic-1000: #220f45,
     plastic-500: #7e56cc,
     plastic-100: #e2d7f2,
 );

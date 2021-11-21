@@ -43,13 +43,19 @@ h2{
     }
 
     &--md{
+        font-family: 'Doughy', sans-serif;
+        font-size: min(2.8vw, calc(var(--main-max-width) * 0.028));
+        line-height: 1em;
+    }
+
+    &--sm{
         font-family: 'Lexend Deca', sans-serif;
         font-size: min(1.5vw, calc(var(--main-max-width) * 0.015));
         font-weight: 700;
         color: var(--clr-900);
     }
 
-    &--sm{
+    &--xs{
         font-size: 1.15rem;
         line-height: 1.3em;
     }
@@ -74,6 +80,12 @@ h2{
 
 /* button */
 .button{
+    &--topbar {
+        font-family: 'Doughy', sans-serif;
+        font-size: 2rem;
+        line-height: 1em;
+    }
+
     &--lg{
         font-family: 'Doughy', sans-serif;
         font-size: min(2.8vw, calc(var(--main-max-width) * 0.028));
@@ -98,10 +110,14 @@ h2{
         }
 
         &--md{
-            font-size: 2.3vw;
+            font-size: 4vw;
         }
 
         &--sm{
+            font-size: 2.3vw;
+        }
+
+        &--xs{
             font-size: 1.1rem;
         }
     }
@@ -126,10 +142,14 @@ h2{
         }
 
         &--md{
-            font-size: 4.3vw;
+            font-size: 6.5vw;
         }
 
         &--sm{
+            font-size: 4.3vw;
+        }
+
+        &--xs{
             font-size: 1.1rem;
         }
     }

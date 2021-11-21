@@ -1,0 +1,66 @@
+// Partial SCSS file containing theme picker styling
+
+
+
+// === USE ====================================
+@use '../base' as b;
+
+
+
+/* ============================================
+   THEME PICKER
+   ============================================ */
+.themepicker{
+    &__list{
+       padding: var(--topbar-item-pad);
+       border-radius: calc(var(--topbar-height) - (var(--topbar-pad-vrt) * 2));
+       margin-left: auto;
+       /* flexbox */
+       display: flex;
+       flex-flow: row nowrap;
+       align-items: stretch;
+    }
+ 
+    &__item{
+       margin-right: var(--topbar-item-pad);
+ 
+       &:last-child{
+          margin-right: 0;
+       }
+    }
+ 
+    &__btn{
+       display: block;
+       position: relative;
+       font-size: 0;
+       padding: 0;
+ 
+       /* tooltip */
+       &::after{
+          content: attr(aria-label);
+          top: calc(100% + var(--themepicker-tooltip-pad-top));
+          right: calc(-1 * var(--topbar-item-pad));
+          transform-origin: top right;
+       }
+ 
+       &:hover, &:focus-visible{
+          svg {
+             top: var(--themepicker-movement);
+          }
+       }
+ 
+       &:hover::after, &:focus-visible::after {
+          transform: scale(1);
+          transition: transform var(--transition-100);
+       }
+ 
+       svg{
+          position: relative;
+          top: 0;
+          height: var(--topbar-item-height);
+          border-radius: 50%;
+          box-shadow: var(--border-main-ds);
+          transition: top var(--transition-100);
+       }
+    }
+ }

@@ -1,0 +1,59 @@
+// Partial SCSS file containing top bar styling
+
+
+
+// === USE ====================================
+@use '../base' as b;
+
+
+
+/* ============================================
+   TOP BAR
+   ============================================ */
+
+/* === VARIABLES ============================== */
+body{
+    --topbar-pad-vrt: 1.5rem;
+    --topbar-pad-hrz: 1.5rem;
+    --topbar-height: calc(3.3rem + (var(--topbar-pad-vrt) * 2));
+    --topbar-item-pad: 0.5rem;
+    --topbar-item-height: calc(var(--topbar-height) - (var(--topbar-pad-vrt) * 2) - (var(--topbar-item-pad) * 2));
+    --themepicker-movement: -0.3rem;
+    --themepicker-tooltip-pad-top: 1rem;
+}
+
+@media only screen and (max-width: b.$breakpoint-tablet){
+    .body{
+        /* variables */
+        --topbar-pad-vrt: 1.5rem;
+        --topbar-pad-hrz: 1.5rem;
+        --topbar-item-pad: 0.5rem;
+        --themepicker-movement: -0.3rem;
+        --themepicker-tooltip-pad-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: b.$breakpoint-mobile){
+    body{
+        /* variables */
+        --topbar-pad-vrt: 1.5rem;
+        --topbar-pad-hrz: 1.5rem;
+        --topbar-item-pad: 0.5rem;
+        --themepicker-movement: -0.3rem;
+        --themepicker-tooltip-pad-top: 1rem;
+    }
+}
+
+
+/* === ACTUAL CODE ============================ */
+.topbar{
+    position: relative;
+    max-width: var(--main-max-width);
+    height: var(--topbar-height);
+    padding: var(--topbar-pad-vrt) var(--main-pad-hrz);
+    margin: auto;
+    /* flexbox */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+ }

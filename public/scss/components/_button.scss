@@ -13,6 +13,11 @@
 
 /* === VARIABLES ============================== */
 .button{
+    &--topbar{
+        /* variables */
+        --button-topbar-pad-vrt: 0.5rem;
+        --button-topbar-pad-hrz: 0.8477rem;
+    }
     &--lg{
         /* variables */
         --button-lg-pad-vrt: min(0.3vw, calc(var(--main-max-width) * 0.003));
@@ -22,6 +27,10 @@
 
 @media only screen and (max-width: b.$breakpoint-tablet){
     .button{
+        &--topbar{
+            /* variables */
+        }
+
         &--lg{
             /* variables */
             --button-lg-pad-vrt: 0.6vw;
@@ -32,6 +41,9 @@
 
 @media only screen and (max-width: b.$breakpoint-mobile){
     .button{
+        &--topbar{
+            /* variables */
+        }
         &--lg{
             /* variables */
             --button-lg-pad-vrt: 1.1vw;
@@ -43,9 +55,21 @@
 
 /* === ACTUAL CODE ============================ */
 .button {
+    &--topbar{
+        box-sizing: border-box;
+        display: block;
+        width: max-content;
+        padding: var(--button-topbar-pad-vrt) var(--button-topbar-pad-hrz) calc(var(--button-topbar-pad-vrt) * 1.5) var(--button-topbar-pad-hrz);
+        border: var(--border-main);
+        border-radius: 20vw;
+        transition: color var(--transition-100),
+                    border-color var(--transition-100);
+    }
+
     &--lg{
         box-sizing: border-box;
         display: block;
+        width: max-content;
         padding: var(--button-lg-pad-vrt) var(--button-lg-pad-hrz) calc(var(--button-lg-pad-vrt) * 1.5) var(--button-lg-pad-hrz);
         border: var(--border-main);
         border-radius: calc(var(--button-lg-pad-hrz) * 1.5);

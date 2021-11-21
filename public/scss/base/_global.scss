@@ -24,6 +24,13 @@ body{
                stroke var(--transition-100);
 }
 
+/* main */
+main{
+   max-width: 2200px;
+   padding: var(--main-pad-vrt) var(--main-pad-hrz);
+   margin: auto;
+}
+
 /* logos */
 .clr-800{
    fill: var(--clr-800);
@@ -52,7 +59,15 @@ body{
    }
 
    &-h2{
-      color: var(--clr-carton-900)
+      color: var(--clr-carton-1000)
+   }
+
+   &-offwhite-1{
+      fill: var(--clr-carton-offwhite-1);
+   }
+
+   &-offwhite-2{
+      fill: var(--clr-carton-offwhite-2);
    }
 
    &-offwhite-3{
@@ -79,6 +94,10 @@ body{
       fill: var(--clr-carton-blue-4);
    }
 
+   &-blue-5{
+      fill: var(--clr-carton-blue-5);
+   }
+
    &-white-1{
       fill: var(--clr-carton-white-1);
    }
@@ -90,6 +109,14 @@ body{
    &-white-3{
       fill: var(--clr-carton-white-3);
    }
+
+   &-white-4{
+      fill: var(--clr-carton-white-4);
+   }
+
+   &-white-5{
+      fill: var(--clr-carton-white-5);
+   }
 }
 
 .cardboard{
@@ -99,7 +126,7 @@ body{
    }
 
    &-h2{
-      color: var(--clr-cardboard-900);
+      color: var(--clr-cardboard-1000);
    }
 
    &-brown-1{
@@ -126,7 +153,7 @@ body{
    }
 
    &-h2{
-      color: var(--clr-paper-900);
+      color: var(--clr-paper-1000);
    }
 
    &-white-1{
@@ -153,7 +180,7 @@ body{
    }
 
    &-h2{
-      color: var(--clr-metal-900);
+      color: var(--clr-metal-1000);
    }
 }
 
@@ -206,7 +233,7 @@ body{
    }
 
    &-h2{
-      color: var(--clr-aluminum-900);
+      color: var(--clr-aluminum-1000);
    }
 }
 
@@ -217,7 +244,7 @@ body{
    }
 
    &-h2{
-      color: var(--clr-glass-900);
+      color: var(--clr-glass-1000);
    }
 }
 
@@ -228,7 +255,7 @@ body{
    }
 
    &-h2{
-      color: var(--clr-plastic-900);
+      color: var(--clr-plastic-1000);
    }
 
    &-bottle-0{

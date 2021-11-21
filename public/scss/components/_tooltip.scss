@@ -7,6 +7,8 @@
    ============================================ */
 
 .tooltip::after{
+   font-family: 'Lexend Deca', sans-serif;
+   line-height: 1.5;
     // add content
     width: max-content;
     position: absolute;
@@ -14,7 +16,6 @@
     font-size: var(--fs-9);
     padding: var(--tooltip-pad-vrt) var(--tooltip-pad-hrz);
     border-radius: calc(var(--tooltip-pad-vrt) + var(--fs-9));
-    background-color: var(--clr-100);
     transform: scale(0);
     // add transform-origin
     transition: transform var(--transition-50);

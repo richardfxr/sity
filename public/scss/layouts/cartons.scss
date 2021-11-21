@@ -1,0 +1,285 @@
+// SCSS file containing CSS styles for index.html
+
+
+
+// === USE ====================================
+@use "sass:map";
+@use '../abstracts' as a;
+@use '../base' as b;
+@use '../components' as c;
+
+
+/* === VARIABLES ============================== */
+body{
+    /* steps */
+    --steps-border-radius: min(3vw, calc(var(--main-max-width) * 0.03));
+    --steps-pad-vrt: min(5vw, calc(var(--main-max-width) * 0.05));
+    --steps-pad-hrz: min(5vw, calc(var(--main-max-width) * 0.05));
+    --steps-h2-pad-top: max(calc(var(--main-max-width) * -0.006), -0.6vw);
+    --steps-1-pad-top: min(3vw, calc(var(--main-max-width) * 0.03));
+}
+
+@media only screen and (max-width: b.$breakpoint-tablet){
+    body{
+        /* steps */
+        --steps-border-radius: 4vw;
+        --steps-pad-vrt: 7vw;
+        --steps-pad-hrz: 7vw;
+        --steps-h2-pad-top: -0.6vw;
+        --steps-1-pad-top: 4vw;
+    }
+}
+
+@media only screen and (max-width: b.$breakpoint-mobile){
+    body{
+        /* steps */
+        --steps-border-radius: 7vw;
+        --steps-pad-vrt: 10vw;
+        --steps-pad-hrz: 6vw;
+        --steps-h2-pad-top: -0.6vw;
+        --steps-1-pad-top: 4vw;
+    }
+}
+
+/* ============================================
+   CARTONS PAGE
+   ============================================ */
+
+/* === WHOLE PAGE ============================= */
+html, body{
+    background-color: var(--clr-carton-0);
+ }
+ 
+ .text{
+    &--xl, &--lg, &--md &--sm{
+       color: var(--clr-carton-800);
+    }
+ 
+    &--xl a, &--lg a{
+       color: var(--clr-800a);
+    }
+ }
+
+ .tooltip::after{
+    background-color: var(--clr-carton-100);
+ }
+
+ .button{
+     &--topbar{
+        color: var(--clr-carton-900);
+        background-color: var(--clr-carton-100);
+        border-color: var(--clr-carton-100);
+
+        &:hover{
+           color: var(--clr-carton-1100);
+        }
+
+        &:focus-visible{
+           border-color: var(--clr-border);
+           color: var(--clr-1100);
+        }
+     }
+
+     &--lg{
+        color: var(--clr-carton-900);
+        background-color: var(--clr-carton-50);
+        border-color: var(--clr-carton-50);
+
+        &:hover{
+           color: var(--clr-carton-1100);
+        }
+
+        &:focus-visible{
+           border-color: var(--clr-border);
+           color: var(--clr-900);
+        }
+     }
+ }
+
+
+ /* === TOP BAR ================================ */
+
+ .topbar{
+    /* back button */
+    &__back{
+        /* tooltip */
+        &::after{
+            content: attr(aria-label);
+            color: var(--clr-carton-900);
+            top: calc(100% - var(--topbar-pad-vrt) - var(--topbar-item-pad) + var(--themepicker-tooltip-pad-top));
+            left: var(--main-pad-hrz);
+            transform-origin: top right;
+        }
+
+        &:hover::after, &:focus-visible::after {
+            transform: scale(1);
+            transition: transform var(--transition-100);
+         }
+    }
+ }
+ /* theme picker */
+ .themepicker {
+    &__list{
+        background-color: var(--clr-carton-100);
+    }
+ 
+    &__btn{
+       /* tooltip */
+       &::after{
+          color: var(--clr-carton-900);
+       }
+    }
+
+    &__light{
+        &--0{
+           fill: map.get(a.$light, carton-0);
+        }
+  
+        &--100{
+           fill: map.get(a.$light, carton-100);
+        }
+  
+        &--800{
+           fill: map.get(a.$light, carton-800);
+        }
+     }
+  
+     &__dark{
+        &--0{
+           fill: map.get(a.$dark, carton-0);
+        }
+  
+        &--100{
+           fill: map.get(a.$dark, carton-100);
+        }
+  
+        &--800{
+           fill: map.get(a.$dark, carton-800);
+        }
+     }
+  
+     &__hc{
+        &--0{
+           fill: map.get(a.$hc, carton-0);
+        }
+  
+        &--100{
+           fill: map.get(a.$hc, carton-100);
+        }
+  
+        &--800{
+           fill: map.get(a.$hc, carton-800);
+        }
+     }
+ }
+ 
+
+ /* === MAIN =================================== */
+.title{
+    padding-bottom: var(--main-pad-sm);
+}
+
+.quicklink{
+    padding-bottom: var(--main-pad-xl);
+    /* flexbox */
+    display: flex;
+    flex-flow: row nowrap;
+
+    &__item{
+        padding-right: var(--footer-link-pad-right);
+
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+}
+
+.steps{
+    padding: var(--steps-pad-vrt) var(--steps-pad-hrz);
+    background-color: var(--clr-carton-50);
+    border-radius: var(--steps-border-radius);
+
+    &__item{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &__main{
+            display: flex;
+            flex-flow: column nowrap;
+
+            h2{
+                color: var(--clr-carton-900);
+                line-height: 1;
+                margin-top: var(--steps-h2-pad-top);
+            }
+
+            p{
+                color: var(--clr-carton-900);
+                margin-top: auto;
+            }
+        }
+
+        &__illu{
+            /* flexbox */
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            align-content: center;
+        }
+    }
+}
+
+#step1__illu{
+     width: min(25vw, calc(var(--main-max-width) * 0.25));
+     padding-top: var(--steps-1-pad-top);
+}
+ 
+
+
+/* ========================================
+    BREAKPOINTS
+    ======================================== */
+
+@media only screen and (max-width: b.$breakpoint-tablet){
+    #step1__illu{
+        width: 30vw;
+   }
+}
+
+@media only screen and (max-width: b.$breakpoint-mobile){
+    .quicklink{
+        flex-flow: column nowrap;
+        align-items: left;
+
+        &__item{
+            padding-right: 0;
+            padding-bottom: var(--footer-link-pad-bottom);
+
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .steps{
+        &__item{
+            grid-template-columns: 1fr;
+
+            &__main{
+                h2{
+                    padding-bottom: var(--steps-pad-vrt);
+                }
+
+                p{
+                    margin-top: 0;
+                    padding-bottom: var(--steps-pad-vrt);
+                }
+            }
+        }
+    }
+
+    #step1__illu{
+        width: 50vw;
+        padding-bottom: 3vw;
+   }
+}
