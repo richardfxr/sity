@@ -93,6 +93,9 @@ main {
 .carton-white-5 {
   fill: var(--clr-carton-white-5);
 }
+.carton-1000 {
+  fill: var(--clr-carton-1000);
+}
 
 .cardboard-bg {
   fill: var(--clr-cardboard-100);
