@@ -6,7 +6,7 @@
 // COLORS
 // ============================================
 
-// === LIGHT THEME ======================== */
+// === LIGHT THEME ========================
 $light: (
     // home
     1000: #272e00,             // active text color
@@ -44,6 +44,7 @@ $light: (
     carton-50: #99d1c8,
     carton-0: #b2ded7,
     
+    // cardboard
     cardboard-brown-1: #debb8e,
     cardboard-brown-2: #c4a370,
     cardboard-brown-3: #a68c56,
@@ -51,6 +52,7 @@ $light: (
     cardboard-1000: #543c1e,
     cardboard-100: #d4b796,
     
+    // paper
     paper-white-1: #ebe9db,
     paper-white-2: #dfe0cf,
     paper-white-3: #c9ccb4,
@@ -60,6 +62,7 @@ $light: (
     paper-500: #9e8846,
     paper-100: #cecfa8,
     
+    // metal
     can-silver-0: #edeadf,
     can-silver-1: #c7c9bc,
     can-silver-2: #b1b3a7,
@@ -75,14 +78,17 @@ $light: (
     metal-500: #a65c4a,
     metal-100: #d6b5a7,
     
+    // aluminum
     aluminum-1000: #404f4f,
     aluminum-100: #b4cccb,
     
+    // glass 
     glass-1100: #27332c,
     glass-1000: #36473d,
     glass-500: #469c6a,
     glass-100: #9dcfb2,
     
+    // plastic
     plastic-bottle-0: #DCF7D7,
     plastic-bottle-1-1: #BDCAE6,
     plastic-bottle-1-2: #C7CCF0,
@@ -98,11 +104,18 @@ $light: (
     plastic-1000: #433b52,
     plastic-500: #75619c,
     plastic-100: #c0b6d1,
+
+    // recycle bin
+    recycle-bin-0: #86b2d4,
+    recycle-bin-1: #5c89b5,
+    recycle-bin-2: #385e8f,
+    recycle-bin-3: #344c7d,
+    recycle-bin-4: #2b4069,
 );
 
 
 
-// dark mode
+// === DARK THEME =========================
 $dark: (
     1000: #ffffff,             /* active text color */
     900: #e7f5ef,              /* slightly hidher-contrast text color */
@@ -113,7 +126,7 @@ $dark: (
     0: #3f544f,                /* default background color */
     border: #cfffe9,           /* border color */
 
-    /* illustrations */
+    // illustrations
     stroke: #202220,
 
     // cartons
@@ -139,6 +152,7 @@ $dark: (
     carton-50: #456663,
     carton-0: #405453,
 
+    // cardboard
     cardboard-brown-1: #bda07a,
     cardboard-brown-2: #a3875c,
     cardboard-brown-3: #917a4b,
@@ -146,6 +160,7 @@ $dark: (
     cardboard-1000: #ffecd6,
     cardboard-100: #736555,
 
+    // paper
     paper-white-1: #c2c1b5,
     paper-white-2: #b7b8a9,
     paper-white-3: #a5a894,
@@ -155,6 +170,7 @@ $dark: (
     paper-500: #d6b85f,
     paper-100: #6e7056,
 
+    // metal
     can-silver-0: #d1cec5,
     can-silver-1: #adb0a3,
     can-silver-2: #98998f, 
@@ -170,14 +186,17 @@ $dark: (
     metal-500: #de795f,
     metal-100: #7a625b,
 
+    // aluminum
     aluminum-1000: #d6ffff,
     aluminum-100: #627575,
 
+    // glass
     glass-1100: #edfff5,
     glass-1000: #d6ffe7,
     glass-500: #60d692,
     glass-100: #5a7365,
 
+    // plastic
     plastic-bottle-0: #C2D4C7,
     plastic-bottle-1-1: #8A94AD,
     plastic-bottle-1-2: #8F95AD,
@@ -198,7 +217,7 @@ $dark: (
 
 
 
-// high contrast mode
+// === HIGH CONTRAST THEME ================
 $hc: (
     1000: #000000,             /* active text color */
     900: #1f452a,              /* slightly hidher-contrast text color */
@@ -209,7 +228,7 @@ $hc: (
     0: #f7fff2,                /* default background color */
     border: #000000,           /* border color */
 
-    /* illustrations */
+    // illustrations
     stroke: #000000,
 
     // cartons
@@ -234,6 +253,7 @@ $hc: (
     carton-50: #c6f7f0,
     carton-0: #f2fffd,
     
+    // cardboard
     cardboard-brown-1: #fad29f,
     cardboard-brown-2: #dbb67d,
     cardboard-brown-3: #ab9059,
@@ -241,6 +261,7 @@ $hc: (
     cardboard-1000: #452d0f,
     cardboard-100: #f2dbc2,
     
+    // paper
     paper-white-1: #faf8ea,
     paper-white-2: #e5e6d4,
     paper-white-3: #b6b8a2,
@@ -250,6 +271,7 @@ $hc: (
     paper-500: #cc9900,
     paper-100: #eff0c2,
     
+    // metal
     can-silver-0: #ffffff,
     can-silver-1: #d4d6c6,
     can-silver-2: #b5b8aa,
@@ -265,14 +287,17 @@ $hc: (
     metal-500: #cc2700,
     metal-100: #f0d2c5,
     
+    // aluminum
     aluminum-1000: #124545,
     aluminum-100: #d6f2f1,
     
+    // glass
     glass-1100: #000000,
     glass-1000: #104525,
     glass-500: #00ab47,
     glass-100: #c2f2d6,
     
+    // plastic
     plastic-bottle-0: #F7FFF5,
     plastic-bottle-1-1: #D6E3FF,
     plastic-bottle-1-2: #E3E6FF,

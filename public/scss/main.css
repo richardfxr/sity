@@ -233,6 +233,22 @@ main {
   fill: var(--clr-plastic-purple-3);
 }
 
+.recycle-bin-0 {
+  fill: var(--clr-recycle-bin-0);
+}
+.recycle-bin-1 {
+  fill: var(--clr-recycle-bin-1);
+}
+.recycle-bin-2 {
+  fill: var(--clr-recycle-bin-2);
+}
+.recycle-bin-3 {
+  fill: var(--clr-recycle-bin-3);
+}
+.recycle-bin-4 {
+  fill: var(--clr-recycle-bin-4);
+}
+
 /* ========================================
     BREAKPOINTS
     ======================================== */
@@ -368,6 +384,7 @@ ol, ul {
   --transition-50: 50ms ease;
   --transition-100: 100ms ease;
   --transition-200: 200ms ease;
+  --recyclebin-pad-top: min(3vw, calc(var(--main-max-width) * 0.03));
   /* === COLORS ============================= */
   /* light theme (default) */
   --clr-1000: #272e00;
@@ -449,6 +466,11 @@ ol, ul {
   --clr-plastic-1000: #433b52;
   --clr-plastic-500: #75619c;
   --clr-plastic-100: #c0b6d1;
+  --clr-recycle-bin-0: #86b2d4;
+  --clr-recycle-bin-1: #5c89b5;
+  --clr-recycle-bin-2: #385e8f;
+  --clr-recycle-bin-3: #344c7d;
+  --clr-recycle-bin-4: #2b4069;
 }
 
 /* dark theme */
@@ -626,6 +648,7 @@ ol, ul {
     --main-pad-xl: 20vw;
     --main-pad-lg: 15vw;
     --main-pad-sm: 5vw;
+    --recyclebin-pad-top: 4vw;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -635,6 +658,7 @@ ol, ul {
     --main-pad-xl: 30vw;
     --main-pad-lg: 23vw;
     --main-pad-sm: 10vw;
+    --recyclebin-pad-top: 5vw;
   }
 }
 /* ============================================

@@ -15,7 +15,7 @@ body{
     --steps-border-radius: min(3vw, calc(var(--main-max-width) * 0.03));
     --steps-pad-vrt: min(5vw, calc(var(--main-max-width) * 0.05));
     --steps-pad-hrz: min(5vw, calc(var(--main-max-width) * 0.05));
-    --steps-item-pad-bottom: min(3vw, calc(var(--main-max-width) * 0.03));
+    --steps-item-gap: min(3vw, calc(var(--main-max-width) * 0.03));
     --steps-h2-pad-top: max(calc(var(--main-max-width) * -0.006), -0.6vw);
     --steps-1-pad-top: min(3vw, calc(var(--main-max-width) * 0.03));
 }
@@ -26,7 +26,7 @@ body{
         --steps-border-radius: 4vw;
         --steps-pad-vrt: 7vw;
         --steps-pad-hrz: 6vw;
-        --steps-item-pad-bottom: 5vw;
+        --steps-item-gap: var(--main-pad-hrz);
         --steps-h2-pad-top: -0.6vw;
         --steps-1-pad-top: 4vw;
     }
@@ -38,7 +38,7 @@ body{
         --steps-border-radius: 7vw;
         --steps-pad-vrt: 10vw;
         --steps-pad-hrz: 6vw;
-        --steps-item-pad-bottom: 7vw;
+        --steps-item-gap: var(--main-pad-hrz);
         --steps-h2-pad-top: -0.6vw;
         --steps-1-pad-top: 4vw;
     }
@@ -183,7 +183,7 @@ html, body{
 }
 
 .quicklink{
-    padding-bottom: var(--main-pad-xl);
+    padding-bottom: var(--main-pad-lg);
     /* flexbox */
     display: flex;
     flex-flow: row nowrap;
@@ -198,11 +198,12 @@ html, body{
 }
 
 .steps{
+    padding-top: var(--steps-item-gap);
     &__item{
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: var(--steps-pad-vrt) var(--steps-pad-hrz);
-        margin-bottom: var(--steps-item-pad-bottom);
+        margin-bottom: var(--steps-item-gap);
         background-color: var(--clr-carton-50);
         border-radius: var(--steps-border-radius);
 
@@ -240,6 +241,12 @@ html, body{
 #step2__illu{
     width: min(17vw, calc(var(--main-max-width) * 0.17));
 }
+
+#recyclebin__illu{
+    width: min(25vw, calc(var(--main-max-width) * 0.25));
+    padding-top: var(--recyclebin-pad-top);
+    margin-bottom: calc(-1 * var(--steps-pad-vrt));
+}
  
 
 
@@ -254,6 +261,10 @@ html, body{
 
     #step2__illu{
         width: 20vw;
+    }
+
+    #recyclebin__illu{
+        width: 26vw;
     }
 }
 
@@ -298,5 +309,9 @@ html, body{
         width: 40vw;
         padding-top: 3vw;;
         padding-bottom: 3vw;
+    }
+
+    #recyclebin__illu{
+        width: 56vw;
     }
 }

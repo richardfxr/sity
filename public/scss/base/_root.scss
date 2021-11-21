@@ -32,6 +32,8 @@
     --transition-100: 100ms ease;
     --transition-200: 200ms ease;
 
+    --recyclebin-pad-top: min(3vw, calc(var(--main-max-width) * 0.03));
+
     /* === COLORS ============================= */
 
     /* light theme (default) */
@@ -69,6 +71,8 @@
         --main-pad-xl: 20vw;
         --main-pad-lg: 15vw;
         --main-pad-sm: 5vw;
+
+        --recyclebin-pad-top: 4vw;
     }
 }
 
@@ -79,5 +83,7 @@
         --main-pad-xl: 30vw;
         --main-pad-lg: 23vw;
         --main-pad-sm: 10vw;
+
+        --recyclebin-pad-top: 5vw;
     }
 }

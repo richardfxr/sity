@@ -307,6 +307,28 @@ main{
    }
 }
 
+.recycle-bin{
+   &-0{
+      fill: var(--clr-recycle-bin-0);
+   }
+
+   &-1{
+      fill: var(--clr-recycle-bin-1);
+   }
+
+   &-2{
+      fill: var(--clr-recycle-bin-2);
+   }
+
+   &-3{
+      fill: var(--clr-recycle-bin-3);
+   }
+
+   &-4{
+      fill: var(--clr-recycle-bin-4);
+   }
+}
+
 
 
 /* ========================================
