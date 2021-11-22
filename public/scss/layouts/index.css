@@ -1452,39 +1452,110 @@ html, body {
   top: 0;
   left: var(--map-illu-pad-left);
 }
+.map__route--svg.top {
+  z-index: 100;
+}
 .map__route--path {
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: var(--map-route-strokewidth);
 }
-.map #routePaper {
+.map .routePaper {
   stroke: var(--clr-paper-500);
-  /* both values should be the length of the SVG path, see data-length attribute for the path */
-  stroke-dasharray: 1301.9189453125;
-  stroke-dashoffset: 1301.9189453125;
-  transition: stroke-dashoffset 1.3s;
 }
-.map #routeMetal {
-  stroke: var(--clr-metal-500);
+.map .routePaper--1 {
   /* both values should be the length of the SVG path, see data-length attribute for the path */
-  stroke-dasharray: 976.4909667969;
-  stroke-dashoffset: 976.4909667969;
-  transition: stroke-dashoffset 1s;
-}
-.map #routeGlass {
-  stroke: var(--clr-glass-500);
-  /* both values should be the length of the SVG path, see data-length attribute for the path */
-  stroke-dasharray: 458.6326293945;
-  stroke-dashoffset: 458.6326293945;
+  stroke-dasharray: 11.5509376526;
+  stroke-dashoffset: 11.5509376526;
   transition: stroke-dashoffset 0.5s;
 }
-.map #routePlastic {
-  stroke: var(--clr-plastic-500);
+.map .routePaper--2 {
   /* both values should be the length of the SVG path, see data-length attribute for the path */
-  stroke-dasharray: 1159.8122558594;
-  stroke-dashoffset: 1159.8122558594;
-  transition: stroke-dashoffset 1.2s;
+  stroke-dasharray: 801.2872924805;
+  stroke-dashoffset: 801.2872924805;
+  transition: stroke-dashoffset 0.8s;
+}
+.map .routePaper--3 {
+  /* both values should be the length of the SVG path, see data-length attribute for the path */
+  stroke-dasharray: 1049.568359375;
+  stroke-dashoffset: 1049.568359375;
+  transition: stroke-dashoffset 1.05s;
+}
+.map .routePaper--4 {
+  /* both values should be the length of the SVG path, see data-length attribute for the path */
+  stroke-dasharray: 1013.4643554688;
+  stroke-dashoffset: 1013.4643554688;
+  transition: stroke-dashoffset 1.01s;
+}
+.map .routePaper--5 {
+  /* both values should be the length of the SVG path, see data-length attribute for the path */
+  stroke-dasharray: 594.1727294922;
+  stroke-dashoffset: 594.1727294922;
+  transition: stroke-dashoffset 0.6s;
+}
+.map .routeMetal {
+  stroke: var(--clr-metal-500);
+}
+.map .routeMetal--1 {
+  /* both values should be the length of the SVG path, see data-length attribute for the path */
+  stroke-dasharray: 14.224234581;
+  stroke-dashoffset: 14.224234581;
+  transition: stroke-dashoffset 0.5s;
+}
+.map .routeMetal--2 {
+  /* both values should be the length of the SVG path, see data-length attribute for the path */
+  stroke-dasharray: 28.3289051056;
+  stroke-dashoffset: 28.3289051056;
+  transition: stroke-dashoffset 0.5s;
+}
+.map .routeMetal--3 {
+  /* both values should be the length of the SVG path, see data-length attribute for the path */
+  stroke-dasharray: 65.6503067017;
+  stroke-dashoffset: 65.6503067017;
+  transition: stroke-dashoffset 0.66s;
+}
+.map .routeGlass {
+  stroke: var(--clr-glass-500);
+}
+.map .routeGlass--1 {
+  /* both values should be the length of the SVG path, see data-length attribute for the path */
+  stroke-dasharray: 10.1663789749;
+  stroke-dashoffset: 10.1663789749;
+  transition: stroke-dashoffset 0.5s;
+}
+.map .routePlastic {
+  stroke: var(--clr-plastic-500);
+}
+.map .routePlastic--1 {
+  /* both values should be the length of the SVG path, see data-length attribute for the path */
+  stroke-dasharray: 110.4977264404;
+  stroke-dashoffset: 110.4977264404;
+  transition: stroke-dashoffset 0.5s;
+}
+.map .routePlastic--2 {
+  /* both values should be the length of the SVG path, see data-length attribute for the path */
+  stroke-dasharray: 89.9270935059;
+  stroke-dashoffset: 89.9270935059;
+  transition: stroke-dashoffset 0.5s;
+}
+.map .routePlastic--3 {
+  /* both values should be the length of the SVG path, see data-length attribute for the path */
+  stroke-dasharray: 26.8621025085;
+  stroke-dashoffset: 26.8621025085;
+  transition: stroke-dashoffset 0.5s;
+}
+.map .routePlastic--4 {
+  /* both values should be the length of the SVG path, see data-length attribute for the path */
+  stroke-dasharray: 64.7208175659;
+  stroke-dashoffset: 64.7208175659;
+  transition: stroke-dashoffset 0.5s;
+}
+.map .routePlastic--5 {
+  /* both values should be the length of the SVG path, see data-length attribute for the path */
+  stroke-dasharray: 51.6930961609;
+  stroke-dashoffset: 51.6930961609;
+  transition: stroke-dashoffset 0.5s;
 }
 .map__menu {
   position: var(--map-categories-position);
@@ -1555,10 +1626,10 @@ html, body {
 }
 
 /* show routes if appropriate class is present */
-.paper #routePaper,
-.metal #routeMetal,
-.glass #routeGlass,
-.plastic #routePlastic {
+.paper .routePaper,
+.metal .routeMetal,
+.glass .routeGlass,
+.plastic .routePlastic {
   stroke-dashoffset: 0;
 }
 
@@ -1784,8 +1855,8 @@ footer .button--lg:focus-visible {
   }
   .map__main {
     position: relative;
-    left: -10vw;
-    width: 120vw;
+    left: -26vw;
+    width: 140vw;
   }
   .map__cattitle {
     padding-left: var(--main-pad-hrz);
