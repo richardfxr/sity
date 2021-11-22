@@ -32,7 +32,15 @@
     --transition-100: 100ms ease;
     --transition-200: 200ms ease;
 
+    /* category pages */
+    --steps-border-radius: min(3vw, calc(var(--main-max-width) * 0.03));
+    --steps-pad-vrt: min(5vw, calc(var(--main-max-width) * 0.05));
+    --steps-pad-hrz: min(5vw, calc(var(--main-max-width) * 0.05));
+    --steps-item-gap: min(3vw, calc(var(--main-max-width) * 0.03));
+    --steps-h2-pad-top: max(calc(var(--main-max-width) * -0.006), -0.6vw);
+
     --recyclebin-pad-top: min(3vw, calc(var(--main-max-width) * 0.03));
+    --plasticbag-pad-top: min(2vw, calc(var(--main-max-width) * 0.02));
 
     /* === COLORS ============================= */
 
@@ -72,7 +80,15 @@
         --main-pad-lg: 15vw;
         --main-pad-sm: 5vw;
 
+        /* category pages */
+        --steps-border-radius: 4vw;
+        --steps-pad-vrt: 7vw;
+        --steps-pad-hrz: 6vw;
+        --steps-item-gap: var(--main-pad-hrz);
+        --steps-h2-pad-top: -0.6vw;
+
         --recyclebin-pad-top: 4vw;
+        --plasticbag-pad-top: 3vw;
     }
 }
 
@@ -84,6 +100,14 @@
         --main-pad-lg: 23vw;
         --main-pad-sm: 10vw;
 
+        /* category pages */
+        --steps-border-radius: 7vw;
+        --steps-pad-vrt: 10vw;
+        --steps-pad-hrz: 6vw;
+        --steps-item-gap: var(--main-pad-hrz);
+        --steps-h2-pad-top: -0.6vw;
+        
         --recyclebin-pad-top: 5vw;
+        --plasticbag-pad-top: 5vw;
     }
 }

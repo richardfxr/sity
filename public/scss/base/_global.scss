@@ -329,6 +329,34 @@ main{
    }
 }
 
+.caution{
+   &__item{
+      background-color: var(--clr-caution-50) !important;
+
+      & h2, & p{
+         color: var(--clr-caution-900) !important;
+      }
+   }
+}
+
+.plastic-bag{
+   &-1{
+      fill: var(--clr-plastic-bag-1);
+   }
+
+   &-2{
+      fill: var(--clr-plastic-bag-2);
+   }
+
+   &-3{
+      fill: var(--clr-plastic-bag-3);
+   }
+
+   &-4{
+      fill: var(--clr-plastic-bag-4);
+   }
+}
+
 
 
 /* ========================================

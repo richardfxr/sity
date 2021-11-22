@@ -12,22 +12,12 @@
 /* === VARIABLES ============================== */
 body{
     /* steps */
-    --steps-border-radius: min(3vw, calc(var(--main-max-width) * 0.03));
-    --steps-pad-vrt: min(5vw, calc(var(--main-max-width) * 0.05));
-    --steps-pad-hrz: min(5vw, calc(var(--main-max-width) * 0.05));
-    --steps-item-gap: min(3vw, calc(var(--main-max-width) * 0.03));
-    --steps-h2-pad-top: max(calc(var(--main-max-width) * -0.006), -0.6vw);
     --steps-1-pad-top: min(3vw, calc(var(--main-max-width) * 0.03));
 }
 
 @media only screen and (max-width: b.$breakpoint-tablet){
     body{
         /* steps */
-        --steps-border-radius: 4vw;
-        --steps-pad-vrt: 7vw;
-        --steps-pad-hrz: 6vw;
-        --steps-item-gap: var(--main-pad-hrz);
-        --steps-h2-pad-top: -0.6vw;
         --steps-1-pad-top: 4vw;
     }
 }
@@ -35,11 +25,6 @@ body{
 @media only screen and (max-width: b.$breakpoint-mobile){
     body{
         /* steps */
-        --steps-border-radius: 7vw;
-        --steps-pad-vrt: 10vw;
-        --steps-pad-hrz: 6vw;
-        --steps-item-gap: var(--main-pad-hrz);
-        --steps-h2-pad-top: -0.6vw;
         --steps-1-pad-top: 4vw;
     }
 }
@@ -102,24 +87,6 @@ html, body{
 
  /* === TOP BAR ================================ */
 
- .topbar{
-    /* back button */
-    &__back{
-        /* tooltip */
-        &::after{
-            content: attr(aria-label);
-            color: var(--clr-carton-900);
-            top: calc(100% - var(--topbar-pad-vrt) - var(--topbar-item-pad) + var(--themepicker-tooltip-pad-top));
-            left: var(--main-pad-hrz);
-            transform-origin: top right;
-        }
-
-        &:hover::after, &:focus-visible::after {
-            transform: scale(1);
-            transition: transform var(--transition-100);
-         }
-    }
- }
  /* theme picker */
  .themepicker {
     &__list{
@@ -178,60 +145,6 @@ html, body{
  
 
  /* === MAIN =================================== */
-.title{
-    padding-bottom: var(--main-pad-sm);
-}
-
-.quicklink{
-    padding-bottom: var(--main-pad-lg);
-    /* flexbox */
-    display: flex;
-    flex-flow: row nowrap;
-
-    &__item{
-        padding-right: var(--footer-link-pad-right);
-
-        &:last-child{
-            padding-right: 0;
-        }
-    }
-}
-
-.steps{
-    padding-top: var(--steps-item-gap);
-    &__item{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: var(--steps-pad-vrt) var(--steps-pad-hrz);
-        margin-bottom: var(--steps-item-gap);
-        background-color: var(--clr-carton-50);
-        border-radius: var(--steps-border-radius);
-
-        &__main{
-            display: flex;
-            flex-flow: column nowrap;
-
-            h2{
-                color: var(--clr-carton-900);
-                line-height: 1;
-                margin-top: var(--steps-h2-pad-top);
-            }
-
-            p{
-                color: var(--clr-carton-900);
-                margin-top: auto;
-            }
-        }
-
-        &__illu{
-            /* flexbox */
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: center;
-            align-content: center;
-        }
-    }
-}
 
 #step1__illu{
      width: min(25vw, calc(var(--main-max-width) * 0.25));
@@ -245,6 +158,12 @@ html, body{
 #recyclebin__illu{
     width: min(25vw, calc(var(--main-max-width) * 0.25));
     padding-top: var(--recyclebin-pad-top);
+    margin-bottom: calc(-1 * var(--steps-pad-vrt));
+}
+
+#plasticbag__illu{
+    width: min(25vw, calc(var(--main-max-width) * 0.25));
+    padding-top: var(--plasticbag-pad-top);
     margin-bottom: calc(-1 * var(--steps-pad-vrt));
 }
  
@@ -266,40 +185,13 @@ html, body{
     #recyclebin__illu{
         width: 26vw;
     }
+
+    #plasticbag__illu{
+        width: 26vw;
+    }
 }
 
 @media only screen and (max-width: b.$breakpoint-mobile){
-    .quicklink{
-        flex-flow: column nowrap;
-        align-items: left;
-
-        &__item{
-            padding-right: 0;
-            padding-bottom: var(--footer-link-pad-bottom);
-
-            &:last-child{
-                padding-bottom: 0;
-            }
-        }
-    }
-
-    .steps{
-        &__item{
-            grid-template-columns: 1fr;
-
-            &__main{
-                h2{
-                    padding-bottom: var(--steps-pad-vrt);
-                }
-
-                p{
-                    margin-top: 0;
-                    padding-bottom: var(--steps-pad-vrt);
-                }
-            }
-        }
-    }
-
     #step1__illu{
         width: 55vw;
         padding-bottom: 3vw;
@@ -312,6 +204,10 @@ html, body{
     }
 
     #recyclebin__illu{
+        width: 56vw;
+    }
+
+    #plasticbag__illu{
         width: 56vw;
     }
 }
