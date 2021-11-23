@@ -1559,7 +1559,7 @@ html, body {
   /* both values should be the length of the SVG path, see data-length attribute for the path */
   stroke-dasharray: 10.1663789749;
   stroke-dashoffset: 10.1663789749;
-  transition: stroke-dashoffset 0.5s;
+  transition: stroke-dashoffset 0.2s;
 }
 .map .routePlastic {
   stroke: var(--clr-plastic-500);
