@@ -1338,7 +1338,6 @@ html, body {
 /* hero text */
 .hero__city {
   color: var(--clr-800a);
-  text-decoration: underline;
 }
 
 .quicklink {
