@@ -86,6 +86,14 @@ html, body{
 
 
  /* === TOP BAR ================================ */
+ .topbar{
+   &__back{
+      /* tooltip */
+      &::after{
+          color: var(--clr-carton-900);
+      }
+   }
+}
 
  /* theme picker */
  .themepicker {

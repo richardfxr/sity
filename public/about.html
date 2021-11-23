@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartons</title>
+
+    <!-- link main CSS files (Sass compiled) -->
+    <link rel="stylesheet" href="scss/layouts/about.css">
+
+    <!-- load correct theme and avoid flash -->
+    <script>
+        localStorage.getItem('theme') && 
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
+        console.log('localStorage theme: ' + localStorage.getItem('theme'))
+    </script>
+
+    <!-- favicons -->
+    <!-- generics -->
+    <link rel="icon" href="assets/favicons/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="assets/favicons/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="assets/favicons/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="assets/favicons/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="assets/favicons/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="assets/favicons/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="assets/favicons/favicon-228.png" sizes="228x228">
+
+    <!-- Android -->
+    <link rel="shortcut icon" sizes="196x196" href="assets/favicons/favicon-196.png">
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="assets/favicons/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="path/to/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="path/to/favicon-180.png" sizes="180x180">
+
+    <!-- Windows 8 IE 10-->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="assets/favicons/favicon-144.png">
+
+    <!-- Windows 8.1 + IE11 and above. Not used for now
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml" />-->
+</head>
+<body>
+    <!-- top bar -->
+    <div class="topbar">
+
+        <!-- back button -->
+        <a href="/" class="topbar__back button--topbar tooltip" aria-label="back to home">↖</a>
+
+        <!-- theme picker-->
+        <ul class="themepicker__list">
+
+            <!-- light theme -->
+            <li class="themepicker__item">
+                <button class="themepicker__btn tooltip" aria-label="light theme" id="themepicker__btn--light" onclick="theme.setTheme('light')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__light">
+                        <circle class="themepicker__light--0" cx="18" cy="18" r="18"/>
+                        <ellipse class="themepicker__light--800" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+                        <path class="themepicker__light--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+                    </svg>
+                </button>
+            </li>
+
+            <!-- dark theme -->
+            <li class="themepicker__item">
+                <button class="themepicker__btn tooltip" aria-label="dark theme" id="themepicker__btn--dark" onclick="theme.setTheme('dark')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__dark">
+                        <circle class="themepicker__dark--0" cx="18" cy="18" r="18"/>
+                        <ellipse class="themepicker__dark--800" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+                        <path class="themepicker__dark--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+                    </svg>
+                </button>
+            </li>
+
+            <!-- high contrast theme -->
+            <li class="themepicker__item">
+                <button class="themepicker__btn tooltip" aria-label="high contrast theme" id="themepicker__btn--hc" onclick="theme.setTheme('hc')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__hc">
+                        <circle class="themepicker__hc--0" cx="18" cy="18" r="18"/>
+                        <ellipse class="themepicker__hc--800" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+                        <path class="themepicker__hc--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+
+    </div>
+
+    <main>
+        <h1 class="text--xl title">Demystifying <span class="text--accent">recycling</span> for sustainable cities.</h1>
+
+        <h2 class="text--lg">Mission Statement</h2>
+        <p class="text--p">S'ity was created to <span class="text--accent">visualize</span> the journey and impacts of our waste through the lens of recycling. Today, our waste system is <span class="text--accent">fragmented</span>; neither consumers, recycling facilities, or recycling mills–those who buy recyclables–really know where material is coming from or going to! S’ity hopes to bridge that gap, communicating the <span class="text--accent">story of waste</span> to people at home and in industries. What is the hidden cost of waste and where does our waste really end up? S’ity’s ultimate mission is to empower people to <span class="text--accent">keep waste localized</span> and live with the principle “waste=food,” meaning that the materials we use should generate positive effects on humans and environmental health. One’s waste is food for another.</p>
+
+        <h2 class="text--lg">Our Stance on Recycling</h2>
+        <p class="text--p">We believe that recycling is an <span class="text--accent">entry point</span> to learning about the global waste system. Recycling properly is one way you can start to make a positive impact in your city and to keep waste out of the landfill. However, we believe that using materials that the earth can safely absorb, reusing, and composting – in short <span class="text--accent">keeping waste local</span> and choosing the <span class="text--accent">least energy intensive journey</span> – is the ultimate goal.</p>
+    </main>
+
+    <!-- link main JavaScript file -->
+    <script src="scripts/main.js"></script>
+</body>

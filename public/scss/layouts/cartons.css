@@ -400,6 +400,7 @@ ol, ul {
   --main-pad-lg: min(10vw, calc(var(--main-max-width) * 0.1));
   --main-pad-md: min(6vw, calc(var(--main-max-width) * 0.06));
   --main-pad-sm: min(3vw, calc(var(--main-max-width) * 0.03));
+  --main-pad-xs: min(2vw, calc(var(--main-max-width) * 0.02));
   --tooltip-pad-vrt: 0.2rem;
   --tooltip-pad-hrz: 0.65rem;
   --transition-50: 50ms ease;
@@ -417,6 +418,7 @@ ol, ul {
   /* light theme (default) */
   --clr-1000: #272e00;
   --clr-900: #304a38;
+  --clr-900a: #8c6836;
   --clr-800: #4a7055;
   --clr-800a: #d48d1c;
   --clr-100: #9bbda2;
@@ -511,6 +513,7 @@ ol, ul {
 [data-theme=dark] {
   --clr-1000: #ffffff;
   --clr-900: #e7f5ef;
+  --clr-900a: #ffca78;
   --clr-800: #ccded6;
   --clr-800a: #eda12b;
   --clr-100: #567366;
@@ -605,6 +608,7 @@ ol, ul {
 [data-theme=hc] {
   --clr-1000: #000000;
   --clr-900: #1f452a;
+  --clr-900a: #995d00;
   --clr-800: #255232;
   --clr-800a: #ab6800;
   --clr-100: #d5e8dc;
@@ -705,6 +709,7 @@ ol, ul {
     --main-pad-lg: 15vw;
     --main-pad-md: 10vw;
     --main-pad-sm: 5vw;
+    --main-pad-xs: 3vw;
     /* category pages */
     --steps-border-radius: 4vw;
     --steps-pad-vrt: 7vw;
@@ -723,6 +728,7 @@ ol, ul {
     --main-pad-lg: 23vw;
     --main-pad-md: 13vw;
     --main-pad-sm: 10vw;
+    --main-pad-xs: 5vw;
     /* category pages */
     --steps-border-radius: 7vw;
     --steps-pad-vrt: 10vw;
@@ -789,6 +795,13 @@ h2 {
   -webkit-text-decoration-color: var(--clr-border);
           text-decoration-color: var(--clr-border);
 }
+.text--p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.7em;
+  color: var(--clr-900);
+}
 
 :root {
   --fs-9: 0.9rem;
@@ -826,6 +839,9 @@ h2 {
   .text--xs {
     font-size: 1.1rem;
   }
+  .text-p {
+    font-size: 1.2rem;
+  }
 
   /* button */
   .button--lg {
@@ -848,6 +864,9 @@ h2 {
   }
   .text--xs {
     font-size: 1.1rem;
+  }
+  .text-p {
+    font-size: 1.2rem;
   }
 
   /* button */
@@ -926,7 +945,6 @@ h2 {
 }
 .topbar__back::after {
   content: attr(aria-label);
-  color: var(--clr-carton-900);
   top: calc(100% - var(--topbar-pad-vrt) - var(--topbar-item-pad) + var(--themepicker-tooltip-pad-top));
   left: var(--main-pad-hrz);
   transform-origin: top right;
@@ -1274,6 +1292,13 @@ html, body {
 }
 
 /* === TOP BAR ================================ */
+.topbar__back {
+  /* tooltip */
+}
+.topbar__back::after {
+  color: var(--clr-carton-900);
+}
+
 /* theme picker */
 .themepicker__list {
   background-color: var(--clr-carton-100);

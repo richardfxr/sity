@@ -18,7 +18,6 @@
         /* tooltip */
         &::after{
             content: attr(aria-label);
-            color: var(--clr-carton-900);
             top: calc(100% - var(--topbar-pad-vrt) - var(--topbar-item-pad) + var(--themepicker-tooltip-pad-top));
             left: var(--main-pad-hrz);
             transform-origin: top right;

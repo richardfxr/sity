@@ -26,6 +26,7 @@
     --main-pad-lg: min(10vw, calc(var(--main-max-width) * 0.1));
     --main-pad-md: min(6vw, calc(var(--main-max-width) * 0.06));
     --main-pad-sm: min(3vw, calc(var(--main-max-width) * 0.03));
+    --main-pad-xs: min(2vw, calc(var(--main-max-width) * 0.02));
     --tooltip-pad-vrt: 0.2rem;
     --tooltip-pad-hrz: 0.65rem;
 
@@ -81,6 +82,7 @@
         --main-pad-lg: 15vw;
         --main-pad-md: 10vw;
         --main-pad-sm: 5vw;
+        --main-pad-xs: 3vw;
 
         /* category pages */
         --steps-border-radius: 4vw;
@@ -102,6 +104,7 @@
         --main-pad-lg: 23vw;
         --main-pad-md: 13vw;
         --main-pad-sm: 10vw;
+        --main-pad-xs: 5vw;
 
         /* category pages */
         --steps-border-radius: 7vw;
