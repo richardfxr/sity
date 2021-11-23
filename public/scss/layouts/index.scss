@@ -84,6 +84,23 @@ html, body{
    background-color: var(--clr-100);
 }
 
+.button{
+   &--lg{
+      color: var(--clr-900);
+      background-color: var(--clr-50);
+      border-color: var(--clr-50);
+
+      &:hover{
+         color: var(--clr-1000);
+      }
+
+      &:focus-visible{
+         border-color: var(--clr-border);
+         color: var(--clr-1000);
+      }
+   }
+}
+
 
 /* === TOP BAR ================================ */
 /* logotype */
@@ -158,6 +175,10 @@ html, body{
       color: var(--clr-800a);
       text-decoration: underline;
    }
+}
+
+.quicklink{
+   padding-bottom: 0;
 }
 
 /* recycle categories */
@@ -603,8 +624,14 @@ footer{
    ======================================== */
 
 @media only screen and (max-width: b.$breakpoint-tablet){
-   .hero{
-      width: 80%;
+   .quicklink{
+      padding-bottom: var(--main-pad-sm);
+   }
+
+   .recycleCat{
+      &__container{
+         padding-top: var(--main-pad-md);
+      }
    }
    
    .carton{
