@@ -44,7 +44,7 @@ h2{
 
     &--md{
         font-family: 'Lexend Deca', sans-serif;
-        font-size: min(2.5vw, calc(var(--main-max-width) * 0.025));
+        font-size: min(2.2vw, calc(var(--main-max-width) * 0.022));
         font-weight: 600;
         line-height: 1.3em;
     }
@@ -119,7 +119,7 @@ h2{
         }
 
         &--md{
-            font-size: 3vw;
+            font-size: 2.7vw;
         }
 
         &--sm{
@@ -155,7 +155,7 @@ h2{
         }
 
         &--md{
-            font-size: 6.5vw;
+            font-size: 6vw;
         }
 
         &--sm{

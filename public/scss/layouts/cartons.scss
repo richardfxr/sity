@@ -10,6 +10,8 @@
 
 
 /* === VARIABLES ============================== */
+$category: carton;
+
 body{
     /* steps */
     --steps-1-pad-top: min(3vw, calc(var(--main-max-width) * 0.03));
@@ -35,12 +37,12 @@ body{
 
 /* === WHOLE PAGE ============================= */
 html, body{
-    background-color: var(--clr-carton-0);
+    background-color: var(--clr-#{$category}-0);
  }
  
  .text{
     &--xl, &--lg, &--md &--sm{
-       color: var(--clr-carton-800);
+       color: var(--clr-#{$category}-800);
     }
  
     &--xl a, &--lg a{
@@ -49,17 +51,17 @@ html, body{
  }
 
  .tooltip::after{
-    background-color: var(--clr-carton-100);
+    background-color: var(--clr-#{$category}-100);
  }
 
  .button{
      &--topbar{
-        color: var(--clr-carton-900);
-        background-color: var(--clr-carton-100);
-        border-color: var(--clr-carton-100);
+        color: var(--clr-#{$category}-900);
+        background-color: var(--clr-#{$category}-100);
+        border-color: var(--clr-#{$category}-100);
 
         &:hover{
-           color: var(--clr-carton-1100);
+           color: var(--clr-#{$category}-1100);
         }
 
         &:focus-visible{
@@ -69,12 +71,12 @@ html, body{
      }
 
      &--lg{
-        color: var(--clr-carton-900);
-        background-color: var(--clr-carton-50);
-        border-color: var(--clr-carton-50);
+        color: var(--clr-#{$category}-900);
+        background-color: var(--clr-#{$category}-50);
+        border-color: var(--clr-#{$category}-50);
 
         &:hover{
-           color: var(--clr-carton-1100);
+           color: var(--clr-#{$category}-1100);
         }
 
         &:focus-visible{
@@ -90,7 +92,7 @@ html, body{
    &__back{
       /* tooltip */
       &::after{
-          color: var(--clr-carton-900);
+          color: var(--clr-#{$category}-900);
       }
    }
 }
@@ -98,81 +100,93 @@ html, body{
  /* theme picker */
  .themepicker {
     &__list{
-        background-color: var(--clr-carton-100);
+        background-color: var(--clr-#{$category}-100);
     }
  
     &__btn{
        /* tooltip */
        &::after{
-          color: var(--clr-carton-900);
+          color: var(--clr-#{$category}-900);
        }
     }
 
     &__light{
         &--0{
-           fill: map.get(a.$light, carton-0);
+           fill: map.get(a.$light, #{$category}-0);
         }
   
         &--100{
-           fill: map.get(a.$light, carton-100);
+           fill: map.get(a.$light, #{$category}-100);
         }
   
         &--800{
-           fill: map.get(a.$light, carton-800);
+           fill: map.get(a.$light, #{$category}-800);
         }
      }
   
      &__dark{
         &--0{
-           fill: map.get(a.$dark, carton-0);
+           fill: map.get(a.$dark, #{$category}-0);
         }
   
         &--100{
-           fill: map.get(a.$dark, carton-100);
+           fill: map.get(a.$dark, #{$category}-100);
         }
   
         &--800{
-           fill: map.get(a.$dark, carton-800);
+           fill: map.get(a.$dark, #{$category}-800);
         }
      }
   
      &__hc{
         &--0{
-           fill: map.get(a.$hc, carton-0);
+           fill: map.get(a.$hc, #{$category}-0);
         }
   
         &--100{
-           fill: map.get(a.$hc, carton-100);
+           fill: map.get(a.$hc, #{$category}-100);
         }
   
         &--800{
-           fill: map.get(a.$hc, carton-800);
+           fill: map.get(a.$hc, #{$category}-800);
         }
      }
  }
  
 
- /* === MAIN =================================== */
+/* === MAIN =================================== */
+
+.steps{
+   &__item{
+      background-color: var(--clr-#{$category}-50);
+
+      &__main{
+         h2, p{
+            color: var(--clr-#{$category}-900);
+         }
+      }
+   }
+}
 
 #step1__illu{
-     width: min(25vw, calc(var(--main-max-width) * 0.25));
-     padding-top: var(--steps-1-pad-top);
+   width: min(25vw, calc(var(--main-max-width) * 0.25));
+   padding-top: var(--steps-1-pad-top);
 }
 
 #step2__illu{
-    width: min(17vw, calc(var(--main-max-width) * 0.17));
+   width: min(17vw, calc(var(--main-max-width) * 0.17));
 }
 
 #recyclebin__illu{
-    width: min(25vw, calc(var(--main-max-width) * 0.25));
-    padding-top: var(--recyclebin-pad-top);
-    margin-bottom: calc(-1 * var(--steps-pad-vrt));
+   width: min(25vw, calc(var(--main-max-width) * 0.25));
+   padding-top: var(--recyclebin-pad-top);
+   margin-bottom: calc(-1 * var(--steps-pad-vrt));
 }
 
 #plasticbag__illu{
-    width: min(25vw, calc(var(--main-max-width) * 0.25));
-    padding-top: var(--plasticbag-pad-top);
-    margin-bottom: calc(-1 * var(--steps-pad-vrt));
+   width: min(25vw, calc(var(--main-max-width) * 0.25));
+   padding-top: var(--plasticbag-pad-top);
+   margin-bottom: calc(-1 * var(--steps-pad-vrt));
 }
  
 

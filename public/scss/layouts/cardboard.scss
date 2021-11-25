@@ -1,0 +1,269 @@
+// SCSS file containing CSS styles for index.html
+
+
+
+// === USE ====================================
+@use "sass:map";
+@use '../abstracts' as a;
+@use '../base' as b;
+@use '../components' as c;
+
+
+/* === VARIABLES ============================== */
+$category: cardboard;
+
+body{
+    /* steps */
+    --steps-1-pad-top: min(3vw, calc(var(--main-max-width) * 0.03));
+    --notice-1-pad-top: min(2vw, calc(var(--main-max-width) * 0.02));
+    --notice-2-pad-top: min(3vw, calc(var(--main-max-width) * 0.03));
+}
+
+@media only screen and (max-width: b.$breakpoint-tablet){
+    body{
+      /* steps */
+      --steps-1-pad-top: 4vw;
+      --notice-1-pad-top: 2vw;
+      --notice-2-pad-top: 4vw;
+    }
+}
+
+@media only screen and (max-width: b.$breakpoint-mobile){
+    body{
+      /* steps */
+      --steps-1-pad-top: 5vw;
+      --notice-1-pad-top: 3.5vw;
+      --notice-2-pad-top: 7vw;
+    }
+}
+
+/* ============================================
+   CARDBAORD PAGE
+   ============================================ */
+
+/* === WHOLE PAGE ============================= */
+html, body{
+    background-color: var(--clr-#{$category}-0);
+ }
+ 
+ .text{
+    &--xl, &--lg, &--md &--sm{
+       color: var(--clr-#{$category}-800);
+    }
+ 
+    &--xl a, &--lg a{
+       color: var(--clr-800a);
+    }
+ }
+
+ .tooltip::after{
+    background-color: var(--clr-#{$category}-100);
+ }
+
+ .button{
+     &--topbar{
+        color: var(--clr-#{$category}-900);
+        background-color: var(--clr-#{$category}-100);
+        border-color: var(--clr-#{$category}-100);
+
+        &:hover{
+           color: var(--clr-#{$category}-1100);
+        }
+
+        &:focus-visible{
+           border-color: var(--clr-border);
+           color: var(--clr-1100);
+        }
+     }
+
+     &--lg{
+        color: var(--clr-#{$category}-900);
+        background-color: var(--clr-#{$category}-50);
+        border-color: var(--clr-#{$category}-50);
+
+        &:hover{
+           color: var(--clr-#{$category}-1100);
+        }
+
+        &:focus-visible{
+           border-color: var(--clr-border);
+           color: var(--clr-900);
+        }
+     }
+ }
+
+
+ /* === TOP BAR ================================ */
+ .topbar{
+   &__back{
+      /* tooltip */
+      &::after{
+          color: var(--clr-#{$category}-900);
+      }
+   }
+}
+
+ /* theme picker */
+ .themepicker {
+    &__list{
+        background-color: var(--clr-#{$category}-100);
+    }
+ 
+    &__btn{
+       /* tooltip */
+       &::after{
+          color: var(--clr-#{$category}-900);
+       }
+    }
+
+    &__light{
+        &--0{
+           fill: map.get(a.$light, #{$category}-0);
+        }
+  
+        &--100{
+           fill: map.get(a.$light, #{$category}-100);
+        }
+  
+        &--800{
+           fill: map.get(a.$light, #{$category}-800);
+        }
+     }
+  
+     &__dark{
+        &--0{
+           fill: map.get(a.$dark, #{$category}-0);
+        }
+  
+        &--100{
+           fill: map.get(a.$dark, #{$category}-100);
+        }
+  
+        &--800{
+           fill: map.get(a.$dark, #{$category}-800);
+        }
+     }
+  
+     &__hc{
+        &--0{
+           fill: map.get(a.$hc, #{$category}-0);
+        }
+  
+        &--100{
+           fill: map.get(a.$hc, #{$category}-100);
+        }
+  
+        &--800{
+           fill: map.get(a.$hc, #{$category}-800);
+        }
+     }
+ }
+ 
+
+/* === MAIN =================================== */
+
+.steps{
+   &__item{
+      background-color: var(--clr-#{$category}-50);
+
+      &__main{
+         h2, p{
+            color: var(--clr-#{$category}-900);
+         }
+      }
+   }
+}
+
+#step1__illu{
+   width: min(27vw, calc(var(--main-max-width) * 0.27));
+   padding-top: var(--steps-1-pad-top);
+}
+
+#notice1__illu{
+   width: min(30vw, calc(var(--main-max-width) * 0.30));
+   padding-top: var(--notice-1-pad-top);
+}
+
+#notice2__illu{
+   width: min(26vw, calc(var(--main-max-width) * 0.26));
+   padding-top: var(--notice-2-pad-top);
+}
+
+#step2__illu{
+   width: min(17vw, calc(var(--main-max-width) * 0.17));
+}
+
+#recyclebin__illu{
+   width: min(25vw, calc(var(--main-max-width) * 0.25));
+   padding-top: var(--recyclebin-pad-top);
+   margin-bottom: calc(-1 * var(--steps-pad-vrt));
+}
+
+#plasticbag__illu{
+   width: min(25vw, calc(var(--main-max-width) * 0.25));
+   padding-top: var(--plasticbag-pad-top);
+   margin-bottom: calc(-1 * var(--steps-pad-vrt));
+}
+ 
+
+
+/* ========================================
+    BREAKPOINTS
+    ======================================== */
+
+@media only screen and (max-width: b.$breakpoint-tablet){
+   #step1__illu{
+      width: 31vw;
+   }
+
+   #notice1__illu{
+      width: 34vw;
+   }
+
+   #notice2__illu{
+      width: 28vw;
+   }
+
+   #step2__illu{
+      width: 20vw;
+   }
+
+   #recyclebin__illu{
+      width: 26vw;
+   }
+
+   #plasticbag__illu{
+      width: 26vw;
+   }
+}
+
+@media only screen and (max-width: b.$breakpoint-mobile){
+    #step1__illu{
+        width: 65vw;
+        padding-bottom: 3vw;
+    }
+
+    #notice1__illu{
+       width: 68vw;
+       padding-bottom: 3vw;
+    }
+
+    #notice2__illu{
+      width: 58vw;
+      padding-bottom: 3vw;
+   }
+
+    #step2__illu{
+        width: 40vw;
+        padding-top: 3vw;;
+        padding-bottom: 3vw;
+    }
+
+    #recyclebin__illu{
+        width: 56vw;
+    }
+
+    #plasticbag__illu{
+        width: 56vw;
+    }
+}

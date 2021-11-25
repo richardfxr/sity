@@ -59,7 +59,6 @@
         grid-template-columns: 1fr 1fr;
         padding: var(--steps-pad-vrt) var(--steps-pad-hrz);
         margin-bottom: var(--steps-item-gap);
-        background-color: var(--clr-carton-50);
         border-radius: var(--steps-border-radius);
 
         &__main{
@@ -67,13 +66,11 @@
             flex-flow: column nowrap;
 
             h2{
-                color: var(--clr-carton-900);
                 line-height: 1;
                 margin-top: var(--steps-h2-pad-top);
             }
 
             p{
-                color: var(--clr-carton-900);
                 margin-top: auto;
             }
         }
