@@ -515,7 +515,7 @@ ol, ul {
   --clr-recycle-bin-3: #344c7d;
   --clr-recycle-bin-4: #2b4069;
   --clr-caution-900: #523614;
-  --clr-caution-50: #dbc4a7;
+  --clr-caution-50: #e3beaa;
   --clr-plastic-bag-1: #e3c7a1;
   --clr-plastic-bag-2: #ccb084;
   --clr-plastic-bag-3: #ab955f;
@@ -559,8 +559,15 @@ ol, ul {
   --clr-cardboard-brown-2: #a3875c;
   --clr-cardboard-brown-3: #917a4b;
   --clr-cardboard-brown-4: #7d6b3a;
+  --clr-cardboard-brown-5: #87633f;
+  --clr-cardboard-red-2: #a63123;
+  --clr-cardboard-1100: #fff6ed;
   --clr-cardboard-1000: #ffecd6;
+  --clr-cardboard-900: #ffecd6;
+  --clr-cardboard-800: #e8dccf;
   --clr-cardboard-100: #736555;
+  --clr-cardboard-50: #665745;
+  --clr-cardboard-0: #544b40;
   --clr-paper-white-1: #c2c1b5;
   --clr-paper-white-2: #b7b8a9;
   --clr-paper-white-3: #a5a894;
@@ -610,7 +617,7 @@ ol, ul {
   --clr-recycle-bin-3: #2a3e66;
   --clr-recycle-bin-4: #233557;
   --clr-caution-900: #ffedd6;
-  --clr-caution-50: #73624d;
+  --clr-caution-50: #6b5548;
   --clr-plastic-bag-1: #b39c7e;
   --clr-plastic-bag-2: #947f60;
   --clr-plastic-bag-3: #807047;
@@ -643,6 +650,7 @@ ol, ul {
   --clr-carton-white-3: #a6a6a6;
   --clr-carton-white-4: #808080;
   --clr-carton-white-5: #6b6b6b;
+  --clr-carton-1100: #082129;
   --clr-carton-1000: #0f3845;
   --clr-carton-900: #173a45;
   --clr-carton-800: #254852;
@@ -653,8 +661,15 @@ ol, ul {
   --clr-cardboard-brown-2: #dbb67d;
   --clr-cardboard-brown-3: #ab9059;
   --clr-cardboard-brown-4: #85713d;
+  --clr-cardboard-brown-5: #ad7c47;
+  --clr-cardboard-red-2: #d1412c;
+  --clr-cardboard-1100: #291a08;
   --clr-cardboard-1000: #452d0f;
+  --clr-cardboard-900: #453017;
+  --clr-cardboard-800: #523c23;
   --clr-cardboard-100: #f2dbc2;
+  --clr-cardboard-50: #f7e0c6;
+  --clr-cardboard-0: #f2ece6;
   --clr-paper-white-1: #faf8ea;
   --clr-paper-white-2: #e5e6d4;
   --clr-paper-white-3: #b6b8a2;
@@ -704,7 +719,7 @@ ol, ul {
   --clr-recycle-bin-3: #334a7a;
   --clr-recycle-bin-4: #25385c;
   --clr-caution-900: #453017;
-  --clr-caution-50: #f7e8d7;
+  --clr-caution-50: #fadbc8;
   --clr-plastic-bag-1: #ffe5c2;
   --clr-plastic-bag-2: #e3c393;
   --clr-plastic-bag-3: #b09961;

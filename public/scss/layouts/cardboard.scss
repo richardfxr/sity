@@ -13,27 +13,15 @@
 $category: cardboard;
 
 body{
-    /* steps */
-    --steps-1-pad-top: min(3vw, calc(var(--main-max-width) * 0.03));
-    --notice-1-pad-top: min(2vw, calc(var(--main-max-width) * 0.02));
-    --notice-2-pad-top: min(3vw, calc(var(--main-max-width) * 0.03));
 }
 
 @media only screen and (max-width: b.$breakpoint-tablet){
     body{
-      /* steps */
-      --steps-1-pad-top: 4vw;
-      --notice-1-pad-top: 2vw;
-      --notice-2-pad-top: 4vw;
     }
 }
 
 @media only screen and (max-width: b.$breakpoint-mobile){
     body{
-      /* steps */
-      --steps-1-pad-top: 5vw;
-      --notice-1-pad-top: 3.5vw;
-      --notice-2-pad-top: 7vw;
     }
 }
 
@@ -176,21 +164,22 @@ html, body{
 
 #step1__illu{
    width: min(27vw, calc(var(--main-max-width) * 0.27));
-   padding-top: var(--steps-1-pad-top);
+   padding-top: min(3vw, calc(var(--main-max-width) * 0.03));
 }
 
 #notice1__illu{
    width: min(30vw, calc(var(--main-max-width) * 0.30));
-   padding-top: var(--notice-1-pad-top);
+   padding-top: min(2vw, calc(var(--main-max-width) * 0.02));
 }
 
 #notice2__illu{
    width: min(26vw, calc(var(--main-max-width) * 0.26));
-   padding-top: var(--notice-2-pad-top);
+   padding-top: min(3vw, calc(var(--main-max-width) * 0.03));
 }
 
 #step2__illu{
-   width: min(17vw, calc(var(--main-max-width) * 0.17));
+   width: min(40vw, calc(var(--main-max-width) * 0.4));
+   padding-top: min(5vw, calc(var(--main-max-width) * 0.05));
 }
 
 #recyclebin__illu{
@@ -214,18 +203,22 @@ html, body{
 @media only screen and (max-width: b.$breakpoint-tablet){
    #step1__illu{
       width: 31vw;
+      padding-top: 4vw;
    }
 
    #notice1__illu{
       width: 34vw;
+      padding-top: 2vw;
    }
 
    #notice2__illu{
       width: 28vw;
+      padding-top: 4vw;
    }
 
    #step2__illu{
-      width: 20vw;
+      width: 40vw;
+      padding-top: 4vw;
    }
 
    #recyclebin__illu{
@@ -240,22 +233,25 @@ html, body{
 @media only screen and (max-width: b.$breakpoint-mobile){
     #step1__illu{
         width: 65vw;
+        padding-top: 5vw;
         padding-bottom: 3vw;
     }
 
     #notice1__illu{
        width: 68vw;
+       padding-top: 3.5vw;
        padding-bottom: 3vw;
     }
 
     #notice2__illu{
       width: 58vw;
+      padding-top: 7vw;
       padding-bottom: 3vw;
    }
 
     #step2__illu{
-        width: 40vw;
-        padding-top: 3vw;;
+        width: 75vw;
+        padding-top: 7vw;;
         padding-bottom: 3vw;
     }
 
