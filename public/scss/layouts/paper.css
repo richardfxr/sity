@@ -891,7 +891,7 @@ h2 {
 
   /* button */
   .button--lg {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -941,8 +941,8 @@ h2 {
   }
   .button--lg {
     /* variables */
-    --button-lg-pad-vrt: 0.6vw;
-    --button-lg-pad-hrz: 3vw;
+    --button-lg-pad-vrt: 0.45vw;
+    --button-lg-pad-hrz: 2.8vw;
   }
 }
 @media only screen and (max-width: 600px) {
