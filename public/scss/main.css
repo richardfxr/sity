@@ -752,7 +752,7 @@ ol, ul {
     --border-main: solid 1.5px;
     --main-pad-vrt: 7vw;
     --main-pad-xl: 20vw;
-    --main-pad-lg: 15vw;
+    --main-pad-lg: 12vw;
     --main-pad-md: 10vw;
     --main-pad-sm: 5vw;
     --main-pad-xs: 3vw;
@@ -760,7 +760,7 @@ ol, ul {
     --steps-border-radius: 4vw;
     --steps-pad-vrt: 7vw;
     --steps-pad-hrz: 6vw;
-    --steps-item-gap: var(--main-pad-hrz);
+    --steps-item-gap: 3.5vw;
     --steps-h2-pad-top: -0.6vw;
     --recyclebin-pad-top: 4vw;
     --plasticbag-pad-top: 3vw;

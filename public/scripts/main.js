@@ -75,3 +75,28 @@ function toggleRoute(category) {
         map.classList.add(category)
     }
 }
+
+
+
+// faq page answer show/hide toggle
+function toggleAnswer(id) {
+    // get faq container
+    let container = document.getElementById(id)
+    // get question <button>
+    let question = document.getElementById(id + "__question")
+
+    // toggle answer visibility
+    if (container.classList.contains("hidden")) {
+        // show answer and remove class
+        question.setAttribute("aria-expanded", "true")
+        container.classList.remove("hidden")
+
+        console.log("faq shown")
+    } else {
+        // hide answer and remove class
+        question.setAttribute("aria-expanded", "false")
+        container.classList.add("hidden")
+
+        console.log("faq hidden")
+    }
+}

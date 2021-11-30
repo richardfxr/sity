@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ============================================
    GOOGLE FONT IMPORTS
    ============================================ */
@@ -1273,44 +1274,68 @@ body {
 }
 
 /* === VARIABLES ============================== */
+body {
+  /* faq */
+  --faq-pad-vrt: min(3vw, calc(var(--main-max-width) * 0.03));
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    /* faq */
+    --faq-pad-vrt: 4vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    /* faq */
+    --faq-pad-vrt: 8vw;
+  }
+}
 /* ============================================
-   CARDBAORD PAGE
+   CARTONS PAGE
    ============================================ */
 /* === WHOLE PAGE ============================= */
 html, body {
-  background-color: var(--clr-cardboard-0);
+  background-color: var(--clr-0);
 }
 
 .text--xl, .text--lg, .text--md .text--sm {
-  color: var(--clr-cardboard-800);
+  color: var(--clr-800);
 }
 .text--xl a, .text--lg a {
   color: var(--clr-800a);
 }
+.text--xl .text--accent, .text--lg .text--accent {
+  color: var(--clr-800a);
+}
+.text--accent {
+  font-weight: 600;
+  color: var(--clr-900a);
+}
 
 .tooltip::after {
-  background-color: var(--clr-cardboard-100);
+  background-color: var(--clr-100);
 }
 
 .button--topbar {
-  color: var(--clr-cardboard-900);
-  background-color: var(--clr-cardboard-100);
-  border-color: var(--clr-cardboard-100);
+  color: var(--clr-900);
+  background-color: var(--clr-100);
+  border-color: var(--clr-100);
 }
 .button--topbar:hover {
-  color: var(--clr-cardboard-1100);
+  color: var(--clr-1000);
 }
 .button--topbar:focus-visible {
   border-color: var(--clr-border);
-  color: var(--clr-1100);
+  color: var(--clr-1000);
 }
 .button--lg {
-  color: var(--clr-cardboard-900);
-  background-color: var(--clr-cardboard-50);
-  border-color: var(--clr-cardboard-50);
+  color: var(--clr-900);
+  background-color: var(--clr-50);
+  border-color: var(--clr-50);
 }
 .button--lg:hover {
-  color: var(--clr-cardboard-1100);
+  color: var(--clr-1000);
 }
 .button--lg:focus-visible {
   border-color: var(--clr-border);
@@ -1322,85 +1347,99 @@ html, body {
   /* tooltip */
 }
 .topbar__back::after {
-  color: var(--clr-cardboard-900);
+  color: var(--clr-900);
 }
 
 /* theme picker */
 .themepicker__list {
-  background-color: var(--clr-cardboard-100);
+  background-color: var(--clr-100);
 }
 .themepicker__btn {
   /* tooltip */
 }
 .themepicker__btn::after {
-  color: var(--clr-cardboard-900);
+  color: var(--clr-900);
 }
 .themepicker__light--0 {
-  fill: #e3cfbd;
+  fill: #c9debf;
 }
 .themepicker__light--100 {
-  fill: #d4b796;
+  fill: #9bbda2;
 }
 .themepicker__light--800 {
-  fill: #6e4e27;
+  fill: #4a7055;
 }
 .themepicker__dark--0 {
-  fill: #544b40;
+  fill: #3f544f;
 }
 .themepicker__dark--100 {
-  fill: #736555;
+  fill: #567366;
 }
 .themepicker__dark--800 {
-  fill: #e8dccf;
+  fill: #ccded6;
 }
 .themepicker__hc--0 {
-  fill: #f2ece6;
+  fill: #f7fff2;
 }
 .themepicker__hc--100 {
-  fill: #f2dbc2;
+  fill: #d5e8dc;
 }
 .themepicker__hc--800 {
-  fill: #523c23;
+  fill: #255232;
 }
 
 /* === MAIN =================================== */
-.steps__item {
-  background-color: var(--clr-cardboard-50);
-}
-.steps__item__main h2, .steps__item__main p {
-  color: var(--clr-cardboard-900);
+.title {
+  padding-bottom: var(--main-pad-lg);
 }
 
-#step1__illu {
-  width: min(27vw, calc(var(--main-max-width) * 0.27));
-  padding-top: min(3vw, calc(var(--main-max-width) * 0.03));
+.faq {
+  padding-top: var(--steps-item-gap);
 }
-
-#notice1__illu {
-  width: min(30vw, calc(var(--main-max-width) * 0.30));
-  padding-top: min(2vw, calc(var(--main-max-width) * 0.02));
+.faq__container {
+  /* flexbox */
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  overflow: hidden;
+  margin-bottom: var(--steps-item-gap);
+  border-radius: var(--steps-border-radius);
+  background-color: var(--clr-50);
 }
-
-#notice2__illu {
-  width: min(26vw, calc(var(--main-max-width) * 0.26));
-  padding-top: min(3vw, calc(var(--main-max-width) * 0.03));
+.faq__question {
+  display: block;
+  position: relative;
+  width: 100%;
+  color: var(--clr-900);
+  text-align: left;
+  padding: var(--faq-pad-vrt) calc(2 * var(--steps-pad-hrz)) var(--faq-pad-vrt) var(--steps-pad-hrz);
+  margin-top: var(--steps-h2-pad-top);
 }
-
-#step2__illu {
-  width: min(40vw, calc(var(--main-max-width) * 0.4));
-  padding-top: min(5vw, calc(var(--main-max-width) * 0.05));
+.faq__question::after {
+  /* arrow at the right end of each button */
+  content: "↓";
+  font-family: "Doughy", sans-serif;
+  position: absolute;
+  right: var(--steps-pad-hrz);
+  transform: rotate(180deg);
+  transition: transform var(--transition-200);
 }
-
-#recyclebin__illu {
-  width: min(25vw, calc(var(--main-max-width) * 0.25));
-  padding-top: var(--recyclebin-pad-top);
-  margin-bottom: calc(-1 * var(--steps-pad-vrt));
+.faq__answer {
+  display: block;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0 var(--steps-pad-hrz) var(--faq-pad-vrt) var(--steps-pad-hrz);
+  transition: padding var(--transition-200), height var(--transition-200);
 }
-
-#plasticbag__illu {
-  width: min(25vw, calc(var(--main-max-width) * 0.25));
-  padding-top: var(--plasticbag-pad-top);
-  margin-bottom: calc(-1 * var(--steps-pad-vrt));
+.faq .hidden .faq__question::after {
+  /* arrow default state */
+  transform: rotate(0deg);
+}
+.faq .hidden .faq__answer {
+  /* answer hidden state */
+  height: 0;
+  padding-bottom: 0;
 }
 
 /* ========================================
@@ -1408,23 +1447,11 @@ html, body {
     ======================================== */
 @media only screen and (max-width: 1200px) {
   #step1__illu {
-    width: 31vw;
-    padding-top: 4vw;
-  }
-
-  #notice1__illu {
-    width: 34vw;
-    padding-top: 2vw;
-  }
-
-  #notice2__illu {
     width: 28vw;
-    padding-top: 4vw;
   }
 
   #step2__illu {
-    width: 40vw;
-    padding-top: 4vw;
+    width: 20vw;
   }
 
   #recyclebin__illu {
@@ -1437,26 +1464,13 @@ html, body {
 }
 @media only screen and (max-width: 600px) {
   #step1__illu {
-    width: 65vw;
-    padding-top: 5vw;
-    padding-bottom: 3vw;
-  }
-
-  #notice1__illu {
-    width: 68vw;
-    padding-top: 3.5vw;
-    padding-bottom: 3vw;
-  }
-
-  #notice2__illu {
-    width: 58vw;
-    padding-top: 7vw;
+    width: 55vw;
     padding-bottom: 3vw;
   }
 
   #step2__illu {
-    width: 75vw;
-    padding-top: 7vw;
+    width: 40vw;
+    padding-top: 3vw;
     padding-bottom: 3vw;
   }
 
@@ -1467,4 +1481,4 @@ html, body {
   #plasticbag__illu {
     width: 56vw;
   }
-}/*# sourceMappingURL=cardboard.css.map */
+}/*# sourceMappingURL=faq.css.map */

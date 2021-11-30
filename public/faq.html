@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+
+    <!-- link main CSS files (Sass compiled) -->
+    <link rel="stylesheet" href="scss/layouts/faq.css">
+
+    <!-- load correct theme and avoid flash -->
+    <script>
+        localStorage.getItem('theme') && 
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
+        console.log('localStorage theme: ' + localStorage.getItem('theme'))
+    </script>
+
+    <!-- favicons -->
+    <!-- generics -->
+    <link rel="icon" href="assets/favicons/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="assets/favicons/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="assets/favicons/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="assets/favicons/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="assets/favicons/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="assets/favicons/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="assets/favicons/favicon-228.png" sizes="228x228">
+
+    <!-- Android -->
+    <link rel="shortcut icon" sizes="196x196" href="assets/favicons/favicon-196.png">
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="assets/favicons/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="path/to/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="path/to/favicon-180.png" sizes="180x180">
+
+    <!-- Windows 8 IE 10-->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="assets/favicons/favicon-144.png">
+
+    <!-- Windows 8.1 + IE11 and above. Not used for now
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml" />-->
+</head>
+<body>
+    <!-- top bar -->
+    <div class="topbar">
+
+        <!-- back button -->
+        <a href="/" class="topbar__back button--topbar tooltip" aria-label="back to home">↖</a>
+
+        <!-- theme picker-->
+        <ul class="themepicker__list">
+
+            <!-- light theme -->
+            <li class="themepicker__item">
+                <button class="themepicker__btn tooltip" aria-label="light theme" id="themepicker__btn--light" onclick="theme.setTheme('light')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__light">
+                        <circle class="themepicker__light--0" cx="18" cy="18" r="18"/>
+                        <ellipse class="themepicker__light--800" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+                        <path class="themepicker__light--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+                    </svg>
+                </button>
+            </li>
+
+            <!-- dark theme -->
+            <li class="themepicker__item">
+                <button class="themepicker__btn tooltip" aria-label="dark theme" id="themepicker__btn--dark" onclick="theme.setTheme('dark')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__dark">
+                        <circle class="themepicker__dark--0" cx="18" cy="18" r="18"/>
+                        <ellipse class="themepicker__dark--800" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+                        <path class="themepicker__dark--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+                    </svg>
+                </button>
+            </li>
+
+            <!-- high contrast theme -->
+            <li class="themepicker__item">
+                <button class="themepicker__btn tooltip" aria-label="high contrast theme" id="themepicker__btn--hc" onclick="theme.setTheme('hc')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__hc">
+                        <circle class="themepicker__hc--0" cx="18" cy="18" r="18"/>
+                        <ellipse class="themepicker__hc--800" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+                        <path class="themepicker__hc--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+
+    </div>
+
+    <main>
+        <h1 class="text--xl title">Frequently asked <span class="text--accent">questions</span>.</h1>
+
+        <!-- questions -->
+        <dl class="faq" id="questions">
+            <!-- faq 1 -->
+            <div class="faq__container hidden" id="faq1">
+                <dt>
+                    <button class="faq__question text--md" id="faq1__question" aria-expanded="false" aria-controls="faq1__answer" onclick="toggleAnswer('faq1')">
+                        What is sity.earth?
+                    </button>
+                </dt>
+                <dd>
+                    <p class="faq__answer text--p" id="faq1__answer">
+                        Something something sustainable something reycling.
+                    </p>
+                </dd>
+            </div>
+
+            <!-- faq 2 -->
+            <div class="faq__container hidden" id="faq2">
+                <dt>
+                    <button class="faq__question text--md" id="faq2__question" aria-expanded="false" aria-controls="faq2__answer" onclick="toggleAnswer('faq2')">
+                        Why are we mapping waste journeys?
+                    </button>
+                </dt>
+                <dd>
+                    <p class="faq__answer text--p" id="faq2__answer">
+                        Something something want things to be more transparent.
+                    </p>
+                </dd>
+            </div>
+
+            <!-- faq 3 -->
+            <div class="faq__container hidden" id="faq3">
+                <dt>
+                    <button class="faq__question text--md" id="faq3__question" aria-expanded="false" aria-controls="faq3__answer" onclick="toggleAnswer('faq3')">
+                        Who created sity.earth?
+                    </button>
+                </dt>
+                <dd>
+                    <p class="faq__answer text--p" id="faq3__answer">
+                        Something something Richard and Deelia.
+                    </p>
+                </dd>
+            </div>
+
+            <!-- faq 4 -->
+            <div class="faq__container hidden" id="faq4">
+                <dt>
+                    <button class="faq__question text--md" id="faq4__question" aria-expanded="false" aria-controls="faq4__answer" onclick="toggleAnswer('faq4')">
+                        Why .earth?
+                    </button>
+                </dt>
+                <dd>
+                    <p class="faq__answer text--p" id="faq4__answer">
+                        Something something .com is commercial and bad.
+                    </p>
+                </dd>
+            </div>
+
+            <!-- faq 5 -->
+            <div class="faq__container hidden" id="faq5">
+                <dt>
+                    <button class="faq__question text--md" id="faq5__question" aria-expanded="false" aria-controls="faq5__answer" onclick="toggleAnswer('faq5')">
+                        Why just Providence?
+                    </button>
+                </dt>
+                <dd>
+                    <p class="faq__answer text--p" id="faq5__answer">
+                        America’s recycling system differs from city to city. That is why we decided to focus on our city for the first few versions of this site. We plan on adding other cities down the line.
+                    </p>
+                </dd>
+            </div>
+
+            <!-- faq 6 -->
+            <div class="faq__container hidden" id="faq6">
+                <dt>
+                    <button class="faq__question text--md" id="faq6__question" aria-expanded="false" aria-controls="faq6__answer" onclick="toggleAnswer('faq6')">
+                        How can I contribute?
+                    </button>
+                </dt>
+                <dd>
+                    <p class="faq__answer text--p" id="faq6__answer">
+                        The project is too early in its development for us to accept contributors. For now, you may <a class="text--link" href="#" rel="noopener noreferrer">email us</a> any suggestions and take a look at the project’s <a class="text--link" href="https://github.com/richardfxr/sity" target="_blank" rel="noopener noreferrer">GitHub page</a>. Once we are ready, we will publish our contributing guidelines and update the site accordingly.
+                    </p>
+                </dd>
+            </div>
+
+            <!-- faq 7 -->
+            <div class="faq__container hidden" id="faq7">
+                <dt>
+                    <button class="faq__question text--md" id="faq7__question" aria-expanded="false" aria-controls="faq7__answer" onclick="toggleAnswer('faq7')">
+                        What steps can I take right now?
+                    </button>
+                </dt>
+                <dd>
+                    <p class="faq__answer text--p" id="faq7__answer">
+                        Something something produce less waste.
+                    </p>
+                </dd>
+            </div>
+
+            <!-- faq 8 -->
+            <div class="faq__container hidden" id="faq8">
+                <dt>
+                    <button class="faq__question text--md" id="faq8__question" aria-expanded="false" aria-controls="faq8__answer" onclick="toggleAnswer('faq8')">
+                        The site is pre-alpha?
+                    </button>
+                </dt>
+                <dd>
+                    <p class="faq__answer text--p" id="faq8__answer">
+                        Correct. We have many things planned for this project. What you see here is just the beginning, the “minimum viable product,” if you will. You can see what’s coming next in our <a class="text--link" href="https://sity-earth--dev-vc9f6b05.web.app/" target="_blank" rel="noopener noreferrer">development preview</a>.
+                    </p>
+                </dd>
+            </div>
+        </dl>
+    </main>
+
+    <!-- link main JavaScript file -->
+    <script src="scripts/main.js"></script>
+</body>
