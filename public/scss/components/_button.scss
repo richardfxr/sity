@@ -63,6 +63,7 @@
         border: var(--border-main);
         border-radius: 20vw;
         transition: color var(--transition-100),
+                    background-color var(--transition-100),
                     border-color var(--transition-100);
     }
 
@@ -74,6 +75,7 @@
         border: var(--border-main);
         border-radius: calc(var(--button-lg-pad-hrz) * 1.5);
         transition: color var(--transition-100),
+                    background-color var(--transition-100),
                     border-color var(--transition-100);
     }
 }

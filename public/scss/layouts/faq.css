@@ -966,7 +966,7 @@ h2 {
   padding: var(--button-topbar-pad-vrt) var(--button-topbar-pad-hrz) calc(var(--button-topbar-pad-vrt) * 1.5) var(--button-topbar-pad-hrz);
   border: var(--border-main);
   border-radius: 20vw;
-  transition: color var(--transition-100), border-color var(--transition-100);
+  transition: color var(--transition-100), background-color var(--transition-100), border-color var(--transition-100);
 }
 .button--lg {
   box-sizing: border-box;
@@ -977,7 +977,7 @@ h2 {
   padding: var(--button-lg-pad-vrt) var(--button-lg-pad-hrz) calc(var(--button-lg-pad-vrt) * 1.5) var(--button-lg-pad-hrz);
   border: var(--border-main);
   border-radius: calc(var(--button-lg-pad-hrz) * 1.5);
-  transition: color var(--transition-100), border-color var(--transition-100);
+  transition: color var(--transition-100), background-color var(--transition-100), border-color var(--transition-100);
 }
 
 /* ============================================
@@ -1314,16 +1314,18 @@ html, body {
 }
 
 .tooltip::after {
-  background-color: var(--clr-100);
+  background-color: var(--clr-50);
 }
 
 .button--topbar {
   color: var(--clr-900);
-  background-color: var(--clr-100);
-  border-color: var(--clr-100);
+  background-color: var(--clr-50);
+  border-color: var(--clr-50);
 }
 .button--topbar:hover {
   color: var(--clr-1000);
+  background-color: var(--clr-100);
+  border-color: var(--clr-100);
 }
 .button--topbar:focus-visible {
   border-color: var(--clr-border);
@@ -1336,6 +1338,8 @@ html, body {
 }
 .button--lg:hover {
   color: var(--clr-1000);
+  background-color: var(--clr-100);
+  border-color: var(--clr-100);
 }
 .button--lg:focus-visible {
   border-color: var(--clr-border);
@@ -1352,7 +1356,7 @@ html, body {
 
 /* theme picker */
 .themepicker__list {
-  background-color: var(--clr-100);
+  background-color: var(--clr-50);
 }
 .themepicker__btn {
   /* tooltip */

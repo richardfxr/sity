@@ -965,7 +965,7 @@ h2 {
   padding: var(--button-topbar-pad-vrt) var(--button-topbar-pad-hrz) calc(var(--button-topbar-pad-vrt) * 1.5) var(--button-topbar-pad-hrz);
   border: var(--border-main);
   border-radius: 20vw;
-  transition: color var(--transition-100), border-color var(--transition-100);
+  transition: color var(--transition-100), background-color var(--transition-100), border-color var(--transition-100);
 }
 .button--lg {
   box-sizing: border-box;
@@ -976,7 +976,7 @@ h2 {
   padding: var(--button-lg-pad-vrt) var(--button-lg-pad-hrz) calc(var(--button-lg-pad-vrt) * 1.5) var(--button-lg-pad-hrz);
   border: var(--border-main);
   border-radius: calc(var(--button-lg-pad-hrz) * 1.5);
-  transition: color var(--transition-100), border-color var(--transition-100);
+  transition: color var(--transition-100), background-color var(--transition-100), border-color var(--transition-100);
 }
 
 /* ============================================

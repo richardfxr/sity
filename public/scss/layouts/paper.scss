@@ -49,17 +49,19 @@ html, body{
  }
 
  .tooltip::after{
-    background-color: var(--clr-#{$category}-100);
+    background-color: var(--clr-#{$category}-50);
  }
 
  .button{
      &--topbar{
         color: var(--clr-#{$category}-900);
-        background-color: var(--clr-#{$category}-100);
-        border-color: var(--clr-#{$category}-100);
+        background-color: var(--clr-#{$category}-50);
+        border-color: var(--clr-#{$category}-50);
 
         &:hover{
            color: var(--clr-#{$category}-1100);
+           background-color: var(--clr-#{$category}-100);
+           border-color: var(--clr-#{$category}-100);
         }
 
         &:focus-visible{
@@ -75,6 +77,8 @@ html, body{
 
         &:hover{
            color: var(--clr-#{$category}-1100);
+           background-color: var(--clr-#{$category}-100);
+           border-color: var(--clr-#{$category}-100);
         }
 
         &:focus-visible{
@@ -98,7 +102,7 @@ html, body{
  /* theme picker */
  .themepicker {
     &__list{
-        background-color: var(--clr-#{$category}-100);
+        background-color: var(--clr-#{$category}-50);
     }
  
     &__btn{

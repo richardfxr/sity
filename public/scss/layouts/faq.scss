@@ -59,17 +59,19 @@ html, body{
 }
 
 .tooltip::after{
-   background-color: var(--clr-100);
+   background-color: var(--clr-50);
 }
 
 .button{
   &--topbar{
      color: var(--clr-900);
-     background-color: var(--clr-100);
-     border-color: var(--clr-100);
+     background-color: var(--clr-50);
+     border-color: var(--clr-50);
 
      &:hover{
         color: var(--clr-1000);
+        background-color: var(--clr-100);
+        border-color: var(--clr-100);
      }
 
      &:focus-visible{
@@ -85,6 +87,8 @@ html, body{
 
      &:hover{
         color: var(--clr-1000);
+        background-color: var(--clr-100);
+        border-color: var(--clr-100);
      }
 
      &:focus-visible{
@@ -108,7 +112,7 @@ html, body{
 /* theme picker */
 .themepicker {
   &__list{
-     background-color: var(--clr-100);
+     background-color: var(--clr-50);
   }
 
   &__btn{
