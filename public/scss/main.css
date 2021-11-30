@@ -130,6 +130,9 @@ main {
 .paper-h2 {
   color: var(--clr-paper-1000);
 }
+.paper-white-0 {
+  fill: var(--clr-paper-white-0);
+}
 .paper-white-1 {
   fill: var(--clr-paper-white-1);
 }
@@ -466,14 +469,19 @@ ol, ul {
   --clr-cardboard-100: #d4b796;
   --clr-cardboard-50: #dec5a6;
   --clr-cardboard-0: #e3cfbd;
+  --clr-paper-white-0: #f7f5e8;
   --clr-paper-white-1: #ebe9db;
   --clr-paper-white-2: #dfe0cf;
   --clr-paper-white-3: #c9ccb4;
   --clr-paper-white-4: #b1b8a2;
   --clr-paper-1100: #323323;
   --clr-paper-1000: #494a34;
+  --clr-paper-900: #494a34;
+  --clr-paper-800: #6f704e;
   --clr-paper-500: #9e8846;
   --clr-paper-100: #cecfa8;
+  --clr-paper-50: #d0d1ab;
+  --clr-paper-0: #e2e3bc;
   --clr-can-silver-0: #edeadf;
   --clr-can-silver-1: #c7c9bc;
   --clr-can-silver-2: #b1b3a7;
@@ -568,14 +576,19 @@ ol, ul {
   --clr-cardboard-100: #736555;
   --clr-cardboard-50: #665745;
   --clr-cardboard-0: #544b40;
+  --clr-paper-white-0: #d4d2c4;
   --clr-paper-white-1: #c2c1b5;
   --clr-paper-white-2: #b7b8a9;
   --clr-paper-white-3: #a5a894;
   --clr-paper-white-4: #959c89;
-  --clr-paper-1100: #feffed;
+  --clr-paper-1100: #fffff2;
   --clr-paper-1000: #feffe0;
+  --clr-paper-900: #ffffdb;
+  --clr-paper-800: #e7e8ce;
   --clr-paper-500: #d6b85f;
   --clr-paper-100: #6e7056;
+  --clr-paper-50: #65664c;
+  --clr-paper-0: #535440;
   --clr-can-silver-0: #d1cec5;
   --clr-can-silver-1: #adb0a3;
   --clr-can-silver-2: #98998f;
@@ -670,14 +683,19 @@ ol, ul {
   --clr-cardboard-100: #f2dbc2;
   --clr-cardboard-50: #f7e0c6;
   --clr-cardboard-0: #f2ece6;
+  --clr-paper-white-0: #ffffff;
   --clr-paper-white-1: #faf8ea;
   --clr-paper-white-2: #e5e6d4;
   --clr-paper-white-3: #b6b8a2;
   --clr-paper-white-4: #929986;
-  --clr-paper-1100: #000000;
+  --clr-paper-1100: #282908;
   --clr-paper-1000: #383b0d;
+  --clr-paper-900: #444517;
+  --clr-paper-800: #515225;
   --clr-paper-500: #cc9900;
   --clr-paper-100: #eff0c2;
+  --clr-paper-50: #f4f5d0;
+  --clr-paper-0: #fffff2;
   --clr-can-silver-0: #ffffff;
   --clr-can-silver-1: #d4d6c6;
   --clr-can-silver-2: #b5b8aa;
