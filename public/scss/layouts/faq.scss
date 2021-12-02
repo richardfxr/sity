@@ -175,6 +175,13 @@ html, body{
 .faq{
    padding-top: var(--steps-item-gap);
 
+   .text{
+      &--sm a:hover, &--sm a:focus, &--xs a:hover, &--xs a:focus, &--p a:hover, &--p a:focus{
+         color: var(--clr-1000);
+         background-color: var(--clr-0);
+      }
+   }
+
    &__container{
       /* flexbox */
       display: flex;
@@ -193,7 +200,11 @@ html, body{
       color: var(--clr-900);
       text-align: left;
       padding: var(--faq-pad-vrt) calc(2 * var(--steps-pad-hrz)) var(--faq-pad-vrt) var(--steps-pad-hrz);
+      border: var(--border-main) rgba(0, 0, 0, 0);
+      border-radius: var(--steps-border-radius);
       margin-top: var(--steps-h2-pad-top);
+      transition: color var(--transition-100),
+                  border-color var(--transition-100);
 
       &::after{
          /* arrow at the right end of each button */
@@ -203,6 +214,11 @@ html, body{
          right: var(--steps-pad-hrz);
          transform: rotate(180deg);
          transition: transform var(--transition-200);
+      }
+
+      &:focus-visible{
+         color: var(--clr-1000);
+         border-color: var(--clr-border);
       }
    }
 

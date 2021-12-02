@@ -85,6 +85,24 @@
     }
 }
 
+.caution{
+    &__item{
+       .text--md{
+          a{
+             &:hover{
+                color: var(--clr-caution-1100);
+                background-color: var(--clr-caution-200);
+             }
+
+             &:focus{
+               color: var(--clr-caution-1100);
+               background-color: var(--clr-caution-200);
+             }
+          }
+       }
+    }
+ }
+
 
 
 /* ========================================

@@ -65,12 +65,11 @@ h2{
         text-decoration: underline;
     }
 
-    &--link{
+    &--link, &--md a, &--sm a, &--xs a{
+        border-radius: var(--inline-link-border-radius);
         text-decoration: underline;
-     
-        &:focus-visible{
-           text-decoration-color: var(--clr-border);
-        }
+        transition: color var(--transition-100),
+                    background-color var(--transition-100);
     }
 
     &--p{

@@ -595,6 +595,18 @@ html, body{
 footer{
    background-color: var(--clr-50);
 
+   .text{
+      &--lg a:hover, &--lg a:focus{
+         color: var(--clr-800a);
+         background-color: var(--clr-0);
+      }
+
+      &--sm a:hover, &--sm a:focus, &--xs a:hover, &--xs a:focus{
+         color: var(--clr-1000);
+         background-color: var(--clr-0);
+      }
+   }
+
    .button{
       &--lg{
          color: var(--clr-800);

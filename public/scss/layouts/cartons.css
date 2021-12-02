@@ -26,6 +26,11 @@ main {
   margin: auto;
 }
 
+.text--sm a:hover, .text--sm a:focus, .text--xs a:hover, .text--xs a:focus {
+  color: var(--clr-1000);
+  background-color: var(--clr-100);
+}
+
 /* logos */
 .clr-800 {
   fill: var(--clr-800);
@@ -412,6 +417,7 @@ ol, ul {
   --main-pad-xs: min(2vw, calc(var(--main-max-width) * 0.02));
   --tooltip-pad-vrt: 0.2rem;
   --tooltip-pad-hrz: 0.65rem;
+  --inline-link-border-radius: 0.3em;
   --transition-50: 50ms ease;
   --transition-100: 100ms ease;
   --transition-200: 200ms ease;
@@ -522,7 +528,9 @@ ol, ul {
   --clr-recycle-bin-2: #385e8f;
   --clr-recycle-bin-3: #344c7d;
   --clr-recycle-bin-4: #2b4069;
+  --clr-caution-1100: #332616;
   --clr-caution-900: #523614;
+  --clr-caution-200: #d1aa95;
   --clr-caution-50: #e3beaa;
   --clr-plastic-bag-1: #e3c7a1;
   --clr-plastic-bag-2: #ccb084;
@@ -834,12 +842,10 @@ h2 {
 .text--xl a, .text--lg a, .text--md a {
   text-decoration: underline;
 }
-.text--link {
+.text--link, .text--md a, .text--sm a, .text--xs a {
+  border-radius: var(--inline-link-border-radius);
   text-decoration: underline;
-}
-.text--link:focus-visible {
-  -webkit-text-decoration-color: var(--clr-border);
-          text-decoration-color: var(--clr-border);
+  transition: color var(--transition-100), background-color var(--transition-100);
 }
 .text--p {
   font-family: "Lexend Deca", sans-serif;
@@ -1045,6 +1051,15 @@ h2 {
   flex-flow: column nowrap;
   align-items: center;
   align-content: center;
+}
+
+.caution__item .text--md a:hover {
+  color: var(--clr-caution-1100);
+  background-color: var(--clr-caution-200);
+}
+.caution__item .text--md a:focus {
+  color: var(--clr-caution-1100);
+  background-color: var(--clr-caution-200);
 }
 
 /* ========================================
@@ -1320,8 +1335,8 @@ html, body {
   border-color: var(--clr-carton-100);
 }
 .button--topbar:focus-visible {
+  color: var(--clr-carton-1100);
   border-color: var(--clr-border);
-  color: var(--clr-1100);
 }
 .button--lg {
   color: var(--clr-carton-900);
@@ -1334,8 +1349,8 @@ html, body {
   border-color: var(--clr-carton-100);
 }
 .button--lg:focus-visible {
+  color: var(--clr-carton-1100);
   border-color: var(--clr-border);
-  color: var(--clr-900);
 }
 
 /* === TOP BAR ================================ */

@@ -65,8 +65,8 @@ html, body{
         }
 
         &:focus-visible{
+           color: var(--clr-#{$category}-1100);
            border-color: var(--clr-border);
-           color: var(--clr-1100);
         }
      }
 
@@ -82,8 +82,8 @@ html, body{
         }
 
         &:focus-visible{
+           color: var(--clr-#{$category}-1100);
            border-color: var(--clr-border);
-           color: var(--clr-900);
         }
      }
  }

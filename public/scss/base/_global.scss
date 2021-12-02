@@ -31,6 +31,13 @@ main{
    margin: auto;
 }
 
+.text{
+   &--sm a:hover, &--sm a:focus, &--xs a:hover, &--xs a:focus{
+      color: var(--clr-1000);
+      background-color: var(--clr-100);
+   }
+}
+
 /* logos */
 .clr-800{
    fill: var(--clr-800);
