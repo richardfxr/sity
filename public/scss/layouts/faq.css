@@ -1142,6 +1142,16 @@ body {
   --footer-title-pad-bottom: min(1vw, calc(var(--main-max-width) * 0.01));
   --footer-link-pad-right: min(1.1vw, calc(var(--main-max-width) * 0.011));
   --footer-link-pad-bottom: min(1.3vw, calc(var(--main-max-width) * 0.013));
+  --footer-illu-height: 100%;
+  --footer-illu-cardboard-width: min(32vw, calc(var(--main-max-width) * 0.32));
+  --footer-illu-cardboard-pad-top: min(20vw, calc(var(--main-max-width) * 0.2));
+  --footer-illu-cardboard-pad-left: min(2vw, calc(var(--main-max-width) * 0.02));
+  --footer-illu-carton-width: min(13.5vw, calc(var(--main-max-width) * 0.135));
+  --footer-illu-carton-pad-top: min(15vw, calc(var(--main-max-width) * 0.15));
+  --footer-illu-carton-pad-left: min(12vw, calc(var(--main-max-width) * 0.12));
+  --footer-illu-can-width: min(9vw, calc(var(--main-max-width) * 0.09));
+  --footer-illu-can-pad-top: min(12vw, calc(var(--main-max-width) * 0.12));
+  --footer-illu-can-pad-left: min(22vw, calc(var(--main-max-width) * 0.22));
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1154,6 +1164,16 @@ body {
     --footer-title-pad-bottom: 1.5vw;
     --footer-link-pad-right: 1.6vw;
     --footer-link-pad-bottom: 2vw;
+    --footer-illu-height: 35vw;
+    --footer-illu-cardboard-width: 41.6vw;
+    --footer-illu-cardboard-pad-top: 18.5vw;
+    --footer-illu-cardboard-pad-left: 23vw;
+    --footer-illu-carton-width: 17.55vw;
+    --footer-illu-carton-pad-top: 12vw;
+    --footer-illu-carton-pad-left: 36vw;
+    --footer-illu-can-width: 11.7vw;
+    --footer-illu-can-pad-top: 9vw;
+    --footer-illu-can-pad-left: 48.5vw;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -1166,9 +1186,22 @@ body {
     --footer-title-pad-bottom: 1.5vw;
     --footer-link-pad-right: 2.5vw;
     --footer-link-pad-bottom: 3vw;
+    --footer-illu-height: 55vw;
+    --footer-illu-cardboard-width: 64vw;
+    --footer-illu-cardboard-pad-top: 29vw;
+    --footer-illu-cardboard-pad-left: 10vw;
+    --footer-illu-carton-width: 27vw;
+    --footer-illu-carton-pad-top: 18.5vw;
+    --footer-illu-carton-pad-left: 30vw;
+    --footer-illu-can-width: 18vw;
+    --footer-illu-can-pad-top: 12vw;
+    --footer-illu-can-pad-left: 50vw;
   }
 }
 /* === ACTUAL CODE ============================ */
+.footer {
+  /* illustrations */
+}
 .footer__transition {
   height: var(--footer-transition-height);
   border-bottom-right-radius: var(--footer-transition-height);
@@ -1216,7 +1249,31 @@ body {
 .footer__version {
   padding-top: calc(var(--footer-pad-vrt) / 2);
 }
+.footer__illu {
+  height: var(--footer-illu-height);
+  overflow: hidden;
+}
+.footer__illu--cardboard {
+  width: var(--footer-illu-cardboard-width);
+  top: var(--footer-illu-cardboard-pad-top) !important;
+  left: var(--footer-illu-cardboard-pad-left) !important;
+}
+.footer__illu--carton {
+  width: var(--footer-illu-carton-width);
+  top: var(--footer-illu-carton-pad-top) !important;
+  left: var(--footer-illu-carton-pad-left) !important;
+}
+.footer__illu--can {
+  width: var(--footer-illu-can-width);
+  top: var(--footer-illu-can-pad-top) !important;
+  left: var(--footer-illu-can-pad-left) !important;
+}
 
+@media only screen and (max-width: 1200px) {
+  .footer__container {
+    padding-bottom: 0;
+  }
+}
 /* ============================================
    THEME PICKER
    ============================================ */
