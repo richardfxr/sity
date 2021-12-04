@@ -1,0 +1,268 @@
+// SCSS file containing CSS styles for metal.html
+
+
+
+// === USE ====================================
+@use "sass:map";
+@use '../abstracts' as a;
+@use '../base' as b;
+@use '../components' as c;
+
+
+/* === VARIABLES ============================== */
+$category: metal;
+
+body{
+}
+
+@media only screen and (max-width: b.$breakpoint-tablet){
+    body{
+        /* steps */
+        --steps-1-pad-top: 4vw;
+    }
+}
+
+@media only screen and (max-width: b.$breakpoint-mobile){
+    body{
+        /* steps */
+        --steps-1-pad-top: 4vw;
+    }
+}
+
+/* ============================================
+   METAL PAGE
+   ============================================ */
+
+/* === WHOLE PAGE ============================= */
+html, body{
+    background-color: var(--clr-#{$category}-0);
+ }
+ 
+ .text{
+    &--xl, &--lg, &--md &--sm{
+       color: var(--clr-#{$category}-800);
+    }
+ 
+    &--xl a, &--lg a{
+       color: var(--clr-800a);
+    }
+ }
+
+ .tooltip::after{
+    background-color: var(--clr-#{$category}-50);
+ }
+
+ .button{
+     &--topbar{
+        color: var(--clr-#{$category}-900);
+        background-color: var(--clr-#{$category}-50);
+        border-color: var(--clr-#{$category}-50);
+
+        &:hover{
+           color: var(--clr-#{$category}-1100);
+           background-color: var(--clr-#{$category}-100);
+           border-color: var(--clr-#{$category}-100);
+        }
+
+        &:focus-visible{
+           color: var(--clr-#{$category}-1100);
+           border-color: var(--clr-border);
+        }
+     }
+
+     &--lg{
+        color: var(--clr-#{$category}-900);
+        background-color: var(--clr-#{$category}-50);
+        border-color: var(--clr-#{$category}-50);
+
+        &:hover{
+           color: var(--clr-#{$category}-1100);
+           background-color: var(--clr-#{$category}-100);
+           border-color: var(--clr-#{$category}-100);
+        }
+
+        &:focus-visible{
+           color: var(--clr-#{$category}-1100);
+           border-color: var(--clr-border);
+        }
+     }
+ }
+
+
+ /* === TOP BAR ================================ */
+ .topbar{
+   &__back{
+      /* tooltip */
+      &::after{
+          color: var(--clr-#{$category}-900);
+      }
+   }
+}
+
+ /* theme picker */
+ .themepicker {
+    &__list{
+        background-color: var(--clr-#{$category}-50);
+    }
+ 
+    &__btn{
+       /* tooltip */
+       &::after{
+          color: var(--clr-#{$category}-900);
+       }
+    }
+
+    &__light{
+        &--0{
+           fill: map.get(a.$light, #{$category}-0);
+        }
+  
+        &--100{
+           fill: map.get(a.$light, #{$category}-100);
+        }
+  
+        &--800{
+           fill: map.get(a.$light, #{$category}-800);
+        }
+     }
+  
+     &__dark{
+        &--0{
+           fill: map.get(a.$dark, #{$category}-0);
+        }
+  
+        &--100{
+           fill: map.get(a.$dark, #{$category}-100);
+        }
+  
+        &--800{
+           fill: map.get(a.$dark, #{$category}-800);
+        }
+     }
+  
+     &__hc{
+        &--0{
+           fill: map.get(a.$hc, #{$category}-0);
+        }
+  
+        &--100{
+           fill: map.get(a.$hc, #{$category}-100);
+        }
+  
+        &--800{
+           fill: map.get(a.$hc, #{$category}-800);
+        }
+     }
+ }
+ 
+
+/* === MAIN =================================== */
+
+.steps{
+   &__item{
+      background-color: var(--clr-#{$category}-50);
+
+      &__main{
+         h2, p{
+            color: var(--clr-#{$category}-900);
+         }
+      }
+   }
+}
+
+#step1__illu{
+   width: min(30vw, calc(var(--main-max-width) * 0.3));
+   padding-top: min(5vw, calc(var(--main-max-width) * 0.05));
+}
+
+#notice1__illu{
+   width: min(23vw, calc(var(--main-max-width) * 0.23));
+}
+
+#notice2__illu{
+   width: min(28vw, calc(var(--main-max-width) * 0.28));
+   padding-top: min(7vw, calc(var(--main-max-width) * 0.07));
+}
+
+#notice3__illu{
+   width: min(20vw, calc(var(--main-max-width) * 0.2));
+}
+
+#recyclebin__illu{
+   width: min(25vw, calc(var(--main-max-width) * 0.25));
+   padding-top: var(--recyclebin-pad-top);
+   margin-bottom: calc(-1 * var(--steps-pad-vrt));
+}
+
+#plasticbag__illu{
+   width: min(25vw, calc(var(--main-max-width) * 0.25));
+   padding-top: var(--plasticbag-pad-top);
+   margin-bottom: calc(-1 * var(--steps-pad-vrt));
+}
+ 
+
+
+/* ========================================
+    BREAKPOINTS
+    ======================================== */
+
+@media only screen and (max-width: b.$breakpoint-tablet){
+    #step1__illu{
+        width: 32vw;
+    }
+
+    #notice1__illu{
+        width: 23vw;
+    }
+
+    #notice2__illu{
+         width: 30vw;
+         padding-top: 9vw;
+    }
+
+    #notice3__illu{
+         width: 19vw;
+   }
+
+    #recyclebin__illu{
+        width: 26vw;
+    }
+
+    #plasticbag__illu{
+        width: 26vw;
+    }
+}
+
+@media only screen and (max-width: b.$breakpoint-mobile){
+    #step1__illu{
+        width: 63vw;
+        padding-top: 6vw;
+        padding-bottom: 3vw;
+    }
+
+    #notice1__illu{
+       width: 50vw;
+       padding-top: 3vw;
+       padding-bottom: 3vw;
+    }
+
+    #notice2__illu{
+       width: 63vw;
+       padding-top: 8vw;
+       padding-bottom: 3vw;
+    }
+
+    #notice3__illu{
+      width: 45vw;
+      padding-top: 5vw;
+      padding-bottom: 3vw;
+   }
+
+    #recyclebin__illu{
+        width: 56vw;
+    }
+
+    #plasticbag__illu{
+        width: 56vw;
+    }
+}

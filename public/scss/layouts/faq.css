@@ -501,14 +501,22 @@ ol, ul {
   --clr-can-orange-3: #bf7b5e;
   --clr-metal-1100: #331e16;
   --clr-metal-1000: #593426;
+  --clr-metal-900: #593426;
+  --clr-metal-800: #70321a;
   --clr-metal-500: #a65c4a;
-  --clr-metal-100: #d6b5a7;
+  --clr-metal-100: #e3baa5;
+  --clr-metal-50: #e8c1ae;
+  --clr-metal-0: #f5d2c4;
   --clr-aluminum-1000: #404f4f;
   --clr-aluminum-100: #b4cccb;
-  --clr-glass-1100: #27332c;
+  --clr-glass-1100: #1a2e21;
   --clr-glass-1000: #36473d;
+  --clr-glass-900: #36473d;
+  --clr-glass-800: #305e42;
   --clr-glass-500: #469c6a;
-  --clr-glass-100: #9dcfb2;
+  --clr-glass-100: #91c4a4;
+  --clr-glass-50: #9bcfae;
+  --clr-glass-0: #b6e3c6;
   --clr-plastic-bottle-0: #DCF7D7;
   --clr-plastic-bottle-1-1: #BDCAE6;
   --clr-plastic-bottle-1-2: #C7CCF0;
@@ -520,10 +528,14 @@ ol, ul {
   --clr-plastic-purple-1: #C0AFE0;
   --clr-plastic-purple-2: #A591C9;
   --clr-plastic-purple-3: #917DB5;
-  --clr-plastic-1100: #2a2533;
+  --clr-plastic-1100: #2b233b;
   --clr-plastic-1000: #433b52;
+  --clr-plastic-900: #433b52;
+  --clr-plastic-800: #483863;
   --clr-plastic-500: #75619c;
-  --clr-plastic-100: #c0b6d1;
+  --clr-plastic-100: #bfafd9;
+  --clr-plastic-50: #ccbde6;
+  --clr-plastic-0: #ded3f2;
   --clr-recycle-bin-0: #86b2d4;
   --clr-recycle-bin-1: #5c89b5;
   --clr-recycle-bin-2: #385e8f;
@@ -608,16 +620,24 @@ ol, ul {
   --clr-can-orange-1: #d9957e;
   --clr-can-orange-2: #c9876e;
   --clr-can-orange-3: #b57459;
-  --clr-metal-1100: #fff2ed;
+  --clr-metal-1100: #fffbfa;
   --clr-metal-1000: #ffede6;
+  --clr-metal-900: #ffede6;
+  --clr-metal-800: #e8d6ce;
   --clr-metal-500: #de795f;
-  --clr-metal-100: #7a625b;
+  --clr-metal-100: #7b5951;
+  --clr-metal-50: #73554e;
+  --clr-metal-0: #5c4b46;
   --clr-aluminum-1000: #d6ffff;
   --clr-aluminum-100: #627575;
   --clr-glass-1100: #edfff5;
   --clr-glass-1000: #d6ffe7;
+  --clr-glass-900: #d6ffe7;
+  --clr-glass-800: #d0e8d9;
   --clr-glass-500: #60d692;
-  --clr-glass-100: #5a7365;
+  --clr-glass-100: #4e6e5a;
+  --clr-glass-50: #466351;
+  --clr-glass-0: #41544a;
   --clr-plastic-bottle-0: #C2D4C7;
   --clr-plastic-bottle-1-1: #8A94AD;
   --clr-plastic-bottle-1-2: #8F95AD;
@@ -629,10 +649,14 @@ ol, ul {
   --clr-plastic-purple-1: #B09FCC;
   --clr-plastic-purple-2: #9381B3;
   --clr-plastic-purple-3: #7C6B9C;
-  --clr-plastic-1100: #f3edff;
+  --clr-plastic-1100: #f1ebff;
   --clr-plastic-1000: #E9DEFF;
+  --clr-plastic-900: #e9deff;
+  --clr-plastic-800: #d6cfe6;
   --clr-plastic-500: #a88fd6;
-  --clr-plastic-100: #655e73;
+  --clr-plastic-100: #665f78;
+  --clr-plastic-50: #5b5569;
+  --clr-plastic-0: #514d5c;
   --clr-recycle-bin-0: #6d91ad;
   --clr-recycle-bin-1: #4a6d91;
   --clr-recycle-bin-2: #2d4c73;
@@ -715,16 +739,24 @@ ol, ul {
   --clr-can-orange-1: #ffbca3;
   --clr-can-orange-2: #e69a7e;
   --clr-can-orange-3: #b57559;
-  --clr-metal-1100: #000000;
+  --clr-metal-1100: #2e1408;
   --clr-metal-1000: #451f10;
+  --clr-metal-900: #572814;
+  --clr-metal-800: #523326;
   --clr-metal-500: #cc2700;
-  --clr-metal-100: #f0d2c5;
+  --clr-metal-100: #ebccbb;
+  --clr-metal-50: #ffe5d6;
+  --clr-metal-0: #fff8f5;
   --clr-aluminum-1000: #124545;
   --clr-aluminum-100: #d6f2f1;
-  --clr-glass-1100: #000000;
+  --clr-glass-1100: #062411;
   --clr-glass-1000: #104525;
+  --clr-glass-900: #104525;
+  --clr-glass-800: #224a30;
   --clr-glass-500: #00ab47;
-  --clr-glass-100: #c2f2d6;
+  --clr-glass-100: #a8dbbc;
+  --clr-glass-50: #ccf2db;
+  --clr-glass-0: #f2fff7;
   --clr-plastic-bottle-0: #F7FFF5;
   --clr-plastic-bottle-1-1: #D6E3FF;
   --clr-plastic-bottle-1-2: #E3E6FF;
@@ -736,17 +768,21 @@ ol, ul {
   --clr-plastic-purple-1: #E9DEFF;
   --clr-plastic-purple-2: #B7A3E0;
   --clr-plastic-purple-3: #8D7AB0;
-  --clr-plastic-1100: #000000;
+  --clr-plastic-1100: #0f0621;
   --clr-plastic-1000: #220f45;
+  --clr-plastic-900: #2a1459;
+  --clr-plastic-800: #3b2b61;
   --clr-plastic-500: #7e56cc;
-  --clr-plastic-100: #e2d7f2;
+  --clr-plastic-100: #d9cbe8;
+  --clr-plastic-50: #eae3f2;
+  --clr-plastic-0: #fbf7ff;
   --clr-recycle-bin-0: #bde2ff;
   --clr-recycle-bin-1: #6da2d6;
   --clr-recycle-bin-2: #406ba3;
   --clr-recycle-bin-3: #334a7a;
   --clr-recycle-bin-4: #25385c;
   --clr-caution-900: #453017;
-  --clr-caution-50: #fadbc8;
+  --clr-caution-50: #ffdfcc;
   --clr-plastic-bag-1: #ffe5c2;
   --clr-plastic-bag-2: #e3c393;
   --clr-plastic-bag-3: #b09961;
@@ -987,7 +1023,7 @@ h2 {
 }
 
 /* ============================================
-   CATEGORY PAGE
+   CATEGORY PAGES
    ============================================ */
 /* === TOP BAR ================================ */
 .topbar {
@@ -1008,6 +1044,10 @@ h2 {
 }
 
 /* === MAIN =================================== */
+.text--lg {
+  padding-bottom: var(--main-pad-sm);
+}
+
 .title {
   padding-bottom: var(--main-pad-sm);
 }

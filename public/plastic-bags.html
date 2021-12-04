@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Bags</title>
+
+    <!-- link main CSS files (Sass compiled) -->
+    <link rel="stylesheet" href="scss/layouts/plastic.css">
+
+    <!-- load correct theme and avoid flash -->
+    <script>
+        localStorage.getItem('theme') && 
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
+        console.log('localStorage theme: ' + localStorage.getItem('theme'))
+    </script>
+
+    <!-- favicons -->
+    <!-- generics -->
+    <link rel="icon" href="assets/favicons/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="assets/favicons/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="assets/favicons/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="assets/favicons/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="assets/favicons/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="assets/favicons/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="assets/favicons/favicon-228.png" sizes="228x228">
+
+    <!-- Android -->
+    <link rel="shortcut icon" sizes="196x196" href="assets/favicons/favicon-196.png">
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="assets/favicons/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="path/to/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="path/to/favicon-180.png" sizes="180x180">
+
+    <!-- Windows 8 IE 10-->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="assets/favicons/favicon-144.png">
+
+    <!-- Windows 8.1 + IE11 and above. Not used for now
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml" />-->
+</head>
+<body>
+    <!-- top bar -->
+    <div class="topbar">
+
+        <!-- back button -->
+        <a href="/" class="topbar__back button--topbar tooltip" aria-label="back to home">↖</a>
+
+        <!-- theme picker-->
+        <ul class="themepicker__list">
+
+            <!-- light theme -->
+            <li class="themepicker__item">
+                <button class="themepicker__btn tooltip" aria-label="light theme" id="themepicker__btn--light" onclick="theme.setTheme('light')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__light">
+                        <circle class="themepicker__light--0" cx="18" cy="18" r="18"/>
+                        <ellipse class="themepicker__light--800" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+                        <path class="themepicker__light--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+                    </svg>
+                </button>
+            </li>
+
+            <!-- dark theme -->
+            <li class="themepicker__item">
+                <button class="themepicker__btn tooltip" aria-label="dark theme" id="themepicker__btn--dark" onclick="theme.setTheme('dark')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__dark">
+                        <circle class="themepicker__dark--0" cx="18" cy="18" r="18"/>
+                        <ellipse class="themepicker__dark--800" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+                        <path class="themepicker__dark--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+                    </svg>
+                </button>
+            </li>
+
+            <!-- high contrast theme -->
+            <li class="themepicker__item">
+                <button class="themepicker__btn tooltip" aria-label="high contrast theme" id="themepicker__btn--hc" onclick="theme.setTheme('hc')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="themepicker__hc">
+                        <circle class="themepicker__hc--0" cx="18" cy="18" r="18"/>
+                        <ellipse class="themepicker__hc--800" cx="9.73" cy="10.46" rx="5.54" ry="3.56" transform="translate(-4.42 12.39) rotate(-54.82)"/>
+                        <path class="themepicker__hc--100" d="M31.88,29.46C31.16,20.72,26.79,14,21.5,14,15.7,14,11,22.06,11,32c0,.9.05,1.77.12,2.63a18,18,0,0,0,20.76-5.17Z"/>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+
+    </div>
+
+    <main>
+        <h1 class="text--xl title">How to recycle plastic bags.</h1>
+
+        <ul class="quicklink">
+            <li class="quicklink__item"><a href="#steps" class="button--lg">Steps ↓</a></li>
+            <li class="quicklink__item"><a href="#next" class="button--lg">What happens next ↓</a></li>
+        </ul>
+
+        <!-- steps -->
+        <ol class="steps" id="steps">
+            <!-- step 1 -->
+            <li class="steps__item">
+                <div class="steps__item__main">
+                    <h2 class="text--lg">Still in the works...</h2>
+                    <p class="text--md">This page is still being worked on. It'll be ready in a future release</p>
+                </div>
+                <div class="steps__item__illu">
+                    <!-- illustration goes here -->
+                </div>
+            </li>
+        </ol>
+    </main>
+
+    <!-- link main JavaScript file -->
+    <script src="scripts/main.js"></script>
+</body>
