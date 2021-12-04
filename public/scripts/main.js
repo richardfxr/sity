@@ -61,6 +61,17 @@ if (window.CSS && CSS.supports('color', 'var(--fake-var)')) {
 
 
 
+// set version number in footer
+function setVersion() {
+    // get version <p>
+    let version = document.getElementById("footer__version")
+
+    // website version text
+    version.innerHTML = "pre-alpha v0.1.11 development preview. "
+}
+
+
+
 // index page map route toggle
 function toggleRoute(category) {
     // get map div
