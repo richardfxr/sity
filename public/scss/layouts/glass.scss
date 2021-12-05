@@ -221,6 +221,10 @@ footer{
          background-color: var(--clr-#{$category}-0);
       }
 
+      &--sm, &--xs{
+         color: var(--clr-#{$category}-900);
+      }
+
       &--sm a:hover, &--sm a:focus, &--xs a:hover, &--xs a:focus{
          color: var(--clr-#{$category}-1100);
          background-color: var(--clr-#{$category}-0);

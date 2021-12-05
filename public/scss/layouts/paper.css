@@ -458,7 +458,7 @@ ol, ul {
   --clr-carton-1100: #162c33;
   --clr-carton-1000: #144352;
   --clr-carton-900: #144757;
-  --clr-carton-800: #1e6980;
+  --clr-carton-800: #1b5d70;
   --clr-carton-100: #8fc9c0;
   --clr-carton-50: #99d1c8;
   --clr-carton-0: #b2ded7;
@@ -474,7 +474,7 @@ ol, ul {
   --clr-cardboard-800: #6e4e27;
   --clr-cardboard-100: #d6bc9c;
   --clr-cardboard-50: #dec5a6;
-  --clr-cardboard-0: #e3cfbd;
+  --clr-cardboard-0: #ebd1ba;
   --clr-paper-white-0: #f7f5e8;
   --clr-paper-white-1: #ebe9db;
   --clr-paper-white-2: #dfe0cf;
@@ -483,11 +483,11 @@ ol, ul {
   --clr-paper-1100: #323323;
   --clr-paper-1000: #494a34;
   --clr-paper-900: #494a34;
-  --clr-paper-800: #6f704e;
+  --clr-paper-800: #686946;
   --clr-paper-500: #9e8846;
-  --clr-paper-100: #c8c9a1;
-  --clr-paper-50: #d0d1ab;
-  --clr-paper-0: #e2e3bc;
+  --clr-paper-100: #c3c49d;
+  --clr-paper-50: #cecfa9;
+  --clr-paper-0: #dadbb6;
   --clr-can-silver-0: #edeadf;
   --clr-can-silver-1: #c7c9bc;
   --clr-can-silver-2: #b1b3a7;
@@ -504,7 +504,7 @@ ol, ul {
   --clr-metal-800: #70321a;
   --clr-metal-500: #a65c4a;
   --clr-metal-100: #e3baa5;
-  --clr-metal-50: #e8c1ae;
+  --clr-metal-50: #edc5b2;
   --clr-metal-0: #f5d2c4;
   --clr-aluminum-1000: #404f4f;
   --clr-aluminum-100: #b4cccb;
@@ -513,9 +513,9 @@ ol, ul {
   --clr-glass-900: #36473d;
   --clr-glass-800: #305e42;
   --clr-glass-500: #469c6a;
-  --clr-glass-100: #91c4a4;
-  --clr-glass-50: #9bcfae;
-  --clr-glass-0: #b6e3c6;
+  --clr-glass-100: #93c9a8;
+  --clr-glass-50: #a3d4b5;
+  --clr-glass-0: #b8dec5;
   --clr-plastic-bottle-0: #DCF7D7;
   --clr-plastic-bottle-1-1: #BDCAE6;
   --clr-plastic-bottle-1-2: #C7CCF0;
@@ -532,9 +532,9 @@ ol, ul {
   --clr-plastic-900: #433b52;
   --clr-plastic-800: #483863;
   --clr-plastic-500: #75619c;
-  --clr-plastic-100: #bfafd9;
-  --clr-plastic-50: #ccbde6;
-  --clr-plastic-0: #ded3f2;
+  --clr-plastic-100: #c4b3de;
+  --clr-plastic-50: #cdbee8;
+  --clr-plastic-0: #d9cfed;
   --clr-recycle-bin-0: #86b2d4;
   --clr-recycle-bin-1: #5c89b5;
   --clr-recycle-bin-2: #385e8f;
@@ -580,8 +580,8 @@ ol, ul {
   --clr-carton-1000: #d6faff;
   --clr-carton-900: #d6faff;
   --clr-carton-800: #cee4e8;
-  --clr-carton-100: #486e6a;
-  --clr-carton-50: #456663;
+  --clr-carton-100: #446965;
+  --clr-carton-50: #42615e;
   --clr-carton-0: #405453;
   --clr-cardboard-brown-1: #bda07a;
   --clr-cardboard-brown-2: #a3875c;
@@ -595,7 +595,7 @@ ol, ul {
   --clr-cardboard-800: #e8dccf;
   --clr-cardboard-100: #6e5d48;
   --clr-cardboard-50: #665745;
-  --clr-cardboard-0: #544b40;
+  --clr-cardboard-0: #595044;
   --clr-paper-white-0: #d4d2c4;
   --clr-paper-white-1: #c2c1b5;
   --clr-paper-white-2: #b7b8a9;
@@ -606,8 +606,8 @@ ol, ul {
   --clr-paper-900: #ffffdb;
   --clr-paper-800: #e7e8ce;
   --clr-paper-500: #d6b85f;
-  --clr-paper-100: #6d6e50;
-  --clr-paper-50: #65664c;
+  --clr-paper-100: #68694c;
+  --clr-paper-50: #606148;
   --clr-paper-0: #535440;
   --clr-can-silver-0: #d1cec5;
   --clr-can-silver-1: #adb0a3;
@@ -624,9 +624,9 @@ ol, ul {
   --clr-metal-900: #ffede6;
   --clr-metal-800: #e8d6ce;
   --clr-metal-500: #de795f;
-  --clr-metal-100: #7b5951;
-  --clr-metal-50: #73554e;
-  --clr-metal-0: #5c4b46;
+  --clr-metal-100: #78574f;
+  --clr-metal-50: #70534c;
+  --clr-metal-0: #5e4d48;
   --clr-aluminum-1000: #d6ffff;
   --clr-aluminum-100: #627575;
   --clr-glass-1100: #edfff5;
@@ -634,8 +634,8 @@ ol, ul {
   --clr-glass-900: #d6ffe7;
   --clr-glass-800: #d0e8d9;
   --clr-glass-500: #60d692;
-  --clr-glass-100: #4e6e5a;
-  --clr-glass-50: #466351;
+  --clr-glass-100: #4a6956;
+  --clr-glass-50: #465e4f;
   --clr-glass-0: #41544a;
   --clr-plastic-bottle-0: #C2D4C7;
   --clr-plastic-bottle-1-1: #8A94AD;
@@ -1467,19 +1467,19 @@ html, body {
   color: var(--clr-paper-900);
 }
 .themepicker__light--0 {
-  fill: #e2e3bc;
+  fill: #dadbb6;
 }
 .themepicker__light--100 {
-  fill: #c8c9a1;
+  fill: #c3c49d;
 }
 .themepicker__light--800 {
-  fill: #6f704e;
+  fill: #686946;
 }
 .themepicker__dark--0 {
   fill: #535440;
 }
 .themepicker__dark--100 {
-  fill: #6d6e50;
+  fill: #68694c;
 }
 .themepicker__dark--800 {
   fill: #e7e8ce;
@@ -1545,6 +1545,9 @@ footer .text--lg a {
 footer .text--lg a:hover, footer .text--lg a:focus {
   color: var(--clr-paper-800);
   background-color: var(--clr-paper-0);
+}
+footer .text--sm, footer .text--xs {
+  color: var(--clr-paper-900);
 }
 footer .text--sm a:hover, footer .text--sm a:focus, footer .text--xs a:hover, footer .text--xs a:focus {
   color: var(--clr-paper-1100);
