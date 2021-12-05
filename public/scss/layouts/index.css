@@ -1074,6 +1074,9 @@ h2 {
   margin-bottom: var(--steps-item-gap);
   border-radius: var(--steps-border-radius);
 }
+.steps__item:last-child {
+  margin-bottom: 0;
+}
 .steps__item__main {
   display: flex;
   flex-flow: column nowrap;
@@ -1135,7 +1138,7 @@ h2 {
 /* === VARIABLES ============================== */
 body {
   --footer-pad-vrt: var(--main-pad-vrt);
-  --footer-transition-height: var(--main-pad-hrz);
+  --footer-transition-height: calc(var(--steps-border-radius) + var(--main-pad-hrz));
   --footer-container-grid: 60% 40%;
   --footer-suggestions-width: min(35vw, calc(var(--main-max-width) * 0.35));
   --footer-title-pad-bottom: min(1vw, calc(var(--main-max-width) * 0.01));
@@ -1157,7 +1160,7 @@ body {
   body {
     /* varaibles */
     --footer-pad-vrt: 8vw;
-    --footer-transition-height: 8vw;
+    --footer-transition-height: calc(var(--steps-border-radius) + var(--main-pad-hrz));
     --footer-container-grid: 1fr;
     --footer-suggestions-width: 70vw;
     --footer-title-pad-bottom: 1.5vw;
@@ -1179,7 +1182,7 @@ body {
   body {
     /* varaibles */
     --footer-pad-vrt: 15vw;
-    --footer-transition-height: 17vw;
+    --footer-transition-height: calc(var(--steps-border-radius) + var(--main-pad-hrz));
     --footer-container-grid: 1fr;
     --footer-suggestions-width: 100%;
     --footer-title-pad-bottom: 1.5vw;

@@ -1074,6 +1074,9 @@ h2 {
   margin-bottom: var(--steps-item-gap);
   border-radius: var(--steps-border-radius);
 }
+.steps__item:last-child {
+  margin-bottom: 0;
+}
 .steps__item__main {
   display: flex;
   flex-flow: column nowrap;
@@ -1135,7 +1138,7 @@ h2 {
 /* === VARIABLES ============================== */
 body {
   --footer-pad-vrt: var(--main-pad-vrt);
-  --footer-transition-height: var(--main-pad-hrz);
+  --footer-transition-height: calc(var(--steps-border-radius) + var(--main-pad-hrz));
   --footer-container-grid: 60% 40%;
   --footer-suggestions-width: min(35vw, calc(var(--main-max-width) * 0.35));
   --footer-title-pad-bottom: min(1vw, calc(var(--main-max-width) * 0.01));
@@ -1157,7 +1160,7 @@ body {
   body {
     /* varaibles */
     --footer-pad-vrt: 8vw;
-    --footer-transition-height: 8vw;
+    --footer-transition-height: calc(var(--steps-border-radius) + var(--main-pad-hrz));
     --footer-container-grid: 1fr;
     --footer-suggestions-width: 70vw;
     --footer-title-pad-bottom: 1.5vw;
@@ -1179,7 +1182,7 @@ body {
   body {
     /* varaibles */
     --footer-pad-vrt: 15vw;
-    --footer-transition-height: 17vw;
+    --footer-transition-height: calc(var(--steps-border-radius) + var(--main-pad-hrz));
     --footer-container-grid: 1fr;
     --footer-suggestions-width: 100%;
     --footer-title-pad-bottom: 1.5vw;
@@ -1527,6 +1530,39 @@ html, body {
   width: min(25vw, calc(var(--main-max-width) * 0.25));
   padding-top: var(--plasticbag-pad-top);
   margin-bottom: calc(-1 * var(--steps-pad-vrt));
+}
+
+/* === FOOTER ================================= */
+footer {
+  background-color: var(--clr-plastic-50);
+}
+footer .footer__transition {
+  background-color: var(--clr-plastic-0);
+}
+footer .text--lg a {
+  color: var(--clr-plastic-800);
+}
+footer .text--lg a:hover, footer .text--lg a:focus {
+  color: var(--clr-plastic-800);
+  background-color: var(--clr-plastic-0);
+}
+footer .text--sm a:hover, footer .text--sm a:focus, footer .text--xs a:hover, footer .text--xs a:focus {
+  color: var(--clr-plastic-1100);
+  background-color: var(--clr-plastic-0);
+}
+footer .button--lg {
+  color: var(--clr-plastic-800);
+  background-color: var(--clr-plastic-0);
+  border-color: var(--clr-plastic-0);
+}
+footer .button--lg:hover {
+  color: var(--clr-plastic-900);
+  background-color: var(--clr-plastic-0);
+  border-color: var(--clr-plastic-0);
+}
+footer .button--lg:focus-visible {
+  border-color: var(--clr-border);
+  color: var(--clr-plastic-900);
 }
 
 /* ========================================

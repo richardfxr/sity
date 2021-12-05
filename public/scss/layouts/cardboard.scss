@@ -197,6 +197,53 @@ html, body{
    padding-top: var(--plasticbag-pad-top);
    margin-bottom: calc(-1 * var(--steps-pad-vrt));
 }
+
+
+/* === FOOTER ================================= */
+footer{
+   background-color: var(--clr-#{$category}-50);
+
+   .footer{
+      &__transition{
+         background-color: var(--clr-#{$category}-0);
+      }
+   }
+
+   .text{
+      &--lg a{
+         color: var(--clr-#{$category}-800);
+      }
+
+      &--lg a:hover, &--lg a:focus{
+         color: var(--clr-#{$category}-800);
+         background-color: var(--clr-#{$category}-0);
+      }
+
+      &--sm a:hover, &--sm a:focus, &--xs a:hover, &--xs a:focus{
+         color: var(--clr-#{$category}-1100);
+         background-color: var(--clr-#{$category}-0);
+      }
+   }
+
+   .button{
+      &--lg{
+         color: var(--clr-#{$category}-800);
+         background-color: var(--clr-#{$category}-0);
+         border-color: var(--clr-#{$category}-0);
+
+         &:hover{
+            color: var(--clr-#{$category}-900);
+            background-color: var(--clr-#{$category}-0);
+            border-color: var(--clr-#{$category}-0);
+         }
+
+         &:focus-visible{
+            border-color: var(--clr-border);
+            color: var(--clr-#{$category}-900);
+         }
+      }
+   }
+}
  
 
 

@@ -1075,6 +1075,9 @@ h2 {
   margin-bottom: var(--steps-item-gap);
   border-radius: var(--steps-border-radius);
 }
+.steps__item:last-child {
+  margin-bottom: 0;
+}
 .steps__item__main {
   display: flex;
   flex-flow: column nowrap;
@@ -1136,7 +1139,7 @@ h2 {
 /* === VARIABLES ============================== */
 body {
   --footer-pad-vrt: var(--main-pad-vrt);
-  --footer-transition-height: var(--main-pad-hrz);
+  --footer-transition-height: calc(var(--steps-border-radius) + var(--main-pad-hrz));
   --footer-container-grid: 60% 40%;
   --footer-suggestions-width: min(35vw, calc(var(--main-max-width) * 0.35));
   --footer-title-pad-bottom: min(1vw, calc(var(--main-max-width) * 0.01));
@@ -1158,7 +1161,7 @@ body {
   body {
     /* varaibles */
     --footer-pad-vrt: 8vw;
-    --footer-transition-height: 8vw;
+    --footer-transition-height: calc(var(--steps-border-radius) + var(--main-pad-hrz));
     --footer-container-grid: 1fr;
     --footer-suggestions-width: 70vw;
     --footer-title-pad-bottom: 1.5vw;
@@ -1180,7 +1183,7 @@ body {
   body {
     /* varaibles */
     --footer-pad-vrt: 15vw;
-    --footer-transition-height: 17vw;
+    --footer-transition-height: calc(var(--steps-border-radius) + var(--main-pad-hrz));
     --footer-container-grid: 1fr;
     --footer-suggestions-width: 100%;
     --footer-title-pad-bottom: 1.5vw;
@@ -1511,6 +1514,7 @@ html, body {
 
 .faq {
   padding-top: var(--steps-item-gap);
+  /* updates.html card colors */
 }
 .faq .text--sm a:hover, .faq .text--sm a:focus, .faq .text--xs a:hover, .faq .text--xs a:focus, .faq .text--p a:hover, .faq .text--p a:focus {
   color: var(--clr-1000);
@@ -1525,6 +1529,9 @@ html, body {
   margin-bottom: var(--steps-item-gap);
   border-radius: var(--steps-border-radius);
   background-color: var(--clr-50);
+}
+.faq__container:last-child {
+  margin-bottom: 0;
 }
 .faq__question {
   display: block;
@@ -1567,6 +1574,67 @@ html, body {
   /* answer hidden state */
   height: 0;
   padding-bottom: 0;
+}
+.faq__prealpha {
+  background-color: var(--clr-metal-50);
+}
+.faq__prealpha .faq__question, .faq__prealpha .faq__answer {
+  color: var(--clr-metal-900);
+}
+.faq__prealpha .text--link:hover {
+  color: var(--clr-metal-1100) !important;
+  background-color: var(--clr-metal-0) !important;
+}
+.faq__alpha {
+  background-color: var(--clr-cardboard-50);
+}
+.faq__alpha .faq__question, .faq__alpha .faq__answer {
+  color: var(--clr-cardboard-900);
+}
+.faq__alpha .text--link:hover {
+  color: var(--clr-cardboard-1100) !important;
+  background-color: var(--clr-cardboard-0) !important;
+}
+.faq__beta {
+  background-color: var(--clr-paper-50);
+}
+.faq__beta .faq__question, .faq__beta .faq__answer {
+  color: var(--clr-paper-900);
+}
+.faq__beta .text--link:hover {
+  color: var(--clr-paper-1100) !important;
+  background-color: var(--clr-paper-0) !important;
+}
+
+/* === FOOTER ================================= */
+footer {
+  background-color: var(--clr-50);
+}
+footer .text--lg a:hover, footer .text--lg a:focus {
+  color: var(--clr-800a);
+  background-color: var(--clr-0);
+}
+footer .text--sm a:hover, footer .text--sm a:focus, footer .text--xs a:hover, footer .text--xs a:focus {
+  color: var(--clr-1000);
+  background-color: var(--clr-0);
+}
+footer .button--lg {
+  color: var(--clr-800);
+  background-color: var(--clr-0);
+  border-color: var(--clr-0);
+}
+footer .button--lg:hover {
+  color: var(--clr-900);
+  background-color: var(--clr-0);
+  border-color: var(--clr-0);
+}
+footer .button--lg:focus-visible {
+  border-color: var(--clr-border);
+  color: var(--clr-900);
+}
+
+.footer__transition {
+  background-color: var(--clr-0);
 }
 
 /* ========================================

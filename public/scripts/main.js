@@ -67,7 +67,7 @@ function setVersion() {
     let version = document.getElementById("footer__version")
 
     // website version text
-    version.innerHTML = "pre-alpha v0.1.11 development preview. "
+    version.innerHTML = "v0.1.12 alpha development preview."
 }
 
 

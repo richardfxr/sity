@@ -67,6 +67,10 @@
         margin-bottom: var(--steps-item-gap);
         border-radius: var(--steps-border-radius);
 
+        &:last-child{
+            margin-bottom: 0;
+        }
+
         &__main{
             display: flex;
             flex-flow: column nowrap;

@@ -191,6 +191,10 @@ html, body{
       margin-bottom: var(--steps-item-gap);
       border-radius: var(--steps-border-radius);
       background-color: var(--clr-50);
+
+      &:last-child{
+         margin-bottom: 0;
+      }
    }
 
    &__question{
@@ -243,6 +247,89 @@ html, body{
          height: 0;
          padding-bottom: 0;
       }
+   }
+
+   /* updates.html card colors */
+   &__prealpha{
+      background-color: var(--clr-metal-50);
+      
+      .faq__question, .faq__answer{
+         color: var(--clr-metal-900);
+      }
+
+      .text--link:hover{
+         color: var(--clr-metal-1100) !important;
+         background-color: var(--clr-metal-0) !important;
+      }
+   }
+
+   &__alpha{
+      background-color: var(--clr-cardboard-50);
+      
+      .faq__question, .faq__answer{
+         color: var(--clr-cardboard-900);
+      }
+
+      .text--link:hover{
+         color: var(--clr-cardboard-1100) !important;
+         background-color: var(--clr-cardboard-0) !important;
+      }
+   }
+
+   &__beta{
+      background-color: var(--clr-paper-50);
+      
+      .faq__question, .faq__answer{
+         color: var(--clr-paper-900);
+      }
+
+      .text--link:hover{
+         color: var(--clr-paper-1100) !important;
+         background-color: var(--clr-paper-0) !important;
+      }
+   }
+}
+
+
+/* === FOOTER ================================= */
+footer{
+   background-color: var(--clr-50);
+
+   .text{
+      &--lg a:hover, &--lg a:focus{
+         color: var(--clr-800a);
+         background-color: var(--clr-0);
+      }
+
+      &--sm a:hover, &--sm a:focus, &--xs a:hover, &--xs a:focus{
+         color: var(--clr-1000);
+         background-color: var(--clr-0);
+      }
+   }
+
+   .button{
+      &--lg{
+         color: var(--clr-800);
+         background-color: var(--clr-0);
+         border-color: var(--clr-0);
+
+         &:hover{
+            color: var(--clr-900);
+            background-color: var(--clr-0);
+            border-color: var(--clr-0);
+         }
+
+         &:focus-visible{
+            border-color: var(--clr-border);
+            color: var(--clr-900);
+         }
+      }
+   }
+}
+
+.footer{
+   &__transition{
+      background-color: var(--clr-0);
    }
 }
  
