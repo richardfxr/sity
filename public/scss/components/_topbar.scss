@@ -15,7 +15,7 @@
 body{
     --topbar-pad-vrt: 1.5rem;
     --topbar-pad-hrz: 1.5rem;
-    --topbar-height: calc(3.3rem + (var(--topbar-pad-vrt) * 2));
+    --topbar-height: calc(3.8rem + (var(--topbar-pad-vrt) * 2));
     --topbar-item-pad: 0.5rem;
     --topbar-item-height: calc(var(--topbar-height) - (var(--topbar-pad-vrt) * 2) - (var(--topbar-item-pad) * 2));
     --themepicker-movement: -0.3rem;

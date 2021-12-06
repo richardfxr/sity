@@ -900,7 +900,7 @@ h2 {
 /* button */
 .button--topbar {
   font-family: "Doughy", sans-serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 1em;
 }
 .button--lg {
@@ -969,8 +969,8 @@ h2 {
 /* === VARIABLES ============================== */
 .button--topbar {
   /* variables */
-  --button-topbar-pad-vrt: 0.5rem;
-  --button-topbar-pad-hrz: 0.8477rem;
+  --button-topbar-pad-vrt: 0.75rem;
+  --button-topbar-pad-hrz: 1.052rem;
 }
 .button--lg {
   /* variables */
@@ -1348,7 +1348,7 @@ body {
 body {
   --topbar-pad-vrt: 1.5rem;
   --topbar-pad-hrz: 1.5rem;
-  --topbar-height: calc(3.3rem + (var(--topbar-pad-vrt) * 2));
+  --topbar-height: calc(3.8rem + (var(--topbar-pad-vrt) * 2));
   --topbar-item-pad: 0.5rem;
   --topbar-item-height: calc(var(--topbar-height) - (var(--topbar-pad-vrt) * 2) - (var(--topbar-item-pad) * 2));
   --themepicker-movement: -0.3rem;
