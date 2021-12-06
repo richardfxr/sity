@@ -38,6 +38,20 @@ main{
    }
 }
 
+/* coming soon */
+.soon{
+   /* flexbox */
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: stretch;
+   justify-content: center;
+   height: var(--soon-height);
+   padding: 0 var(--steps-pad-hrz);
+   border-radius: var(--steps-border-radius);
+   margin: var(--main-pad-sm) 0;
+   background-color: var(--clr-50);
+}
+
 /* logos */
 .clr-800{
    fill: var(--clr-800);

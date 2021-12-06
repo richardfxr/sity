@@ -34,13 +34,16 @@
 /* === MAIN =================================== */
 
 .text{
+    &--xl{
+        padding-bottom: var(--main-pad-sm);
+    }
+    
     &--lg{
         padding-bottom: var(--main-pad-sm);
     }
 }
 
 .title{
-    padding-bottom: var(--main-pad-sm);
 }
  
 .quicklink{
@@ -59,7 +62,7 @@
 }
 
 .steps{
-    padding-top: var(--steps-item-gap);
+    padding: var(--steps-item-gap) 0 var(--main-pad-lg) 0;
     &__item{
         display: grid;
         grid-template-columns: 1fr 1fr;

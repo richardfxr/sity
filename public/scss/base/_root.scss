@@ -32,6 +32,8 @@
 
     --inline-link-border-radius: 0.3em;
 
+    --soon-height: min(30vw, calc(var(--main-max-width) * 0.3));
+
     --transition-50: 50ms ease;
     --transition-100: 100ms ease;
     --transition-200: 200ms ease;
@@ -86,6 +88,8 @@
         --main-pad-sm: 5vw;
         --main-pad-xs: 3vw;
 
+        --soon-height: 40vw;
+
         /* category pages */
         --steps-border-radius: 4vw;
         --steps-pad-vrt: 7vw;
@@ -107,6 +111,8 @@
         --main-pad-md: 13vw;
         --main-pad-sm: 10vw;
         --main-pad-xs: 5vw;
+
+        --soon-height: 100vw;
 
         /* category pages */
         --steps-border-radius: 7vw;
