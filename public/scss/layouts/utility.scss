@@ -169,9 +169,24 @@ h2{
    padding-bottom: var(--main-pad-xs);
 }
 
-p{
-   padding-bottom: var(--main-pad-md);
+main{
+   .text{
+      &--p{
+         padding-bottom: var(--main-pad-xs);
+         
+         &--last{
+            padding-bottom: var(--main-pad-md);
+         }
+
+         &--pad{
+            &--none{
+               padding-bottom: 0;
+            }
+         }
+      }
+   }
 }
+
 
 
 /* === FOOTER ================================= */
