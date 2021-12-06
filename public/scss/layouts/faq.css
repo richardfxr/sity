@@ -1575,6 +1575,13 @@ html, body {
   height: 0;
   padding-bottom: 0;
 }
+.faq .hidden .faq__answer:focus-within {
+  /* answer hidden state */
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding-bottom: var(--faq-pad-vrt);
+}
 .faq__prealpha {
   background-color: var(--clr-metal-50);
 }

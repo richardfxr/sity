@@ -498,7 +498,7 @@ html, body{
          border-width: var(--map-button-borderwidth);
       }
 
-      button#mapPaper{
+      button#paperRouteToggle{
          color: var(--clr-paper-1000);
          background-color: var(--clr-paper-100);
          border-color: rgba(0, 0, 0, 0);
@@ -513,7 +513,7 @@ html, body{
          }
       }
 
-      button#mapMetal{
+      button#metalRouteToggle{
          color: var(--clr-metal-1000);
          background-color: var(--clr-metal-100);
          border-color: rgba(0, 0, 0, 0);
@@ -528,7 +528,7 @@ html, body{
          }
       }
 
-      button#mapGlass{
+      button#glassRouteToggle{
          color: var(--clr-glass-1000);
          background-color: var(--clr-glass-100);
          border-color: rgba(0, 0, 0, 0);
@@ -543,7 +543,7 @@ html, body{
          }
       }
 
-      button#mapPlastic{
+      button#plasticRouteToggle{
          color: var(--clr-plastic-1000);
          background-color: var(--clr-plastic-100);
          border-color: rgba(0, 0, 0, 0);
@@ -568,19 +568,19 @@ html, body{
    stroke-dashoffset: 0;
 }
 
-.paper button#mapPaper{
+.paper button#paperRouteToggle{
    border-color: var(--clr-paper-500);
 }
 
-.metal button#mapMetal{
+.metal button#metalRouteToggle{
    border-color: var(--clr-metal-500);
 }
 
-.glass button#mapGlass{
+.glass button#glassRouteToggle{
    border-color: var(--clr-glass-500);
 }
 
-.plastic button#mapPlastic{
+.plastic button#plasticRouteToggle{
    border-color: var(--clr-plastic-500);
 }
 

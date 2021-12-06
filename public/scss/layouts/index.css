@@ -1773,51 +1773,51 @@ html, body {
 .map__categories .button--lg {
   border-width: var(--map-button-borderwidth);
 }
-.map__categories button#mapPaper {
+.map__categories button#paperRouteToggle {
   color: var(--clr-paper-1000);
   background-color: var(--clr-paper-100);
   border-color: rgba(0, 0, 0, 0);
 }
-.map__categories button#mapPaper:hover {
+.map__categories button#paperRouteToggle:hover {
   color: var(--clr-paper-1100);
 }
-.map__categories button#mapPaper:focus-visible {
+.map__categories button#paperRouteToggle:focus-visible {
   border-color: var(--clr-paper-500);
   color: var(--clr-paper-1100);
 }
-.map__categories button#mapMetal {
+.map__categories button#metalRouteToggle {
   color: var(--clr-metal-1000);
   background-color: var(--clr-metal-100);
   border-color: rgba(0, 0, 0, 0);
 }
-.map__categories button#mapMetal:hover {
+.map__categories button#metalRouteToggle:hover {
   color: var(--clr-metal-1100);
 }
-.map__categories button#mapMetal:focus-visible {
+.map__categories button#metalRouteToggle:focus-visible {
   border-color: var(--clr-metal-500);
   color: var(--clr-metal-1100);
 }
-.map__categories button#mapGlass {
+.map__categories button#glassRouteToggle {
   color: var(--clr-glass-1000);
   background-color: var(--clr-glass-100);
   border-color: rgba(0, 0, 0, 0);
 }
-.map__categories button#mapGlass:hover {
+.map__categories button#glassRouteToggle:hover {
   color: var(--clr-glass-1100);
 }
-.map__categories button#mapGlass:focus-visible, .map__categories button#mapGlass .paper button#paper {
+.map__categories button#glassRouteToggle:focus-visible, .map__categories button#glassRouteToggle .paper button#paper {
   border-color: var(--clr-glass-500);
   color: var(--clr-glass-1100);
 }
-.map__categories button#mapPlastic {
+.map__categories button#plasticRouteToggle {
   color: var(--clr-plastic-1000);
   background-color: var(--clr-plastic-100);
   border-color: rgba(0, 0, 0, 0);
 }
-.map__categories button#mapPlastic:hover {
+.map__categories button#plasticRouteToggle:hover {
   color: var(--clr-plastic-1100);
 }
-.map__categories button#mapPlastic:focus-visible, .map__categories button#mapPlastic .paper button#paper {
+.map__categories button#plasticRouteToggle:focus-visible, .map__categories button#plasticRouteToggle .paper button#paper {
   border-color: var(--clr-plastic-500);
   color: var(--clr-plastic-1100);
 }
@@ -1830,19 +1830,19 @@ html, body {
   stroke-dashoffset: 0;
 }
 
-.paper button#mapPaper {
+.paper button#paperRouteToggle {
   border-color: var(--clr-paper-500);
 }
 
-.metal button#mapMetal {
+.metal button#metalRouteToggle {
   border-color: var(--clr-metal-500);
 }
 
-.glass button#mapGlass {
+.glass button#glassRouteToggle {
   border-color: var(--clr-glass-500);
 }
 
-.plastic button#mapPlastic {
+.plastic button#plasticRouteToggle {
   border-color: var(--clr-plastic-500);
 }
 

@@ -67,7 +67,7 @@ function setVersion() {
     let version = document.getElementById("footer__version")
 
     // website version text
-    version.innerHTML = "v0.1.12 alpha development preview."
+    version.innerHTML = "v0.1.13 alpha development preview."
 }
 
 
@@ -76,14 +76,20 @@ function setVersion() {
 function toggleRoute(category) {
     // get map div
     let map = document.getElementById("map")
+    // get appropriate button
+    let button = document.getElementById(category + "RouteToggle")
 
     // toggle category class
     if (map.classList.contains(category)) {
         // remove class if it already exists
         map.classList.remove(category)
+        // change aria-pressed value
+        button.setAttribute('aria-pressed', 'false')
     } else {
         // add class otherwise
         map.classList.add(category)
+        // change aria-pressed value
+        button.setAttribute('aria-pressed', 'true')
     }
 }
 
@@ -95,19 +101,19 @@ function toggleAnswer(id) {
     let container = document.getElementById(id)
     // get question <button>
     let question = document.getElementById(id + "__question")
+    // get answer <p>
+    let answer = document.getElementById(id + "__answer")
 
     // toggle answer visibility
     if (container.classList.contains("hidden")) {
         // show answer and remove class
         question.setAttribute("aria-expanded", "true")
+        answer.setAttribute("aria-hidden", "false")
         container.classList.remove("hidden")
-
-        console.log("faq shown")
     } else {
         // hide answer and remove class
         question.setAttribute("aria-expanded", "false")
+        answer.setAttribute("aria-hidden", "true")
         container.classList.add("hidden")
-
-        console.log("faq hidden")
     }
 }

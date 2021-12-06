@@ -246,6 +246,12 @@ html, body{
          /* answer hidden state */
          height: 0;
          padding-bottom: 0;
+
+         &:focus-within{
+            /* answer hidden state */
+            height: max-content;
+            padding-bottom: var(--faq-pad-vrt);
+         }
       }
    }
 
