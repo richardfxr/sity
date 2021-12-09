@@ -117,3 +117,14 @@ function toggleAnswer(id) {
         container.classList.add("hidden")
     }
 }
+
+
+
+// back to top button
+function scrollToTop() {
+    // Scroll to top logic
+    document.documentElement.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+}

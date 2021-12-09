@@ -676,7 +676,9 @@ ol, ul {
   --clr-recycle-bin-2: #2d4c73;
   --clr-recycle-bin-3: #2a3e66;
   --clr-recycle-bin-4: #233557;
+  --clr-caution-1100: #fff6eb;
   --clr-caution-900: #ffedd6;
+  --clr-caution-200: #806250;
   --clr-caution-50: #6b5548;
   --clr-plastic-bag-1: #b39c7e;
   --clr-plastic-bag-2: #947f60;
@@ -795,7 +797,9 @@ ol, ul {
   --clr-recycle-bin-2: #406ba3;
   --clr-recycle-bin-3: #334a7a;
   --clr-recycle-bin-4: #25385c;
+  --clr-caution-1100: #241606;
   --clr-caution-900: #453017;
+  --clr-caution-200: #dbab90;
   --clr-caution-50: #ffdfcc;
   --clr-plastic-bag-1: #ffe5c2;
   --clr-plastic-bag-2: #e3c393;
