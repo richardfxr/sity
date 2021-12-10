@@ -61,6 +61,20 @@ if (window.CSS && CSS.supports('color', 'var(--fake-var)')) {
 
 
 
+// back button function
+function back() {
+    // check referrer to see if it is a new page
+    if (document.referrer == "") {
+        // if page is new, go back to home page
+        window.location.pathname = '/';
+    } else {
+        // goes back in history otherwise
+        history.back()
+    }
+}
+
+
+
 // set version number in footer
 function setVersion() {
     // get version <p>
