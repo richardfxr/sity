@@ -141,7 +141,7 @@ h2 {
    BREAKPOINTS
    ======================================== */
 
-@media only screen and (max-width: g.$breakpoint-tablet) {
+@media only screen and (max-width: $breakpoint-tablet) {
     .text {
         &--xl {
             font-size: 8.5vw;
@@ -176,7 +176,7 @@ h2 {
     }
 }
 
-@media only screen and (max-width: g.$breakpoint-mobile) {
+@media only screen and (max-width: $breakpoint-mobile) {
     .text {
         &--xl {
             font-size: 12vw;
