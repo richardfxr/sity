@@ -1,0 +1,399 @@
+// Partial SCSS file containing global styling
+
+
+
+// === USE ====================================
+@use 'variables' as *;
+
+
+
+/* ============================================
+   GLOBAL
+   ============================================ */
+
+body{
+   /* transition during theme switch */
+   transition: color var(--transition-100),
+               background-color var(--transition-100),
+               border-color var(--transition-100),
+               fill var(--transition-100),
+               stroke var(--transition-100);
+}
+
+/* main */
+main{
+   max-width: 2200px;
+   padding: var(--main-pad-vrt) var(--main-pad-hrz);
+   margin: auto;
+}
+
+.text{
+   &--sm a:hover, &--sm a:focus, &--xs a:hover, &--xs a:focus{
+      color: var(--clr-1000);
+      background-color: var(--clr-100);
+   }
+}
+
+/* coming soon */
+.soon{
+   /* flexbox */
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: stretch;
+   justify-content: center;
+   height: var(--soon-height);
+   padding: 0 var(--steps-pad-hrz);
+   border-radius: var(--steps-border-radius);
+   margin: var(--main-pad-sm) 0;
+   background-color: var(--clr-50);
+}
+
+/* logos */
+.clr-800{
+   fill: var(--clr-800);
+}
+
+.clr-800a{
+   fill: var(--clr-800a);
+}
+
+
+/* illustrations */
+.illu{
+   &__stroke{
+      fill: none;
+      stroke: var(--clr-stroke);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.25px;
+   }
+}
+
+.carton{
+   &-bg{
+      fill: var(--clr-carton-100);
+      stroke: var(--clr-carton-100);
+   }
+
+   &-h2{
+      color: var(--clr-carton-1000)
+   }
+
+   &-offwhite-1{
+      fill: var(--clr-carton-offwhite-1);
+   }
+
+   &-offwhite-2{
+      fill: var(--clr-carton-offwhite-2);
+   }
+
+   &-offwhite-3{
+      fill: var(--clr-carton-offwhite-3);
+   }
+
+   &-offwhite-4{
+      fill: var(--clr-carton-offwhite-4);
+   }
+
+   &-blue-1{
+      fill: var(--clr-carton-blue-1);
+   }
+
+   &-blue-2{
+      fill: var(--clr-carton-blue-2);
+   }
+
+   &-blue-3{
+      fill: var(--clr-carton-blue-3);
+   }
+
+   &-blue-4{
+      fill: var(--clr-carton-blue-4);
+   }
+
+   &-blue-5{
+      fill: var(--clr-carton-blue-5);
+   }
+
+   &-white-1{
+      fill: var(--clr-carton-white-1);
+   }
+
+   &-white-2{
+      fill: var(--clr-carton-white-2);
+   }
+
+   &-white-3{
+      fill: var(--clr-carton-white-3);
+   }
+
+   &-white-4{
+      fill: var(--clr-carton-white-4);
+   }
+
+   &-white-5{
+      fill: var(--clr-carton-white-5);
+   }
+
+   &-1000{
+      fill: var(--clr-carton-1000);
+   }
+}
+
+.cardboard{
+   &-bg{
+      fill: var(--clr-cardboard-100);
+      stroke: var(--clr-cardboard-100);
+   }
+
+   &-h2{
+      color: var(--clr-cardboard-1000);
+   }
+
+   &-brown-1{
+      fill: var(--clr-cardboard-brown-1);
+   }
+
+   &-brown-2{
+      fill: var(--clr-cardboard-brown-2);
+   }
+
+   &-brown-3{
+      fill: var(--clr-cardboard-brown-3);
+   }
+
+   &-brown-4{
+      fill: var(--clr-cardboard-brown-4);
+   }
+
+   &-brown-5{
+      fill: var(--clr-cardboard-brown-5);
+   }
+
+   &-red-2{
+      fill: var(--clr-cardboard-red-2);
+   }
+}
+
+.paper{
+   &-bg{
+      fill: var(--clr-paper-100);
+      stroke: var(--clr-paper-100);
+   }
+
+   &-h2{
+      color: var(--clr-paper-1000);
+   }
+
+   &-white-0{
+      fill: var(--clr-paper-white-0);
+   }
+
+   &-white-1{
+      fill: var(--clr-paper-white-1);
+   }
+
+   &-white-2{
+      fill: var(--clr-paper-white-2);
+   }
+
+   &-white-3{
+      fill: var(--clr-paper-white-3);
+   }
+
+   &-white-4{
+      fill: var(--clr-paper-white-4);
+   }
+}
+
+.metal{
+   &-bg{
+      fill: var(--clr-metal-100);
+      stroke: var(--clr-metal-100);
+   }
+
+   &-h2{
+      color: var(--clr-metal-1000);
+   }
+}
+
+.can{
+   &-silver-0{
+      fill: var(--clr-can-silver-0);
+   }
+
+   &-silver-1{
+      fill: var(--clr-can-silver-1);
+   }
+
+   &-silver-2{
+      fill: var(--clr-can-silver-2);
+   }
+
+   &-silver-3{
+      fill: var(--clr-can-silver-3);
+   }
+
+   &-silver-4{
+      fill: var(--clr-can-silver-4);
+   }
+
+   &-silver-5{
+      fill: var(--clr-can-silver-5);
+   }
+
+   &-orange-0{
+      fill: var(--clr-can-orange-0);
+   }
+
+   &-orange-1{
+      fill: var(--clr-can-orange-1);
+   }
+
+   &-orange-2{
+      fill: var(--clr-can-orange-2);
+   }
+
+   &-orange-3{
+      fill: var(--clr-can-orange-3);
+   }
+}
+
+.aluminum{
+   &-bg{
+      fill: var(--clr-aluminum-100);
+      stroke: var(--clr-aluminum-100);
+   }
+
+   &-h2{
+      color: var(--clr-aluminum-1000);
+   }
+}
+
+.glass{
+   &-bg{
+      fill: var(--clr-glass-100);
+      stroke: var(--clr-glass-100);
+   }
+
+   &-h2{
+      color: var(--clr-glass-1000);
+   }
+}
+
+.plastic{
+   &-bg{
+      fill: var(--clr-plastic-100);
+      stroke: var(--clr-plastic-100);
+   }
+
+   &-h2{
+      color: var(--clr-plastic-1000);
+   }
+
+   &-bottle-0{
+      fill: var(--clr-plastic-bottle-0);
+   }
+
+   &-bottle-1-1{
+      fill: var(--clr-plastic-bottle-1-1);
+   }
+
+   &-bottle-1-2{
+      fill: var(--clr-plastic-bottle-1-2);
+   }
+
+   &-bottle-2{
+      fill: var(--clr-plastic-bottle-2);
+   }
+
+   &-bottle-3-1{
+      fill: var(--clr-plastic-bottle-3-1);
+   }
+
+   &-bottle-3-2{
+      fill: var(--clr-plastic-bottle-3-2);
+   }
+
+   &-bottle-4-1{
+      fill: var(--clr-plastic-bottle-4-1);
+   }
+
+   &-bottle-4-2{
+      fill: var(--clr-plastic-bottle-4-2);
+   }
+
+   &-purple-1{
+      fill: var(--clr-plastic-purple-1);
+   }
+
+   &-purple-2{
+      fill: var(--clr-plastic-purple-2);
+   }
+
+   &-purple-3{
+      fill: var(--clr-plastic-purple-3);
+   }
+}
+
+.recycle-bin{
+   &-0{
+      fill: var(--clr-recycle-bin-0);
+   }
+
+   &-1{
+      fill: var(--clr-recycle-bin-1);
+   }
+
+   &-2{
+      fill: var(--clr-recycle-bin-2);
+   }
+
+   &-3{
+      fill: var(--clr-recycle-bin-3);
+   }
+
+   &-4{
+      fill: var(--clr-recycle-bin-4);
+   }
+}
+
+.caution{
+   &__item{
+      background-color: var(--clr-caution-50) !important;
+
+      & h2, & p{
+         color: var(--clr-caution-900) !important;
+      }
+   }
+}
+
+.plastic-bag{
+   &-1{
+      fill: var(--clr-plastic-bag-1);
+   }
+
+   &-2{
+      fill: var(--clr-plastic-bag-2);
+   }
+
+   &-3{
+      fill: var(--clr-plastic-bag-3);
+   }
+
+   &-4{
+      fill: var(--clr-plastic-bag-4);
+   }
+}
+
+
+
+/* ========================================
+    BREAKPOINTS
+    ======================================== */
+
+@media only screen and (max-width: $breakpoint-tablet){
+}
+
+@media only screen and (max-width: $breakpoint-mobile){
+}
