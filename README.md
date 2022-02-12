@@ -46,6 +46,9 @@ npm run dev
 
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
+
+# or start the server and expose it to other devices on the same network
+npm run dev -- --host
 ```
 
 ## Building
