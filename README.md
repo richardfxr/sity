@@ -1,24 +1,45 @@
-# create-svelte
+# sity.earth
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+sity.earth aims to make recycling more accessible and apprehensible through visuals. It serves as an entry point to learn about the impacts of waste. The site helps home sorters properly dispose of waste based on city guidelines and encourages lifestyle changes such as using less, reusing, and keeping waste local.
 
-## Creating a project
+## Technical Overview
 
-If you're seeing this, you've probably already done this step. Congrats!
+sity.earth is a web app built using [SvelteKit](https://kit.svelte.dev/). Each “page” is a [Svelte](https://svelte.dev/) component consisting of HTML, JavaScript, and [Dart Sass](https://sass-lang.com/dart-sass) (not [node-sass](https://www.npmjs.com/package/node-sass)). The initial request is rendered on the server, but subsequent requests are handled by the client much like a traditional [SPA](https://en.wikipedia.org/wiki/Single-page_application).
+
+User authentication is handled through [Firebase Auth](https://firebase.google.com/docs/auth). The database is [Firestore](https://firebase.google.com/docs/firestore) ([NoSQL](https://en.wikipedia.org/wiki/NoSQL)).
+
+
+## Getting Started
+
+### Installing Node.js
+
+To check if Node.js is installed on your system, type the following line into a terminal: 
 
 ```bash
-# create a new project in the current directory
-npm init svelte@next
+node -v
 
-# create a new project in my-app
-npm init svelte@next my-app
+# if a version number like this is returned
+# it means Node.js is already installed
+v16.14.0
 ```
 
-> Note: the `@next` is temporary
+If Node.js is not installed, head over to [nodejs.org](https://nodejs.org/en/) and download the current LTS version. 
+
+> Note: Node.js should be v16.13.0 or newer to not cause issues with SvelteKit.
+
+### Installing Node Modules
+
+After Node.js is installed, pull all the files from this repo to your computer and install all Node modules:
+
+```bash
+npm i
+```
+
+You’re all set now! Move on to the next section to see how to start a local development server.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you start to make edits to the code, start a development server and preview changes in real-time:
 
 ```bash
 npm run dev
@@ -29,12 +50,10 @@ npm run dev -- --open
 
 ## Building
 
-To create a production version of your app:
+To create a production version of sity.earth:
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+To preview the production build, type `npm run preview`.
