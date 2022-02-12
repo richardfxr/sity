@@ -8,7 +8,10 @@ const config = {
 	},
 
 	preprocess: preprocess({
-		// ...svelte-preprocess options
+		scss: {
+			// prepend all src/styles SCSS files to each component
+			prependData: `@use 'src/styles' as *;`
+		}
 	}),
 };
 
