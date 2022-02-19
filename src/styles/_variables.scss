@@ -20,6 +20,7 @@ $breakpoint-mobile: 600px;
        ======================================== */
 
     --border-main: solid 2px;
+    --focus-outline: solid 0.2rem;
     --border-main-ds: 0 0 0 1px var(--clr-stroke);
 
     --main-max-width: 2200px;
@@ -39,7 +40,9 @@ $breakpoint-mobile: 600px;
 
     --transition-50: 50ms ease;
     --transition-100: 100ms ease;
-    --transition-200: 200ms ease;
+    --transition-200: 200ms;
+
+    --transition-fn1: cubic-bezier(.5,0,.5,1);
 
     /* category pages */
     --steps-border-radius: min(3vw, calc(var(--main-max-width) * 0.03));
