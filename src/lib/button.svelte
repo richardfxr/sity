@@ -19,6 +19,7 @@
 
 {#if type==="button"}
     <button 
+        on:click
         class="button {style}">
         { text }
     </button>
