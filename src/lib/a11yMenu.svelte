@@ -49,4 +49,17 @@
             opacity: 1;
         }
     }
+
+    /* reduced motion */
+    @media (prefers-reduced-motion) {
+        :global([data-motion="auto"]) {
+            .a11yMenu {
+                transform: none;
+                
+                &:focus-within {
+                    transform: none;
+                }
+            }
+        }
+    }
 </style>
