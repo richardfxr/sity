@@ -2,7 +2,7 @@
     import Button from '$lib/button.svelte';
 
     // props
-    export let options = [{text: "Skip to content.", href: "#content"}];
+    export let options = [{text: "Skip to content.", href: "#main"}];
 
     /**CSS varaible props
      * --textColor - applies only to <Button />

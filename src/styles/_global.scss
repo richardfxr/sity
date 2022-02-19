@@ -21,10 +21,20 @@ body {
 }
 
 /* main */
-main {
-    max-width: 2200px;
-    padding: var(--main-pad-vrt) var(--main-pad-hrz);
-    margin: auto;
+#main {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--pad-md);
+    inline-size: min(100%, var(--max-width));
+    margin-inline: auto;
+}
+
+.heroText {
+    padding: var(--pad-lg) 0 var(--pad-sm) 0;
+    padding-block-start: var(--pad-lg);
+    padding-block-end: var(--pad-sm);
+    margin: 0 auto;
+    margin-inline: auto;
 }
 
 .text {

@@ -16,11 +16,19 @@
     --bgColor="var(--clr-100)"
     --bgColorHover="var(--clr-50)"/>
 
-<h1>Demystifying recycling for sustainable cities.</h1>
-<p>Page still in the works. See current published build at <a href="https://sity.earth/" target="_blank">sity.earth</a>.</p>
+<main id="main">
+    <h1 class="heroText">Demystifying recycling for sustainable cities.</h1>
+    <p>Page still in the works. See current published build at <a href="https://sity.earth/" target="_blank">sity.earth</a>.</p>
+</main>
+
 
 <style lang="scss">
     :global(html, body) {
         background-color: var(--clr-50);
+    }
+
+    .heroText {
+        width: min(100%, 18ch);
+        inline-size: min(100%, 18ch);
     }
 </style>
