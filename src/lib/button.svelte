@@ -46,11 +46,12 @@
         inline-size: var(--inlineSize, 100%);
         font-family: 'Lexend Deca', sans-serif;
         line-height: 1.7em;
-        color: var(--textColor, var(--clr-900));
+        color: var(--textColor, var(--clr-800));
         background-color: var(--bgColor, var(--clr-50));
         overflow: hidden;
 
         transition: transform var(--transition-200) var(--transition-fn1),
+                    color var(--transition-200) ease-in-out,
                     background-color var(--transition-200) ease-in-out;
 
         &::before {
@@ -70,7 +71,7 @@
         &:hover {
             z-index: 101;
             transform: scale(1.05);
-            color: var(--textColorHover, var(--clr-1000));
+            color: var(--textColorHover, var(--clr-900));
 
             &::before {
                 transform: translateX(0%);
@@ -80,7 +81,7 @@
         &:focus-visible {
             z-index: 100;
             transform: scale(1.05);
-            color: var(--textColorHover, var(--clr-1000));
+            color: var(--textColorHover, var(--clr-900));
             outline: var(--focus-outline) var(--outlineColor, var(--clr-900));
             outline-offset: 0;
 
@@ -94,7 +95,7 @@
             --blockHeight: 3.2rem;
 
             font-size: 1.1rem;
-            font-weight: 400;
+            font-weight: 500;
 
             block-size: var(--blockHeight);
             border-radius: calc(var(--blockHeight) / 2);
