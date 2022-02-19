@@ -6,14 +6,21 @@
         {text: "Navigation.", href: "#"},
         {text: "Settings.", href: "#"},
         {text: "Accessibility Help.", href: "#"}
-    ]
+    ];
 </script>
 
 
 
-<A11yMenu 
+<A11yMenu
     options={a11yMenuOptions}
     --bgColor="var(--clr-100)"
     --bgColorHover="var(--clr-50)"/>
-<h1>sity.earth v0.2.0 pre-alpha</h1>
+
+<h1>Demystifying recycling for sustainable cities.</h1>
 <p>Page still in the works. See current published build at <a href="https://sity.earth/" target="_blank">sity.earth</a>.</p>
+
+<style lang="scss">
+    :global(html, body) {
+        background-color: var(--clr-50);
+    }
+</style>

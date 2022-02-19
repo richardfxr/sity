@@ -36,6 +36,7 @@
         margin-inline: auto;
         background-color: var(--bgColor, var(--clr-100));
         border-radius: 2.4rem;
+        box-shadow: var(--boxShadow-main) var(--bgColor, var(--clr-100));
 
         pointer-events: none;
         transform: translateY(-3rem) scale(0.8);
