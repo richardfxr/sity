@@ -25,6 +25,8 @@ body {
     display: flex;
     flex-flow: column nowrap;
     gap: var(--pad-md);
+    align-items: center;
+
     inline-size: min(100%, var(--max-width));
     margin-inline: auto;
 }
@@ -33,8 +35,6 @@ body {
     padding: var(--pad-lg) 0 var(--pad-sm) 0;
     padding-block-start: var(--pad-lg);
     padding-block-end: var(--pad-sm);
-    margin: 0 auto;
-    margin-inline: auto;
 }
 
 .text {
