@@ -11,7 +11,7 @@
    GLOBAL
    ============================================ */
 
-body {
+:global(body) {
     /* transition during theme switch */
     transition: color var(--transition-100),
                 background-color var(--transition-100),

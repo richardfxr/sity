@@ -9,14 +9,12 @@
 /* === ANDY BELL'S CSS RESET ================== */
 
 /* Box sizing rules */
-*,
-*::before,
-*::after {
+:global(*, *::before, *::after) {
     box-sizing: border-box;
 }
 
 /* Remove default margin */
-body,
+:global(body),
 h1,
 h2,
 h3,
@@ -36,12 +34,12 @@ ol[role='list'] {
 }
 
 /* Set core root defaults */
-html, html:focus-within {
+:global(html, html:focus-within) {
     scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
-body {
+:global(body) {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -70,13 +68,11 @@ select {
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-    html:focus-within {
+    :global(html:focus-within) {
         scroll-behavior: auto;
     }
     
-    *,
-    *::before,
-    *::after {
+    :global(*, *::before, *::after) {
         scroll-behavior: auto !important;
     }
 }
@@ -84,16 +80,16 @@ select {
 
 /* === SITY SPECIFIC RESETS ================== */
 
-body, html {
+:global(body, html) {
     height: 100%;
 }
 
-html {
+:global(html) {
     -webkit-text-size-adjust: 100%;
 }
 
 /* remove default focus ring */
-*:focus{
+:global(*:focus) {
     outline: none;
 }
 
