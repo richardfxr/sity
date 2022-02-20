@@ -24,11 +24,13 @@ $breakpoint-mobile: 600px;
     --border-main: solid 2px;
     --focus-outline: solid 0.16rem;
     --border-main-ds: 0 0 0 1px var(--clr-stroke);
-    --boxShadow-main: 0 0.7rem 2rem -0.5rem;
+    --boxShadow-main: 0 0.7rem 2rem -0.9rem;
 
     --pad-lg: 6rem;
     --pad-md: 3rem;
-    --pad-sm: 1rem;
+    --pad-sm: 1.5rem;
+    --pad-xs: 1rem;
+    --pad-xxs: 0.5rem;
 
     --main-max-width: 2200px;
     --main-pad-vrt: min(7vw, calc(var(--main-max-width) * 0.07));
