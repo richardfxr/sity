@@ -64,7 +64,8 @@
             position: absolute;
             z-index: -1;
 
-            transform: translateX(-100%);
+            /* -105% translateX to prevent ::before from peaking thorough */
+            transform: translateX(-105%);
             transition: transform var(--transition-200) ease-out;
         }
 
