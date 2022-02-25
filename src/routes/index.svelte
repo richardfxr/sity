@@ -26,6 +26,7 @@
 
 <main id="main">
     <h1 class="heroText">Demystifying recycling for sustainable cities.</h1>
+
     <ul class="siteOpt">
         {#each siteOptions as siteOption}
         <li>
@@ -100,6 +101,17 @@
         .siteOpt {
             width: min(100%, calc(2 * 13rem + 3 * var(--pad-sm)));
             grid-template-columns: repeat(2, 1fr);
+
+            #about, #faq, #settings {
+                /* reset individual card margins */
+                margin-top: 0;
+            }
+
+            #about, #settings {
+                /* offset second column */
+                position: relative;
+                top: 5rem;
+            }
         }
     }
 </style>
