@@ -5,11 +5,13 @@
     export let options = [{text: "Skip to content.", href: "#main"}];
 
     /**CSS varaible props
+     * --menuBgColor
      * --textColor - applies only to <Button />
      * --textColorHover - applies only to <Button />
      * --outlineColor - applies only to <Button />
      * --bgColor - applies to <Button />
-     * --bgColorHover - applie only to <Button />
+     * --bgColorHover - applies only to <Button />
+     * --bgColorTransition - applies only to <Button />
     */
 </script>
 
@@ -24,17 +26,17 @@
     .a11yMenu {
         display: flex;
         flex-flow: column nowrap;
-        gap: 0.3rem;
+        gap: 0.7rem;
         /* absolute positioning to remove a11yMenu from the document flow */
         position: absolute;
+        z-index: 1000;
         inset-block-start: var(--pad-lg);
         inset-inline: 0;
 
         inline-size: 20rem;
-        padding-block: 1.1rem;
-        padding-inline: 1.4rem;
+        padding: 1.1rem;
         margin-inline: auto;
-        background-color: var(--bgColor, var(--clr-100));
+        background-color: var(--menuBgColor, var(--clr-100));
         border-radius: 2.4rem;
         box-shadow: var(--boxShadow-main) var(--bgColor, var(--clr-100));
 
