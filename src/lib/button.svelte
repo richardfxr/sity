@@ -13,6 +13,7 @@
      * --outlineColor
      * --bgColor
      * --bgColorHover
+     * --bgColorTransition
     */
 </script>
 
@@ -65,30 +66,25 @@
             z-index: -1;
 
             /* -105% translateX to prevent ::before from peaking thorough */
-            transform: translateX(-105%);
+            transform: translateY(50%) scale(0);
             transition: transform var(--transition-200) ease-out;
         }
 
-        &:hover {
+        &:hover, &:focus-visible {
             z-index: 101;
-            transform: scale(1.05);
             color: var(--textColorHover, var(--clr-900));
+            background-color: var(--bgColorTransition, var(--clr-100));
+            transform: scale(1.05);
 
             &::before {
-                transform: translateX(0%);
+                transform: translateY(0%);
             }
         }
 
         &:focus-visible {
             z-index: 100;
-            transform: scale(1.05);
-            color: var(--textColorHover, var(--clr-900));
             outline: var(--focus-outline) var(--outlineColor, var(--clr-900));
             outline-offset: 0;
-
-            &::before {
-                transform: translateX(0%);
-            }
         }
 
         &.md {
