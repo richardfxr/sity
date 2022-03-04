@@ -67,7 +67,7 @@ To preview the production build, type `npm run preview`.
 
 ## Commit Messages
 
-[Commit messages](commits/main) usually start with one of the following labels:
+[Commit messages](https://github.com/richardfxr/sity/commits/main) usually start with one of the following labels:
 
 - ♿️A11Y: commits related to accessibility.
 - 🔧CNFG: commits related to configuration files.
