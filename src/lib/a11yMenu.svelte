@@ -26,15 +26,15 @@
     .a11yMenu {
         display: flex;
         flex-flow: column nowrap;
-        gap: 0.7rem;
+        gap: var(--pad-xxs);
         /* absolute positioning to remove a11yMenu from the document flow */
         position: absolute;
         z-index: 1000;
         inset-block-start: var(--pad-lg);
         inset-inline: 0;
 
-        inline-size: 20rem;
-        padding: 1.1rem;
+        width: 20rem;
+        padding: 1.1rem 1.5rem;
         margin-inline: auto;
         background-color: var(--menuBgColor, var(--clr-100));
         border-radius: 2.4rem;
@@ -58,11 +58,21 @@
         :global([data-motion="auto"]) {
             .a11yMenu {
                 transform: none;
+                /* change padding to look better as button no longer scale */
+                padding: 1.1rem;
                 
                 &:focus-within {
                     transform: none;
                 }
             }
+        }
+    }
+
+
+    /* === BREAKPOINTS ======================== */
+    @media only screen and (max-width: $breakpoint-smdesktop) {
+        .a11yMenu {
+            width: 16.25rem;
         }
     }
 </style>

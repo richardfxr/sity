@@ -74,10 +74,10 @@
             z-index: 101;
             color: var(--textColorHover, var(--clr-900));
             background-color: var(--bgColorTransition, var(--clr-100));
-            transform: scale(1.05);
+            transform: scale(1.1);
 
             &::before {
-                transform: translateY(0%);
+                transform: translateY(0%);  
             }
         }
 
@@ -89,16 +89,17 @@
 
         &.md {
             /* variables */
-            --blockHeight: 3.2rem;
+            --height: 3.2rem;
 
-            font-size: 1.1rem;
+            font-size: calc(0.35 * var(--height));
             font-weight: 500;
 
-            block-size: var(--blockHeight);
-            border-radius: calc(var(--blockHeight) / 2);
+            height: var(--height);
+            border-radius: calc(var(--height) / 2);
+            padding: 0 calc(0.47 * var(--height));
 
             &::before {
-                border-radius: calc(var(--blockHeight) / 2);
+                border-radius: calc(var(--height) / 2);
             }
         }
     }
@@ -124,6 +125,16 @@
                     transform: none;
                     background-color: var(--bgColorHover, var(--clr-100));
                 }
+            }
+        }
+    }
+
+    /* === BREAKPOINTS ======================== */
+    @media only screen and (max-width: $breakpoint-smdesktop) {
+        .button {
+            &.md {
+                /* variables */
+                --height: 2.6rem;
             }
         }
     }
