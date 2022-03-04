@@ -31,6 +31,10 @@
     margin-inline: auto;
 }
 
+.maxWidth {
+    max-width: var(--max-width);
+}
+
 .heroText {
     padding: var(--pad-lg) 0 var(--pad-sm) 0;
     padding-block-start: var(--pad-lg);
