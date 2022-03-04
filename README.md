@@ -64,3 +64,20 @@ npm run build
 ```
 
 To preview the production build, type `npm run preview`.
+
+## Commit Messages
+
+[Commit messages](commits/main) usually start with one of the following labels:
+
+- ♿️A11Y: commits related to accessibility.
+- 🔧CNFG: commits related to configuration files.
+- 💄CSS: commits related to CSS styling in a `.scss` or `.svelte` file.
+- 📐DES: commits related to any file in the [designs](designs) directory.
+- 📝DOC: commits related to project documentation such as this `README.md` file.
+- 🐛FIX: commits that fix a known bug.
+- 🏷️HTML: commits related to HTML in a `.svelte` file.
+- ✨NEW: initial commits for a new file.
+- 🟠SVLT: commits related to Svelte and SvelteKit files, excluding CSS and HTML changes as those have more specific labels.
+- 🚧WIP: commits that include partial/broken code.
+
+> Note: earlier commits to this repo include other labels that have now been deprecated or combined.
