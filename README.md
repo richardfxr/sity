@@ -1,5 +1,9 @@
 # sity.earth
 
+![sity.earth Logotype](designs/logos/GitHub-banner-1.png)
+
+## About
+
 sity.earth aims to make recycling more accessible and apprehensible through visuals. It serves as an entry point to learn about the impacts of waste. The site helps home sorters properly dispose of waste based on city guidelines and encourages lifestyle changes such as using less, reusing, and keeping waste local.
 
 ## Technical Overview
