@@ -28,11 +28,11 @@ export async function initFirebase() {
 
         // server-only imports (Firebase Admin SDK)
         const { initializeApp, applicationDefault, cert, getApps, getApp } = await import('firebase-admin/app');
-        const { getFirestore, Timestamp, FieldValue } = await import ('firebase-admin/firestore');
+        const { getFirestore, Timestamp, FieldValue } = await import('firebase-admin/firestore');
 
         if (getApps().length === 0) {
             // import service account private key
-            const serviceAccount = await import ('../.secure/firebaseAdminKey.json');
+            const serviceAccount = await import('../.secure/firebaseAdminKey.json');
 
             // init firebase if one doesn't already exist
             initializeApp({
