@@ -32,7 +32,7 @@
     --bgColorTransition="var(--clr-250)"/>
 
 <main id="main">
-    <div class="twoCol maxWidth">
+    <div class="twoCol maxWidth" id="intro">
 
         <div class="hero">
 
@@ -45,7 +45,7 @@
             </div>
 
             <h1>Recycling<br>— <span class="accent">demystified</span></h1>
-            <p>A visual tour of the recycling journey - when to recycle, how to recycle, and where the recycling goes.</p>
+            <p>A visual tour of the recycling journey - when to recycle, how to recycle, and where the recycling goes. <a href="#seach">Find your city</a> to get started.</p>
         </div>
 
         <div class="content">
@@ -54,7 +54,7 @@
                 <Button type="link" text="Log in" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
                 <Button type="link" text="Sign up" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
             </div>
-            <ul class="siteOpt">
+            <ul class="contentGrid siteOpt">
                 {#each siteOptions as siteOption}
                 <li>
                     <SiteOptCard {...siteOption} />
@@ -63,12 +63,47 @@
             </ul>
         </div>
     </div>
+
+    <div class="twoCol maxWidth" id="search">
+        <div class="search">
+            <div class="searchBar">Search bar place holder</div>
+            <!-- desktop/tablet button -->
+            <Button type="link" text="Why ask for my city?" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+        </div>
+
+        <!-- mobile button -->
+        <Button type="link" text="Why ask for my city?" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+
+        <ul class="contentGrid cities">
+            <li>
+                <a class="cityCard" href="#">
+                    <h2>Providence</h2>
+                    <span class="state">Rhode Island</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </main>
 
 
 <style lang="scss">
     :global(html, body) {
         background-color: var(--clr-50);
+    }
+
+    .twoCol {
+        display: grid;
+        grid-template-columns: 1fr 45rem;
+        align-items: start;
+        gap: var(--pad-lg);
+        width: 100%;
+        padding: 0 var(--pad-hrz);
+    }
+
+    .contentGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.1rem;
     }
 
     .header {
@@ -79,12 +114,9 @@
         height: var(--header-height);
     }
 
-    .twoCol {
-        display: grid;
-        grid-template-columns: 1fr 45rem;
-        align-items: start;
-        gap: var(--pad-lg);
-        padding: 0 var(--pad-hrz);
+    #intro {
+        /* bottom padding to compoensate for SiteOptCards top offset */
+        padding-bottom: var(--pad-xl);
 
         .hero {
             /* force full height and centers text vertically */
@@ -130,9 +162,13 @@
 
             p {
                 font-family: 'Lexend Deca', sans-serif;
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 font-weight: 400;
                 color: var(--clr-900);
+
+                a {
+                    text-decoration: underline;
+                }
             }
         }
 
@@ -143,10 +179,6 @@
             }
 
             .siteOpt {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 1.1rem;
-
                 li {
                     &:nth-child(even) {
                         position: relative;
@@ -162,6 +194,33 @@
                     text-align: center;
                     color: var(--clr-800);
                 }
+            }
+        }
+    }
+
+    #search {
+        padding-bottom: var(--pad-xxl);
+
+        .search {
+            .searchBar {
+                width: 100%;
+                padding: 1rem 1.2rem;
+                border-radius: 3rem;
+                background-color: var(--clr-0);
+            }
+        }
+
+        :global(.button) {
+            /* hide mobile "Why ask for my city?" button */
+            display: none;
+        }
+
+        .cities {
+            .cityCard {
+                display: block;
+                padding: 1.8rem;
+                background-color: var(--clr-100);
+                border-radius: 1rem;
             }
         }
     }

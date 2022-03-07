@@ -24,7 +24,7 @@
 #main {
     display: flex;
     flex-flow: column nowrap;
-    gap: var(--pad-md);
+    gap: var(--pad-xxl);
     align-items: center;
 
     inline-size: min(100%, var(--max-width));
