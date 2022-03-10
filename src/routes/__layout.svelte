@@ -5,7 +5,7 @@
 
     console.log("should be able to see this");
 
-    export async function load() {
+    export async function load({ params, fetch, session, stuff }) {
         // initialize Firebase and Firestore
         let db = await initFirebase();
 
