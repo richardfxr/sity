@@ -1,9 +1,10 @@
 import { browser } from '$app/env';
 
 /**
- * get Firestore database that works on both server and client
+ * Returns Firestore database.
+ * Works on both server and client.
  * 
- * @returns sity Firestore database 
+ * @returns {object} Firestore database object
  */
 export async function getDb() {
     if (browser) {
@@ -29,6 +30,14 @@ export async function getDb() {
 }
 
 
+/**
+ * Returns all documents in the spcified collection in the Firestore database.
+ * Works on both server and client.
+ * 
+ * @param {object} db Firestore database object returned by getDB()
+ * @param {string} col name of collection 
+ * @returns {array} array with each document as an object (including document.id and everything in document.data())
+ */
 export async function getAllDocs(db, col) {
     if (browser) {
         // following code only runs in a browser (browser === true)
@@ -37,12 +46,50 @@ export async function getAllDocs(db, col) {
         const { collection, getDocs } = await import ("firebase/firestore");
 
         const querySnapshot = await getDocs(collection(db, col));
-        return querySnapshot;
+
+        // returns arrayified querySnapshot so it's easier to work with in Svelte
+        return arrayify(querySnapshot);
 
     } else {
         // following code only runs on the server
 
         const snapshot = await db.collection(col).get();
-        return snapshot;
+
+        // returns arrayified querySnapshot so it's easier to work with in Svelte
+        return arrayify(snapshot);
     }
+}
+
+
+/**
+ * Returns the whole collection as a array of objects.
+ * Works on both server and client.
+ * 
+ * @param {object} obj Firestore snapshot of a collection
+ * @returns {array} array with each document in the collection as an object (including document.id and everything in document.data())
+ */
+function arrayify(obj) {
+    // create final array
+    const array = [];
+
+    // declare index counter
+    let i = 0;
+
+    obj.forEach((elem) => {
+        // declare temporary element object
+        let elemObj = { id: elem.id };
+
+        // add all properties in elem.data() to elemObj
+        for (const prop in elem.data()) {
+            elemObj[prop] = elem.data()[prop];
+        }
+
+        // assign elemObj to corresponsing index in array
+        array[i] = elemObj;
+
+        // increment counter
+        i++;
+    });
+
+    return array;
 }
