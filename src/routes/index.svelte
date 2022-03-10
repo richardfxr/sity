@@ -70,7 +70,7 @@
             </div>
 
             <h1>Recycling<br>— <span class="accent">demystified</span></h1>
-            <p>A visual tour of the recycling journey - when to recycle, how to recycle, and where the recycling goes. <a href="#seach">Find your city</a> to get started.</p>
+            <p>A visual tour of the recycling journey - when to recycle, how to recycle, and where the recycling goes. <a href="#search">Find your city</a> to get started.</p>
         </div>
 
         <div class="content">
