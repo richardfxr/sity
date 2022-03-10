@@ -40,6 +40,7 @@
     import SvgIcon from '$lib/svgIcon.svelte';
     import Button from '$lib/button.svelte';
     import SiteOptCard from '$lib/siteOptCard.svelte';
+    import CityCard from '$lib/cityCard.svelte';
 
     // button options for A11yMenu
     const a11yMenuOptions = [
@@ -114,10 +115,7 @@
         <ul class="contentGrid cities">
             {#each cities as city}
                 <li>
-                    <a class="cityCard" href="#">
-                        <h2>{city.name}</h2>
-                        <span class="state">{city.state}</span>
-                    </a>
+                    <CityCard {...city} />
                 </li>
             {/each}
         </ul>
@@ -252,15 +250,6 @@
         :global(.button) {
             /* hide mobile "Why ask for my city?" button */
             display: none;
-        }
-
-        .cities {
-            .cityCard {
-                display: block;
-                padding: 1.8rem;
-                background-color: var(--clr-100);
-                border-radius: 1rem;
-            }
         }
     }
 
