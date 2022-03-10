@@ -15,7 +15,7 @@
             props: {
                 cities
             }
-        }
+        };
     }
 </script>
 
