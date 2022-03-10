@@ -5,7 +5,7 @@
     export let state = "N/A";
 </script>
 
-<a class="cityCard" href="{id}">
+<a class="cityCard" href="/cities/{id}">
     <h2>{name}</h2>
     <span class="state">{state}</span>
 </a>
