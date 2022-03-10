@@ -1,4 +1,41 @@
+<script context="module">
+    // following code runs on both server and client
+
+    import { getDb, getAllDocs } from '../firebase/firestore';
+
+    export async function load({ params, fetch, session, stuff }) {
+        // get Firestore database
+        const db = await getDb();
+        console.log("db", db);
+
+        // get all docs from 'cities' collection
+        const citiesCol = await getAllDocs(db, "cities");
+
+        // citiesCol is an object, we will place all of its data into an array "cities" so that SvelteKit can loop over it
+        const cities = [];
+        let i = 0; // index counter
+        citiesCol.forEach((city) => {
+            cities[i] = {
+                id: city.id,
+                name: city.data().name,
+                state: city.data().state
+            };
+            // increment counter
+            i++;
+        });
+
+        return {
+            props: {
+                cities
+            }
+        }
+    }
+</script>
+
 <script>
+    // props
+    export let cities = null;
+
     import A11yMenu from '$lib/a11yMenu.svelte';
     import SvgIcon from '$lib/svgIcon.svelte';
     import Button from '$lib/button.svelte';
@@ -75,12 +112,14 @@
         <Button type="link" text="Why ask for my city?" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
 
         <ul class="contentGrid cities">
-            <li>
-                <a class="cityCard" href="#">
-                    <h2>Providence</h2>
-                    <span class="state">Rhode Island</span>
-                </a>
-            </li>
+            {#each cities as city}
+                <li>
+                    <a class="cityCard" href="#">
+                        <h2>{city.name}</h2>
+                        <span class="state">{city.state}</span>
+                    </a>
+                </li>
+            {/each}
         </ul>
     </div>
 </main>
