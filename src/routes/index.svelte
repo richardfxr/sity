@@ -9,20 +9,7 @@
         console.log("db", db);
 
         // get all docs from 'cities' collection
-        const citiesCol = await getAllDocs(db, "cities");
-
-        // citiesCol is an object, we will place all of its data into an array "cities" so that SvelteKit can loop over it
-        const cities = [];
-        let i = 0; // index counter
-        citiesCol.forEach((city) => {
-            cities[i] = {
-                id: city.id,
-                name: city.data().name,
-                state: city.data().state
-            };
-            // increment counter
-            i++;
-        });
+        const cities = await getAllDocs(db, "cities");
 
         return {
             props: {
