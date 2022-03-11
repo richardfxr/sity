@@ -2,6 +2,7 @@
     // following code runs on both server and client
 
     import { initFirebase } from '../firebase/init';
+    import { getDb, getAllDocs } from '../firebase/firestore';
 
     console.log("should be able to see this");
 
@@ -9,8 +10,12 @@
         // initialize Firebase
         await initFirebase();
 
+        // get Firestore database
+        const db = await getDb();
+
         return {
-            props: {
+            stuff: {
+                "db": db
             }
         }
     }
