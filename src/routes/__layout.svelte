@@ -2,7 +2,7 @@
     // following code runs on both server and client
 
     import { initFirebase } from '../firebase/init';
-    import { getDb, getAllDocs } from '../firebase/firestore';
+    import { getDb } from '../firebase/firestore';
 
     console.log("should be able to see this");
 
