@@ -86,7 +86,6 @@ export async function getDbDoc(db, col, docId) {
             throw new Error("document does not exist");
         }
 
-        console.log("docSnap.data():", docSnap.data());
         // return doc data
         return docSnap.data();
 
@@ -101,7 +100,6 @@ export async function getDbDoc(db, col, docId) {
             throw new Error("document does not exist");
         }
 
-        console.log("docSnap.data():", docSnap.data());
         // return doc data
         return docSnap.data();
     }
