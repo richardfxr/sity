@@ -99,8 +99,8 @@
             justify-content: start;
             gap: 1.5rem;
             
-            font-size: calc(0.35 * var(--height));
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 1.3rem;
 
             height: 100%;
             width: 100%;
