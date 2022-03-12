@@ -120,18 +120,10 @@
         gap: 1.1rem;
     }
 
-    .header {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-
-        height: var(--header-height);
-    }
-
     #intro {
         /* bottom padding to compoensate for SiteOptCards top offset */
         padding-bottom: var(--pad-xl);
-        
+
         .content {
             .siteOpt {
                 li {
@@ -174,31 +166,6 @@
 
     /* === BREAKPOINTS ======================== */
     @media only screen and (max-width: $breakpoint-smdesktop) {
-        .twoCol {
-            grid-template-columns: 1fr 40rem;
-            align-items: start;
-            gap: var(--pad-md);
-
-            .hero {
-                .header {
-                    :global(svg) {
-                        width: 4.5rem;
-                    }
-                }
-
-                h1 {
-                    /* fluid font size
-                    * min font size: 47px
-                    * max font size: 75px
-                    * min viewport width: 1171px
-                    * max viewport width: 1450px
-                    */
-                    --font-size: calc(47px + (75 - 47) * ((100vw - 1171px) / (1450 - 1171)));
-                }
-            }
-
-            
-        }
     }
 
     @media only screen and (max-width: 960px) {
