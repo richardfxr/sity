@@ -61,6 +61,43 @@ export async function getDbDocs(db, col) {
 }
 
 
+export async function getDbDoc(db, col, docId) {
+    if (browser) {
+        // following code only runs in a browser (browser === true)
+
+        // browser-only imports (Firebase 9 SDK)
+        const {doc, getDoc} = await import("firebase/firestore");
+
+        const docRef = doc(db, col, docId);
+        const docSnap = await getDoc(docRef);
+
+        if (!docSnap.exists()) {
+            // throw error if doc does not exist
+            throw new Error("document does not exist");
+        }
+
+        console.log("docSnap.data():", docSnap.data());
+        // return doc data
+        return docSnap.data();
+
+    } else {
+        // following code only runs on the server
+
+        const docRef = db.collection(col).doc(docId);
+        const docSnap = await docRef.get();
+
+        if (!docSnap.exists) {
+            // throw error if doc does not exist
+            throw new Error("document does not exist");
+        }
+
+        console.log("docSnap.data():", docSnap.data());
+        // return doc data
+        return docSnap.data();
+    }
+}
+
+
 /**
  * Returns the whole collection as a array of objects.
  * Works on both server and client.
