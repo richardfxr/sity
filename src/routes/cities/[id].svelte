@@ -48,6 +48,8 @@
 
     // imports
     import A11yMenu from '$lib/a11yMenu.svelte';
+    import SvgIcon from '$lib/svgIcon.svelte';
+    import Button from '$lib/button.svelte';
 
     // button options for A11yMenu
     const a11yMenuOptions = [
@@ -71,7 +73,24 @@
 <main id="main">
     <div class="twoCol maxWidth" id="intro">
         <div class="hero">
+
+            <div class="header">
+                <SvgIcon icon="logotype"/>
+                <!-- tablet/mobile user auth buttons -->
+                <Button type="link" text="Log in" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+                <Button type="link" text="Sign up" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+
+            </div>
+
             <h1>Recycling in <span class="accent">{city.name}, {city.state}</span></h1>
+        </div>
+
+        <div class="content">
+            <div class="header">
+                <!-- desktop user auth buttons -->
+                <Button type="link" text="Log in" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+                <Button type="link" text="Sign up" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+            </div>
         </div>
     </div>
 </main>
@@ -79,28 +98,5 @@
 <style lang="scss">
     :global(html, body) {
         background-color: var(--clr-50);
-    }
-
-    #intro {
-        h1 {
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-
-            /* fluid font size
-            * min font size: 65px
-            * max font size: 105px
-            * min viewport width: 1451px
-            * max viewport width: 1800px
-            */
-            --font-size: calc(65px + (105 - 65) * ((min(100vw, var(--max-width)) - 1451px) / (1800 - 1451)));
-            font-size: var(--font-size);
-
-            /* negative top margin so that top of h1 aligns with top of siteOptCards */
-            margin-top: calc(-0.2 * var(--font-size));
-
-            .accent {
-                color: var(--clr-700a);
-            }
-        }
     }
 </style>
