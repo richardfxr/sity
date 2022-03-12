@@ -32,7 +32,7 @@ export async function initFirebase() {
 
         if (getApps().length === 0) {
             // import service account private key
-            const serviceAccount = await import('../.secure/firebaseAdminKey.json');
+            const serviceAccount = process.env.FB_ADMIN_KEY;
 
             // init firebase if one doesn't already exist
             initializeApp({
