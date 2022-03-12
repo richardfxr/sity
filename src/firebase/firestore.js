@@ -66,19 +66,16 @@ export async function getDbDocs(db, col) {
  * Requires consumer to have error handling.
  * Works on both server and client.
  * 
- * @param {object} db Firestore database object returned by getDB()
- * @param {string} col name of collection
- * @param {string} docId id of document
+ * @param {object} docRef 
  * @returns {object} object containing all data within document
  */
-export async function getDbDoc(db, col, docId) {
+export async function getDbDocFromRef(docRef) {
     if (browser) {
         // following code only runs in a browser (browser === true)
 
         // browser-only imports (Firebase 9 SDK)
-        const {doc, getDoc} = await import("firebase/firestore");
-
-        const docRef = doc(db, col, docId);
+        const { getDoc } = await import("firebase/firestore");
+        
         const docSnap = await getDoc(docRef);
 
         if (!docSnap.exists()) {
@@ -92,7 +89,6 @@ export async function getDbDoc(db, col, docId) {
     } else {
         // following code only runs on the server
 
-        const docRef = db.collection(col).doc(docId);
         const docSnap = await docRef.get();
 
         if (!docSnap.exists) {
@@ -102,6 +98,39 @@ export async function getDbDoc(db, col, docId) {
 
         // return doc data
         return docSnap.data();
+    }
+}
+
+
+/**
+ * Returns all data within the specified document in the Firestore database.
+ * Requires consumer to have error handling.
+ * Works on both server and client.
+ * 
+ * @param {object} db Firestore database object returned by getDB()
+ * @param {string} col name of collection
+ * @param {string} docId id of document
+ * @returns {object} object containing all data within document
+ */
+export async function getDbDoc(db, col, docId) {
+    if (browser) {
+        // following code only runs in a browser (browser === true)
+
+        // browser-only imports (Firebase 9 SDK)
+        const { doc } = await import("firebase/firestore");
+
+        const docRef = doc(db, col, docId);
+        
+        // pass docRef to getDbDocFromRef
+        return getDbDocFromRef(docRef);
+
+    } else {
+        // following code only runs on the server
+
+        const docRef = db.collection(col).doc(docId);
+        
+        // pass docRef to getDbDocFromRef
+        return getDbDocFromRef(docRef);
     }
 }
 

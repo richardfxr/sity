@@ -1,5 +1,5 @@
 <script context="module">
-    import { getDbDoc } from "../../firebase/firestore";
+    import { getDbDoc, getDbDocFromRef } from "../../firebase/firestore";
 
     export async function load({ params, fetch, session, stuff }) {
         // get city id
@@ -16,7 +16,7 @@
             // get city document data
             city = await getDbDoc(db, "cities", id);
             // get city guideline
-            guideline = await getDbDoc(db, "guidelines", city.guideline);
+            guideline = await getDbDocFromRef(city.guideline);
 
             // set loaded to true
             loaded = true;
