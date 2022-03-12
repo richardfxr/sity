@@ -38,7 +38,7 @@
 
     // options for SiteOptCards
     const siteOptions = [
-        {id: "findYourCity", href: "#", bgColor:"#7BE6F5", title: "Find your city", text: "00 cities"},
+        {id: "findYourCity", href: "#", bgColor:"#7BE6F5", title: "Find your city", text: `${cities.length} cities`},
         {id: "about", href: "#", bgColor:"#C4BFFF", title: "About us", text: "What is sity.earth?"},
         {id: "faq", href: "#", bgColor:"#F7B4D6", title: "FAQ", text: "00 questions"},
         {id: "settings", href: "#", bgColor:"#F7E57C", title: "Settings", text: "account and accessibility"},
