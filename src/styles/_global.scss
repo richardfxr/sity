@@ -55,7 +55,68 @@
     align-items: start;
     gap: var(--pad-lg);
     width: 100%;
-    padding: 0 var(--pad-hrz);
+    padding: 0 var(--pad-hrz);        
+
+    .hero {
+        /* force full height and centers text vertically */
+        display: flex;
+        flex-flow: column nowrap;
+        /* sticky positioning so .hero does not move on scroll */
+        position: sticky;
+        top: 0;
+
+        .header {
+            :global(svg) {
+                width: 6rem;
+            }
+
+            :global(.button) {
+                margin-left: auto;
+                /* hide normal log in button on desktop due to layout */
+                display: none;
+            }
+        }
+
+        h1 {
+            // font-size: 110px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            
+            /* fluid font size
+                * min font size: 65px
+                * max font size: 105px
+                * min viewport width: 1451px
+                * max viewport width: 1800px
+                */
+            --font-size: calc(65px + (105 - 65) * ((min(100vw, var(--max-width)) - 1451px) / (1800 - 1451)));
+            font-size: var(--font-size);
+
+            /* negative top margin so that top of h1 aligns with top of siteOptCards */
+            margin-top: calc(-0.2 * var(--font-size));
+
+            .accent {
+                color: var(--clr-700a);
+            }
+        }
+
+        p {
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--clr-900);
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .content {
+        .header {
+            justify-content: end;
+            gap: var(--pad-xxs);
+        }
+    }
 }
 
 /* coming soon */
