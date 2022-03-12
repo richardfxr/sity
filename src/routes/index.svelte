@@ -114,12 +114,6 @@
         background-color: var(--clr-50);
     }
 
-    .contentGrid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.1rem;
-    }
-
     #intro {
         /* bottom padding to compoensate for SiteOptCards top offset */
         padding-bottom: var(--pad-xl);
