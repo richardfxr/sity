@@ -74,7 +74,6 @@
             z-index: 101;
             color: var(--textColorHover, var(--clr-900));
             background-color: var(--bgColorTransition, var(--clr-100));
-            transform: scale(1.1);
 
             &::before {
                 transform: translateY(0%);  
@@ -85,6 +84,24 @@
             z-index: 100;
             outline: var(--focus-outline) var(--outlineColor, var(--clr-900));
             outline-offset: 0;
+        }
+
+        &.lg, &.lg--icon {
+            font-size: calc(0.35 * var(--height));
+            font-weight: 500;
+
+            height: 100%;
+            width: 100%;
+            border-radius: 1rem;
+            padding: 0 1.8rem;
+
+            &::before {
+                border-radius: 1rem;
+            }
+
+            &:hover, &:focus-visible {
+                transform: scale(1.05);
+            }
         }
 
         &.md {
@@ -100,6 +117,10 @@
 
             &::before {
                 border-radius: calc(var(--height) / 2);
+            }
+
+            &:hover, &:focus-visible {
+                transform: scale(1.1);
             }
         }
     }
