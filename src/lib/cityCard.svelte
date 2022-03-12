@@ -16,5 +16,9 @@
         padding: 1.8rem;
         background-color: var(--clr-100);
         border-radius: 1rem;
+
+        .state {
+            opacity: 0.85;
+        }
     }
 </style>
