@@ -143,7 +143,11 @@
         padding-bottom: var(--pad-xxl);
 
         .search {
+            height: 100%;
+
             .searchBar {
+                position: sticky;
+                top: var(--pad-md);
                 width: 100%;
                 padding: 1rem 1.2rem;
                 border-radius: 3rem;
