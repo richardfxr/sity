@@ -5,6 +5,10 @@
     export let text = "add text";
     export let href = "#";
     export let target = "_self";
+    export let icon;
+
+    // imports
+    import SvgIcon from '$lib/svgIcon.svelte';
 
     /**CSS varaible props
      * --inlineSize
@@ -22,6 +26,9 @@
     <button 
         on:click
         class="button {style}">
+        {#if icon}
+            <SvgIcon {icon} />
+        {/if}
         { text }
     </button>
 {:else if type==="link"}
@@ -87,6 +94,11 @@
         }
 
         &.lg, &.lg--icon {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: start;
+            gap: 1.5rem;
+            
             font-size: calc(0.35 * var(--height));
             font-weight: 500;
 
@@ -121,6 +133,21 @@
 
             &:hover, &:focus-visible {
                 transform: scale(1.1);
+            }
+        }
+
+        &.lg--icon {
+            :global(svg) {
+                --mainClr: var(--textColor, var(--clr-800));
+                --strokeWidth: 0.3rem;
+
+                width: 1.6rem;
+            }
+
+            &:hover, &:focus-visible {
+                :global(svg) {
+                    --mainClr: var(--textColorHover, var(--clr-900));
+                }
             }
         }
     }
