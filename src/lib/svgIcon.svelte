@@ -3,7 +3,8 @@
 
     /**CSS varaible props
      * --mainClr: the main color of the SVG
-     * --secClr: the secondary color of the SVG
+     * --secClr: the secondary color of the SVG\
+     * --strokeWidth: stroke-width
      */
 </script>
 
@@ -14,6 +15,11 @@
 {/if}
 
 <style lang="scss">
+    * {
+        transition: stroke var(--transition-200) ease-in-out,
+                    fill var(--transition-200) ease-in-out;
+    }
+
     .clr {
         &-700 {
             fill: var(--mainClr, var(--clr-700));
@@ -28,6 +34,6 @@
         fill: none;
         stroke: var(--mainClr, var(--clr-900));
         stroke-miterlimit: 10;
-        stroke-width: 0.3rem;
+        stroke-width: var(--strokeWidth, 0.3rem);
     }
 </style>
