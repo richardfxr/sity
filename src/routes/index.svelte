@@ -1,14 +1,14 @@
 <script context="module">
     // following code runs on both server and client
 
-    import { getAllDocs } from '../firebase/firestore';
+    import { getDbDocs } from '../firebase/firestore';
 
     export async function load({ params, fetch, session, stuff }) {
         // get Firestore database
         const db = stuff.db
 
         // get all docs from 'cities' collection
-        const cities = await getAllDocs(db, "cities");
+        const cities = await getDbDocs(db, "cities");
 
         return {
             props: {

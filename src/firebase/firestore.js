@@ -38,7 +38,7 @@ export async function getDb() {
  * @param {string} col name of collection 
  * @returns {array} array with each document as an object (including document.id and everything in document.data())
  */
-export async function getAllDocs(db, col) {
+export async function getDbDocs(db, col) {
     if (browser) {
         // following code only runs in a browser (browser === true)
 
