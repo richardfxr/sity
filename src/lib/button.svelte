@@ -5,7 +5,7 @@
     export let text = "add text";
     export let href = "#";
     export let target = "_self";
-    export let icon;
+    export let icon = null;
 
     // imports
     import SvgIcon from '$lib/svgIcon.svelte';
