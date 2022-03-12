@@ -144,6 +144,7 @@
 
         .search {
             height: 100%;
+            padding-top: var(--pad-md);
 
             .searchBar {
                 position: sticky;
@@ -158,6 +159,10 @@
         :global(.button) {
             /* hide mobile "Why ask for my city?" button */
             display: none;
+        }
+
+        .cities {
+            padding-top: var(--pad-md);
         }
     }
 
