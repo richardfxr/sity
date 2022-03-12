@@ -61,6 +61,16 @@ export async function getDbDocs(db, col) {
 }
 
 
+/**
+ * Returns all data within the specified document in the Firestore database.
+ * Requires consumer to have error handling.
+ * Works on both server and client.
+ * 
+ * @param {object} db Firestore database object returned by getDB()
+ * @param {string} col name of collection
+ * @param {string} docId id of document
+ * @returns {object} object containing all data within document
+ */
 export async function getDbDoc(db, col, docId) {
     if (browser) {
         // following code only runs in a browser (browser === true)
