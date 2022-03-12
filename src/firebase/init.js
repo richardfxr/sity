@@ -31,8 +31,18 @@ export async function initFirebase() {
         // const { getFirestore, Timestamp, FieldValue } = await import('firebase-admin/firestore');
 
         if (getApps().length === 0) {
+            let serviceAccount;
+
             // import service account private key
-            const serviceAccount = JSON.parse(process.env.FB_ADMIN_KEY);
+            if (import.meta.env.MODE === "development") {
+                // get admin key through Vite if in development mode
+                serviceAccount = JSON.parse(import.meta.env.VITE_FB_ADMIN_KEY);
+                console.log(import.meta.env.VITE_FB_ADMIN_KEY);
+            } else {
+                // get admin key from Vercel env variables otherwise
+                serviceAccount = JSON.parse(process.env.FB_ADMIN_KEY);
+            }
+            
 
             // init firebase if one doesn't already exist
             initializeApp({
