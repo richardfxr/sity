@@ -48,6 +48,16 @@
     }
 }
 
+/* layout */
+.twoCol {
+    display: grid;
+    grid-template-columns: 1fr 45rem;
+    align-items: start;
+    gap: var(--pad-lg);
+    width: 100%;
+    padding: 0 var(--pad-hrz);
+}
+
 /* coming soon */
 .soon {
     /* flexbox */

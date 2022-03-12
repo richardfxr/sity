@@ -114,15 +114,6 @@
         background-color: var(--clr-50);
     }
 
-    .twoCol {
-        display: grid;
-        grid-template-columns: 1fr 45rem;
-        align-items: start;
-        gap: var(--pad-lg);
-        width: 100%;
-        padding: 0 var(--pad-hrz);
-    }
-
     .contentGrid {
         display: grid;
         grid-template-columns: 1fr 1fr;
