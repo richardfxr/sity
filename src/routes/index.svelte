@@ -42,7 +42,7 @@
         {id: "about", href: "#", bgColor:"#C4BFFF", title: "About us", text: "What is sity.earth?"},
         {id: "faq", href: "#", bgColor:"#F7B4D6", title: "FAQ", text: "00 questions"},
         {id: "settings", href: "#", bgColor:"#F7E57C", title: "Settings", text: "account and accessibility"},
-    ]
+    ];
 </script>
 
 

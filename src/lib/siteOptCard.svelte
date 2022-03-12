@@ -1,12 +1,13 @@
 <script>
     // props
+    export let id = "id (for background-color and SVGs)";
     export let href = "#";
-    export let id = "id (for background-color and SVGs";
+    export let bgColor;
     export let title = "title of link";
     export let text = "text that's shown on hover";
 </script>
 
-<a {href} {id} class="siteOptCard">
+<a {href} {id} class="siteOptCard" style="--bgColor: {bgColor}">
     <h2>{title}</h2>
     <p class="text--xs">{text}</p>
 
@@ -26,7 +27,7 @@
         height: 32rem;
         padding: 1.8rem;
         /* default background color, overwritten later */
-        background-color: var(--clr-150);
+        background-color: var(--bgColor, var(--clr-150));
 
         /* round corners and prevent overflow */
         border-radius: 1rem;
@@ -57,7 +58,7 @@
     }
 
     #findYourCity {
-        background-color: #7BE6F5;
+        // background-color: #7BE6F5;
 
         .illu {
             margin-left: auto;
