@@ -19,10 +19,6 @@ export async function initFirebase() {
             getApp();
         }
 
-        // initialize Firestore
-        // const db = getFirestore();
-        // return db;
-
     } else {
         // following code only runs on the server
 
@@ -52,9 +48,7 @@ export async function initFirebase() {
             // get firebaseApp if it already exists
             getApp();
         }
-
-        // initialize Firestore
-        // const db = getFirestore();
-        // return db;
     }
+
+    return;
 }
