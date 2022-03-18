@@ -111,6 +111,7 @@
                 </li>
                 <li class="share">
                     <Button type="button" style="lg--icon" icon="share" text="Share this page" on:click={copyURL} --inlineSize="auto" --textColor="var(--clr-900)" --textColorHover="var(--clr-0)" --bgColor="var(--clr-100)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+                    <Button type="button" style="lg--icon" icon="share" text="Share" on:click={copyURL} --inlineSize="auto" --textColor="var(--clr-900)" --textColorHover="var(--clr-0)" --bgColor="var(--clr-100)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
                 </li>
                 <li  class="facility">
                     <a href={guideline.link} target="_blank" class="cityOptCard">
@@ -140,11 +141,11 @@
             display: flex;
             flex-flow: column nowrap;
             gap: var(--pad-xxs);
-            padding: 1.8rem;
+            padding: var(--pad-main);
             background-color: var(--clr-100);
 
             /* round corners and prevent overflow */
-            border-radius: 1rem;
+            border-radius: var(--border-radius);
             overflow: hidden;
 
             /* relative position for .svgShape */
@@ -175,42 +176,49 @@
             }
 
             :global(.plastic) {
-                width: 10rem;
+                width: 45%;
                 transform: rotate(50deg);
-                top: 3rem;
-                left: 14rem;
+                top: 13%;
+                left: 67%;
             }
 
             :global(.cardboard) {
-                width: 10rem;
-                top: -3rem;
-                left: 10rem;
+                width: 46%;
+                top: -13%;
+                left: 45%;
             }
 
             :global(.metal) {
-                width: 9rem;
+                width: 40%;
                 transform: rotate(110deg);
-                top: 3rem;
-                left: -3rem;
+                top: 13%;
+                left: -14%;
             }
 
             :global(.glass) {
-                width: 10rem;
+                width: 45%;
                 transform: rotate(50deg);
-                top: -3.5rem;
-                left: 2.5rem;
+                top: -15%;
+                left: 11%;
             }
 
             :global(.paper) {
-                width: 11rem;
+                width: 49%;
                 transform: rotate(-20deg);
-                top: -1rem;
-                left: 4rem;
+                top: -4%;
+                left: 18%;
             }
         }
 
         .share {
             grid-area: share;
+
+            :global(div:last-child) {
+                :global(.button) {
+                    /* hide mobile share button */
+                    display: none; 
+                }
+            }
         }
 
         .facility {
@@ -227,6 +235,40 @@
                 width: 2rem;
                 margin-left: auto;
                 padding-bottom: 2rem;
+            }
+        }
+    }
+
+
+    /* === BREAKPOINTS ======================== */
+    @media only screen and (max-width: $breakpoint-mobile) {
+        .cityOpt {
+            grid-template: 
+                "guidelines facility" 50vw
+                "share facility" 13vw
+                / 1fr 1fr;
+            
+            .share {
+                :global(div:last-child) {
+                    :global(.button) {
+                        /* hide desktop share this page button */
+                        display: flex; 
+                    }
+                }
+
+                :global(div:first-child) {
+                    :global(.button) {
+                        /* show mobile share button */
+                        display: none; 
+                    }
+                }
+            }
+
+            .facility {
+                :global(svg) {
+                    width: 6vw;
+                    padding-bottom: 7vw;
+                }
             }
         }
     }

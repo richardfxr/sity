@@ -88,7 +88,6 @@
         h1 {
             // font-size: 110px;
             text-transform: uppercase;
-            margin-bottom: 2rem;
             
             /* fluid font size
                 * min font size: 65px
@@ -113,6 +112,7 @@
             font-weight: 500;
             line-height: 1.15em;
             color: var(--clr-800);
+            margin-top: 2rem;
 
             a {
                 text-decoration: underline;

@@ -25,6 +25,7 @@ $breakpoint-mobile: 600px;
     --border-main: solid 2px;
     --focus-outline: solid 0.16rem;
     --border-main-ds: 0 0 0 1px var(--clr-stroke);
+    --border-radius: 1rem;
     --boxShadow-main: 0 0.7rem 2rem -0.9rem;
 
     --pad-xxl: 12rem;
@@ -35,6 +36,7 @@ $breakpoint-mobile: 600px;
     --pad-xs: 1rem;
     --pad-xxs: 0.7rem;
 
+    --pad-main: 1.8rem;
     --pad-vrt: min(7vw, calc(var(--max-width) * 0.07));
     --pad-hrz: min(6vw, calc(var(--max-width) * 0.06));
     // s--pad-xl: min(15vw, calc(var(--max-width) * 0.15));
@@ -132,11 +134,15 @@ $breakpoint-mobile: 600px;
 @media only screen and (max-width: $breakpoint-mobile) {
     :root {
         --border-main: solid 2px;
+        --border-radius: 2vw;
 
+        --pad-xl: 28vw;
         --pad-lg: 24vw;
         --pad-sm: 5vw;
         --pad-xs: 2vw;
+        --pad-xxs: 1.5vw;
 
+        --pad-main: 3vw;
         --pad-hrz: 5vw;
 
         --soon-height: 100vw;

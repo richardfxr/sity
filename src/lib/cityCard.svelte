@@ -7,15 +7,15 @@
 
 <a class="cityCard" href="/city/{id}">
     <h2>{name}</h2>
-    <span class="state">{state}</span>
+    <span class="state text--xs">{state}</span>
 </a>
 
 <style lang="scss">
     .cityCard {
         display: block;
-        padding: 1.8rem;
+        padding: var(--pad-main);
         background-color: var(--clr-100);
-        border-radius: 1rem;
+        border-radius: var(--border-radius);
 
         .state {
             opacity: 0.85;

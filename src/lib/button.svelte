@@ -97,18 +97,18 @@
             display: flex;
             flex-flow: row nowrap;
             justify-content: start;
-            gap: 1.5rem;
+            gap: var(--pad-main);
             
             font-weight: 600;
             font-size: 1.3rem;
 
             height: 100%;
             width: 100%;
-            border-radius: 1rem;
-            padding: 0 1.8rem;
+            border-radius: var(--border-radius);
+            padding: 0 var(--pad-main);
 
             &::before {
-                border-radius: 1rem;
+                border-radius: var(--border-radius);
             }
 
             &:hover, &:focus-visible {
@@ -183,6 +183,22 @@
             &.md {
                 /* variables */
                 --height: 2.6rem;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        .button {
+            &.lg, &.lg--icon {
+                font-size: 1rem;
+            }
+
+            &.lg--icon {
+                :global(svg) {
+                    --strokeWidth: 0.3rem;
+
+                    width: 5vw;
+                }
             }
         }
     }

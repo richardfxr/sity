@@ -25,12 +25,12 @@
         /* relative position for absolute positioning of .illu */
         position: relative;
         height: 32rem;
-        padding: 1.8rem;
+        padding: var(--pad-main);
         /* default background color, overwritten later */
         background-color: var(--bgColor, var(--clr-150));
 
         /* round corners and prevent overflow */
-        border-radius: 1rem;
+        border-radius: var(--border-radius);
         overflow: hidden;
 
         &:focus-visible {
@@ -119,6 +119,12 @@
     @media only screen and (max-width: $breakpoint-tablet) {
         .siteOptCard {
             height: 30rem;
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        .siteOptCard {
+            height: 70vw;
         }
     }
 </style>
