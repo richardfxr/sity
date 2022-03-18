@@ -2,10 +2,11 @@
     // props
     export let id = "id (for background-color and SVGs)";
     export let href = "#";
-    export let target = "_self";
     export let bgColor;
     export let title = "title of link";
     export let text = "text that's shown on hover";
+
+    $: target = (href.charAt(0) === "#") ? "_self" : null;
 </script>
 
 <a {href} {target} {id} class="siteOptCard" style="--bgColor: {bgColor}">

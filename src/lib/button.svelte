@@ -4,8 +4,9 @@
     export let style = "md";
     export let text = "add text";
     export let href = "#";
-    export let target = "_self";
     export let icon = null;
+
+    $: target = (href.charAt(0) === "#") ? "_self" : null;
 
     // imports
     import SvgIcon from '$lib/svgIcon.svelte';
