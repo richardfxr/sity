@@ -22,8 +22,21 @@
 // 700: Bold
 // 800: Extra-bold
 // 900: Black
+//
+//
+/* Inter */
+//
+// 100: Thin
+// 200: Extra-light
+// 300: Light
+// 400: Regular
+// 500: Medium
+// 600: Semi-bold
+// 700: Bold
+// 800: Extra-bold
+// 900: Black
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 
@@ -93,7 +106,8 @@ h2 {
     }
 
     &--xs {
-        font-family: 'Lexend Deca', sans-serif;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
         font-size: 1.15rem;
         line-height: 1.2em;
     }
