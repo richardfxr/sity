@@ -27,19 +27,20 @@
 
 <script>
     // imports
-    import { fly } from 'svelte/transition';
+    import { fade, fly } from 'svelte/transition';
 
     // props
     export let url = "";
 
     // page transition parameter
-    const pageTransitionDuration = 300;
+    let pageTransitionDuration = 300;   
+    let flyAmount = 300;
+    $: flyAmountNeg = -1 * flyAmount;
 </script>
 
 <!-- page transition -->
 {#key url.pathname}
-    <div in:fly="{{ y: -10, duration: pageTransitionDuration, delay: pageTransitionDuration }}"
-         out:fly="{{ y: 10, duration: pageTransitionDuration }}">
+    <div in:fly="{{ y: flyAmount, duration: pageTransitionDuration, delay: pageTransitionDuration }}" out:fly="{{ y: flyAmountNeg, duration: pageTransitionDuration }}">
         <slot />
     </div>
 {/key}
