@@ -2,14 +2,15 @@
     // props
     export let id = "id (for background-color and SVGs)";
     export let href = "#";
-    export let bgColor;
+    export let bgColor = "var(--clr-150)";
+    export let bgColorHover = "var(--clr-250)";
     export let title = "title of link";
     export let text = "text that's shown on hover";
 
     $: target = (href.charAt(0) === "#") ? "_self" : null;
 </script>
 
-<a {href} {target} {id} class="siteOptCard" style="--bgColor: {bgColor}">
+<a {href} {target} {id} class="siteOptCard" style="--bgColor: {bgColor}; --bgColorHover: {bgColorHover}">
     <h2>{title}</h2>
     <p class="text--xs">{text}</p>
 
@@ -20,6 +21,14 @@
 
 <style lang="scss">
     .siteOptCard {
+        /* variables */
+        --beforeSize: 35rem;
+        --beforeScale: 0.7;
+        --beforeTransY: 20%;
+        --scaleHover: 1.03;
+        --scaleNone: calc(1.0 / var(--scaleHover));
+        --textTransY: 1rem;
+
         display: flex;
         flex-flow: column nowrap;
         gap: var(--pad-xxs);
@@ -29,20 +38,65 @@
         height: 32rem;
         padding: var(--pad-main);
         /* default background color, overwritten later */
-        background-color: var(--bgColor, var(--clr-150));
+        background-color: var(--bgColor);
 
         /* round corners and prevent overflow */
         border-radius: var(--border-radius);
         overflow: hidden;
+
+        transform: scale(1);
+        transition: transform var(--transition-300) var(--transition-smoothEase);
+
+        &::before {
+            /* ::before pseudo class that appears as a circle when hovered/focused */
+            width: var(--beforeSize);
+            height: var(--beforeSize);
+            content: "";
+            background-color: var(--bgColorHover);
+            /* move ::before under main text */
+            position: absolute;
+            left: 10%;
+            top: 35%;
+            z-index: 0;
+
+            /* make ::before a circle */
+            border-radius: 50%;
+
+            transform: translateY(var(--beforeTransY)) scale(var(--beforeScale));
+            transition: transform var(--transition-300) var(--transition-smoothEase),
+                        background-color var(--transition-200) ease-in-out;
+        }
+
+        &:hover, &:focus-visible {
+            transform: scale(var(--scaleHover));
+
+            &::before {
+                transform: translateY(0%) scale(1);  
+            }
+
+            h2, p {
+                transform: translateY(0) scale(var(--scaleNone));
+            }
+        }
 
         &:focus-visible {
             outline: var(--focus-outline) var(--clr-900);
             outline-offset: 0;
         }
 
+        h2, p {
+            transform: translateY(var(--textTransY)) scale(1);
+            transition: transform var(--transition-300) var(--transition-smoothEase);
+        }
+
         h2 {
             color: var(--clr-1000);
             opacity: 0.7;
+        }
+
+        p {
+            color: var(--clr-1000);
+            opacity: 0.6;
         }
 
         .illu {
@@ -60,8 +114,6 @@
     }
 
     #findYourCity {
-        // background-color: #7BE6F5;
-
         .illu {
             margin-left: auto;
             width: 70%;
@@ -110,6 +162,31 @@
         }
     }
 
+
+    /* reduced motion */
+    @media (prefers-reduced-motion) {
+        :global([data-motion="auto"]) {
+            .siteOptCard {
+                /* variables - prevent scailing and translate */
+                --beforeTransY: 0;
+                --beforeScale: 1;
+                --scaleHover: 1;
+                --scaleNone: 1;
+                --textTransY: 0;
+
+                &::before {
+                    background-color: var(--bgColor);
+                }
+
+                &:hover, &:focus-visible {
+                    &::before {
+                        background-color: var(--bgColorHover);
+                    }
+                }
+            }
+        }
+    }
+
     
     /* === BREAKPOINTS ======================== */
     @media only screen and (max-width: $breakpoint-smdesktop) {
@@ -126,7 +203,11 @@
 
     @media only screen and (max-width: $breakpoint-mobile) {
         .siteOptCard {
-            height: 70vw;
+            /* variables */
+            --beforeSize: 70vw;
+            --textTransY: 3vw;
+
+            height: 65vw;
         }
     }
 </style>

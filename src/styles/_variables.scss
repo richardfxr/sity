@@ -34,7 +34,7 @@ $breakpoint-mobile: 600px;
     --pad-md: 3rem;
     --pad-sm: 1.5rem;
     --pad-xs: 1rem;
-    --pad-xxs: 0.7rem;
+    --pad-xxs: 0.5rem;
 
     --pad-main: 1.8rem;
     --pad-vrt: min(7vw, calc(var(--max-width) * 0.07));
@@ -56,8 +56,10 @@ $breakpoint-mobile: 600px;
     --transition-50: 50ms ease;
     --transition-100: 100ms ease;
     --transition-200: 170ms;
+    --transition-300: 300ms;
 
     --transition-fn1: cubic-bezier(.5,0,.5,1);
+    --transition-smoothEase: cubic-bezier(.56,0,.13,.99);
 
     /* category pages */
     --steps-border-radius: min(3vw, calc(var(--max-width) * 0.03));
