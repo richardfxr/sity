@@ -77,7 +77,9 @@
         <div class="hero">
 
             <div class="header">
-                <SvgIcon icon="logotype"/>
+                <a href="/">
+                    <SvgIcon icon="logotype"/>
+                </a>
                 <!-- tablet/mobile user auth buttons -->
                 <div class="userAuth">
                     <Button type="link" text="Log in" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>

@@ -74,7 +74,12 @@
         top: 0;
 
         .header {
+            a {
+                display: block;
+            }
+
             :global(svg) {
+                display: block;
                 width: 6rem;
             }
 
