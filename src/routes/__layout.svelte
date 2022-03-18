@@ -6,7 +6,7 @@
 
     console.log("should be able to see this");
 
-    export async function load({ params, fetch, session, stuff }) {
+    export async function load({ url, params, fetch, session, stuff }) {
         // initialize Firebase
         await initFirebase();
 
@@ -15,14 +15,31 @@
 
         return {
             stuff: {
-                "db": db
+                db
+            },
+
+            props: {
+                url
             }
         }
     }
 </script>
 
 <script>
+    // imports
+    import { fly } from 'svelte/transition';
 
+    // props
+    export let url = "";
+
+    // page transition parameter
+    const pageTransitionDuration = 300;
 </script>
 
-<slot />
+<!-- page transition -->
+{#key url.pathname}
+    <div in:fly="{{ y: -10, duration: pageTransitionDuration, delay: pageTransitionDuration }}"
+         out:fly="{{ y: 10, duration: pageTransitionDuration }}">
+        <slot />
+    </div>
+{/key}
