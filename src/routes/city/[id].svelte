@@ -79,12 +79,13 @@
             <div class="header">
                 <SvgIcon icon="logotype"/>
                 <!-- tablet/mobile user auth buttons -->
-                <Button type="link" text="Log in" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
-                <Button type="link" text="Sign up" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
-
+                <div class="userAuth">
+                    <Button type="link" text="Log in" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+                    <Button type="link" text="Sign up" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+                </div>
             </div>
 
-            <h1>Recycling in <span class="accent">{city.name}, {city.state}</span></h1>
+            <h1>Recycling in <br><span class="accent">{city.name}, {city.state}</span></h1>
         </div>
 
         <div class="content">

@@ -115,4 +115,10 @@
             height: 28rem;;
         }
     }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        .siteOptCard {
+            height: 30rem;
+        }
+    }
 </style>

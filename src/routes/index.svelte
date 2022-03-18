@@ -63,13 +63,14 @@
             <div class="header">
                 <SvgIcon icon="logotype"/>
                 <!-- tablet/mobile user auth buttons -->
-                <Button type="link" text="Log in" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
-                <Button type="link" text="Sign up" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
-
+                <div class="userAuth">
+                    <Button type="link" text="Log in" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+                    <Button type="link" text="Sign up" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+                </div>
             </div>
 
             <h1>Recycling<br>— <span class="accent">demystified</span></h1>
-            <p>A visual tour of the recycling journey - when to recycle, how to recycle, and where the recycling goes. <a href="#search">Find your city</a> to get started.</p>
+            <p>A visual tour of the recycling journey - when to recycle, how to recycle, and where the recycling goes.</p>
         </div>
 
         <div class="content">
@@ -173,9 +174,6 @@
 
     @media only screen and (max-width: 960px) {
         .siteOpt {
-            width: min(100%, calc(2 * 13rem + 3 * var(--pad-sm)));
-            grid-template-columns: repeat(2, 1fr);
-
             #about, #faq, #settings {
                 /* reset individual card margins */
                 margin-top: 0;
@@ -185,6 +183,15 @@
                 /* offset second column */
                 position: relative;
                 top: 5rem;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        #search {
+            .cities {
+                /* remove top padding */
+                padding-top: 0;
             }
         }
     }

@@ -105,6 +105,8 @@ $breakpoint-mobile: 600px;
 
 @media only screen and (max-width: $breakpoint-tablet) {
     :root {
+        --max-width: 800px;
+
         --border-main: solid 1.5px;
         --main-pad-vrt: 7vw;
         --main-pad-xl: 20vw;
@@ -130,12 +132,12 @@ $breakpoint-mobile: 600px;
 @media only screen and (max-width: $breakpoint-mobile) {
     :root {
         --border-main: solid 2px;
-        --main-pad-vrt: 17vw;
-        --main-pad-xl: 30vw;
-        --main-pad-lg: 23vw;
-        --main-pad-md: 13vw;
-        --main-pad-sm: 10vw;
-        --main-pad-xs: 5vw;
+
+        --pad-lg: 24vw;
+        --pad-sm: 5vw;
+        --pad-xs: 2vw;
+
+        --pad-hrz: 5vw;
 
         --soon-height: 100vw;
 

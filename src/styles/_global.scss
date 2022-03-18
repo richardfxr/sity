@@ -78,7 +78,7 @@
                 width: 6rem;
             }
 
-            :global(.button) {
+            .userAuth {
                 margin-left: auto;
                 /* hide normal log in button on desktop due to layout */
                 display: none;
@@ -109,9 +109,10 @@
 
         p {
             font-family: 'Lexend Deca', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: var(--clr-900);
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.15em;
+            color: var(--clr-800);
 
             a {
                 text-decoration: underline;
@@ -130,7 +131,7 @@
 .contentGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: var(--pad-xs);
 }
 
 /* coming soon */
@@ -518,7 +519,67 @@
 }
 
 @media only screen and (max-width: $breakpoint-tablet) {
+    /* layout */
+    .twoCol {
+        grid-template-columns: 1fr;
+        gap: var(--pad-lg);
+
+        .hero {
+            position: relative;
+            .header {
+                :global(svg) {
+                    width: 5rem;
+                }
+
+                .userAuth {
+                    /* show normal log in button */
+                    display: flex;
+                    flex-flow: row nowrap;
+                    gap: var(--pad-xxs);
+                }
+            }
+
+            h1 {
+                /* fluid font size
+                * min font size: 60px
+                * max font size: 70px
+                * min viewport width: 600px
+                * max viewport width: 800px
+                */
+                --font-size: calc(60px + (70 - 60) * ((min(100vw, 800px) - 600px) / (800 - 600)));
+            }
+        }
+
+        .content {
+            .header {
+                /* hide desktop .twoCol header */
+                display: none;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: $breakpoint-mobile) {
+    /* layout */
+    .twoCol {
+        .hero {
+            .header {
+                /* reset header height */
+                height: auto;
+                padding: var(--pad-sm) 0 var(--pad-lg) 0;
+
+                :global(svg) {
+                    width: 18vw;
+                }
+
+                .userAuth {
+                    /* hide user auth buttons on mobile to save space */
+                    display: none;
+                }
+            }
+            h1 {
+                font-size: 13vw;
+            }
+        }
+    }
 }
