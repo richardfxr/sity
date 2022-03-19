@@ -59,8 +59,8 @@
         background-color: var(--bgColor, var(--clr-50));
         overflow: hidden;
 
-        transition: transform var(--transition-200) var(--transition-fn1),
-                    color var(--transition-200) ease-in-out,
+        transition: transform var(--transition-300) var(--transition-smoothEase),
+                    color var(--transition-300) ease-in-out,
                     background-color var(--transition-200) ease-in-out;
 
         &::before {
@@ -75,7 +75,7 @@
 
             /* -105% translateX to prevent ::before from peaking thorough */
             transform: translateY(50%) scale(0);
-            transition: transform var(--transition-200) ease-out;
+            transition: transform var(--transition-300) var(--transition-smoothEase);
         }
 
         &:hover, &:focus-visible {
