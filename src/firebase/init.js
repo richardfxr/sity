@@ -33,7 +33,6 @@ export async function initFirebase() {
             if (import.meta.env.MODE === "development") {
                 // get admin key through Vite if in development mode
                 serviceAccount = JSON.parse(import.meta.env.VITE_FB_ADMIN_KEY);
-                console.log(import.meta.env.VITE_FB_ADMIN_KEY);
             } else {
                 // get admin key from Vercel env variables otherwise
                 serviceAccount = JSON.parse(process.env.FB_ADMIN_KEY);
