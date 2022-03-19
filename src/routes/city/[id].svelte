@@ -172,13 +172,6 @@
                     }
                 }
             }
-
-            .facility {
-                :global(svg) {
-                    width: 6vw;
-                    padding-bottom: 7vw;
-                }
-            }
         }
     }
 </style>

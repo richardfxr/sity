@@ -115,4 +115,17 @@
             }
         }
     }
+
+
+    /* === BREAKPOINTS ======================== */
+    @media only screen and (max-width: $breakpoint-mobile) {
+        .cityOptCard {
+            &#facility {
+                :global(svg) {
+                    width: 6vw;
+                    padding-bottom: 7vw;
+                }
+            }
+        }
+    }
 </style>
