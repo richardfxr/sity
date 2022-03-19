@@ -60,7 +60,7 @@
         overflow: hidden;
 
         transition: transform var(--transition-300) var(--transition-smoothEase),
-                    color var(--transition-300) ease-in-out,
+                    color var(--transition-200) ease-in-out,
                     background-color var(--transition-200) ease-in-out;
 
         &::before {
