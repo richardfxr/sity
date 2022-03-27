@@ -85,6 +85,11 @@
             }
         }
 
+        &:focus-visible {
+            outline: var(--focus-outline) var(--clr-900);
+            outline-offset: 0;
+        }
+
         h2, p {
             transform: translateY(0);
             transition: transform var(--transition-300) var(--transition-smoothEase);
