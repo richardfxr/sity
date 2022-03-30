@@ -47,6 +47,8 @@
     export let guideline;
 
     // imports
+    import { onMount } from 'svelte';
+    import { onPageLoad } from '$lib/page.js';
     import { curPage, defaultCity, defaultCityName } from '../../store/store.js';
     import SvgIcon from '$lib/svgIcon.svelte';
     import CityOptCard from '$lib/cityOptCard.svelte';
@@ -54,13 +56,20 @@
     import {copyURL} from '$lib/clipboard.js';
 
     /* === STORES ============================= */
-    curPage.set("city");
     defaultCity.set(id);
     defaultCityName.set(city.name);
+
+    // bindings
+    let pageHeading;
+
+    // call onPageLoad on mount
+    onMount(() => {
+		onPageLoad("city", $curPage, pageHeading);
+	});
 </script>
 
 
-<div class="twoCol maxWidth" id="intro" role="region" aria-labelledby="cityHeading">
+<div class="twoCol maxWidth" id="intro" aria-labelledby="pageHeading">
     <div class="hero">
 
         <div class="header">
@@ -69,7 +78,7 @@
             </a>
         </div>
 
-        <h1 id="cityHeading">Recycling in <br><span class="accent">{city.name}, {city.state}</span></h1>
+        <h1 id="pageHeading" bind:this={pageHeading} tabindex="-1">Recycling in <br><span class="accent">{city.name}, {city.state}</span></h1>
     </div>
 
     <div class="content">

@@ -46,7 +46,6 @@
     let pageTransitionDuration = 300;   
     let flyAmount = 0;
     $: flyAmountNeg = -1 * flyAmount;
-    
 </script>
 
 <!-- accessibility menu -->

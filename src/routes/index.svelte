@@ -23,14 +23,13 @@
     export let cities = null;
 
     // imports
+    import { onMount } from 'svelte';
+    import { onPageLoad } from '$lib/page.js';
     import { curPage } from '../store/store.js';
     import SvgIcon from '$lib/svgIcon.svelte';
     import Button from '$lib/button.svelte';
     import SiteOptCard from '$lib/siteOptCard.svelte';
     import CityCard from '$lib/cityCard.svelte';
-
-    // set curPage
-    curPage.set("home");
 
     // options for SiteOptCards
     const siteOptions = [
@@ -39,10 +38,18 @@
         {id: "about", href: "/about", bgColor:"var(--clr-siteOpt-pink-250)", bgColorHover:"var(--clr-siteOpt-pink-350)", title: "About us", text: "what is sity.earth?"},
         {id: "settings", href: "/settings", bgColor:"var(--clr-siteOpt-yellow-250)", bgColorHover:"var(--clr-siteOpt-yellow-350)", title: "Settings", text: "account and accessibility"},
     ];
+
+    // bindings
+    let pageHeading;
+
+    // call onPageLoad on mount
+    onMount(() => {
+		onPageLoad("home", $curPage, pageHeading);
+	});
 </script>
 
 
-<div class="twoCol" id="intro" role="region" aria-labelledby="introHeading">
+<div class="twoCol" id="intro" aria-labelledby="pageHeading">
 
     <div class="hero">
 
@@ -50,7 +57,7 @@
             <SvgIcon icon="logotype"/>
         </div>
 
-        <h1 id="introHeading">Recycling<br>— <span class="accent">demystified</span></h1>
+        <h1 id="pageHeading" bind:this={pageHeading} tabindex="-1">Recycling<br>— <span class="accent">demystified</span></h1>
         <p>A visual tour of the recycling journey - when to recycle, how to recycle, and where the recycling goes.</p>
     </div>
 

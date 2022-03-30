@@ -1,10 +1,17 @@
 <script>
     // imports
+    import { onMount } from 'svelte';
+    import { onPageLoad } from '$lib/page.js';
     import { curPage } from '../store/store.js';
     import SvgIcon from '$lib/svgIcon.svelte';
 
-    // set curPage
-    curPage.set("settings");
+    // bindings
+    let pageHeading;
+
+    // call onPageLoad on mount
+    onMount(() => {
+		onPageLoad("settings", $curPage, pageHeading);
+	});
 </script>
 
 
@@ -17,7 +24,7 @@
             </a>
         </div>
 
-        <h1>Settings</h1>
+        <h1 id="pageHeading" bind:this={pageHeading} tabindex="-1">Settings</h1>
     </div>
 </div>
 
