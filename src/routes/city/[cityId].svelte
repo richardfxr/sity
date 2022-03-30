@@ -47,16 +47,14 @@
     export let guideline;
 
     // imports
-    import { curPage, hasCity, defaultCity } from '../../store/store.js';
+    import { curPage, defaultCity } from '../../store/store.js';
     import SvgIcon from '$lib/svgIcon.svelte';
     import CityOptCard from '$lib/cityOptCard.svelte';
     import Button from '$lib/button.svelte';
     import {copyURL} from '$lib/clipboard.js';
 
-    // set curPage
+    /* === STORES ============================= */
     curPage.set("city");
-    // set city
-    hasCity.set(true);
     defaultCity.set(id);
 
     // button options for A11yMenu
