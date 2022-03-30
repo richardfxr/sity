@@ -1,5 +1,6 @@
 <script>
     // imports
+    import { browser } from '$app/env';
     import { onMount, afterUpdate } from 'svelte';
     import { curPage, hasCity, defaultCity } from '../store/store.js';
     import SvgIcon from '$lib/svgIcon.svelte';
@@ -13,8 +14,8 @@
 
     /* === DECLARATIONS ======================= */
     let currentPage;
-    let showCity;
-    let cityId;
+    let showCity = false; // do not show city link if SSR
+    let cityId = null;
     let cityLink;
     let magicCircleVrt;
     let magicCircleHrz;
@@ -22,21 +23,23 @@
     /* === STORES ============================= */
     curPage.subscribe(value => {
         currentPage = value;
-        console.log("currentPage:", currentPage);
-        console.log("called updateMagicCircle()");
         updateMagicCircle();
     });
 
-    hasCity.subscribe(value => {
-        showCity = value;
+    if (browser) {
+        hasCity.subscribe(value => {
+            showCity = value;
 
-        // update city link so it is tabbable
-        setCityLinkTab();
-    });
+            // update city link so it is tabbable
+            setCityLinkTab();
 
-    defaultCity.subscribe(value => {
-        cityId = value;
-    });
+            updateMagicCircle();
+        });
+
+        defaultCity.subscribe(value => {
+            cityId = value;
+        });
+    }    
 
     /* === EVENT HANDLERS ===================== */
     /**
@@ -163,6 +166,48 @@
             </a>
         </li>
         <li>
+            <a href="/whyrecycle"
+               id="recycleLink"
+               class:active="{isRecycle}"
+               on:mousemove={moveMagicCircle}
+               on:mouseleave={updateMagicCircle}
+               on:focus={moveMagicCircle}
+               on:blur={updateMagicCircle}
+               on:click={() => setNewPage("recycle")}
+               aria-current={isRecycle}>
+                <span class="visuallyHidden">Why recycle</span>
+                <SvgIcon icon="recycle" ariaHidden="true" />
+            </a>
+        </li>
+        <li>
+            <a href="/about"
+               id="aboutLink"
+               class:active="{isAbout}"
+               on:mousemove={moveMagicCircle}
+               on:mouseleave={updateMagicCircle}
+               on:focus={moveMagicCircle}
+               on:blur={updateMagicCircle}
+               on:click={() => setNewPage("about")}
+               aria-current={isAbout}>
+                <span class="visuallyHidden">About us</span>
+                <SvgIcon icon="about" ariaHidden="true" />
+            </a>
+        </li>
+        <li>
+            <a href="/settings"
+               id="settingsLink"
+               class:active="{isSettings}"
+               on:mousemove={moveMagicCircle}
+               on:mouseleave={updateMagicCircle}
+               on:focus={moveMagicCircle}
+               on:blur={updateMagicCircle}
+               on:click={() => setNewPage("settings")}
+               aria-current={isSettings}>
+                <span class="visuallyHidden">Settings</span>
+                <SvgIcon icon="settings" ariaHidden="true" />
+            </a>
+        </li>
+        <li>
             <a href="/city/{cityId}"
                id="cityLink"
                bind:this={cityLink}
@@ -177,48 +222,6 @@
                aria-current={isCity}>
                 <span class="visuallyHidden">City</span>
                 <SvgIcon icon="city" ariaHidden="true" />
-            </a>
-        </li>
-        <li>
-            <a href="/"
-               id="recycleLink"
-               class:active="{isRecycle}"
-               on:mousemove={moveMagicCircle}
-               on:mouseleave={updateMagicCircle}
-               on:focus={moveMagicCircle}
-               on:blur={updateMagicCircle}
-               on:click={() => setNewPage("recycle")}
-               aria-current={isRecycle}>
-                <span class="visuallyHidden">Why recycle</span>
-                <SvgIcon icon="recycle" ariaHidden="true" />
-            </a>
-        </li>
-        <li>
-            <a href="/"
-               id="aboutLink"
-               class:active="{isAbout}"
-               on:mousemove={moveMagicCircle}
-               on:mouseleave={updateMagicCircle}
-               on:focus={moveMagicCircle}
-               on:blur={updateMagicCircle}
-               on:click={() => setNewPage("about")}
-               aria-current={isAbout}>
-                <span class="visuallyHidden">About us</span>
-                <SvgIcon icon="about" ariaHidden="true" />
-            </a>
-        </li>
-        <li>
-            <a href="/"
-               id="settingsLink"
-               class:active="{isSettings}"
-               on:mousemove={moveMagicCircle}
-               on:mouseleave={updateMagicCircle}
-               on:focus={moveMagicCircle}
-               on:blur={updateMagicCircle}
-               on:click={() => setNewPage("settings")}
-               aria-current={isSettings}>
-                <span class="visuallyHidden">Settings</span>
-                <SvgIcon icon="settings" ariaHidden="true" />
             </a>
         </li>
         <!-- magic cirles -->
