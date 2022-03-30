@@ -3,7 +3,7 @@
 
     export async function load({ params, fetch, session, stuff }) {
         // get city id
-        let id = params.id;
+        let id = params.cityId;
         // get Firestore database
         const db = stuff.db
         // declare variables
