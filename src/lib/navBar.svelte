@@ -2,7 +2,7 @@
     // imports
     import { browser } from '$app/env';
     import { onMount, afterUpdate } from 'svelte';
-    import { curPage, hasCity, defaultCity } from '../store/store.js';
+    import { curPage, hasCity, defaultCity, defaultCityName } from '../store/store.js';
     import SvgIcon from '$lib/svgIcon.svelte';
 
     /**CSS varaible props
@@ -16,6 +16,7 @@
     let currentPage;
     let showCity = false; // do not show city link if SSR
     let cityId = null;
+    let cityName = null;
     let cityLink;
     let magicCircleVrt;
     let magicCircleHrz;
@@ -38,6 +39,10 @@
 
         defaultCity.subscribe(value => {
             cityId = value;
+        });
+
+        defaultCityName.subscribe(value => {
+            cityName = value;
         });
     }    
 
@@ -221,7 +226,7 @@
                on:click={() => setNewPage("city")}
                aria-current={isCity}
                aria-hidden="{!showCity}">
-                <span class="visuallyHidden">City</span>
+                <span class="visuallyHidden">City of {cityName}</span>
                 <SvgIcon icon="city" ariaHidden="true" />
             </a>
         </li>

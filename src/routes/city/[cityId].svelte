@@ -47,7 +47,7 @@
     export let guideline;
 
     // imports
-    import { curPage, defaultCity } from '../../store/store.js';
+    import { curPage, defaultCity, defaultCityName } from '../../store/store.js';
     import SvgIcon from '$lib/svgIcon.svelte';
     import CityOptCard from '$lib/cityOptCard.svelte';
     import Button from '$lib/button.svelte';
@@ -56,6 +56,7 @@
     /* === STORES ============================= */
     curPage.set("city");
     defaultCity.set(id);
+    defaultCityName.set(city.name);
 </script>
 
 
