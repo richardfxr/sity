@@ -219,7 +219,8 @@
                on:focus={moveMagicCircle}
                on:blur={updateMagicCircle}
                on:click={() => setNewPage("city")}
-               aria-current={isCity}>
+               aria-current={isCity}
+               aria-hidden="{!showCity}">
                 <span class="visuallyHidden">City</span>
                 <SvgIcon icon="city" ariaHidden="true" />
             </a>
