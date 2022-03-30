@@ -37,7 +37,7 @@
     // button options for A11yMenu
     const a11yMenuOptions = [
         {text: "Skip to content.", href: "#main"},
-        {text: "Navigation.", href: "#"},
+        {text: "Navigation.", href: "#navBar"},
         {text: "Settings.", href: "#"},
         {text: "Accessibility Help.", href: "#"}
     ];
@@ -60,9 +60,9 @@
 
     <!-- page transition -->
     {#key url.pathname}
-        <div class="mainWrapper" in:fly="{{ y: flyAmount, duration: pageTransitionDuration, delay: pageTransitionDuration }}" out:fly="{{ y: flyAmountNeg, duration: pageTransitionDuration }}">
+        <main id="main" in:fly="{{ y: flyAmount, duration: pageTransitionDuration, delay: pageTransitionDuration }}" out:fly="{{ y: flyAmountNeg, duration: pageTransitionDuration }}">
             <slot />
-        </div>
+        </main>
     {/key}
 </div>
 
@@ -83,7 +83,7 @@
             z-index: 10000;
         }
 
-        .mainWrapper {
+        #main {
             width: 100%;
         }
     }

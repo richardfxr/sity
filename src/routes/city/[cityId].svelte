@@ -69,37 +69,35 @@
 </script>
 
 
-<main id="main">
-    <div class="twoCol maxWidth" id="intro">
-        <div class="hero">
+<div class="twoCol maxWidth" id="intro">
+    <div class="hero">
 
-            <div class="header">
-                <a href="/">
-                    <SvgIcon icon="logotype"/>
-                </a>
-            </div>
-
-            <h1>Recycling in <br><span class="accent">{city.name}, {city.state}</span></h1>
+        <div class="header">
+            <a href="/">
+                <SvgIcon icon="logotype"/>
+            </a>
         </div>
 
-        <div class="content">
-            <ul class="contentGrid cityOpt">
-                <li class="guidelines">
-                    <CityOptCard id="guidelines" guidelineLength={guideline.categories.length} />
-                </li>
-                <li class="share">
-                    <Button type="button" style="lg--icon" icon="share" text="Share this page" on:click={copyURL} --inlineSize="auto" --textClr="var(--clr-900)" --textClrHover="var(--clr-0)" --bgClr="var(--clr-100)" --bgClrHover="var(--clr-700)" --bgClrTransition="var(--clr-250)"/>
-                    <Button type="button" style="lg--icon" icon="share" text="Share" on:click={copyURL} --inlineSize="auto" --textClr="var(--clr-900)" --textClrHover="var(--clr-0)" --bgClr="var(--clr-100)" --bgClrHover="var(--clr-700)" --bgClrTransition="var(--clr-250)"/>
-                </li>
-                <li  class="facility">
-                    <CityOptCard id="facility" href={guideline.link} facilityName={guideline.name} />
-                </li>
-            </ul>
-        </div>
+        <h1>Recycling in <br><span class="accent">{city.name}, {city.state}</span></h1>
     </div>
 
-    <div class="placeholder"></div>
-</main>
+    <div class="content">
+        <ul class="contentGrid cityOpt">
+            <li class="guidelines">
+                <CityOptCard id="guidelines" guidelineLength={guideline.categories.length} />
+            </li>
+            <li class="share">
+                <Button type="button" style="lg--icon" icon="share" text="Share this page" on:click={copyURL} --inlineSize="auto" --textClr="var(--clr-900)" --textClrHover="var(--clr-0)" --bgClr="var(--clr-100)" --bgClrHover="var(--clr-700)" --bgClrTransition="var(--clr-250)"/>
+                <Button type="button" style="lg--icon" icon="share" text="Share" on:click={copyURL} --inlineSize="auto" --textClr="var(--clr-900)" --textClrHover="var(--clr-0)" --bgClr="var(--clr-100)" --bgClrHover="var(--clr-700)" --bgClrTransition="var(--clr-250)"/>
+            </li>
+            <li  class="facility">
+                <CityOptCard id="facility" href={guideline.link} facilityName={guideline.name} />
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="placeholder"></div>
 
 <style lang="scss">
     :global(html, body) {

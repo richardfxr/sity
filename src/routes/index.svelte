@@ -42,49 +42,47 @@
 </script>
 
 
-<main id="main">
-    <div class="twoCol" id="intro">
+<div class="twoCol" id="intro">
 
-        <div class="hero">
+    <div class="hero">
 
-            <div class="header">
-                <SvgIcon icon="logotype"/>
-            </div>
-
-            <h1>Recycling<br>— <span class="accent">demystified</span></h1>
-            <p>A visual tour of the recycling journey - when to recycle, how to recycle, and where the recycling goes.</p>
+        <div class="header">
+            <SvgIcon icon="logotype"/>
         </div>
 
-        <div class="content">
-            <ul class="contentGrid siteOpt">
-                {#each siteOptions as siteOption}
-                <li>
-                    <SiteOptCard {...siteOption} />
-                </li>
-                {/each}
-            </ul>
-        </div>
+        <h1>Recycling<br>— <span class="accent">demystified</span></h1>
+        <p>A visual tour of the recycling journey - when to recycle, how to recycle, and where the recycling goes.</p>
     </div>
 
-    <div class="twoCol" id="search">
-        <div class="search">
-            <div class="searchBar">Search bar place holder</div>
-            <!-- desktop/tablet button -->
-            <Button type="link" text="Why ask for my city?" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
-        </div>
-
-        <!-- mobile button -->
-        <Button type="link" text="Why ask for my city?" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
-
-        <ul class="contentGrid cities">
-            {#each cities as city}
-                <li>
-                    <CityCard {...city} />
-                </li>
+    <div class="content">
+        <ul class="contentGrid siteOpt">
+            {#each siteOptions as siteOption}
+            <li>
+                <SiteOptCard {...siteOption} />
+            </li>
             {/each}
         </ul>
     </div>
-</main>
+</div>
+
+<div class="twoCol" id="search">
+    <div class="search">
+        <div class="searchBar">Search bar place holder</div>
+        <!-- desktop/tablet button -->
+        <Button type="link" text="Why ask for my city?" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+    </div>
+
+    <!-- mobile button -->
+    <Button type="link" text="Why ask for my city?" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
+
+    <ul class="contentGrid cities">
+        {#each cities as city}
+            <li>
+                <CityCard {...city} />
+            </li>
+        {/each}
+    </ul>
+</div>
 
 
 <style lang="scss">
