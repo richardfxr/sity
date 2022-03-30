@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" data-motion="auto">
+<html lang="en" data-motion="auto" data-script="false">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="" />
 		<link rel="icon" href="%svelte.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!-- change data-script attribute to show that JS is running on client -->
+		<script>
+			document.documentElement.setAttribute("data-script", "true");
+		</script>
+		
 		%svelte.head%
 	</head>
 	<body>
