@@ -13,12 +13,12 @@
 
     /**CSS varaible props
      * --inlineSize
-     * --textColor
-     * --textColorHover
+     * --textClr - default text color
+     * --textClrHover - text color on hover and focus-visible
      * --outlineColor
-     * --bgColor
-     * --bgColorHover
-     * --bgColorTransition
+     * --bgClr - default background color
+     * --bgClrHover - background color on hover
+     * --bgClrTransition - background color that is transittioned to before being covered by --bgClrHover
     */
 </script>
 
@@ -55,8 +55,8 @@
         inline-size: var(--inlineSize, 100%);
         font-family: 'Lexend Deca', sans-serif;
         line-height: 1.7em;
-        color: var(--textColor, var(--clr-800));
-        background-color: var(--bgColor, var(--clr-50));
+        color: var(--textClr, var(--clr-800));
+        background-color: var(--bgClr, var(--clr-50));
         overflow: hidden;
 
         transition: transform var(--transition-300) var(--transition-smoothEase),
@@ -68,7 +68,7 @@
             inset-block: 0;
             inset-inline: 0;
             content: "";
-            background-color: var(--bgColorHover, var(--clr-100));
+            background-color: var(--bgClrHover, var(--clr-100));
             /* move ::before under main text */
             position: absolute;
             z-index: -1;
@@ -80,8 +80,8 @@
 
         &:hover, &:focus-visible {
             z-index: 101;
-            color: var(--textColorHover, var(--clr-900));
-            background-color: var(--bgColorTransition, var(--clr-100));
+            color: var(--textClrHover, var(--clr-900));
+            background-color: var(--bgClrTransition, var(--clr-100));
 
             &::before {
                 transform: translateY(0%);  
@@ -139,7 +139,7 @@
 
         &.lg--icon {
             :global(svg) {
-                --mainClr: var(--textColor, var(--clr-800));
+                --mainClr: var(--textClr, var(--clr-800));
                 --strokeWidth: 0.3rem;
 
                 width: 1.6rem;
@@ -147,7 +147,7 @@
 
             &:hover, &:focus-visible {
                 :global(svg) {
-                    --mainClr: var(--textColorHover, var(--clr-900));
+                    --mainClr: var(--textClrHover, var(--clr-900));
                 }
             }
         }
@@ -163,7 +163,7 @@
 
                 &:hover {
                     transform: none;
-                    background-color: var(--bgColorHover, var(--clr-100));
+                    background-color: var(--bgClrHover, var(--clr-100));
 
                     &::before {
                         transform: none;
@@ -172,7 +172,7 @@
 
                 &:focus-visible {
                     transform: none;
-                    background-color: var(--bgColorHover, var(--clr-100));
+                    background-color: var(--bgClrHover, var(--clr-100));
                 }
             }
         }
