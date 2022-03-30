@@ -15,7 +15,8 @@
     <SvgShape shape="Metal" --bgColor="var(--clr-metal-150)" />
     <SvgShape shape="Paper" --bgColor="var(--clr-paper-150)" />
 
-    <span class="city">{name}</span> 
+    <span class="city text--h2">{name}</span>
+    <span class="visuallyHidden">. </span>
     <span class="state text--xs">{state}</span>
 </a>
 
@@ -137,12 +138,6 @@
         }
 
         .city {
-            /* same styling as h2 */
-            font-family: 'Lexend Deca', sans-serif;
-            font-weight: 600;
-            font-size: 1.3rem;
-            color: var(--clr-900);
-
             display: block;
             position: relative;
             z-index: 0;
