@@ -12,8 +12,8 @@
 
 // === BREAKPOINTS ============================
 $breakpoint-smdesktop: 1450px;
-$breakpoint-tablet: 1170px;
-$breakpoint-mobile: 600px;
+$breakpoint-tablet: 1250px;
+$breakpoint-mobile: 650px;
 
 :root {
     /* ========================================
@@ -21,12 +21,13 @@ $breakpoint-mobile: 600px;
        ======================================== */
 
     --max-width: 1800px;
+    --nav-size: 5rem;
 
     --border-main: solid 2px;
     --focus-outline: solid 0.16rem;
     --border-main-ds: 0 0 0 1px var(--clr-stroke);
     --border-radius: 1rem;
-    --boxShadow-main: 0 0.7rem 2rem -0.9rem;
+    --boxShadow-main: 0 0.7rem 3rem -1.2rem;
 
     --pad-xxl: 12rem;
     --pad-xl: 8rem;
@@ -41,7 +42,7 @@ $breakpoint-mobile: 600px;
     --pad-hrz: min(6vw, calc(var(--max-width) * 0.06));
     // s--pad-xl: min(15vw, calc(var(--max-width) * 0.15));
     // --pad-lg: min(8vw, calc(var(--max-width) * 0.08));
-    --pad-md: min(6vw, calc(var(--max-width) * 0.06));
+    // --pad-md: min(6vw, calc(var(--max-width) * 0.06));
     // --pad-sm: min(3vw, calc(var(--max-width) * 0.03));
     // --pad-xs: min(2vw, calc(var(--max-width) * 0.02));
     // --pad-xxs: min(1vw, calc(var(--max-width) * 0.01));
@@ -109,14 +110,9 @@ $breakpoint-mobile: 600px;
 @media only screen and (max-width: $breakpoint-tablet) {
     :root {
         --max-width: 800px;
+        --nav-size: 4rem;
 
-        --border-main: solid 1.5px;
-        --main-pad-vrt: 7vw;
-        --main-pad-xl: 20vw;
-        --main-pad-lg: 12vw;
-        --main-pad-md: 10vw;
-        --main-pad-sm: 5vw;
-        --main-pad-xs: 3vw;
+        --pad-md: 2.5rem;
 
         --soon-height: 40vw;
 
