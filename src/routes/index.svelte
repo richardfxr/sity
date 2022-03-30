@@ -22,19 +22,15 @@
     // props
     export let cities = null;
 
-    import A11yMenu from '$lib/a11yMenu.svelte';
+    // imports
+    import { curPage } from '../store/store.js';
     import SvgIcon from '$lib/svgIcon.svelte';
     import Button from '$lib/button.svelte';
     import SiteOptCard from '$lib/siteOptCard.svelte';
     import CityCard from '$lib/cityCard.svelte';
 
-    // button options for A11yMenu
-    const a11yMenuOptions = [
-        {text: "Skip to content.", href: "#main"},
-        {text: "Navigation.", href: "#"},
-        {text: "Settings.", href: "#"},
-        {text: "Accessibility Help.", href: "#"}
-    ];
+    // set curPage
+    curPage.set("home");
 
     // options for SiteOptCards
     const siteOptions = [
@@ -46,27 +42,13 @@
 </script>
 
 
-
-<A11yMenu
-    options={a11yMenuOptions}
-    --textColorHover="var(--clr-0)"
-    --menuBgColor="var(--clr-100)"
-    --bgColor="var(--clr-150)"
-    --bgColorHover="var(--clr-700)"
-    --bgColorTransition="var(--clr-250)"/>
-
 <main id="main">
-    <div class="twoCol maxWidth" id="intro">
+    <div class="twoCol" id="intro">
 
         <div class="hero">
 
             <div class="header">
                 <SvgIcon icon="logotype"/>
-                <!-- tablet/mobile user auth buttons -->
-                <div class="userAuth">
-                    <Button type="link" text="Log in" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
-                    <Button type="link" text="Sign up" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
-                </div>
             </div>
 
             <h1>Recycling<br>— <span class="accent">demystified</span></h1>
@@ -74,11 +56,6 @@
         </div>
 
         <div class="content">
-            <div class="header">
-                <!-- desktop user auth buttons -->
-                <Button type="link" text="Log in" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
-                <Button type="link" text="Sign up" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
-            </div>
             <ul class="contentGrid siteOpt">
                 {#each siteOptions as siteOption}
                 <li>
@@ -89,7 +66,7 @@
         </div>
     </div>
 
-    <div class="twoCol maxWidth" id="search">
+    <div class="twoCol" id="search">
         <div class="search">
             <div class="searchBar">Search bar place holder</div>
             <!-- desktop/tablet button -->
@@ -112,7 +89,16 @@
 
 <style lang="scss">
     :global(html, body) {
-        background-color: var(--clr-50);
+        /* page variables */
+        --pageClr-800: var(--clr-800);
+        --pageClr-700: var(--clr-700);
+        --pageClr-250: var(--clr-250);
+        --pageClr-150: var(--clr-150);
+        --pageClr-100: var(--clr-100);
+        --pageClr-50: var(--clr-50);
+        --pageClr-0: var(--clr-0);
+
+        background-color: var(--pageClr-50);
     }
 
     #intro {
