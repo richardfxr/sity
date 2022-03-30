@@ -11,6 +11,7 @@
      * --pageClr-0 - icon hover and focus-visible color
      */
 
+    /* === DECLARATIONS ======================= */
     let currentPage;
     let showCity;
     let cityId;
@@ -18,7 +19,7 @@
     let magicCircleVrt;
     let magicCircleHrz;
 
-    // subscribe to stores
+    /* === STORES ============================= */
     curPage.subscribe(value => {
         currentPage = value;
         console.log("currentPage:", currentPage);
@@ -30,14 +31,19 @@
         showCity = value;
 
         // update city link so it is tabbable
-        tabbableCityLink();
+        setCityLinkTab();
     });
 
     defaultCity.subscribe(value => {
         cityId = value;
     });
 
-    // magic circle event handler
+    /* === EVENT HANDLERS ===================== */
+    /**
+     * Sets magic circle translateX and translateY so that it moves to event.target
+     * 
+     * @param {Object} event 
+     */
     function moveMagicCircle(event) {
         // remove current active class
         let activeLink = document.querySelector(`#navBar a.active`);
@@ -49,6 +55,9 @@
         setMagicCircleHrzTo(event.target.offsetLeft);
     };
 
+    /**
+     * Updates magic circle translateX and translateY so that it moves to a.active
+     */
     function updateMagicCircle() {
         // returns if currentPage or magic circles are falsy
         if (!currentPage || !magicCircleVrt || !magicCircleHrz) return;
@@ -62,28 +71,53 @@
         setMagicCircleHrzTo(activeLink.offsetLeft);
     };
 
-    function setMagicCircleVrtTo(offsetTop) {
-        magicCircleVrt.style.transform = "translateY(" + offsetTop + "px)";
-    };
-
-    function setMagicCircleHrzTo(offsetLeft) {
-        magicCircleHrz.style.transform = "translateX(" + offsetLeft + "px)";
-    }
-
+    /**
+     * Update currentPage to newPage and calls updateMagicCircle()
+     * 
+     * @param {string} newPage
+     */
     function setNewPage(newPage) {
         currentPage = newPage;
         console.log("set currentPage to:", currentPage);
         updateMagicCircle();
     };
 
-    function tabbableCityLink() {
-        // returns if city link is not shown or cityLink is not bound yet
-        if (!showCity || !cityLink) return;
-
-        // set tabindex to 0
-        cityLink.setAttribute("tabindex", "0");
+    /* === FUNCTIONS ========================== */
+    /**
+     * Sets translateY of vertical magic circle (#magicCircleVrt) to offsetTop
+     * 
+     * @param {number} offsetTop top offset (in px but without units)
+     */
+    function setMagicCircleVrtTo(offsetTop) {
+        magicCircleVrt.style.transform = "translateY(" + offsetTop + "px)";
     };
 
+    /**
+     * Sets translateX of horizontal magic circle (#magicCircleHrz) to offsetLeft
+     * 
+     * @param {number} offsetLeft left offset (in px but without units)
+     */
+    function setMagicCircleHrzTo(offsetLeft) {
+        magicCircleHrz.style.transform = "translateX(" + offsetLeft + "px)";
+    }
+
+    /**
+     * Updates #cityLink tabindex value depending on showCity
+     */
+    function setCityLinkTab() {
+        // returns if cityLink is not bound yet
+        if (!cityLink) return;
+
+        if (showCity) {
+            // make city link tabbable
+            cityLink.setAttribute("tabindex", "0");
+        } else {
+            // make city link non-tabbable
+            cityLink.setAttribute("tabindex", "-1");
+        }
+    };
+
+    /* === LIFECYCLE HOOKS ==================== */
     onMount(() => {
         // set initial position for magic circle
         updateMagicCircle();
@@ -93,12 +127,13 @@
         magicCircleHrz.classList.add("active");
 
         // set city link tabindex
-        tabbableCityLink();
+        setCityLinkTab();
 
         // update magic circle position on window resize
         window.onresize = updateMagicCircle;
     });
 
+    /* === REACTIVE DECLARATIONS ============== */
     /* reactive declarations to apply active class to links
      * there is a bug where element.classList.add() doesn't always work when going to a new page
      */
