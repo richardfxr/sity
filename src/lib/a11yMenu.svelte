@@ -16,7 +16,7 @@
 </script>
 
 
-<ul class="a11yMenu">
+<ul class="a11yMenu" aria-label="Accessibility menu">
     {#each options as option}
         <li><Button type="link" {...option} /></li>
     {/each}
