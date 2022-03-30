@@ -12,7 +12,6 @@
 
 <a {href} {target} {id} class="siteOptCard" style="--bgColor: {bgColor}; --bgColorHover: {bgColorHover}">
     <span class="title text--h2">{title}</span>
-    <span class="visuallyHidden">. </span>
     <span class="subtitle text--xs">{text}</span>
 
     {#if id === 'findYourCity'}

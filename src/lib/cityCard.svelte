@@ -16,7 +16,6 @@
     <SvgShape shape="Paper" --bgColor="var(--clr-paper-150)" />
 
     <span class="city text--h2">{name}</span>
-    <span class="visuallyHidden">. </span>
     <span class="state text--xs">{state}</span>
 </a>
 
