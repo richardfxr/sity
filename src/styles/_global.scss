@@ -63,7 +63,7 @@
     align-items: start;
     gap: var(--pad-lg);
     width: 100%;
-    padding: 0 var(--pad-hrz);        
+    padding: 0;        
 
     .hero {
         /* force full height and centers text vertically */
@@ -82,12 +82,6 @@
                 display: block;
                 width: 6rem;
             }
-
-            .userAuth {
-                margin-left: auto;
-                /* hide normal log in button on desktop due to layout */
-                display: none;
-            }
         }
 
         h1 {
@@ -97,10 +91,10 @@
             /* fluid font size
                 * min font size: 65px
                 * max font size: 105px
-                * min viewport width: 1451px
-                * max viewport width: 1800px
+                * min viewport width: 1500px
+                * max viewport width: 1850px
                 */
-            --font-size: calc(65px + (105 - 65) * ((min(100vw, var(--max-width)) - 1451px) / (1800 - 1451)));
+            --font-size: calc(65px + (105 - 65) * ((min(100vw, var(--max-width)) - 1500px) / (1850 - 1500)));
             font-size: var(--font-size);
 
             /* negative top margin so that top of h1 aligns with top of siteOptCards */
@@ -126,10 +120,7 @@
     }
 
     .content {
-        .header {
-            justify-content: end;
-            gap: var(--pad-xxs);
-        }
+        padding-top: var(--header-height);
     }
 }
 
@@ -151,6 +142,19 @@
     border-radius: var(--steps-border-radius);
     margin: var(--main-pad-sm) 0;
     background-color: var(--clr-50);
+}
+
+/* utility */
+.visuallyHidden {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.placeholder {
+    height: 100vh;
 }
 
 /* logos */
@@ -535,13 +539,6 @@
                 :global(svg) {
                     width: 5rem;
                 }
-
-                .userAuth {
-                    /* show normal log in button */
-                    display: flex;
-                    flex-flow: row nowrap;
-                    gap: var(--pad-xxs);
-                }
             }
 
             h1 {
@@ -556,10 +553,7 @@
         }
 
         .content {
-            .header {
-                /* hide desktop .twoCol header */
-                display: none;
-            }
+            padding-top: 0;
         }
     }
 }
@@ -575,11 +569,6 @@
 
                 :global(svg) {
                     width: 18vw;
-                }
-
-                .userAuth {
-                    /* hide user auth buttons on mobile to save space */
-                    display: none;
                 }
             }
             h1 {
