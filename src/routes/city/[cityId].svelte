@@ -59,7 +59,7 @@
 </script>
 
 
-<div class="twoCol maxWidth" id="intro">
+<div class="twoCol maxWidth" id="intro" role="region" aria-labelledby="cityHeading">
     <div class="hero">
 
         <div class="header">
@@ -68,11 +68,11 @@
             </a>
         </div>
 
-        <h1>Recycling in <br><span class="accent">{city.name}, {city.state}</span></h1>
+        <h1 id="cityHeading">Recycling in <br><span class="accent">{city.name}, {city.state}</span></h1>
     </div>
 
     <div class="content">
-        <ul class="contentGrid cityOpt">
+        <ul class="contentGrid cityOpt" aria-label="Options for {city.name}">
             <li class="guidelines">
                 <CityOptCard id="guidelines" guidelineLength={guideline.categories.length} />
             </li>
