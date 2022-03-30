@@ -56,14 +56,6 @@
     /* === STORES ============================= */
     curPage.set("city");
     defaultCity.set(id);
-
-    // button options for A11yMenu
-    const a11yMenuOptions = [
-        {text: "Skip to content.", href: "#main"},
-        {text: "Navigation.", href: "#"},
-        {text: "Settings.", href: "#"},
-        {text: "Accessibility Help.", href: "#"}
-    ];
 </script>
 
 
