@@ -42,7 +42,7 @@
 </script>
 
 
-<div class="twoCol" id="intro">
+<div class="twoCol" id="intro" role="region" aria-labelledby="introHeading">
 
     <div class="hero">
 
@@ -50,12 +50,12 @@
             <SvgIcon icon="logotype"/>
         </div>
 
-        <h1>Recycling<br>— <span class="accent">demystified</span></h1>
+        <h1 id="introHeading">Recycling<br>— <span class="accent">demystified</span></h1>
         <p>A visual tour of the recycling journey - when to recycle, how to recycle, and where the recycling goes.</p>
     </div>
 
     <div class="content">
-        <ul class="contentGrid siteOpt">
+        <ul class="contentGrid siteOpt" aria-label="Website options">
             {#each siteOptions as siteOption}
             <li>
                 <SiteOptCard {...siteOption} />
@@ -65,7 +65,10 @@
     </div>
 </div>
 
-<div class="twoCol" id="search">
+<div class="twoCol" id="search" role="region" aria-labelledby="searchHeading">
+    <!-- heading for screen readers -->
+    <h2 id="searchHeading" class="visuallyHidden">Search for your city</h2>
+
     <div class="search">
         <div class="searchBar">Search bar place holder</div>
         <!-- desktop/tablet button -->
@@ -75,7 +78,7 @@
     <!-- mobile button -->
     <Button type="link" text="Why ask for my city?" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
 
-    <ul class="contentGrid cities">
+    <ul class="contentGrid cities" aria-label="Cities">
         {#each cities as city}
             <li>
                 <CityCard {...city} />
