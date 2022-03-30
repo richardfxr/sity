@@ -5,13 +5,13 @@
     export let options = [{text: "Skip to content.", href: "#main"}];
 
     /**CSS varaible props
-     * --menuBgColor
-     * --textColor - applies only to <Button />
-     * --textColorHover - applies only to <Button />
+     * --pageClr-800 - applied as --textClr to <Button />
+     * --pageClr-700 - applied as --bgClrHover to <Button />
+     * --pageClr-250 - applied as --bgClrTransition to <Button />
+     * --pageClr-150 - applied as --bgClr to <Button />
+     * --pageClr-100 - menu background color
+     * --pageClr-0 - applied as --textClrHover to <Button />
      * --outlineColor - applies only to <Button />
-     * --bgColor - applies to <Button />
-     * --bgColorHover - applies only to <Button />
-     * --bgColorTransition - applies only to <Button />
     */
 </script>
 
@@ -23,6 +23,8 @@
 </ul>
 
 <style lang="scss">
+    
+
     .a11yMenu {
         display: flex;
         flex-flow: column nowrap;
@@ -36,9 +38,9 @@
         width: 20rem;
         padding: 1.1rem 1.5rem;
         margin-inline: auto;
-        background-color: var(--menuBgColor, var(--clr-100));
+        background-color: var(--pageClr-100, var(--clr-100));
         border-radius: 2.4rem;
-        box-shadow: var(--boxShadow-main) var(--bgColor, var(--clr-100));
+        box-shadow: var(--boxShadow-main) var(--pageClr-100, var(--clr-100));
 
         pointer-events: none;
         transform: translateY(-3rem) scale(0.8);
@@ -50,6 +52,15 @@
             pointer-events: auto;
             transform: translateY(0);
             opacity: 1;
+        }
+
+        :global(.button) {
+            /* button varaibles */
+            --textClr: var(--pageClr-800);
+            --textClrHover: var(--pageClr-0);
+            --bgClr: var(--pageClr-150);
+            --bgClrHover: var(--pageClr-700);
+            --bgClrTransition: var(--pageClr-250);
         }
     }
 
