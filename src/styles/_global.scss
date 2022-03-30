@@ -146,11 +146,15 @@
 
 /* utility */
 .visuallyHidden {
-    height: 0;
-    width: 0;
+    /* elements with this class will not be displayed visually but still be read by screen readers */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
     overflow: hidden;
+    padding: 0;
     position: absolute;
-    white-space: nowrap;
 }
 
 .placeholder {
