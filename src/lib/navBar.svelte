@@ -161,7 +161,7 @@
                id="homeLink"
                class:active="{isHome}"
                on:pointerenter={moveMagicCircle}
-               on:pointerout={updateMagicCircle}
+               on:pointerleave={updateMagicCircle}
                on:focus={moveMagicCircle}
                on:blur={updateMagicCircle}
                on:click={() => setNewPage("home")}
@@ -175,7 +175,7 @@
                id="recycleLink"
                class:active="{isRecycle}"
                on:pointerenter={moveMagicCircle}
-               on:pointerout={updateMagicCircle}
+               on:pointerleave={updateMagicCircle}
                on:focus={moveMagicCircle}
                on:blur={updateMagicCircle}
                on:click={() => setNewPage("recycle")}
@@ -189,7 +189,7 @@
                id="aboutLink"
                class:active="{isAbout}"
                on:pointerenter={moveMagicCircle}
-               on:pointerout={updateMagicCircle}
+               on:pointerleave={updateMagicCircle}
                on:focus={moveMagicCircle}
                on:blur={updateMagicCircle}
                on:click={() => setNewPage("about")}
@@ -203,7 +203,7 @@
                id="settingsLink"
                class:active="{isSettings}"
                on:pointerenter={moveMagicCircle}
-               on:pointerout={updateMagicCircle}
+               on:pointerleave={updateMagicCircle}
                on:focus={moveMagicCircle}
                on:blur={updateMagicCircle}
                on:click={() => setNewPage("settings")}
@@ -220,7 +220,7 @@
                class:show="{showCity}"
                tabindex="-1"
                on:pointerenter={moveMagicCircle}
-               on:pointerout={updateMagicCircle}
+               on:pointerleave={updateMagicCircle}
                on:focus={moveMagicCircle}
                on:blur={updateMagicCircle}
                on:click={() => setNewPage("city")}
