@@ -160,8 +160,8 @@
             <a href="/" 
                id="homeLink"
                class:active="{isHome}"
-               on:mousemove={moveMagicCircle}
-               on:mouseleave={updateMagicCircle}
+               on:pointerenter={moveMagicCircle}
+               on:pointerout={updateMagicCircle}
                on:focus={moveMagicCircle}
                on:blur={updateMagicCircle}
                on:click={() => setNewPage("home")}
@@ -174,8 +174,8 @@
             <a href="/whyrecycle"
                id="recycleLink"
                class:active="{isRecycle}"
-               on:mousemove={moveMagicCircle}
-               on:mouseleave={updateMagicCircle}
+               on:pointerenter={moveMagicCircle}
+               on:pointerout={updateMagicCircle}
                on:focus={moveMagicCircle}
                on:blur={updateMagicCircle}
                on:click={() => setNewPage("recycle")}
@@ -188,8 +188,8 @@
             <a href="/about"
                id="aboutLink"
                class:active="{isAbout}"
-               on:mousemove={moveMagicCircle}
-               on:mouseleave={updateMagicCircle}
+               on:pointerenter={moveMagicCircle}
+               on:pointerout={updateMagicCircle}
                on:focus={moveMagicCircle}
                on:blur={updateMagicCircle}
                on:click={() => setNewPage("about")}
@@ -202,8 +202,8 @@
             <a href="/settings"
                id="settingsLink"
                class:active="{isSettings}"
-               on:mousemove={moveMagicCircle}
-               on:mouseleave={updateMagicCircle}
+               on:pointerenter={moveMagicCircle}
+               on:pointerout={updateMagicCircle}
                on:focus={moveMagicCircle}
                on:blur={updateMagicCircle}
                on:click={() => setNewPage("settings")}
@@ -219,8 +219,8 @@
                class:active="{isCity}"
                class:show="{showCity}"
                tabindex="-1"
-               on:mousemove={moveMagicCircle}
-               on:mouseleave={updateMagicCircle}
+               on:pointerenter={moveMagicCircle}
+               on:pointerout={updateMagicCircle}
                on:focus={moveMagicCircle}
                on:blur={updateMagicCircle}
                on:click={() => setNewPage("city")}
