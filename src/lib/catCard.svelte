@@ -12,6 +12,7 @@
     // declare variables
     let parallaxScene;
     let parallaxInstance;
+    const url = "/" + category.id;
 
     onMount(() => {
         // prevent code from running on server
@@ -22,25 +23,32 @@
 </script>
 
 
-<a href={category.link}
+<a href={url}
+   class="catCard {category.id}"
    bind:this={parallaxScene}
    data-hover-only="true">
     <!-- SVG shape background -->
-    <SvgShape shape={category.name} ariaHidden={true} dataDepth={0.1 + category.depthOffset} bgClr={`var(--clr-${category.clr}-100)`} />
+    <SvgShape shape={category.id} ariaHidden={true} dataDepth={0.1 + category.depthOffset} bgClr={`var(--clr-${category.clr}-100)`} />
 
     <!-- SVG illustration -->
     <Illustration illus={category.illus} clr={category.clr} ariaHidden={true} dataDepth={0.4} />
 
-    <span data-depth="0.7" class="text--h1">{category.name}</span>
+    <span data-depth="0.7" class="text--h1" style={`--clr: var(--clr-${category.clr}-1100`}>{category.name}</span>
 </a>
 
 
 <style lang="scss">
-    a {
+    .catCard {
         display: block;
 
-        :global(.illus) {
-            width: 20vw;
-        } 
+        span {
+            display: block;
+            color: var(--clr);
+        }
+
+        &.Carton {
+
+        }
     }
+    
 </style>
