@@ -2,7 +2,7 @@
     export let shape;
     export let bgClr;
     export let ariaHidden = "false";
-    export let dataDepth;
+    export let dataDepth = 0;
 
     /**CSS varaible props
      * --bgColor: the fill color of the SVG
