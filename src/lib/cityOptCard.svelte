@@ -14,11 +14,11 @@
 {#if id === "guidelines"}
     <a href="#guidelines" class="cityOptCard" id="guidelines">
         <!-- SVG shapes -->
-        <SvgShape shape="Plastic" --bgColor="var(--clr-plastic-150)" />
-        <SvgShape shape="Cardboard" --bgColor="var(--clr-cardboard-150)" />
-        <SvgShape shape="Metal" --bgColor="var(--clr-metal-150)" />
-        <SvgShape shape="Glass" --bgColor="var(--clr-glass-150)" />
-        <SvgShape shape="Paper" --bgColor="var(--clr-paper-150)" />
+        <SvgShape shape="Plastic" bgClr="var(--clr-plastic-150)" />
+        <SvgShape shape="Cardboard" bgClr="var(--clr-cardboard-150)" />
+        <SvgShape shape="Metal" bgClr="var(--clr-metal-150)" />
+        <SvgShape shape="Glass" bgClr="var(--clr-glass-150)" />
+        <SvgShape shape="Paper" bgClr="var(--clr-paper-150)" />
         
         <h2>City guidelines</h2>
         <p class="text--xs">{guidelineLength} categories</p>

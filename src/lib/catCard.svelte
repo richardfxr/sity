@@ -26,10 +26,21 @@
    bind:this={parallaxScene}
    data-hover-only="true">
     <!-- SVG shape background -->
-    <SvgShape shape={category.name} ariaHidden={true} dataDepth={0.1 + category.depthOffset} --bgColor={`var(--clr-${category.clr}-100)`} />
+    <SvgShape shape={category.name} ariaHidden={true} dataDepth={0.1 + category.depthOffset} bgClr={`var(--clr-${category.clr}-100)`} />
 
     <!-- SVG illustration -->
     <Illustration illus={category.illus} clr={category.clr} ariaHidden={true} dataDepth={0.4} />
 
     <span data-depth="0.7" class="text--h1">{category.name}</span>
 </a>
+
+
+<style lang="scss">
+    a {
+        display: block;
+
+        :global(.illus) {
+            width: 20vw;
+        } 
+    }
+</style>
