@@ -28,7 +28,7 @@
    bind:this={parallaxScene}
    data-hover-only="true">
     <!-- SVG shape background -->
-    <SvgShape shape={category.id} ariaHidden={true} dataDepth={0.1 + category.depthOffset} bgClr={`var(--clr-${category.clr}-100)`} />
+    <SvgShape shape={category.id} ariaHidden={true} dataDepth={0.1 + category.depthOffset} bgClr={`var(--clr-${category.clr}-150)`} />
 
     <!-- SVG illustration -->
     <Illustration illus={category.illus} clr1={category.illusClrs[0]} clr2={category.illusClrs[1]} clr3={category.illusClrs[2]} ariaHidden={true} dataDepth={0.4} />
@@ -59,6 +59,8 @@
             color: var(--clr);
             // default positioning, same as in-line styling applied by parallax-js
             position: absolute;
+            // override default font size
+            font-size: min(4vw, calc(var(--max-width) * 0.04));
         }
 
         // cartons category card
@@ -151,14 +153,14 @@
 
             // illustration
             :global(.illus) {
-                width: 38%;
-                margin-top: 30%;
-                margin-left: 30%;
+                width: 43%;
+                margin-top: 25%;
+                margin-left: 35%;
             }
 
             span {
                 margin-top: 70%;
-                margin-left: 35%;
+                margin-left: 37%;
             }
         }
 
@@ -166,9 +168,9 @@
         &.plastic {
             // illustration
             :global(.illus) {
-                width: 38%;
-                margin-top: 30%;
-                margin-left: 30%;
+                width: 32%;
+                margin-top: -20%;
+                margin-left: 33%;
             }
 
             span {
@@ -178,4 +180,20 @@
         }
     }
     
+    /* === BREAKPOINTS ======================== */
+    @media only screen and (max-width: $breakpoint-tablet) {
+        .catCard {
+            span {
+                font-size: min(6.1vw, calc(var(--max-width) * 0.061));
+            }
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        .catCard {
+            span {
+                font-size: min(6.7vw, calc(var(--max-width) * 0.067));
+            }
+        }
+    }
 </style>
