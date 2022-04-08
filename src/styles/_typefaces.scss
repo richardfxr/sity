@@ -66,9 +66,17 @@
 
 h1, .text--h1 {
     font-family: 'Doughy', sans-serif;
-    font-size: 3.7rem;
     line-height: 1em;
     color: var(--clr-700);
+
+    /* fluid font size
+    * min font size: 50px
+    * max font size: 90px
+    * min viewport width: 1500px
+    * max viewport width: 1850px
+    */
+    --font-size: calc(50px + (90 - 50) * ((min(100vw, var(--max-width)) - 1500px) / (1850 - 1500)));
+    font-size: var(--font-size);
 }
 
 h2, .text--h2 {
