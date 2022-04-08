@@ -164,6 +164,11 @@
 
 
     /* === BREAKPOINTS ======================== */
+    @media only screen and (max-width: $breakpoint-tablet) {
+        .catGrid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
     @media only screen and (max-width: $breakpoint-mobile) {
         .cityOpt {
             grid-template: 
@@ -184,6 +189,22 @@
                         /* show mobile share button */
                         display: none; 
                     }
+                }
+            }
+        }
+
+        .catGrid {
+            grid-template-columns: 1fr;
+            
+            :global(.catCard) {
+                &:nth-child(2n - 1) {
+                    margin-right: 30vw;
+                    margin-left: -10vw;
+                }
+
+                &:nth-child(2n) {
+                    margin-right: -10vw;
+                    margin-left: 30vw;
                 }
             }
         }
