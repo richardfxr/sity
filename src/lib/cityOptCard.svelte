@@ -12,13 +12,13 @@
 
 
 {#if id === "guidelines"}
-    <a href="#guidelines" class="cityOptCard" id="guidelines">
+    <a href="#categories" class="cityOptCard" id="guidelines">
         <!-- SVG shapes -->
-        <SvgShape shape="Plastic" bgClr="var(--clr-plastic-150)" />
-        <SvgShape shape="Cardboard" bgClr="var(--clr-cardboard-150)" />
-        <SvgShape shape="Metal" bgClr="var(--clr-metal-150)" />
-        <SvgShape shape="Glass" bgClr="var(--clr-glass-150)" />
-        <SvgShape shape="Paper" bgClr="var(--clr-paper-150)" />
+        <SvgShape shape="plastic" bgClr="var(--clr-purple-150)" />
+        <SvgShape shape="cardboard" bgClr="var(--clr-brown-150)" />
+        <SvgShape shape="metal" bgClr="var(--clr-orange-150)" />
+        <SvgShape shape="glass" bgClr="var(--clr-green-150)" />
+        <SvgShape shape="paper" bgClr="var(--clr-vanilla-150)" />
         
         <h2>City guidelines</h2>
         <p class="text--xs">{guidelineLength} categories</p>
