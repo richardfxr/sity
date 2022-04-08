@@ -53,6 +53,7 @@
     import SvgIcon from '$lib/svgIcon.svelte';
     import CityOptCard from '$lib/cityOptCard.svelte';
     import Button from '$lib/button.svelte';
+    import CatCard from '$lib/catCard.svelte';
     import {copyURL} from '$lib/clipboard.js';
 
     /* === STORES ============================= */
@@ -61,6 +62,9 @@
 
     // bindings
     let pageHeading;
+
+    // categories array
+    let cats = guideline.categories;
 
     // call onPageLoad on mount
     onMount(() => {
@@ -97,7 +101,17 @@
     </div>
 </div>
 
-<div class="placeholder"></div>
+<!-- recycling categories -->
+<div class="maxWidth" id="categories" role="region" aria-labelledby="catHeading">
+    <h2 class="visuallyHidden" id="catHeading">Recycling categories</h2>
+    <ul class="catGrid">
+        {#each cats as cat}
+            <CatCard category={cat} />
+        {/each}
+    </ul>
+</div>
+
+<div class="placeHolder"></div>
 
 <style lang="scss">
     :global(html, body) {
@@ -140,6 +154,12 @@
             display: flex;
             justify-content: flex-end;
         }
+    }
+
+    .catGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--pad-cat);
     }
 
 
