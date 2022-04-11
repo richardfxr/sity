@@ -40,16 +40,36 @@
     ];
 
     // bindings
+    let scrollY;
+    let windowHeight;
     let pageHeading;
 
     // call onPageLoad on mount
     onMount(() => {
 		onPageLoad("home", $curPage, pageHeading);
 	});
+
+    /* === REACTIVE DECLARATIONS ============== */
+    let scrollLimit = 0.8;
+    $: scrollYRatio = scrollY / windowHeight;
+    $: scrollYScale = scrollYRatio / scrollLimit < 1 ? 1 - (scrollYRatio / scrollLimit)  : 0;
 </script>
 
 
-<div class="twoCol" id="intro" aria-labelledby="pageHeading">
+<svelte:window bind:scrollY={scrollY} bind:innerHeight={windowHeight}/>
+
+
+<div id="heroIllus">
+    <div class="container normalWidth">
+        <div class="main" style="transform: scale({1 + scrollYScale})">
+            
+        </div>
+        <span class="text--h1">Where does it all go?</span>
+    </div>
+</div>
+
+
+<div class="twoCol normalWidth" id="intro" aria-labelledby="pageHeading">
 
     <div class="hero">
 
@@ -72,7 +92,7 @@
     </div>
 </div>
 
-<div class="twoCol" id="search" role="region" aria-labelledby="searchHeading">
+<div class="twoCol normalWidth" id="search" role="region" aria-labelledby="searchHeading">
     <!-- heading for screen readers -->
     <h2 id="searchHeading" class="visuallyHidden">Search for your city</h2>
 
@@ -107,6 +127,56 @@
         --pageClr-0: var(--clr-0);
 
         background-color: var(--pageClr-50);
+    }
+
+    #heroIllus {
+        height: 150vh;
+        width: 100%;
+
+        /* center .container within */
+        display: flex;
+        justify-content: center;
+
+        /* padding so .main does not hit very bottom and get cut off by contain: paint */
+        padding-bottom: var(--pad-md);
+
+        /* remove gap between #heroIllus and #intro */
+        margin-bottom: calc(-1 * var(--pad-xxl));
+
+        /* prevent scale transform from overflowing and adding horizontal scroll bar */
+        contain: paint;
+
+        .container {
+            /* sticky positioning */
+            position: sticky;
+            top: 18vh;
+            right: 0;
+            left: 0;
+
+            /* flexbox */
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+
+            height: 64vh;
+
+            .main {
+                width: 100%;
+                height: 100%;
+                
+                border-radius: var(--border-radius);
+                overflow: hidden;
+
+                background-color: var(--pageClr-100);
+            }
+
+            span {
+                position: absolute;
+                padding: 0 var(--pad-sm);
+                text-align: center;
+            }
+        }
     }
 
     #intro {
