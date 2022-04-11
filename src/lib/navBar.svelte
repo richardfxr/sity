@@ -457,7 +457,10 @@
 
     @media only screen and (max-width: $breakpoint-mobile) {
         #navBar {
-            height: auto;
+            /* position changes */
+            top: unset;
+            right: 0;
+            left: 0;
 
             ul {
                 /* make navigation horizontal */
