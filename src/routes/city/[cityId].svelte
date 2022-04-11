@@ -102,9 +102,9 @@
 </div>
 
 <!-- recycling categories -->
-<div class="normalWidth" id="categories" role="region" aria-labelledby="catHeading">
+<div class="cat" id="categories" role="region" aria-labelledby="catHeading">
     <h2 class="visuallyHidden" id="catHeading">Recycling categories</h2>
-    <ul class="catGrid">
+    <ul class="catGrid normalWidth">
         {#each cats as cat}
             <CatCard category={cat} />
         {/each}
@@ -156,17 +156,28 @@
         }
     }
 
-    .catGrid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: var(--pad-cat);
+    .cat {
+        width: 100%;
+
+        .catGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--pad-cat);
+            
+            /* prevent horizontal overflow */
+            overflow: hidden;
+        }
     }
+
+    
 
 
     /* === BREAKPOINTS ======================== */
     @media only screen and (max-width: $breakpoint-tablet) {
-        .catGrid {
-            grid-template-columns: 1fr 1fr;
+        .cat {
+            .catGrid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
     }
     @media only screen and (max-width: $breakpoint-mobile) {
@@ -193,20 +204,23 @@
             }
         }
 
-        .catGrid {
-            grid-template-columns: 1fr;
-            
-            :global(.catCard) {
-                &:nth-child(2n - 1) {
-                    margin-right: 30vw;
-                    margin-left: -10vw;
-                }
+        .cat {
+            .catGrid {
+                grid-template-columns: 1fr;
+                
+                :global(.catCard) {
+                    &:nth-child(2n - 1) {
+                        margin-right: 20vw;
+                        margin-left: -10vw;
+                    }
 
-                &:nth-child(2n) {
-                    margin-right: -10vw;
-                    margin-left: 30vw;
+                    &:nth-child(2n) {
+                        margin-right: -10vw;
+                        margin-left: 20vw;
+                    }
                 }
             }
         }
+        
     }
 </style>
