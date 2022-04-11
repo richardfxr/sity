@@ -53,9 +53,7 @@
 
 <div class="wrapper">
     <!-- navigation bar -->
-    <div class="navWrapper">
-        <NavBar />
-    </div>
+    <NavBar />
 
     <!-- page transition -->
     {#key url.pathname}
@@ -68,19 +66,15 @@
 
 <style lang="scss">
     .wrapper {
-        display: flex;
-        flex-flow: row nowrap;
-        gap: var(--pad-md);
+        // display: flex;
+        // flex-flow: row nowrap;
+        // gap: var(--pad-md);
 
-        /* limit max width and center everything */
-        max-width: var(--max-width);
-        padding: 0 var(--pad-sm);
-        margin: 0 auto;
-
-        .navWrapper {
-            position: relative;
-            z-index: 10000;
-        }
+        // /* limit max width and center everything */
+        // width: 100%;
+        // max-width: var(--max-width);
+        // padding: 0 var(--pad-sm);
+        // margin: 0 auto;
 
         #main {
             width: 100%;

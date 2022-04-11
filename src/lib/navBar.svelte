@@ -242,10 +242,12 @@
         --nav-pad: 0.4rem;
         --a-size: calc(var(--nav-size) - (2 * var(--nav-pad)));
         --svg-size: 1.5rem;
-        /* full viewport height with sticky positioning */
-        position: sticky;
+        /* fixed positioning */
+        position: fixed;
         top: 0;
-        height: 100vh;
+        bottom: 0;
+
+        z-index: 10000;
 
         /* flex to push navigation bar to the bottom */
         display: flex;
@@ -257,6 +259,7 @@
             width: var(--nav-size);
             padding: var(--nav-pad) 0;
             margin-bottom: var(--pad-md);
+            margin-left: max(calc((100vw - var(--max-width)) / 2), var(--pad-sm));
             /* z-index */
             position: relative;
             z-index: -2;
