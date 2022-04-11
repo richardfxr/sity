@@ -13,6 +13,7 @@
     let parallaxScene;
     let parallaxInstance;
     const url = "/" + category.id;
+    let depthOffset = parseFloat(category.depthOffset);
 
     onMount(() => {
         // prevent code from running on server
@@ -28,10 +29,10 @@
    bind:this={parallaxScene}
    data-hover-only="true">
     <!-- SVG shape background -->
-    <SvgShape shape={category.id} ariaHidden={true} dataDepth={0.1 + category.depthOffset} bgClr={`var(--clr-${category.clr}-150)`} />
+    <SvgShape shape={category.id} ariaHidden={true} dataDepth={depthOffset + 0.2} bgClr={`var(--clr-${category.clr}-150)`} />
 
     <!-- SVG illustration -->
-    <Illustration illus={category.illus} clr1={category.illusClrs[0]} clr2={category.illusClrs[1]} clr3={category.illusClrs[2]} ariaHidden={true} dataDepth={0.4} />
+    <Illustration illus={category.illus} clr1={category.illusClrs[0]} clr2={category.illusClrs[1]} clr3={category.illusClrs[2]} ariaHidden={true} dataDepth={depthOffset + 0.4} />
 
     <span data-depth="0.7" class="text--h1" style={`--clr: var(--clr-${category.clr}-1000`}>{category.name}</span>
 </a>
@@ -61,6 +62,14 @@
             position: absolute;
             // override default font size
             font-size: min(4vw, calc(var(--max-width) * 0.04));
+
+            // center span
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
         }
 
         // cartons category card
@@ -69,12 +78,11 @@
             :global(.illus) {
                 width: 45%;
                 margin-top: 23%;
-                margin-left: 23%;
+                margin-left: 28%;
             }
 
             span {
                 margin-top: 70%;
-                margin-left: 20%;
             }
         }
 
@@ -95,8 +103,7 @@
             }
 
             span {
-                margin-top: 73%;
-                margin-left: 8%;
+                margin-top: 53%;
             }
         }
 
@@ -111,13 +118,12 @@
             // illustration
             :global(.illus) {
                 width: 68%;
-                margin-top: 35%;
+                margin-top: 38%;
                 margin-left: 20%;
             }
 
             span {
-                margin-top: 70%;
-                margin-left: 30%;
+                margin-top: 43%;
             }
         }
 
@@ -132,14 +138,13 @@
 
             // illustration
             :global(.illus) {
-                width: 38%;
-                margin-top: 30%;
-                margin-left: 30%;
+                width: 32%;
+                margin-top: 35%;
+                margin-left: 34%;
             }
 
             span {
-                margin-top: 70%;
-                margin-left: 28%;
+                margin-top: 60%;
             }
         }
 
@@ -153,14 +158,13 @@
 
             // illustration
             :global(.illus) {
-                width: 43%;
-                margin-top: 25%;
-                margin-left: 35%;
+                width: 40%;
+                margin-top: 28%;
+                margin-left: 30%;
             }
 
             span {
-                margin-top: 70%;
-                margin-left: 37%;
+                margin-top: 53%;
             }
         }
 
@@ -169,13 +173,12 @@
             // illustration
             :global(.illus) {
                 width: 32%;
-                margin-top: -20%;
-                margin-left: 33%;
+                margin-top: 17%;
+                margin-left: 35%;
             }
 
             span {
-                margin-top: 70%;
-                margin-left: 20%;
+                margin-top: 60%;
             }
         }
     }
