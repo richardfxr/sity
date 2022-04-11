@@ -195,7 +195,52 @@
     @media only screen and (max-width: $breakpoint-mobile) {
         .catCard {
             span {
-                font-size: min(6.7vw, calc(var(--max-width) * 0.067));
+                font-size: min(13vw, calc(var(--max-width) * 0.13));
+            }
+
+            // metal category card
+            &.metal {
+                // background shape
+                :global(.svgShape) {
+                    margin-top: -5%;
+                    margin-bottom: 4%;
+                }
+
+                // illustration
+                :global(.illus) {
+                    width: 32%;
+                    margin-top: 25%;
+                    margin-left: 34%;
+                }
+
+                span {
+                    margin-top: 50%;
+                }
+            }
+
+            // glass category card
+            &.glass {
+                // background shape
+                :global(.svgShape) {
+                    margin-top: 4%;
+                    margin-bottom: 4%;
+                }
+            }
+
+            // plastic category card
+            &.plastic {
+                // background shape
+                :global(.svgShape) {
+                    margin-top: 4%;
+                    margin-bottom: 4%;
+                }
+
+                // illustration
+                :global(.illus) {
+                    width: 32%;
+                    margin-top: 17%;
+                    margin-left: 35%;
+                }
             }
         }
     }
