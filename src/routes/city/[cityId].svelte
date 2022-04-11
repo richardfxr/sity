@@ -166,6 +166,9 @@
             
             /* prevent horizontal overflow */
             overflow: hidden;
+
+            /* center grid on larger vw */
+            margin: 0 auto;
         }
     }
 
