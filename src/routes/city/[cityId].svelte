@@ -73,7 +73,7 @@
 </script>
 
 
-<div class="twoCol maxWidth" id="intro" aria-labelledby="pageHeading">
+<div class="twoCol normalWidth" id="intro" aria-labelledby="pageHeading">
     <div class="hero">
 
         <div class="header">
@@ -102,7 +102,7 @@
 </div>
 
 <!-- recycling categories -->
-<div class="maxWidth" id="categories" role="region" aria-labelledby="catHeading">
+<div class="normalWidth" id="categories" role="region" aria-labelledby="catHeading">
     <h2 class="visuallyHidden" id="catHeading">Recycling categories</h2>
     <ul class="catGrid">
         {#each cats as cat}

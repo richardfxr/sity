@@ -15,7 +15,7 @@
 </script>
 
 
-<div class="twoCol maxWidth" id="intro">
+<div class="twoCol normalWidth" id="intro">
     <div class="hero">
 
         <div class="header">
