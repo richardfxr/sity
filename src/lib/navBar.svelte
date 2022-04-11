@@ -244,7 +244,6 @@
         --svg-size: 1.5rem;
         /* fixed positioning */
         position: fixed;
-        top: 0;
         bottom: 0;
 
         z-index: 10000;
@@ -458,7 +457,6 @@
     @media only screen and (max-width: $breakpoint-mobile) {
         #navBar {
             /* position changes */
-            top: unset;
             right: 0;
             left: 0;
 
