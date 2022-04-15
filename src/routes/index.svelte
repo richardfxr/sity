@@ -173,7 +173,7 @@
 
             .main {
                 /* variables */
-                --mainHeight: 68vh;
+                --mainHeight: 75vh;
                 --borderWidth: 0;
                 
                 width: 100%;
@@ -206,7 +206,7 @@
                     span {
                         padding: 0 var(--pad-lg);
                         text-align: center;
-                        font-size: min(5vw, calc(var(--max-width) * 0.05));
+                        font-size: min(4.5vw, calc(var(--max-width) * 0.045));
                     }
 
                     .handles {
