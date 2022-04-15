@@ -64,8 +64,22 @@
 <div id="heroIllus">
     <div class="container">
         <div class="normalWidth">
-            <div class="main" style="transform: scale({1 + scrollYInv}">
+            <!-- transforms: translateX and translateY centers main when on top of page -->
+            <div class="main" style="transform: scale({1 + scrollYInv}) translateX(calc((-1 * {scrollYInv} * ((var(--nav-size) + var(--pad-md)) / 2)) / {1 + scrollYInv})) translateY(calc(-6.5 * {scrollYInv}vh))">
                 <SvgIcon icon="logotype"/>
+                <!-- vortex layers -->
+                <div class="vortex vortex-2">
+                    <!-- layer 2 -->
+                    <Illustration illus="carton-default" clr1="skyBlue" clr2="offWhite" ariaHidden={true} />
+                    <Illustration illus="metalCan-default" clr1="orange" clr2="silverWarm" ariaHidden={true} />
+                    <Illustration illus="cardboardBox-open" clr1="brown" ariaHidden={true} />
+                </div>
+                <div class="vortex vortex-1">
+                    <!-- layer 1 -->
+                    <Illustration illus="pizzaBox-dirty" clr1="brown" clr2="offWhite" ariaHidden={true} />
+                    <Illustration illus="cardboardBox-closed" clr1="brown" clr2="offWhite" clr3="red" ariaHidden={true} />
+                    <Illustration illus="cardboardBox-open" clr1="brown" ariaHidden={true} />
+                </div>
                 <div class="textCard" style="transform: translateY(calc({scrollYInv}* (-1 * var(--mainHeight))))">
                     <span class="text--h1">Where does it all go?</span>
                     <div class="handles">
@@ -132,6 +146,7 @@
         /* page variables */
         --pageClr-800: var(--clr-800);
         --pageClr-700: var(--clr-700);
+        --pageClr-600: var(--clr-600);
         --pageClr-250: var(--clr-250);
         --pageClr-150: var(--clr-150);
         --pageClr-100: var(--clr-100);
@@ -197,7 +212,78 @@
                     bottom: 0;
                     left: 0;
                     margin: auto;
+                    z-index: 500;
+
+                    filter: drop-shadow(0 min(0.2vw, calc(var(--max-width) * 0.002)) min(0.3vw, calc(var(--max-width) * 0.003)) var(--clr-shadow));
+
+                    :global(path) {
+                        /* fill logo with --clr-0 instead of default */
+                        fill: var(--clr-0);
+                    }
                     
+                }
+
+                .vortex {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    :global(.illus) {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        margin: auto;
+                    }
+
+                    &-1 {
+                        z-index: 499;
+                        animation: rotateForever 30s linear infinite;
+
+                        :global(svg:nth-child(1)) {
+                            width: 33%;
+                            padding: 0 20% 25% 0;
+                            transform: rotate(28deg);
+                        }
+
+                        :global(svg:nth-child(2)) {
+                            width: 28%;
+                            padding: 27% 15% 0 0;
+                            transform: rotate(69deg);
+                        }
+
+                        :global(svg:nth-child(3)) {
+                            width: 34%;
+                            padding: 10% 0 0 20%;
+                            transform: rotate(11deg);
+                        }
+                    }
+
+                    &-2 {
+                        z-index: 499;
+                        animation: rotateForever 23s linear infinite;
+
+                        :global(svg:nth-child(1)) {
+                            width: 14%;
+                            padding: 0 0 18% 8%;
+                            transform: rotate(32deg);
+                        }
+
+                        :global(svg:nth-child(2)) {
+                            width: 14%;
+                            padding: 15% 0 0 10%;
+                            transform: rotate(84deg);
+                        }
+
+                        :global(svg:nth-child(3)) {
+                            width: 32%;
+                            padding: 10% 0 0 20%;
+                            transform: rotate(11deg);
+                        }
+                    }
                 }
 
                 .textCard {
@@ -211,7 +297,8 @@
                     top: 0;
                     right: 0;
                     bottom: 0;
-                    left: 0;          
+                    left: 0;
+                    z-index: 501;
 
                     /* flexbox to center span */
                     display: flex;
