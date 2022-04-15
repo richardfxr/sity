@@ -65,6 +65,7 @@
     <div class="container">
         <div class="normalWidth">
             <div class="main" style="transform: scale({1 + scrollYInv}">
+                <SvgIcon icon="logotype"/>
                 <div class="textCard" style="transform: translateY(calc({scrollYInv}* (-1 * var(--mainHeight))))">
                     <span class="text--h1">Where does it all go?</span>
                     <div class="handles">
@@ -184,12 +185,33 @@
 
                 background-color: var(--pageClr-250);
 
+                will-change: transform;
+
+                :global(.logotype) {
+                    width: 20%;
+
+                    /* center logotye */
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                    
+                }
+
                 .textCard {
                     /* take up all of .main with space at bottom */
                     width: calc(100% + 2 * var(--borderWidth));
                     height: 95%;
                     /* overlap borders */
                     margin: 0 calc(-1 * var(--borderWidth));
+
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;          
 
                     /* flexbox to center span */
                     display: flex;
@@ -202,6 +224,8 @@
                     overflow: hidden;
 
                     background-color: var(--pageClr-100);
+
+                    will-change: transform;
 
                     span {
                         padding: 0 var(--pad-lg);
