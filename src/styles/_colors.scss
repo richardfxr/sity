@@ -23,6 +23,8 @@ $light: (
     50: #DEFFE9,               // footer background color
     0: #ffffff,                // default background color
     border: #272e00,           // border color
+
+    shadow: rgba(0, 0, 0, 0.1),         // #000000 at 10% opacity
     
     //siteOptCard
     siteOpt-blue-350: #6CCEF5,    // siteOptCard blue bgColorHover
@@ -162,6 +164,9 @@ $light: (
     brown-illus-4: #85713d,
     brown-illus-5: #a67a4e,
 
+    // red
+    red-illus-2: #c23b29,
+
     // purple
     purple-illus-0: #f7fff5,
     purple-illus-1: #e3e4f9,
@@ -178,8 +183,6 @@ $light: (
 
 
     
-    // cardboard
-    cardboard-red-2: #c23b29,
     
     // aluminum
     aluminum-1000: #404f4f,
