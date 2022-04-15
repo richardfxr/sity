@@ -73,7 +73,7 @@
 </script>
 
 
-<div class="twoCol maxWidth" id="intro" aria-labelledby="pageHeading">
+<div class="twoCol normalWidth" id="intro" aria-labelledby="pageHeading">
     <div class="hero">
 
         <div class="header">
@@ -102,9 +102,9 @@
 </div>
 
 <!-- recycling categories -->
-<div class="maxWidth" id="categories" role="region" aria-labelledby="catHeading">
+<div class="cat" id="categories" role="region" aria-labelledby="catHeading">
     <h2 class="visuallyHidden" id="catHeading">Recycling categories</h2>
-    <ul class="catGrid">
+    <ul class="catGrid normalWidth">
         {#each cats as cat}
             <CatCard category={cat} />
         {/each}
@@ -156,14 +156,33 @@
         }
     }
 
-    .catGrid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: var(--pad-cat);
+    .cat {
+        width: 100%;
+
+        .catGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--pad-cat);
+            
+            /* prevent horizontal overflow */
+            overflow: hidden;
+
+            /* center grid on larger vw */
+            margin: 0 auto;
+        }
     }
+
+    
 
 
     /* === BREAKPOINTS ======================== */
+    @media only screen and (max-width: $breakpoint-tablet) {
+        .cat {
+            .catGrid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
     @media only screen and (max-width: $breakpoint-mobile) {
         .cityOpt {
             grid-template: 
@@ -187,5 +206,24 @@
                 }
             }
         }
+
+        .cat {
+            .catGrid {
+                grid-template-columns: 1fr;
+                
+                :global(.catCard) {
+                    &:nth-child(2n - 1) {
+                        margin-right: 20vw;
+                        margin-left: -10vw;
+                    }
+
+                    &:nth-child(2n) {
+                        margin-right: -10vw;
+                        margin-left: 20vw;
+                    }
+                }
+            }
+        }
+        
     }
 </style>

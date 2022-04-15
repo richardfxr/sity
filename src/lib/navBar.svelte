@@ -242,10 +242,11 @@
         --nav-pad: 0.4rem;
         --a-size: calc(var(--nav-size) - (2 * var(--nav-pad)));
         --svg-size: 1.5rem;
-        /* full viewport height with sticky positioning */
-        position: sticky;
-        top: 0;
-        height: 100vh;
+        /* fixed positioning */
+        position: fixed;
+        bottom: 0;
+
+        z-index: 10000;
 
         /* flex to push navigation bar to the bottom */
         display: flex;
@@ -257,6 +258,7 @@
             width: var(--nav-size);
             padding: var(--nav-pad) 0;
             margin-bottom: var(--pad-md);
+            margin-left: max(calc((100vw - var(--max-width)) / 2), var(--pad-sm));
             /* z-index */
             position: relative;
             z-index: -2;
@@ -454,7 +456,9 @@
 
     @media only screen and (max-width: $breakpoint-mobile) {
         #navBar {
-            height: auto;
+            /* position changes */
+            right: 0;
+            left: 0;
 
             ul {
                 /* make navigation horizontal */

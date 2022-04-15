@@ -16,6 +16,7 @@ $light: (
     800a: #A36E19,             // default accent color
     700: #008A64,              // header color and button bg color
     700a: #BD4800,             // header accent color and outline color
+    600: #25A690,
     250: #6AD1B3,
     150:#86E8CC,
     100: #9DF2DA,              // secondary background color
@@ -51,7 +52,7 @@ $light: (
     skyBlue-1000: #144352,
     skyBlue-900: #144757,
     skyBlue-800: #1b5d70,
-    skyBlue-150: #93F5E8,
+    skyBlue-150: #90f0e4,
     skyBlue-100: #8fc9c0,
     skyBlue-50: #99d1c8,
     skyBlue-0: #b2ded7,
@@ -105,52 +106,74 @@ $light: (
     stroke: #202220,
 
     // white
-    white-illus-1: #f2f2f2,
-    white-illus-2: #d6d6d6,
-    white-illus-3: #b5b5b5,
+    white-illus-1: #ffffff,
+    white-illus-2: #e0e0e0,
+    white-illus-3: #bababa,
     white-illus-4: #9c9c9c,
     white-illus-5: #8c8c8c,
 
     // offWhite
     offWhite-illus-1: #f7f5ed,
     offWhite-illus-2: #f0ead5,
-    offWhite-illus-3: #e0ddca,
-    offWhite-illus-4: #c5c9b5,
+    offWhite-illus-3: #e8e5d2,
+    offWhite-illus-4: #c0c9b5,
 
     // vanilla
-    vanilla-illus-0: #f7f5e8,
-    vanilla-illus-1: #ebe9db,
-    vanilla-illus-2: #dfe0cf,
-    vanilla-illus-3: #c9ccb4,
-    vanilla-illus-4: #b1b8a2,
+    vanilla-illus-0: #fffdee,
+    vanilla-illus-1: #f0efe9,
+    vanilla-illus-2: #e5e6d8,
+    vanilla-illus-3: #c5c7b5,
+    vanilla-illus-4: #a4ab98,
 
     // silverWarm
-    silverWarm-illus-0: #edeadf,
-    silverWarm-illus-1: #c7c9bc,
-    silverWarm-illus-2: #b1b3a7,
-    silverWarm-illus-3: #778278,
+    silverWarm-illus-0: #f5f2e7,
+    silverWarm-illus-1: #d4d6c9,
+    silverWarm-illus-2: #bdbfb0,
+    silverWarm-illus-3: #7e8a7f,
     silverWarm-illus-4: #40524c,
     silverWarm-illus-5: #d9cba7,
 
     // skyBlue
-    skyBlue-illus-1: #93ded7,
-    skyBlue-illus-2: #5db9cf,
-    skyBlue-illus-3: #5f95ba,
-    skyBlue-illus-4: #5f7fb3,
+    skyBlue-illus-1: #9ff0e8,
+    skyBlue-illus-2: #63c6de,
+    skyBlue-illus-3: #549dcf,
+    skyBlue-illus-4: #507cbf,
     skyBlue-illus-5: #3f4b5e,
 
+    // green
+    green-illus-0: #dafaeb,
+    green-illus-1: #c1fadf,
+    green-illus-2: #aff7d0,
+    green-illus-3: #92ebb6,
+    green-illus-4: #5ac99e,
+    green-illus-5: #3a916f,
+    green-illus-6: #28634d,
+
     // orange
-    orange-illus-0: #ffd4c7,
-    orange-illus-1: #f0a68b,
-    orange-illus-2: #d99277,
+    orange-illus-0: #ffe0d6,
+    orange-illus-1: #f7b299,
+    orange-illus-2: #e89f82,
     orange-illus-3: #bf7b5e,
 
     // brown
-    brown-illus-1: #debb8e,
-    brown-illus-2: #c4a370,
-    brown-illus-3: #a68c56,
-    brown-illus-4: #8f7b43,
+    brown-illus-1: #edc898,
+    brown-illus-2: #d6b27a,
+    brown-illus-3: #ab9058,
+    brown-illus-4: #85713d,
     brown-illus-5: #a67a4e,
+
+    // purple
+    purple-illus-0: #f7fff5,
+    purple-illus-1: #e3e4f9,
+    purple-illus-2: #eceaf9,
+    purple-illus-3: #b7acdd,
+    purple-illus-4: #d5aeff,
+    purple-illus-5: #af73f4,
+    purple-illus-6: #9696dd,
+    purple-illus-7: #8c89c4,
+    purple-illus-8: #5d6094,
+    purple-illus-9: #834dbd,
+    purple-illus-10: #5a5994,
 
 
 

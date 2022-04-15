@@ -13,6 +13,7 @@
     let parallaxScene;
     let parallaxInstance;
     const url = "/" + category.id;
+    let depthOffset = parseFloat(category.depthOffset);
 
     onMount(() => {
         // prevent code from running on server
@@ -28,10 +29,10 @@
    bind:this={parallaxScene}
    data-hover-only="true">
     <!-- SVG shape background -->
-    <SvgShape shape={category.id} ariaHidden={true} dataDepth={0.1 + category.depthOffset} bgClr={`var(--clr-${category.clr}-100)`} />
+    <SvgShape shape={category.id} ariaHidden={true} dataDepth={depthOffset + 0.2} bgClr={`var(--clr-${category.clr}-150)`} />
 
     <!-- SVG illustration -->
-    <Illustration illus={category.illus} clr1={category.illusClrs[0]} clr2={category.illusClrs[1]} clr3={category.illusClrs[2]} ariaHidden={true} dataDepth={0.4} />
+    <Illustration illus={category.illus} clr1={category.illusClrs[0]} clr2={category.illusClrs[1]} clr3={category.illusClrs[2]} ariaHidden={true} dataDepth={depthOffset + 0.4} />
 
     <span data-depth="0.7" class="text--h1" style={`--clr: var(--clr-${category.clr}-1000`}>{category.name}</span>
 </a>
@@ -59,6 +60,16 @@
             color: var(--clr);
             // default positioning, same as in-line styling applied by parallax-js
             position: absolute;
+            // override default font size
+            font-size: min(4vw, calc(var(--max-width) * 0.04));
+
+            // center span
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
         }
 
         // cartons category card
@@ -67,12 +78,11 @@
             :global(.illus) {
                 width: 45%;
                 margin-top: 23%;
-                margin-left: 23%;
+                margin-left: 28%;
             }
 
             span {
                 margin-top: 70%;
-                margin-left: 20%;
             }
         }
 
@@ -93,8 +103,7 @@
             }
 
             span {
-                margin-top: 73%;
-                margin-left: 8%;
+                margin-top: 53%;
             }
         }
 
@@ -109,13 +118,12 @@
             // illustration
             :global(.illus) {
                 width: 68%;
-                margin-top: 35%;
+                margin-top: 38%;
                 margin-left: 20%;
             }
 
             span {
-                margin-top: 70%;
-                margin-left: 30%;
+                margin-top: 43%;
             }
         }
 
@@ -130,14 +138,13 @@
 
             // illustration
             :global(.illus) {
-                width: 38%;
-                margin-top: 30%;
-                margin-left: 30%;
+                width: 32%;
+                margin-top: 35%;
+                margin-left: 34%;
             }
 
             span {
-                margin-top: 70%;
-                margin-left: 28%;
+                margin-top: 60%;
             }
         }
 
@@ -151,14 +158,13 @@
 
             // illustration
             :global(.illus) {
-                width: 38%;
-                margin-top: 30%;
+                width: 40%;
+                margin-top: 28%;
                 margin-left: 30%;
             }
 
             span {
-                margin-top: 70%;
-                margin-left: 35%;
+                margin-top: 53%;
             }
         }
 
@@ -166,16 +172,76 @@
         &.plastic {
             // illustration
             :global(.illus) {
-                width: 38%;
-                margin-top: 30%;
-                margin-left: 30%;
+                width: 32%;
+                margin-top: 17%;
+                margin-left: 35%;
             }
 
             span {
-                margin-top: 70%;
-                margin-left: 20%;
+                margin-top: 60%;
             }
         }
     }
     
+    /* === BREAKPOINTS ======================== */
+    @media only screen and (max-width: $breakpoint-tablet) {
+        .catCard {
+            span {
+                font-size: min(6.1vw, calc(var(--max-width) * 0.061));
+            }
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        .catCard {
+            span {
+                font-size: min(13vw, calc(var(--max-width) * 0.13));
+            }
+
+            // metal category card
+            &.metal {
+                // background shape
+                :global(.svgShape) {
+                    margin-top: -5%;
+                    margin-bottom: 4%;
+                }
+
+                // illustration
+                :global(.illus) {
+                    width: 32%;
+                    margin-top: 25%;
+                    margin-left: 34%;
+                }
+
+                span {
+                    margin-top: 50%;
+                }
+            }
+
+            // glass category card
+            &.glass {
+                // background shape
+                :global(.svgShape) {
+                    margin-top: 4%;
+                    margin-bottom: 4%;
+                }
+            }
+
+            // plastic category card
+            &.plastic {
+                // background shape
+                :global(.svgShape) {
+                    margin-top: 4%;
+                    margin-bottom: 4%;
+                }
+
+                // illustration
+                :global(.illus) {
+                    width: 32%;
+                    margin-top: 17%;
+                    margin-left: 35%;
+                }
+            }
+        }
+    }
 </style>

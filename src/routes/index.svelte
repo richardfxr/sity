@@ -26,6 +26,7 @@
     import { onMount } from 'svelte';
     import { onPageLoad } from '$lib/page.js';
     import { curPage } from '../store/store.js';
+    import Illustration from '$lib/illustration.svelte';
     import SvgIcon from '$lib/svgIcon.svelte';
     import Button from '$lib/button.svelte';
     import SiteOptCard from '$lib/siteOptCard.svelte';
@@ -40,16 +41,47 @@
     ];
 
     // bindings
+    let scrollY;
+    let windowHeight;
     let pageHeading;
 
     // call onPageLoad on mount
     onMount(() => {
 		onPageLoad("home", $curPage, pageHeading);
 	});
+
+    /* === REACTIVE DECLARATIONS ============== */
+    let scrollLimit = 0.8;
+    $: scrollYRatio = scrollY / windowHeight;
+    // scroll variable used for .heroIllus
+    $: scrollYInv = scrollYRatio / scrollLimit < 1 ? 1 - (scrollYRatio / scrollLimit)  : 0;
 </script>
 
 
-<div class="twoCol" id="intro" aria-labelledby="pageHeading">
+<svelte:window bind:scrollY={scrollY} bind:innerHeight={windowHeight}/>
+
+
+<div id="heroIllus">
+    <div class="container">
+        <div class="normalWidth">
+            <div class="main" style="transform: scale({1 + scrollYInv}">
+                <SvgIcon icon="logotype"/>
+                <div class="textCard" style="transform: translateY(calc({scrollYInv}* (-1 * var(--mainHeight))))">
+                    <span class="text--h1">Where does it all go?</span>
+                    <div class="handles">
+                        <!-- left bin handle -->
+                        <Illustration illus="binHandle-left" clr1="main" ariaHidden={true} />
+                        <!-- right bin handle -->
+                        <Illustration illus="binHandle-right" clr1="main" ariaHidden={true} />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="twoCol normalWidth" id="intro" aria-labelledby="pageHeading">
 
     <div class="hero">
 
@@ -72,7 +104,7 @@
     </div>
 </div>
 
-<div class="twoCol" id="search" role="region" aria-labelledby="searchHeading">
+<div class="twoCol normalWidth" id="search" role="region" aria-labelledby="searchHeading">
     <!-- heading for screen readers -->
     <h2 id="searchHeading" class="visuallyHidden">Search for your city</h2>
 
@@ -107,6 +139,123 @@
         --pageClr-0: var(--clr-0);
 
         background-color: var(--pageClr-50);
+    }
+
+    #heroIllus {
+        height: 150vh;
+        width: 100%;
+
+        /* center .container within */
+        display: flex;
+        justify-content: center;
+
+        /* padding so .main does not hit very bottom and get cut off by contain: paint */
+        padding-bottom: var(--pad-md);
+
+        /* remove gap between #heroIllus and #intro */
+        margin-bottom: calc(-1 * var(--pad-xxl));
+
+        .container {
+            /* sticky positioning */
+            position: sticky;
+            top: 0;
+            right: 0;
+            left: 0;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            width: 100%;
+            height: 100vh;
+
+            /* prevent overflow from scaling */
+            overflow: hidden;
+
+            .main {
+                /* variables */
+                --mainHeight: 75vh;
+                --borderWidth: 0;
+                
+                width: 100%;
+                height: var(--mainHeight);
+                
+                border: solid var(--clr-stroke) var(--borderWidth);
+                border-radius: var(--border-radius);
+
+                background-color: var(--pageClr-250);
+
+                will-change: transform;
+
+                :global(.logotype) {
+                    width: 20%;
+
+                    /* center logotye */
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                    
+                }
+
+                .textCard {
+                    /* take up all of .main with space at bottom */
+                    width: calc(100% + 2 * var(--borderWidth));
+                    height: 95%;
+                    /* overlap borders */
+                    margin: 0 calc(-1 * var(--borderWidth));
+
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;          
+
+                    /* flexbox to center span */
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    justify-content: center;
+
+                    border: solid var(--clr-stroke) var(--borderWidth);
+                    border-radius: var(--border-radius);
+                    overflow: hidden;
+
+                    background-color: var(--pageClr-100);
+
+                    will-change: transform;
+
+                    span {
+                        padding: 0 var(--pad-lg);
+                        text-align: center;
+                        font-size: min(4.5vw, calc(var(--max-width) * 0.045));
+                    }
+
+                    .handles {
+                        /* position handles to bottom of .textCard */
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        /* flexbox to push handle to sides */
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+                        height: 14rem;
+                        padding: 0 2rem 2rem 2rem;
+
+                        :global(.illus) {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+            
+        }
     }
 
     #intro {
@@ -164,6 +313,18 @@
 
     /* === BREAKPOINTS ======================== */
     @media only screen and (max-width: $breakpoint-smdesktop) {
+        #heroIllus {
+            .container {
+                .main {
+                    .textCard {
+                        .handles {
+                            height: 12rem;
+                            padding: 0 1.5rem 1.5rem 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @media only screen and (max-width: 960px) {
@@ -182,10 +343,47 @@
     }
 
     @media only screen and (max-width: $breakpoint-tablet) {
+        #heroIllus {
+            .container {
+                .main {
+                    .textCard {
+                        span {
+                            font-size: min(7vw, calc(var(--max-width) * 0.07));
+                        }
+
+                        .handles {
+                            height: 8rem;
+                            padding: 0 1rem 1rem 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
         #search {
             .cities {
                 /* remove top padding */
                 padding-top: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        #heroIllus {
+            .container {
+                .main {
+                    .textCard {
+                        span {
+                            padding: 0 var(--pad-md);
+                            font-size: min(10vw, calc(var(--max-width) * 0.10));
+                        }
+
+                        .handles {
+                            height: 8rem;
+                            padding: 0 0.75rem 0.75rem 0.75rem;
+                        }
+                    }
+                }
             }
         }
     }
