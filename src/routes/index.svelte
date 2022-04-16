@@ -42,6 +42,7 @@
 
     // bindings
     let scrollY;
+    let windowWidth
     let windowHeight;
     let pageHeading;
 
@@ -52,21 +53,27 @@
 
     /* === REACTIVE DECLARATIONS ============== */
     let scrollLimit = 0.8;
+    $: isMobile = windowWidth <= 650 ? true  : false;
     $: scrollYRatio = scrollY / windowHeight;
     // scroll variable used for .heroIllus
     $: scrollYInv = scrollYRatio / scrollLimit < 1 ? 1 - (scrollYRatio / scrollLimit)  : 0;
+    // same as scrollYInv except on mobile, where it becomes 0
+    $: scrollYInvMobile = isMobile ? 0  : scrollYInv;
 </script>
 
 
-<svelte:window bind:scrollY={scrollY} bind:innerHeight={windowHeight}/>
+<svelte:window bind:scrollY={scrollY} bind:innerHeight={windowHeight} bind:innerWidth={windowWidth}/>
 
 
 <div id="heroIllus">
     <div class="container">
         <div class="normalWidth">
             <!-- transforms: translateX and translateY centers main when on top of page -->
-            <div class="main" style="transform: scale({1 + scrollYInv}) translateX(calc((-1 * {scrollYInv} * ((var(--nav-size) + var(--pad-md)) / 2)) / {1 + scrollYInv})) translateY(calc(-6.5 * {scrollYInv}vh))">
-                <SvgIcon icon="logotype"/>
+            <div class="main" style="transform: scale({1 + scrollYInv}) translateX(calc((-1 * {scrollYInvMobile} * ((var(--nav-size) + var(--pad-md)) / 2)) / {1 + scrollYInvMobile})) translateY(calc(-6.5 * {scrollYInv}vh))">
+
+                <!-- logotype -->
+                <SvgIcon icon="logotype-border"/>
+
                 <!-- vortex layers -->
                 <div class="vortex vortex-2">
                     <!-- layer 2 -->
@@ -80,6 +87,7 @@
                     <Illustration illus="glassCup-empty" clr1="skyBlueTransparent" ariaHidden={true} />
                     <Illustration illus="carton-default" clr1="skyBlue" clr2="offWhite" ariaHidden={true} />
                 </div>
+                
                 <div class="textCard" style="transform: translateY(calc({scrollYInv}* (-1 * var(--mainHeight))))">
                     <span class="text--h1">Where does it all go?</span>
                     <div class="handles">
@@ -181,7 +189,8 @@
             align-items: flex-end;
             justify-content: center;
 
-            width: 100%;
+            width: 100vw;
+            // width: 100%;
             height: 100vh;
 
             /* prevent overflow from scaling */
@@ -189,12 +198,16 @@
 
             .main {
                 /* variables */
+                /* --scrollYInv assigned in-line by Svelte */
                 --mainHeight: 75vh;
                 --borderWidth: 0;
+                --vortexScale: 1;
                 
-                width: 100%;
+                /* sizing */
+                // width: 100%;
                 height: var(--mainHeight);
                 
+                /* border */
                 border: solid var(--clr-stroke) var(--borderWidth);
                 border-radius: var(--border-radius);
 
@@ -214,13 +227,8 @@
                     margin: auto;
                     z-index: 500;
 
-                    filter: drop-shadow(0 min(0.2vw, calc(var(--max-width) * 0.002)) min(0.3vw, calc(var(--max-width) * 0.003)) var(--clr-shadow));
-
-                    :global(path) {
-                        /* fill logo with --clr-0 instead of default */
-                        fill: var(--clr-0);
-                    }
-                    
+                    /* scale along with vortex */
+                    transform: scale(var(--vortexScale));
                 }
 
                 .vortex {
@@ -246,19 +254,19 @@
                         :global(svg:nth-child(1)) {
                             width: 25%;
                             padding: 18% 0 0 4%;
-                            transform: rotate(250deg);
+                            transform: rotate(250deg) scale(var(--vortexScale));
                         }
 
                         :global(svg:nth-child(2)) {
                             width: 5%;
                             padding: 18% 0 0 0;
-                            transform: rotate(84deg);
+                            transform: rotate(84deg) scale(var(--vortexScale));
                         }
 
                         :global(svg:nth-child(3)) {
                             width: 28%;
                             padding: 27% 0 0 10%;
-                            transform: rotate(11deg);
+                            transform: rotate(11deg) scale(var(--vortexScale));
                         }
                     }
 
@@ -269,19 +277,19 @@
                         :global(svg:nth-child(1)) {
                             width: 20%;
                             padding: 0 20% 30% 0;
-                            transform: rotate(28deg);
+                            transform: rotate(28deg) scale(var(--vortexScale));
                         }
 
                         :global(svg:nth-child(2)) {
                             width: 17%;
                             padding: 32% 0 0 10%;
-                            transform: rotate(69deg);
+                            transform: rotate(69deg) scale(var(--vortexScale));
                         }
 
                         :global(svg:nth-child(3)) {
                             width: 20%;
                             padding: 30% 0 0 10%;
-                            transform: rotate(320deg);
+                            transform: rotate(320deg) scale(var(--vortexScale));
                         }
                     }
                 }
@@ -459,6 +467,9 @@
         #heroIllus {
             .container {
                 .main {
+                    /* variables */
+                    --vortexScale: 2;
+
                     .textCard {
                         span {
                             padding: 0 var(--pad-md);
