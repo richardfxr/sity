@@ -24,7 +24,7 @@ $light: (
     0: #ffffff,                // default background color
     border: #272e00,           // border color
 
-    shadow: rgba(0, 0, 0, 0.1),         // #000000 at 10% opacity
+    shadow: rgba(0, 0, 0, 0.17),         // #000000 at 10% opacity
     
     //siteOptCard
     siteOpt-blue-350: #6CCEF5,    // siteOptCard blue bgColorHover
@@ -141,6 +141,16 @@ $light: (
     skyBlue-illus-3: #549dcf,
     skyBlue-illus-4: #507cbf,
     skyBlue-illus-5: #3f4b5e,
+
+    // skyBlueTransparent
+    skyBlueTransparent-illus-0: #FFFFFF,
+    skyBlueTransparent-illus-1: #D4F3F7,
+    skyBlueTransparent-illus-2: #E1F5F7,
+    skyBlueTransparent-illus-3: #54E3F2,
+    skyBlueTransparent-illus-4: #00BECF,
+    skyBlueTransparent-illus-5: #005561,
+    skyBlueTransparent-illus-6: #000000,
+
 
     // green
     green-illus-0: #dafaeb,
