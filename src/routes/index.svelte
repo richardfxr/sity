@@ -70,15 +70,15 @@
                 <!-- vortex layers -->
                 <div class="vortex vortex-2">
                     <!-- layer 2 -->
-                    <Illustration illus="carton-default" clr1="skyBlue" clr2="offWhite" ariaHidden={true} />
+                    <Illustration illus="pizzaBox-dirty" clr1="brown" clr2="offWhite" ariaHidden={true} />
                     <Illustration illus="metalCan-default" clr1="orange" clr2="silverWarm" ariaHidden={true} />
-                    <Illustration illus="cardboardBox-open" clr1="brown" ariaHidden={true} />
+                    <Illustration illus="cardboardBox-closed" clr1="brown" clr2="offWhite" clr3="red" ariaHidden={true} />
                 </div>
                 <div class="vortex vortex-1">
                     <!-- layer 1 -->
-                    <Illustration illus="pizzaBox-dirty" clr1="brown" clr2="offWhite" ariaHidden={true} />
-                    <Illustration illus="cardboardBox-closed" clr1="brown" clr2="offWhite" clr3="red" ariaHidden={true} />
-                    <Illustration illus="cardboardBox-open" clr1="brown" ariaHidden={true} />
+                    <Illustration illus="plasticBottle-default" clr1="brown" clr2="offWhite" ariaHidden={true} />
+                    <Illustration illus="glassCup-empty" clr1="skyBlueTransparent" ariaHidden={true} />
+                    <Illustration illus="carton-default" clr1="skyBlue" clr2="offWhite" ariaHidden={true} />
                 </div>
                 <div class="textCard" style="transform: translateY(calc({scrollYInv}* (-1 * var(--mainHeight))))">
                     <span class="text--h1">Where does it all go?</span>
@@ -239,49 +239,49 @@
                         margin: auto;
                     }
 
-                    &-1 {
-                        z-index: 499;
-                        animation: rotateForever 30s linear infinite;
-
-                        :global(svg:nth-child(1)) {
-                            width: 33%;
-                            padding: 0 20% 25% 0;
-                            transform: rotate(28deg);
-                        }
-
-                        :global(svg:nth-child(2)) {
-                            width: 28%;
-                            padding: 27% 15% 0 0;
-                            transform: rotate(69deg);
-                        }
-
-                        :global(svg:nth-child(3)) {
-                            width: 34%;
-                            padding: 10% 0 0 20%;
-                            transform: rotate(11deg);
-                        }
-                    }
-
                     &-2 {
                         z-index: 499;
                         animation: rotateForever 23s linear infinite;
 
                         :global(svg:nth-child(1)) {
-                            width: 14%;
-                            padding: 0 0 18% 8%;
-                            transform: rotate(32deg);
+                            width: 25%;
+                            padding: 18% 0 0 4%;
+                            transform: rotate(250deg);
                         }
 
                         :global(svg:nth-child(2)) {
-                            width: 14%;
-                            padding: 15% 0 0 10%;
+                            width: 5%;
+                            padding: 18% 0 0 0;
                             transform: rotate(84deg);
                         }
 
                         :global(svg:nth-child(3)) {
-                            width: 32%;
-                            padding: 10% 0 0 20%;
+                            width: 28%;
+                            padding: 27% 0 0 10%;
                             transform: rotate(11deg);
+                        }
+                    }
+
+                    &-1 {
+                        z-index: 499;
+                        animation: rotateForever 30s linear infinite;
+
+                        :global(svg:nth-child(1)) {
+                            width: 20%;
+                            padding: 0 20% 30% 0;
+                            transform: rotate(28deg);
+                        }
+
+                        :global(svg:nth-child(2)) {
+                            width: 17%;
+                            padding: 32% 0 0 10%;
+                            transform: rotate(69deg);
+                        }
+
+                        :global(svg:nth-child(3)) {
+                            width: 20%;
+                            padding: 30% 0 0 10%;
+                            transform: rotate(320deg);
                         }
                     }
                 }
