@@ -87,6 +87,10 @@
                     <Illustration illus="glassCup-empty" clr1="skyBlueTransparent" ariaHidden={true} />
                     <Illustration illus="carton-default" clr1="skyBlue" clr2="offWhite" ariaHidden={true} />
                 </div>
+
+                <div class="shadow__container">
+                    <div class="shadow" style="transform: translateY(calc(var(--mainHeight) * 0.95 - var(--border-radius) + ((var(--mainHeight) * {scrollYInv}) / 20)))"></div>
+                </div>
                 
                 <div class="textCard" style="transform: translateY(calc({scrollYInv}* (-1 * var(--mainHeight))))">
                     <span class="text--h1">Where does it all go?</span>
@@ -294,6 +298,23 @@
                     }
                 }
 
+                .shadow {
+                    /* z-index to cover vortex illustrations */
+                    position: relative;
+                    z-index: 501;
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--clr-600);
+
+                    &__container {
+                        width: 100%;
+                        height: 100%;
+
+                        border-radius: var(--border-radius);
+                        overflow: hidden;
+                    }
+                }
+
                 .textCard {
                     /* take up all of .main with space at bottom */
                     width: calc(100% + 2 * var(--borderWidth));
@@ -306,7 +327,7 @@
                     right: 0;
                     bottom: 0;
                     left: 0;
-                    z-index: 501;
+                    z-index: 502;
 
                     /* flexbox to center span */
                     display: flex;
