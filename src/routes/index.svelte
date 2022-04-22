@@ -346,7 +346,7 @@
                     span {
                         padding: 0 var(--pad-lg);
                         text-align: center;
-                        font-size: min(4.5vw, calc(var(--max-width) * 0.045));
+                        font-size: min(5.5vw, calc(var(--max-width) * 0.055));
                     }
 
                     .handles {
@@ -369,8 +369,6 @@
                     }
                 }
             }
-
-            
         }
     }
 
@@ -462,9 +460,12 @@
         #heroIllus {
             .container {
                 .main {
+                    /* variables */
+                    --vortexScale: 1.5;
+
                     .textCard {
                         span {
-                            font-size: min(7vw, calc(var(--max-width) * 0.07));
+                            font-size: min(8vw, calc(var(--max-width) * 0.08));
                         }
 
                         .handles {
@@ -494,7 +495,7 @@
                     .textCard {
                         span {
                             padding: 0 var(--pad-md);
-                            font-size: min(10vw, calc(var(--max-width) * 0.10));
+                            font-size: min(12vw, calc(var(--max-width) * 0.12));
                         }
 
                         .handles {
