@@ -32,23 +32,32 @@
                 <SvgIcon icon="logotype-border"/>
 
                 <!-- vortex layers -->
-                <div class="vortex vortex-2">
-                    <!-- layer 2 -->
+                <div class="vortex vortex-1">
+                    <!-- layer 1 -->
                     <Illustration illus="pizzaBox-dirty" clr1="brown" clr2="offWhite" ariaHidden={true} />
                     <Illustration illus="metalCan-default" clr1="salmon" clr2="silverWarm" ariaHidden={true} />
                     <Illustration illus="cardboardBox-closed" clr1="brown" clr2="offWhite" clr3="red" ariaHidden={true} />
                 </div>
-                <div class="vortex vortex-1">
-                    <!-- layer 1 -->
+                <div class="vortex vortex-2">
+                    <!-- layer 2 -->
                     <Illustration illus="plasticBottle-default" clr1="brown" clr2="offWhite" ariaHidden={true} />
                     <Illustration illus="glassCup-empty" clr1="skyBlueTransparent" ariaHidden={true} />
                     <Illustration illus="carton-default" clr1="skyBlue" clr2="offWhite" ariaHidden={true} />
                 </div>
+                <div class="vortex vortex-3">
+                    <!-- layer 3 -->
+                    <Illustration illus="plasticStraw-bent" clr1="orange" ariaHidden={true} />
+                    <Illustration illus="plasticStraw-straight" clr1="hotPink" ariaHidden={true} />
+                    <Illustration illus="plasticBottle-default" clr1="greenTransparent" clr2="purple" ariaHidden={true} />
+                    <Illustration illus="paperCup-empty" clr1="vanilla" ariaHidden={true} />
+                </div>
+                <div class="vortex vortex-4">
+                    <!-- layer 4 -->
+                    <Illustration illus="plasticFork-default" clr1="black" ariaHidden={true} />
+                </div>
 
                 <!-- shadow that appears under .textCard on scroll -->
-                <div class="shadow__container">
-                    <div class="shadow" style="transform: translateY(calc(var(--mainHeight) * 0.95 - var(--border-radius) + ((var(--mainHeight) * {scrollYInv}) / 20)))"></div>
-                </div>
+                <div class="shadow" style="transform: translateY(calc(var(--mainHeight) * 0.95 - var(--border-radius) + ((var(--mainHeight) * {scrollYInv}) / 20)))"></div>
                 
                 <!-- text card lid that slides down on scroll -->
                 <div class="textCard" style="transform: translateY(calc({scrollYInv}* (-1 * var(--mainHeight))))">
@@ -113,6 +122,7 @@
                 /* border */
                 border: solid var(--clr-stroke) var(--borderWidth);
                 border-radius: var(--border-radius);
+                overflow: hidden;
 
                 background-color: var(--pageClr-250);
 
@@ -150,8 +160,8 @@
                         margin: auto;
                     }
 
-                    &-2 {
-                        z-index: 499;
+                    &-1 {
+                        z-index: 399;
                         animation: rotateForever 23s linear infinite;
 
                         :global(svg:nth-child(1)) {
@@ -173,14 +183,66 @@
                         }
                     }
 
-                    &-1 {
-                        z-index: 499;
+                    &-2 {
+                        z-index: 401;
                         animation: rotateForever 30s linear infinite;
 
                         :global(svg:nth-child(1)) {
                             width: 20%;
                             padding: 0 20% 30% 0;
                             transform: rotate(28deg) scale(var(--vortexScale));
+                        }
+
+                        :global(svg:nth-child(2)) {
+                            width: 17%;
+                            padding: 32% 0 0 10%;
+                            transform: rotate(69deg) scale(var(--vortexScale));
+                        }
+
+                        :global(svg:nth-child(3)) {
+                            width: 20%;
+                            padding: 30% 0 0 10%;
+                            transform: rotate(320deg) scale(var(--vortexScale));
+                        }
+                    }
+
+                    &-3 {
+                        z-index: 402;
+                        animation: rotateForever 37s linear infinite;
+
+                        :global(svg:nth-child(1)) {
+                            width: 11%;
+                            padding: 25% 0 0 6%;
+                            transform: rotate(200deg) scale(var(--vortexScale));
+                        }
+
+                        :global(svg:nth-child(2)) {
+                            width: 2%;
+                            padding: 30% 0 0 1%;
+                            transform: rotate(95deg) scale(var(--vortexScale));
+                        }
+
+                        :global(svg:nth-child(3)) {
+                            width: 16%;
+                            padding: 38% 0 0 10%;
+                            transform: rotate(290deg) scale(var(--vortexScale));
+                        }
+
+                        :global(svg:nth-child(4)) {
+                            width: 13%;
+                            padding: 32% 5% 0 0;
+                            transform: rotate(350deg) scale(var(--vortexScale));
+                        }
+                    }
+
+                    &-4 {
+                        z-index: 403;
+                        animation: rotateForever 44s linear infinite;
+
+                        :global(svg:nth-child(1)) {
+                            width: 13%;
+                            padding: 30% 0 0 10%;
+                            transform: rotate(30deg) scale(var(--vortexScale));
                         }
 
                         :global(svg:nth-child(2)) {
@@ -204,14 +266,6 @@
                     width: 100%;
                     height: 100%;
                     background-color: var(--clr-600);
-
-                    &__container {
-                        width: 100%;
-                        height: 100%;
-
-                        border-radius: var(--border-radius);
-                        overflow: hidden;
-                    }
                 }
 
                 .textCard {
