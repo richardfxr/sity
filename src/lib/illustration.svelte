@@ -43,7 +43,7 @@
         }
 
         // list of all illustrattion color groups
-        $illusClrs: "white", "offWhite", "vanilla", "silverWarm", "skyBlue", "green", "orange", "brown", "red", "purple";
+        $illusClrs: "white", "offWhite", "vanilla", "silverWarm", "skyBlue", "green", "salmon", "brown", "red", "purple";
         $illusClrsTransparent: "skyBlue";
         // list of all color ranges
         $illusClrRanges: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;

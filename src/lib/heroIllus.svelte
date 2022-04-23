@@ -35,7 +35,7 @@
                 <div class="vortex vortex-2">
                     <!-- layer 2 -->
                     <Illustration illus="pizzaBox-dirty" clr1="brown" clr2="offWhite" ariaHidden={true} />
-                    <Illustration illus="metalCan-default" clr1="orange" clr2="silverWarm" ariaHidden={true} />
+                    <Illustration illus="metalCan-default" clr1="salmon" clr2="silverWarm" ariaHidden={true} />
                     <Illustration illus="cardboardBox-closed" clr1="brown" clr2="offWhite" clr3="red" ariaHidden={true} />
                 </div>
                 <div class="vortex vortex-1">
