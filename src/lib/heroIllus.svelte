@@ -35,14 +35,14 @@
                 <div class="vortex vortex-1">
                     <!-- layer 1 -->
                     <Illustration illus="pizzaBox-dirty" clr1="brown" clr2="offWhite" ariaHidden={true} />
-                    <Illustration illus="metalCan-default" clr1="salmon" clr2="silverWarm" ariaHidden={true} />
                     <Illustration illus="cardboardBox-closed" clr1="brown" clr2="offWhite" clr3="red" ariaHidden={true} />
+                    <Illustration illus="carton-default" clr1="skyBlue" clr2="offWhite" ariaHidden={true} />
                 </div>
                 <div class="vortex vortex-2">
                     <!-- layer 2 -->
                     <Illustration illus="plasticBottle-default" clr1="brown" clr2="offWhite" ariaHidden={true} />
                     <Illustration illus="glassCup-empty" clr1="skyBlueTransparent" ariaHidden={true} />
-                    <Illustration illus="carton-default" clr1="skyBlue" clr2="offWhite" ariaHidden={true} />
+                    <Illustration illus="paperBag-default" clr1="brown" ariaHidden={true} />
                 </div>
                 <div class="vortex vortex-3">
                     <!-- layer 3 -->
@@ -54,6 +54,8 @@
                 <div class="vortex vortex-4">
                     <!-- layer 4 -->
                     <Illustration illus="plasticFork-default" clr1="black" ariaHidden={true} />
+                    <Illustration illus="paper-crumpled" clr1="vanilla" ariaHidden={true} />
+                    <Illustration illus="metalCan-default" clr1="salmon" clr2="silverWarm" ariaHidden={true} />
                 </div>
 
                 <!-- shadow that appears under .textCard on scroll -->
@@ -171,15 +173,15 @@
                         }
 
                         :global(svg:nth-child(2)) {
-                            width: 5%;
-                            padding: 18% 0 0 0;
-                            transform: rotate(84deg) scale(var(--vortexScale));
-                        }
-
-                        :global(svg:nth-child(3)) {
                             width: 28%;
                             padding: 27% 0 0 10%;
                             transform: rotate(11deg) scale(var(--vortexScale));
+                        }
+
+                        :global(svg:nth-child(3)) {
+                            width: 18%;
+                            padding: 30% 0 0 10%;
+                            transform: rotate(120deg) scale(var(--vortexScale));
                         }
                     }
 
@@ -200,9 +202,9 @@
                         }
 
                         :global(svg:nth-child(3)) {
-                            width: 20%;
-                            padding: 30% 0 0 10%;
-                            transform: rotate(320deg) scale(var(--vortexScale));
+                            width: 11%;
+                            padding: 32% 0 0 0;
+                            transform: rotate(310deg) scale(var(--vortexScale));
                         }
                     }
 
@@ -246,15 +248,15 @@
                         }
 
                         :global(svg:nth-child(2)) {
-                            width: 17%;
-                            padding: 32% 0 0 10%;
-                            transform: rotate(69deg) scale(var(--vortexScale));
+                            width: 18%;
+                            padding: 28% 0 0 10%;
+                            transform: rotate(150deg) scale(var(--vortexScale));
                         }
 
                         :global(svg:nth-child(3)) {
-                            width: 20%;
-                            padding: 30% 0 0 10%;
-                            transform: rotate(320deg) scale(var(--vortexScale));
+                            width: 6%;
+                            padding: 28% 0 0 0;
+                            transform: rotate(230deg) scale(var(--vortexScale));
                         }
                     }
                 }
