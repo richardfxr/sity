@@ -3,7 +3,7 @@
 
     export async function load({ params, fetch, session, stuff }) {
         // get city id
-        let id = params.cityId;
+        let cityId = params.cityId;
         // get Firestore database
         const db = stuff.db
         // declare variables
@@ -14,7 +14,7 @@
         // retrieve data from Firestore
         try {
             // get city document data
-            city = await getDbDoc(db, "cities", id);
+            city = await getDbDoc(db, "cities", cityId);
             // get city guideline
             guideline = await getDbDocFromRef(city.guideline);
 
@@ -31,7 +31,7 @@
         return {
             props: {
                 loaded,
-                id,
+                cityId,
                 city,
                 guideline
             }
@@ -42,7 +42,7 @@
 <script>
     // props
     export let loaded = false;
-    export let id;
+    export let cityId;
     export let city;
     export let guideline;
 
@@ -57,7 +57,7 @@
     import {copyURL} from '$lib/clipboard.js';
 
     /* === STORES ============================= */
-    defaultCity.set(id);
+    defaultCity.set(cityId);
     defaultCityName.set(city.name);
 
     // bindings
@@ -106,7 +106,7 @@
     <h2 class="visuallyHidden" id="catHeading">Recycling categories</h2>
     <ul class="catGrid normalWidth">
         {#each cats as cat}
-            <CatCard category={cat} />
+            <CatCard category={cat} {cityId} />
         {/each}
     </ul>
 </div>

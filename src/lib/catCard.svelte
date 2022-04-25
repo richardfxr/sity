@@ -1,6 +1,7 @@
 <script>
     // props
     export let category; // category object from Firebase Firestore
+    export let cityId; // city.id used for routing
 
     // imports
     import Parallax from 'parallax-js'
@@ -12,7 +13,7 @@
     // declare variables
     let parallaxScene;
     let parallaxInstance;
-    const url = "/" + category.id;
+    const url = "/city/" + cityId + "/" + category.id;
     let depthOffset = parseFloat(category.depthOffset);
 
     onMount(() => {
@@ -42,6 +43,8 @@
     .catCard {
         display: block;
         position: relative;
+        /* override pointer-evetns:none */
+        pointer-events: auto !important;
 
         // background shape
         :global(.svgShape) {
