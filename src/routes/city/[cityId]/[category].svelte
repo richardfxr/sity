@@ -56,10 +56,13 @@
     import { onPageLoad } from '$lib/page.js';
     import { curPage, defaultCity, defaultCityName } from '../../../store/store.js';
     import SvgIcon from '$lib/svgIcon.svelte';
+    import CatStep from '$lib/catStep.svelte';
 
     /* === STORES ============================= */
     defaultCity.set(id);
     defaultCityName.set(city.name);
+
+    console.log(category.details[0]);
 
     // bindings
     let pageHeading;
@@ -84,7 +87,20 @@
     </div>
 
     <div class="content">
+        
     </div>
+</div>
+
+<div class="normalWidth">
+    {#each category.details as detail}
+        <div class="detailSection">
+            {#if detail.component === "CatStep"}
+                {#each detail.array as step}
+                    <CatStep {step} />
+                {/each}
+            {/if}
+        </div>
+    {/each}
 </div>
 
 
@@ -99,5 +115,22 @@
         --pageClr-0: var(--clr-0);
 
         background-color: var(--clr-50);
+    }
+
+    .detailSection {
+        /* grid */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--pad-md);
+    }
+
+    /* ========================================
+    BREAKPOINTS
+    ======================================== */
+
+    @media only screen and (max-width: $breakpoint-smdesktop) {
+        .detailSection {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
