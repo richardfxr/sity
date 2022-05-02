@@ -111,7 +111,7 @@
         /* grid */
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: var(--pad-md);
+        gap: var(--pad-xs);
     }
 
     /* ========================================
@@ -121,6 +121,12 @@
     @media only screen and (max-width: $breakpoint-smdesktop) {
         .detailSection {
             grid-template-columns: 1fr;
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        .detailSection {
+            gap: var(--pad-sm);
         }
     }
 </style>

@@ -69,6 +69,10 @@
     @media only screen and (max-width: $breakpoint-mobile) {
         .catStep {
             grid-template-columns: 1fr;
+
+            .text {
+                padding: var(--pad-md) var(--pad-sm);
+            }
         }
     }
 </style>
