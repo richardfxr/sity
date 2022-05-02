@@ -40,7 +40,6 @@
                 </div>
                 <div class="vortex vortex-2">
                     <!-- layer 2 -->
-                    <Illustration illus="plasticBottle-default" clr1="brown" clr2="offWhite" ariaHidden={true} />
                     <Illustration illus="glassCup-empty" clr1="skyBlueTransparent" ariaHidden={true} />
                     <Illustration illus="paperBag-default" clr1="brown" ariaHidden={true} />
                 </div>
@@ -190,18 +189,12 @@
                         animation: rotateForever 30s linear infinite;
 
                         :global(svg:nth-child(1)) {
-                            width: 20%;
-                            padding: 0 20% 30% 0;
-                            transform: rotate(28deg) scale(var(--vortexScale));
-                        }
-
-                        :global(svg:nth-child(2)) {
                             width: 17%;
                             padding: 32% 0 0 10%;
                             transform: rotate(69deg) scale(var(--vortexScale));
                         }
 
-                        :global(svg:nth-child(3)) {
+                        :global(svg:nth-child(2)) {
                             width: 11%;
                             padding: 32% 0 0 0;
                             transform: rotate(310deg) scale(var(--vortexScale));
