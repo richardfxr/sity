@@ -35,7 +35,7 @@
     <!-- SVG illustration -->
     <Illustration illus={category.illus} clr1={category.illusClrs[0]} clr2={category.illusClrs[1]} clr3={category.illusClrs[2]} ariaHidden={true} dataDepth={depthOffset + 0.4} />
 
-    <span data-depth="0.7" class="text--h1" style={`--clr: var(--clr-${category.clr}-1000`}>{category.name}</span>
+    <span data-depth="0.7" class="text--h1" style={`--clr: var(--clr-${category.clr}-900`}>{category.name}</span>
 </a>
 
 

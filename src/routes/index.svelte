@@ -46,7 +46,7 @@
 
     // call onPageLoad on mount
     onMount(() => {
-		onPageLoad("home", $curPage, pageHeading);
+		onPageLoad("home", $curPage, pageHeading, "default");
 	});
 </script>
 
@@ -100,20 +100,6 @@
 
 
 <style lang="scss">
-    :global(html, body) {
-        /* page variables */
-        --pageClr-800: var(--clr-800);
-        --pageClr-700: var(--clr-700);
-        --pageClr-600: var(--clr-600);
-        --pageClr-250: var(--clr-250);
-        --pageClr-150: var(--clr-150);
-        --pageClr-100: var(--clr-100);
-        --pageClr-50: var(--clr-50);
-        --pageClr-0: var(--clr-0);
-
-        background-color: var(--pageClr-50);
-    }
-
     #intro {
         /* bottom padding to compoensate for SiteOptCards top offset */
         padding-bottom: var(--pad-xl);

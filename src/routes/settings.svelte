@@ -10,7 +10,7 @@
 
     // call onPageLoad on mount
     onMount(() => {
-		onPageLoad("settings", $curPage, pageHeading);
+		onPageLoad("settings", $curPage, pageHeading, "default");
 	});
 </script>
 
@@ -31,18 +31,6 @@
 <div class="placeholder"></div>
 
 <style lang="scss">
-    :global(html, body) {
-        /* page variables */
-        --pageClr-800: var(--clr-800);
-        --pageClr-700: var(--clr-700);
-        --pageClr-250: var(--clr-250);
-        --pageClr-150: var(--clr-150);
-        --pageClr-100: var(--clr-100);
-        --pageClr-0: var(--clr-0);
-
-        background-color: var(--clr-50);
-    }
-
     .cityOpt {
         display: grid;
         grid-template: 

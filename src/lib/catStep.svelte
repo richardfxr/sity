@@ -7,7 +7,7 @@
 </script>
 
 
-<section class="catStep" style="--bgClr: var(--clr-{step.clr}-200)">
+<section class="catStep" style="--bgClr: var(--clr-{step.clr}-100); --textClr: var(--clr-{step.clr}-900)">
     <div class="text">
        <h3>{step.title}</h3> 
        <p>{step.text}</p>
@@ -33,11 +33,13 @@
 
             h3 {
                 font-size: 2.3rem;
+                color: var(--textClr);
             }
 
             p {
                 font-size: 1.7rem;
                 font-weight: 500;
+                color: var(--textClr);
                 margin-top: auto;
             }
         }

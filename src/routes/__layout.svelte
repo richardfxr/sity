@@ -65,6 +65,18 @@
 
 
 <style lang="scss">
+    :global(body) {
+        /* default assignment of page colors to prevent flash of white on initial load */
+        --pageClr-800: var(--clr-800);
+        --pageClr-700: var(--clr-700);
+        --pageClr-250: var(--clr-250);
+        --pageClr-150: var(--clr-150);
+        --pageClr-100: var(--clr-100);
+        --pageClr-0: var(--clr-0);
+
+        background-color: var(--clr-50);
+    }
+
     .wrapper {
         // display: flex;
         // flex-flow: row nowrap;
