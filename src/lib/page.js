@@ -43,7 +43,7 @@ export function onPageLoad(pageName, prevCurPage, pageHeading, pageClr) {
     }
 
     // set body background color
-    document.body.style.setProperty('background-color', "var(--pageClr-50"); 
+    document.body.style.setProperty('background-color', "var(--pageClr-50)"); 
 
     return;
 }
