@@ -83,7 +83,7 @@
             </a>
         </div>
 
-        <h1 id="pageHeading" bind:this={pageHeading} tabindex="-1">{category.name}</h1>
+        <h1 id="pageHeading" bind:this={pageHeading} tabindex="-1">How to recycle {category.name}</h1>
     </div>
 
     <div class="content">
@@ -102,6 +102,8 @@
         </div>
     {/each}
 </div>
+
+<div></div>
 
 
 <style lang="scss">
