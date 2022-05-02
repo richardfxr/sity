@@ -5,7 +5,7 @@
     export let clr2 = "white"; // second color group of the illustration, may leave default if illustration doesn't use it
     export let clr3 = "white"; // third color group of the illustration, may leave default if illustration doesn't use it
     export let ariaHidden = false;
-    export let dataDepth;
+    export let dataDepth = 0;
     export let type = null;
 </script>
 
