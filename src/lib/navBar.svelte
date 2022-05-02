@@ -265,6 +265,8 @@
 
             border-radius: 50rem;
             background-color: var(--pageClr-100);
+
+            transition: background-color var(--transition-200) ease-in-out;
         }
 
         a {
@@ -287,6 +289,7 @@
                 :global(svg) {
                     /* variables */
                     --mainClr: var(--pageClr-0);
+                    transition: stroke var(--transition-200) ease-in-out;
                 }
             }
 
