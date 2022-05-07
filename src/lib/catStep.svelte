@@ -32,12 +32,13 @@
             padding: var(--pad-md);
 
             h3 {
-                font-size: 2.3rem;
+                font-size: 2.2rem;
+                font-family: 'Doughy', sans-serif;
                 color: var(--textClr);
             }
 
             p {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
                 font-weight: 500;
                 color: var(--textClr);
                 margin-top: auto;
