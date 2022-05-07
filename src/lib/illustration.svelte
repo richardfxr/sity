@@ -177,8 +177,9 @@
 
     @media only screen and (max-width: $breakpoint-mobile) {
         .step {
-            /* remove right padding */
-            padding-right: 0;
+            /* add equal left and right padding */
+            padding-right: var(--pad-sm);
+            padding-left: var(--pad-sm);
         }
     }
 </style>
