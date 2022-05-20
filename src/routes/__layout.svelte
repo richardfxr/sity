@@ -92,7 +92,7 @@
             width: 100%;
             display: flex;
             flex-flow: column nowrap;
-            gap: var(--pad-xxl);
+            gap: var(--pad-xl);
             align-items: center;
             margin-inline: auto;
         }

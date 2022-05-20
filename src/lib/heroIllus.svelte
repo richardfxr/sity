@@ -89,7 +89,7 @@
         padding-bottom: var(--pad-md);
 
         /* remove gap between #heroIllus and #intro */
-        margin-bottom: calc(-1 * var(--pad-xxl));
+        margin-bottom: calc(-1 * var(--pad-xl));
 
         /* varaibles */
         --scrollYInvMobile: 1;
