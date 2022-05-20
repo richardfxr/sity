@@ -91,6 +91,9 @@
         /* remove gap between #heroIllus and #intro */
         margin-bottom: calc(-1 * var(--pad-xxl));
 
+        /* varaibles */
+        --scrollYInvMobile: 1;
+
         .container {
             /* sticky positioning */
             position: sticky;
@@ -320,6 +323,34 @@
         }
     }
 
+
+    /* no script */
+    :global([data-script="false"]) {
+        #heroIllus {
+            /* shorten height as there will be no animation on scroll */
+            height: 100vh;
+
+            .container {
+                .main {
+                    /* apply transforms at 0px scroll to override inline styling */
+                    transform: scale(2)
+                               translateX(calc((-1 * var(--scrollYInvMobile) * ((var(--nav-size) + var(--pad-md)) / 2)) / 2))
+                               translateY(calc(-6.5 * 1vh)) !important;
+
+                    .shadow {
+                        /* apply transforms at 0px scroll to override inline styling */
+                        transform: translateY(calc(var(--mainHeight) * 0.95 - var(--border-radius) + (var(--mainHeight) / 20))) !important;
+                    }
+
+                    .textCard {
+                        /* apply transforms at 0px scroll to override inline styling */
+                        transform: translateY(calc(-1 * var(--mainHeight))) !important;
+                    }
+                }
+            }
+        }
+    }
+
     /* === BREAKPOINTS ======================== */
     @media only screen and (max-width: $breakpoint-smdesktop) {
         #heroIllus {
@@ -360,6 +391,9 @@
 
     @media only screen and (max-width: $breakpoint-mobile) {
         #heroIllus {
+            /* varaibles */
+            --scrollYInvMobile: 0;
+            
             .container {
                 .main {
                     /* variables */
