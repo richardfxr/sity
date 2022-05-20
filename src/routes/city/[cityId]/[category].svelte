@@ -93,7 +93,7 @@
 
 <div class="normalWidth">
     {#each category.details as detail}
-        <div class="detailSection">
+        <div class="detailGrid">
             {#if detail.component === "CatStep"}
                 {#each detail.array as step}
                     <CatStep {step} />
@@ -107,26 +107,5 @@
 
 
 <style lang="scss">
-    .detailSection {
-        /* grid */
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--pad-xs);
-    }
-
-    /* ========================================
-    BREAKPOINTS
-    ======================================== */
-
-    @media only screen and (max-width: $breakpoint-smdesktop) {
-        .detailSection {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    @media only screen and (max-width: $breakpoint-mobile) {
-        .detailSection {
-            gap: var(--pad-sm);
-        }
-    }
+    
 </style>

@@ -123,6 +123,13 @@
     gap: var(--pad-xs);
 }
 
+.detailGrid {
+    /* grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--pad-xs);
+}
+
 /* coming soon */
 .soon {
     /* flexbox */
@@ -522,6 +529,10 @@
             }
         }
     }
+
+    .detailGrid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media only screen and (max-width: $breakpoint-tablet) {
@@ -577,5 +588,9 @@
                 font-size: 13vw;
             }
         }
+    }
+
+    .detailGrid {
+        gap: var(--pad-sm);
     }
 }
