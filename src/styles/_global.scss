@@ -102,7 +102,7 @@
             font-family: 'Inter', sans-serif;
             font-size: 1.2rem;
             font-weight: 600;
-            line-height: 1.2em;
+            line-height: 1.4em;
             color: var(--clr-800);
             margin-top: 2rem;
 
@@ -123,11 +123,38 @@
     gap: var(--pad-xs);
 }
 
+.contentFlex {
+    /* flexbox */
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--pad-sm);
+}
+
 .detailGrid {
     /* grid */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--pad-xs);
+}
+
+.card {
+    /* flexbox */
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--pad-md);
+
+    background-color: var(--pageClr-100);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    padding: var(--pad-md) 0;
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.4em;
+        font-weight: 400;
+        color: var(--textClr);
+        padding: 0 var(--pad-sm);
+    }
 }
 
 /* coming soon */
