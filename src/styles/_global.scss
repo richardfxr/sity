@@ -141,19 +141,17 @@
     /* flexbox */
     display: flex;
     flex-flow: column nowrap;
-    gap: var(--pad-md);
 
     background-color: var(--pageClr-100);
     border-radius: var(--border-radius);
     overflow: hidden;
-    padding: var(--pad-md) 0;
 
     p {
         font-size: 1.2rem;
         line-height: 1.4em;
         font-weight: 400;
         color: var(--textClr);
-        padding: 0 var(--pad-sm);
+        padding: var(--pad-md) var(--pad-sm);
     }
 }
 
