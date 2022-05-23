@@ -51,6 +51,11 @@
 </script>
 
 
+<svelte:head>
+	<title>Sity: recycling demystified</title>
+</svelte:head>
+
+
 <HeroIllus />
 
 <div class="twoCol normalWidth" id="intro" aria-labelledby="pageHeading">

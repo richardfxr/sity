@@ -73,6 +73,11 @@
 </script>
 
 
+<svelte:head>
+	<title>Recycling in {city.name}, {city.state}</title>
+</svelte:head>
+
+
 <div class="twoCol normalWidth" id="intro" aria-labelledby="pageHeading">
     <div class="hero">
 

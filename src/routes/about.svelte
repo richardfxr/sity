@@ -15,6 +15,11 @@
 </script>
 
 
+<svelte:head>
+	<title>About us - Sity</title>
+</svelte:head>
+
+
 <div class="twoCol normalWidth" id="intro">
     <div class="hero">
 

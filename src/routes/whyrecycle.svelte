@@ -16,6 +16,11 @@
 </script>
 
 
+<svelte:head>
+	<title>Why recycle? - Sity</title>
+</svelte:head>
+
+
 <div class="twoCol normalWidth" id="intro" aria-labelledby="pageHeading">
     <div class="hero">
 
