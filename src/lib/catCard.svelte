@@ -5,23 +5,46 @@
 
     // imports
     import Parallax from 'parallax-js'
-    import { onMount } from 'svelte';
+    import { onMount, onDestroy } from 'svelte';
     import { browser } from '$app/env';
+    import { reduceMotion } from '../store/store.js';
     import SvgShape from "$lib/svgShape.svelte";
     import Illustration from '$lib/illustration.svelte';
 
     // declare variables
+    let loaded = false;
     let parallaxScene;
     let parallaxInstance;
     const url = "/city/" + cityId + "/" + category.id;
     let depthOffset = parseFloat(category.depthOffset);
+
+    const unsubReduceMotion = reduceMotion.subscribe((value) => {
+        if (!loaded) return;
+
+        // disable Parallax if reduceMotion === "reduce"
+        if (value === "reduce") {
+            parallaxInstance.disable();
+        } else {
+            parallaxInstance.enable();
+        }
+    });
+
 
     onMount(() => {
         // prevent code from running on server
 		if (!browser) return;
 
         parallaxInstance = new Parallax(parallaxScene);
+
+        // check reduceMotion
+        if ($reduceMotion === "reduce") {
+            parallaxInstance.disable();
+        }
+
+        loaded = true;
 	});
+
+    onDestroy(unsubReduceMotion);
 </script>
 
 

@@ -27,6 +27,7 @@
 
 <script>
     // imports
+    import { onMount } from 'svelte';
     import A11yMenu from '$lib/a11yMenu.svelte';
     import NavBar from '$lib/navBar.svelte';
     import { fly } from 'svelte/transition';
@@ -46,6 +47,7 @@
     let pageTransitionDuration = 300;   
     let flyAmount = 0;
     $: flyAmountNeg = -1 * flyAmount;
+
 </script>
 
 <!-- accessibility menu -->
