@@ -3,6 +3,7 @@
     export let id = "#";
     export let name = "N/A";
     export let state = "N/A";
+    export let guideline = null; // unused
 
     // imports
     import SvgShape from "$lib/svgShape.svelte";
