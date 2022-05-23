@@ -10,10 +10,10 @@
 
 <a class="cityCard" href="/city/{id}">
     <!-- SVG shapes -->
-    <SvgShape shape="Plastic" --bgColor="var(--clr-plastic-150)" />
+    <!-- <SvgShape shape="Plastic" --bgColor="var(--clr-plastic-150)" />
     <SvgShape shape="Cardboard" --bgColor="var(--clr-cardboard-150)" />
     <SvgShape shape="Metal" --bgColor="var(--clr-metal-150)" />
-    <SvgShape shape="Paper" --bgColor="var(--clr-paper-150)" />
+    <SvgShape shape="Paper" --bgColor="var(--clr-paper-150)" /> -->
 
     <span class="city text--h2">{name}</span>
     <span class="state text--xs">{state}</span>
