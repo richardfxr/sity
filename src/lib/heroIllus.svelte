@@ -93,6 +93,7 @@
 
         /* varaibles */
         --scrollYInvMobile: 1;
+        --reduceMotionNegate: 1;
 
         .container {
             /* sticky positioning */
@@ -166,7 +167,7 @@
 
                     &-1 {
                         z-index: 399;
-                        animation: rotateForever 23s linear infinite;
+                        animation: rotateForever calc(23s * var(--reduceMotionNegate)) linear infinite;
 
                         :global(svg:nth-child(1)) {
                             width: 25%;
@@ -189,7 +190,7 @@
 
                     &-2 {
                         z-index: 401;
-                        animation: rotateForever 30s linear infinite;
+                        animation: rotateForever calc(30s * var(--reduceMotionNegate)) linear infinite;
 
                         :global(svg:nth-child(1)) {
                             width: 17%;
@@ -206,7 +207,7 @@
 
                     &-3 {
                         z-index: 402;
-                        animation: rotateForever 37s linear infinite;
+                        animation: rotateForever calc(37s * var(--reduceMotionNegate)) linear infinite;
 
                         :global(svg:nth-child(1)) {
                             width: 11%;
@@ -235,7 +236,7 @@
 
                     &-4 {
                         z-index: 403;
-                        animation: rotateForever 44s linear infinite;
+                        animation: rotateForever calc(44s * var(--reduceMotionNegate)) linear infinite;
 
                         :global(svg:nth-child(1)) {
                             width: 13%;
@@ -347,6 +348,16 @@
                         transform: translateY(calc(-1 * var(--mainHeight))) !important;
                     }
                 }
+            }
+        }
+    }
+
+    /* reduced motion */
+    @media (prefers-reduced-motion) {
+        :global([data-motion="auto"]) {
+            #heroIllus {
+                /* varaibles */
+                --reduceMotionNegate: 0;
             }
         }
     }
