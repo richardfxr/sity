@@ -4,8 +4,6 @@
     import { initFirebase } from '../firebase/init';
     import { getDb } from '../firebase/firestore';
 
-    console.log("should be able to see this");
-
     export async function load({ url, params, fetch, session, stuff }) {
         // initialize Firebase
         await initFirebase();
