@@ -5,6 +5,7 @@
     export let text = "add text";
     export let href = "#";
     export let icon = null;
+    export let shareData = null;
 
     $: target = (href.charAt(0) === "#") ? "_self" : null;
 
@@ -20,6 +21,37 @@
      * --bgClrHover - background color on hover
      * --bgClrTransition - background color that is transittioned to before being covered by --bgClrHover
     */
+
+    /* === BINDINGS =========================== */
+    let buttonText;
+
+    /* === EVENT HANDLERS ===================== */
+    /**
+     * Shares shareData param using Web Share API with Clipboard API as fallback.
+     * Clipboard API fallback only copies shareData.url to clipboard.
+     * Only works on client.
+     */
+    async function shareURL() {
+        if (navigator.share) {
+            // Web Share API
+            try {
+                await navigator.share(shareData);
+                buttonText.textContent = 'shared!';
+            } catch(err) {
+                buttonText.textContent = 'error'
+                console.error(err);
+            }
+        } else {
+            // Clipboard API fallback
+            navigator.clipboard.writeText(shareData.url)
+                .then(() => {
+                    buttonText.textContent = 'copied!'
+                })
+                .catch(() => {
+                    buttonText.textContent = 'error'
+                });
+        }
+    }
 </script>
 
 
@@ -39,6 +71,13 @@
         {target}>
         {text}
     </a>
+{:else if type==="share"}
+    <button 
+        on:click={shareURL}
+        class="button {style}">
+        <SvgIcon icon="share" />
+        <span bind:this={buttonText}>{ text }</span>
+    </button>
 {/if}
 
 
