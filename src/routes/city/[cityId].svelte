@@ -54,7 +54,6 @@
     import CityOptCard from '$lib/cityOptCard.svelte';
     import Button from '$lib/button.svelte';
     import CatCard from '$lib/catCard.svelte';
-    import {copyURL} from '$lib/clipboard.js';
 
     /* === STORES ============================= */
     defaultCity.set(cityId);
@@ -65,6 +64,14 @@
 
     // categories array
     let cats = guideline.categories;
+
+    // sharing data for Web Share API
+    const shareData = {
+        title: city.name + ", " + city.state + " - sity.earth",
+        text: "Recycling in " + city.name + ", " + city.state,
+        url: "https://sity.earth/city/" + cityId
+    };
+    console.log(shareData);
 
     // call onPageLoad on mount
     onMount(() => {
@@ -96,9 +103,7 @@
                 <CityOptCard id="guidelines" guidelineLength={guideline.categories.length} />
             </li>
             <li class="share">
-                <Button type="button" style="lg--icon" icon="share" text="Share this page" on:click={copyURL} --inlineSize="auto" --textClr="var(--clr-900)" --textClrHover="var(--clr-0)" --bgClr="var(--clr-100)" --bgClrHover="var(--clr-700)" --bgClrTransition="var(--clr-250)"/>
-                <Button type="button" style="lg--icon" icon="share" text="Share" on:click={copyURL} --inlineSize="auto" --textClr="var(--clr-900)" --textClrHover="var(--clr-0)" --bgClr="var(--clr-100)" --bgClrHover="var(--clr-700)" --bgClrTransition="var(--clr-250)"/>
-            </li>
+                <Button type="share" style="lg--icon" text="Share" {shareData} --inlineSize="auto" --textClr="var(--clr-900)" --textClrHover="var(--clr-0)" --bgClr="var(--clr-100)" --bgClrHover="var(--clr-700)" --bgClrTransition="var(--clr-250)"/>            </li>
             <li  class="facility">
                 <CityOptCard id="facility" href={guideline.link} facilityName={guideline.name} />
             </li>
@@ -132,13 +137,6 @@
 
         .share {
             grid-area: share;
-
-            :global(div:last-child) {
-                :global(.button) {
-                    /* hide mobile share button */
-                    display: none; 
-                }
-            }
         }
 
         .facility {
@@ -182,22 +180,6 @@
                 "guidelines facility" 50vw
                 "share facility" 13vw
                 / 1fr 1fr;
-            
-            .share {
-                :global(div:last-child) {
-                    :global(.button) {
-                        /* hide desktop share this page button */
-                        display: flex; 
-                    }
-                }
-
-                :global(div:first-child) {
-                    :global(.button) {
-                        /* show mobile share button */
-                        display: none; 
-                    }
-                }
-            }
         }
 
         .cat {
