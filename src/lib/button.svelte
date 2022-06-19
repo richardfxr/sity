@@ -38,7 +38,6 @@
                 await navigator.share(shareData);
                 buttonText.textContent = 'shared!';
             } catch(err) {
-                buttonText.textContent = 'error'
                 console.error(err);
             }
         } else {
