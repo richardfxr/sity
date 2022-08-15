@@ -141,8 +141,8 @@
                 position: sticky;
                 top: var(--pad-md);
                 width: 100%;
-                padding: 1rem 1.2rem;
-                border-radius: 3rem;
+                padding: 16px 19.2px;
+                border-radius: 50px;
                 background-color: var(--clr-0);
             }
         }

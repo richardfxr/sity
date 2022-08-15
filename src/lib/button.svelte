@@ -157,7 +157,7 @@
 
         &.md {
             /* variables */
-            --height: 3.2rem;
+            --height: 51px;
 
             font-size: calc(0.35 * var(--height));
             font-weight: 500;
@@ -178,9 +178,9 @@
         &.lg--icon {
             :global(svg) {
                 --mainClr: var(--textClr, var(--clr-800));
-                --strokeWidth: 0.3rem;
+                --strokeWidth: 4.8px;
 
-                width: 1.6rem;
+                width: 25.6px;
             }
 
             &:hover, &:focus-visible {
@@ -221,7 +221,7 @@
         .button {
             &.md {
                 /* variables */
-                --height: 2.6rem;
+                --height: 42px;
             }
         }
     }
@@ -234,7 +234,7 @@
 
             &.lg--icon {
                 :global(svg) {
-                    --strokeWidth: 0.3rem;
+                    --strokeWidth: 4.8px;
 
                     width: 5vw;
                 }

@@ -54,7 +54,7 @@
 /* layout */
 .twoCol {
     display: grid;
-    grid-template-columns: 1fr 45rem;
+    grid-template-columns: 1fr 720px;
     align-items: start;
     gap: var(--pad-lg);     
 
@@ -532,7 +532,7 @@
 
 @media only screen and (max-width: $breakpoint-smdesktop) {
     .twoCol {
-        grid-template-columns: 1fr 40rem;
+        grid-template-columns: 1fr 640px;
         align-items: start;
         gap: var(--pad-md);
 

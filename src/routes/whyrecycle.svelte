@@ -109,7 +109,8 @@
         align-items: center;
         justify-content: center;
 
-        height: 15rem;
+        height: 240px;
+        padding: 0 var(--pad-sm);
         margin: var(--pad-md) var(--pad-sm) 0 var(--pad-sm);
         background-color: var(--pageClr-250);
         border-radius: var(--border-raidus-sm);

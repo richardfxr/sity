@@ -239,9 +239,9 @@
 <style lang="scss">
     #navBar {
         /* variables */
-        --nav-pad: 0.4rem;
+        --nav-pad: 6.4px;
         --a-size: calc(var(--nav-size) - (2 * var(--nav-pad)));
-        --svg-size: 1.5rem;
+        --svg-size: 24px;
         /* fixed positioning */
         position: fixed;
         bottom: 0;
@@ -263,7 +263,7 @@
             position: relative;
             z-index: -2;
 
-            border-radius: 50rem;
+            border-radius: 800px;
             background-color: var(--pageClr-100);
 
             transition: background-color var(--transition-200) ease-in-out;
@@ -279,7 +279,7 @@
             align-items: center;
             justify-content: center;
 
-            border-radius: 50rem;
+            border-radius: 800px;
             overflow: hidden;
 
             transition: color var(--transition-200) ease-in-out,
@@ -335,7 +335,7 @@
             right: var(--nav-pad);
             height: var(--a-size);
 
-            border-radius: 50rem;
+            border-radius: 800px;
             background-color: var(--pageClr-700);
 
             transition: transform var(--transition-300) var(--transition-smoothEase);
@@ -352,7 +352,7 @@
             left: 0;
             width: var(--a-size);
 
-            border-radius: 50rem;
+            border-radius: 800px;
             background-color: var(--pageClr-700);
 
             transition: transform var(--transition-300) var(--transition-smoothEase);
@@ -415,7 +415,7 @@
                     position: absolute;
                     z-index: -1;
 
-                    border-radius: 50rem;
+                    border-radius: 800px;
 
                     /* -105% translateX to prevent ::before from peaking thorough */
                     transform: translateY(50%) scale(0);
@@ -448,8 +448,8 @@
     @media only screen and (max-width: $breakpoint-tablet) {
         #navBar {
             /* variables */
-            --nav-pad: 0.3rem;
-            --svg-size: 1.2rem;
+            --nav-pad: 4.8px;
+            --svg-size: 19.2px;
 
             ul {
                 margin-bottom: var(--pad-sm);

@@ -57,7 +57,7 @@
         fill: none;
         stroke: var(--mainClr, var(--clr-900));
         stroke-miterlimit: 10;
-        stroke-width: var(--strokeWidth, 0.25rem);
+        stroke-width: var(--strokeWidth, 4px);
 
         &.round {
             stroke-linecap: round;

@@ -35,7 +35,7 @@
 
         /* relative position for absolute positioning of .illu */
         position: relative;
-        height: 32rem;
+        height: 512px;
         padding: var(--pad-main);
         /* default background color, overwritten later */
         background-color: var(--bgColor);

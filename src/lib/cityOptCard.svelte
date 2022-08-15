@@ -36,7 +36,7 @@
     .cityOptCard {
         /* variables */
         --scaleHover: 1.03;
-        --textTransY: -1rem;
+        --textTransY: -16px;
 
         display: flex;
         flex-flow: column nowrap;
@@ -189,9 +189,9 @@
             }
 
             :global(svg) {
-                width: 2rem;
+                width: 32px;
                 margin-left: auto;
-                padding-bottom: 2rem;
+                padding-bottom: 32px;
                 /* move svgIcon above ::before */
                 position: relative;
                 z-index: 1;

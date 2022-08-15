@@ -103,7 +103,8 @@
                 <CityOptCard id="guidelines" guidelineLength={guideline.categories.length} />
             </li>
             <li class="share">
-                <Button type="share" style="lg--icon" text="Share" {shareData} --inlineSize="auto" --textClr="var(--clr-900)" --textClrHover="var(--clr-0)" --bgClr="var(--clr-100)" --bgClrHover="var(--clr-700)" --bgClrTransition="var(--clr-250)"/>            </li>
+                <Button type="share" style="lg--icon" text="Share" {shareData} --inlineSize="auto" --textClr="var(--clr-900)" --textClrHover="var(--clr-0)" --bgClr="var(--clr-100)" --bgClrHover="var(--clr-700)" --bgClrTransition="var(--clr-250)"/>
+            </li>
             <li  class="facility">
                 <CityOptCard id="facility" href={guideline.link} facilityName={guideline.name} />
             </li>

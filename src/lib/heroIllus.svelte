@@ -312,8 +312,8 @@
                         display: flex;
                         flex-flow: row nowrap;
                         justify-content: space-between;
-                        height: 14rem;
-                        padding: 0 2rem 2rem 2rem;
+                        height: 224px;
+                        padding: 0 32px 32px 32px;
 
                         :global(.illus) {
                             height: 100%;
@@ -369,8 +369,8 @@
                 .main {
                     .textCard {
                         .handles {
-                            height: 12rem;
-                            padding: 0 1.5rem 1.5rem 1.5rem;
+                            height: 192px;
+                            padding: 0 24px 24px 24px;
                         }
                     }
                 }
@@ -391,8 +391,8 @@
                         }
 
                         .handles {
-                            height: 8rem;
-                            padding: 0 1rem 1rem 1rem;
+                            height: 128px;
+                            padding: 0 16px 16px 16px;
                         }
                     }
                 }
@@ -417,8 +417,8 @@
                         }
 
                         .handles {
-                            height: 8rem;
-                            padding: 0 0.75rem 0.75rem 0.75rem;
+                            height: 128px;
+                            padding: 0 12px 12px 12px;
                         }
                     }
                 }
