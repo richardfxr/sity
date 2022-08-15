@@ -3,6 +3,7 @@
 
 
 // === USE ====================================
+@use 'breakpoints' as *;
 @use 'variables' as *;
 
 
@@ -58,191 +59,192 @@
    TYPOGRAPHY
    ============================================ */
 
-
-:global(body) {
-    font-family: 'Lexend Deca', sans-serif;
-    color: var(--clr-900);
-}
-
-h1, .text--h1 {
-    font-family: 'Doughy', sans-serif;
-    line-height: 1em;
-    color: var(--pageClr-700);
-
-    /* fluid font size
-    * min font size: 50px
-    * max font size: 90px
-    * min viewport width: 1500px
-    * max viewport width: 1850px
-    */
-    --font-size: calc(50px + (90 - 50) * ((min(100vw, var(--max-width)) - 1500px) / (1850 - 1500)));
-    font-size: var(--font-size);
-}
-
-h2, .text--h2 {
-    font-family: 'Lexend Deca', sans-serif;
-    font-weight: 600;
-    font-size: 1.3rem;
-    color: var(--clr-900);
-}
-
-.text {
-    &--xl {
-        font-size: min(8vw, calc(var(--main-max-width) * 0.08));
-        letter-spacing: 0.01em;
-        line-height: 0.95em;
-    }
-
-    &--lg {
-        font-family: 'Doughy', sans-serif;
-        font-size: min(4vw, calc(var(--main-max-width) * 0.04));
-        line-height: 1em;
-    }
-
-    &--md {
+:global {
+    body {
         font-family: 'Lexend Deca', sans-serif;
-        font-size: min(2.2vw, calc(var(--main-max-width) * 0.022));
+        color: var(--clr-900);
+    }
+
+    h1, .text--h1 {
+        font-family: 'Doughy', sans-serif;
+        line-height: 1em;
+        color: var(--pageClr-700);
+
+        /* fluid font size
+        * min font size: 50px
+        * max font size: 90px
+        * min viewport width: 1500px
+        * max viewport width: 1850px
+        */
+        --font-size: calc(50px + (90 - 50) * ((min(100vw, var(--max-width)) - 1500px) / (1850 - 1500)));
+        font-size: var(--font-size);
+    }
+
+    h2, .text--h2 {
+        font-family: 'Lexend Deca', sans-serif;
         font-weight: 600;
-        line-height: 1.3em;
-    }
-
-    &--sm {
-        font-family: 'Lexend Deca', sans-serif;
-        font-size: min(1.5vw, calc(var(--main-max-width) * 0.015));
-        font-weight: 700;
-        color: var(--clr-900);
-    }
-
-    &--xs {
-        font-family: 'Inter', sans-serif;
-        font-weight: 500;
-        font-size: 1.15rem;
-        line-height: 1.2em;
-    }
-
-    &--xl a, &--lg a, &--md a {
-        text-decoration: underline;
-    }
-
-    &--link, &--md a, &--sm a, &--xs a {
-        border-radius: var(--inline-link-border-radius);
-        text-decoration: underline;
-        transition: color var(--transition-100),
-                    background-color var(--transition-100);
-    }
-
-    &--p {
-        font-family: 'Lexend Deca', sans-serif;
         font-size: 1.3rem;
-        font-weight: 400;
-        line-height: 1.7em;
         color: var(--clr-900);
     }
-}
 
-:root {
-    --fs-9: 0.9rem;
-    --fs-10: 1rem;
-}
-
-/* button */
-.button {
-    &--topbar {
-        font-family: 'Doughy', sans-serif;
-        font-size: 2.1rem;
-        line-height: 1em;
-    }
-
-    &--lg {
-        font-family: 'Doughy', sans-serif;
-        font-size: min(2.8vw, calc(var(--main-max-width) * 0.028));
-        line-height: 1.3em;
-    }
-}
-
-
-
-/* ========================================
-   BREAKPOINTS
-   ======================================== */
-
-@media only screen and (max-width: $breakpoint-tablet) {
     .text {
         &--xl {
-            font-size: 8.5vw;
+            font-size: min(8vw, calc(var(--main-max-width) * 0.08));
+            letter-spacing: 0.01em;
+            line-height: 0.95em;
         }
 
         &--lg {
-            font-size: 6vw;
+            font-family: 'Doughy', sans-serif;
+            font-size: min(4vw, calc(var(--main-max-width) * 0.04));
+            line-height: 1em;
         }
 
         &--md {
-            font-size: 2.7vw;
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: min(2.2vw, calc(var(--main-max-width) * 0.022));
+            font-weight: 600;
+            line-height: 1.3em;
         }
 
         &--sm {
-            font-size: 2.3vw;
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: min(1.5vw, calc(var(--main-max-width) * 0.015));
+            font-weight: 700;
+            color: var(--clr-900);
         }
 
         &--xs {
-            font-size: 1.1rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 1.15rem;
+            line-height: 1.2em;
         }
 
-        &-p {
-            font-size: 1.2rem;
+        &--xl a, &--lg a, &--md a {
+            text-decoration: underline;
         }
+
+        &--link, &--md a, &--sm a, &--xs a {
+            border-radius: var(--inline-link-border-radius);
+            text-decoration: underline;
+            transition: color var(--transition-100),
+                        background-color var(--transition-100);
+        }
+
+        &--p {
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.7em;
+            color: var(--clr-900);
+        }
+    }
+
+    :root {
+        --fs-9: 0.9rem;
+        --fs-10: 1rem;
     }
 
     /* button */
     .button {
-        &--lg {
-            font-size: 3.5vw;
-        }
-    }
-}
-
-@media only screen and (max-width: $breakpoint-mobile) {
-    h1, .text--h1 {
-        font-size: 2.7rem;
-    }
-
-    h2, .text--h2 {
-        font-size: 1rem;
-        line-height: 1.2rem;
-    }
-    
-    .text {
-        &--xl {
-            font-size: 12vw;
+        &--topbar {
+            font-family: 'Doughy', sans-serif;
+            font-size: 2.1rem;
             line-height: 1em;
         }
 
         &--lg {
-            font-size: 9vw;
-        }
-
-        &--md {
-            font-size: 6vw;
-        }
-
-        &--sm {
-            font-size: 4.3vw;
-        }
-
-        &--xs {
-            font-size: 0.9rem;
-        }
-
-        &-p {
-            font-size: 1.2rem;
+            font-family: 'Doughy', sans-serif;
+            font-size: min(2.8vw, calc(var(--main-max-width) * 0.028));
+            line-height: 1.3em;
         }
     }
 
 
-    /* button */
-    .button {
-        &--lg {
-            font-size: 7vw;
+
+    /* ========================================
+    BREAKPOINTS
+    ======================================== */
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+        .text {
+            &--xl {
+                font-size: 8.5vw;
+            }
+
+            &--lg {
+                font-size: 6vw;
+            }
+
+            &--md {
+                font-size: 2.7vw;
+            }
+
+            &--sm {
+                font-size: 2.3vw;
+            }
+
+            &--xs {
+                font-size: 1.1rem;
+            }
+
+            &-p {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* button */
+        .button {
+            &--lg {
+                font-size: 3.5vw;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+        h1, .text--h1 {
+            font-size: 2.7rem;
+        }
+
+        h2, .text--h2 {
+            font-size: 1rem;
+            line-height: 1.2rem;
+        }
+        
+        .text {
+            &--xl {
+                font-size: 12vw;
+                line-height: 1em;
+            }
+
+            &--lg {
+                font-size: 9vw;
+            }
+
+            &--md {
+                font-size: 6vw;
+            }
+
+            &--sm {
+                font-size: 4.3vw;
+            }
+
+            &--xs {
+                font-size: 0.9rem;
+            }
+
+            &-p {
+                font-size: 1.2rem;
+            }
+        }
+
+
+        /* button */
+        .button {
+            &--lg {
+                font-size: 7vw;
+            }
         }
     }
 }

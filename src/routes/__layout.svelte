@@ -65,6 +65,8 @@
 
 
 <style lang="scss">
+    @use 'src/styles' as *;
+    
     :global(body) {
         /* default assignment of page colors to prevent flash of white on initial load */
         --pageClr-800: var(--clr-800);

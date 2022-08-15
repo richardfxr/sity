@@ -6,96 +6,98 @@
    RESET
    ============================================ */
 
-/* === ANDY BELL'S CSS RESET ================== */
+:global {
+    /* === ANDY BELL'S CSS RESET ================== */
 
-/* Box sizing rules */
-:global(*, *::before, *::after) {
-    box-sizing: border-box;
-}
+    /* Box sizing rules */
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
 
-/* Remove default margin */
-:global(body),
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-    margin: 0;
-}
+    /* Remove default margin */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    figure,
+    blockquote,
+    dl,
+    dd {
+        margin: 0;
+    }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-    list-style: none;
-}
+    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+    ul[role='list'],
+    ol[role='list'] {
+        list-style: none;
+    }
 
-/* Set core body defaults */
-:global(body) {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    margin: 0;
-}
+    /* Set core body defaults */
+    body {
+        min-height: 100vh;
+        text-rendering: optimizeSpeed;
+        line-height: 1.5;
+        margin: 0;
+    }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-}
+    /* A elements that don't have a class get default styles */
+    a:not([class]) {
+        text-decoration-skip-ink: auto;
+    }
 
-/* Make images easier to work with */
-img,
-picture {
-    max-width: 100%;
-    display: block;
-}
+    /* Make images easier to work with */
+    img,
+    picture {
+        max-width: 100%;
+        display: block;
+    }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
+    /* Inherit fonts for inputs and buttons */
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
 
 
-/* === SITY SPECIFIC RESETS ================== */
+    /* === SITY SPECIFIC RESETS ================== */
 
-:global(body, html) {
-    height: 100%;
-}
+    body, html {
+        height: 100%;
+    }
 
-:global(html) {
-    -webkit-text-size-adjust: 100%;
-}
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
 
-/* remove default focus ring */
-:global(*:focus) {
-    outline: none;
-}
+    /* remove default focus ring */
+    *:focus {
+        outline: none;
+    }
 
-/* remove webkit tap highlighting */
-:global(*) {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent;
-}
+    /* remove webkit tap highlighting */
+    * {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: transparent;
+    }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 
-button {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-}
+    button {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+    }
 
-ol, ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    ol, ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
 }

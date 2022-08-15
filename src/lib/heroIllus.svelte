@@ -78,6 +78,17 @@
 
 <style lang="scss">
     #heroIllus {
+        /* animations */
+        @keyframes rotateForever {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
         height: 150vh;
         width: 100%;
 

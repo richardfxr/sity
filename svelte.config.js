@@ -10,7 +10,7 @@ const config = {
 	preprocess: preprocess({
 		scss: {
 			// prepend all src/styles SCSS files to each component
-			prependData: `@use 'src/styles' as *;`
+			prependData: `@use 'src/styles/breakpoints' as *;`
 		}
 	}),
 };
