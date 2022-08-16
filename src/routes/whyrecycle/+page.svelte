@@ -1,12 +1,12 @@
 <script>
-    // imports
+    /* === IMPORTS ============================ */
     import { onMount } from 'svelte';
     import { onPageLoad } from '$lib/page.js';
-    import { curPage } from '../store/store.js';
+    import { curPage } from '../../store/store.js';
     import SvgIcon from '$lib/svgIcon.svelte';
     import Illustration from '$lib/illustration.svelte';
 
-    // bindings
+    /* === BINDINGS =========================== */
     let pageHeading;
 
     // call onPageLoad on mount

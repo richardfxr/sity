@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { browser } from '$app/env';
 
 export async function initFirebase() {

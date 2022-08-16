@@ -1,75 +1,31 @@
-<script context="module">
-    import { getDbDoc, getDbDocFromRef } from "../../firebase/firestore";
-
-    export async function load({ params, fetch, session, stuff }) {
-        // get city id
-        let cityId = params.cityId;
-        // get Firestore database
-        const db = stuff.db
-        // declare variables
-        let loaded;
-        let city;
-        let guideline;
-
-        // retrieve data from Firestore
-        try {
-            // get city document data
-            city = await getDbDoc(db, "cities", cityId);
-            // get city guideline
-            guideline = await getDbDocFromRef(city.guideline);
-
-            // set loaded to true
-            loaded = true;
-        } catch(error) {
-            // set loaded to false
-            loaded = false;
-            // log error
-            console.error(error.message);
-        }
-        
-
-        return {
-            props: {
-                loaded,
-                cityId,
-                city,
-                guideline
-            }
-        };
-    }
-</script>
-
 <script>
-    // props
-    export let loaded = false;
-    export let cityId;
-    export let city;
-    export let guideline;
+    /* === PROP =============================== */
+    export let data; // usused data: loaded
 
-    // imports
+    /* === IMPORTS ============================ */
     import { onMount } from 'svelte';
     import { onPageLoad } from '$lib/page.js';
-    import { curPage, defaultCity, defaultCityName } from '../../store/store.js';
+    import { curPage, defaultCity, defaultCityName } from '../../../store/store.js';
     import SvgIcon from '$lib/svgIcon.svelte';
     import CityOptCard from '$lib/cityOptCard.svelte';
     import Button from '$lib/button.svelte';
     import CatCard from '$lib/catCard.svelte';
 
     /* === STORES ============================= */
-    defaultCity.set(cityId);
-    defaultCityName.set(city.name);
+    defaultCity.set(data.cityId);
+    defaultCityName.set(data.city.name);
 
     // bindings
     let pageHeading;
 
     // categories array
-    let cats = guideline.categories;
+    let cats = data.guideline.categories;
 
     // sharing data for Web Share API
     const shareData = {
-        title: city.name + ", " + city.state + " - sity.earth",
-        text: "Recycling in " + city.name + ", " + city.state,
-        url: "https://sity.earth/city/" + cityId
+        title: data.city.name + ", " + data.city.state + " - sity.earth",
+        text: "Recycling in " + data.city.name + ", " + data.city.state,
+        url: "https://sity.earth/city/" + data.cityId
     };
     console.log(shareData);
 
@@ -81,7 +37,7 @@
 
 
 <svelte:head>
-	<title>Recycling in {city.name}, {city.state}</title>
+	<title>Recycling in {data.city.name}, {data.city.state}</title>
 </svelte:head>
 
 
@@ -94,19 +50,19 @@
             </a>
         </div>
 
-        <h1 id="pageHeading" bind:this={pageHeading} tabindex="-1">Recycling in <br><span class="accent">{city.name}, {city.state}</span></h1>
+        <h1 id="pageHeading" bind:this={pageHeading} tabindex="-1">Recycling in <br><span class="accent">{data.city.name}, {data.city.state}</span></h1>
     </div>
 
     <div class="content">
-        <ul class="contentGrid cityOpt" aria-label="Options for {city.name}">
+        <ul class="contentGrid cityOpt" aria-label="Options for {data.city.name}">
             <li class="guidelines">
-                <CityOptCard id="guidelines" guidelineLength={guideline.categories.length} />
+                <CityOptCard id="guidelines" guidelineLength={data.guideline.categories.length} />
             </li>
             <li class="share">
                 <Button type="share" style="lg--icon" text="Share" {shareData} --inlineSize="auto" --textClr="var(--clr-900)" --textClrHover="var(--clr-0)" --bgClr="var(--clr-100)" --bgClrHover="var(--clr-700)" --bgClrTransition="var(--clr-250)"/>
             </li>
             <li  class="facility">
-                <CityOptCard id="facility" href={guideline.link} facilityName={guideline.name} />
+                <CityOptCard id="facility" href={data.guideline.link} facilityName={data.guideline.name} />
             </li>
         </ul>
     </div>
@@ -117,7 +73,7 @@
     <h2 class="visuallyHidden" id="catHeading">Recycling categories</h2>
     <ul class="catGrid normalWidth">
         {#each cats as cat}
-            <CatCard category={cat} {cityId} />
+            <CatCard category={cat} cityId={data.cityId} />
         {/each}
     </ul>
 </div>

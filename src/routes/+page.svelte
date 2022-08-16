@@ -1,26 +1,6 @@
-<script context="module">
-    // following code runs on both server and client
-
-    import { getDbDocs } from '../firebase/firestore';
-
-    export async function load({ params, fetch, session, stuff }) {
-        // get Firestore database
-        const db = stuff.db
-
-        // get all docs from 'cities' collection
-        const cities = await getDbDocs(db, "cities");
-
-        return {
-            props: {
-                cities
-            }
-        };
-    }
-</script>
-
 <script>
-    /* === PROPS ============================== */
-    export let cities = null;
+    /* === PROP =============================== */
+    export let data;
 
     /* === IMPORTS ============================ */
     import { onMount } from 'svelte';
@@ -35,7 +15,7 @@
     /* === CONSTANTS ========================== */
     // options for SiteOptCards
     const siteOptions = [
-        {id: "findYourCity", href: "#search", bgColor:"var(--clr-siteOpt-blue-250)", bgColorHover:"var(--clr-siteOpt-blue-350)", title: "Find your city", text: `${cities.length} cities`},
+        {id: "findYourCity", href: "#search", bgColor:"var(--clr-siteOpt-blue-250)", bgColorHover:"var(--clr-siteOpt-blue-350)", title: "Find your city", text: `${data.cities.length} cities`},
         {id: "recycle", href: "/whyrecycle", bgColor:"var(--clr-siteOpt-purple-250)", bgColorHover:"var(--clr-siteOpt-purple-350)", title: "Why recycle?", text: "how recycling works"},
         {id: "about", href: "/about", bgColor:"var(--clr-siteOpt-pink-250)", bgColorHover:"var(--clr-siteOpt-pink-350)", title: "About us", text: "what is sity.earth?"},
         {id: "settings", href: "/settings", bgColor:"var(--clr-siteOpt-yellow-250)", bgColorHover:"var(--clr-siteOpt-yellow-350)", title: "Settings", text: "account and accessibility"},
@@ -95,7 +75,7 @@
     <Button type="link" text="Why ask for my city?" href="#" --inlineSize="auto" --textColorHover="var(--clr-0)" --bgColor="var(--clr-150)" --bgColorHover="var(--clr-700)" --bgColorTransition="var(--clr-250)"/>
 
     <ul class="contentGrid cities" aria-label="Cities">
-        {#each cities as city}
+        {#each data.cities as city}
             <li>
                 <CityCard {...city} />
             </li>

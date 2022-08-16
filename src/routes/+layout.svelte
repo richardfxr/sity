@@ -1,38 +1,13 @@
-<script context="module">
-    // following code runs on both server and client
-
-    import { initFirebase } from '../firebase/init';
-    import { getDb } from '../firebase/firestore';
-
-    export async function load({ url, params, fetch, session, stuff }) {
-        // initialize Firebase
-        await initFirebase();
-
-        // get Firestore database
-        const db = await getDb();
-
-        return {
-            stuff: {
-                db
-            },
-
-            props: {
-                url
-            }
-        }
-    }
-</script>
-
 <script>
-    // imports
-    import { onMount } from 'svelte';
+    /* === PROP =============================== */
+    export let data;
+
+    /* === IMPORTS ============================ */
     import A11yMenu from '$lib/a11yMenu.svelte';
     import NavBar from '$lib/navBar.svelte';
     import { fly } from 'svelte/transition';
 
-    // props
-    export let url = "";
-
+    /* === CONSTANTS ========================== */
     // button options for A11yMenu
     const a11yMenuOptions = [
         {text: "Skip to content.", href: "#main"},
@@ -41,6 +16,7 @@
         {text: "Accessibility Help.", href: "#"}
     ];
 
+    /* === VARIABLES ========================== */
     // page transition parameter
     let pageTransitionDuration = 300;   
     let flyAmount = 0;
@@ -56,7 +32,7 @@
     <NavBar />
 
     <!-- page transition -->
-    {#key url.pathname}
+    {#key data.url.pathname}
         <main id="main" in:fly="{{ y: flyAmount, duration: pageTransitionDuration, delay: pageTransitionDuration }}" out:fly="{{ y: flyAmountNeg, duration: pageTransitionDuration }}">
             <slot />
         </main>

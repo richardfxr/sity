@@ -2,14 +2,14 @@
   "name": "sity",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "vite dev",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "next.405",
+    "@sveltejs/kit": "next",
     "sass": "^1.49.7",
     "svelte": "^3.44.0",
     "svelte-preprocess": "^4.10.3"
@@ -18,6 +18,7 @@
   "dependencies": {
     "firebase": "^9.6.8",
     "firebase-admin": "^10.0.2",
-    "parallax-js": "^3.1.0"
+    "parallax-js": "^3.1.0",
+    "vite": "^3.0.7"
   }
 }
