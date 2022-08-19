@@ -103,6 +103,10 @@
 
 
 <style lang="scss">
+    :global(.whyrecycle.wrapper) {
+        --pageClr-100: var(--clr-recycle-100);
+        --pageClr-400: var(--clr-recycle-400);
+    }
 
     .illus--placeholder {
         display: flex;

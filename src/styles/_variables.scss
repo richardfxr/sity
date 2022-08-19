@@ -17,23 +17,28 @@
         CSS VARIABLES
         ======================================== */
 
+        --inputSize-adjust: 0px;
+        --fontSize-multiplier: 1;
+
         --max-width: 1800px;
-        --nav-size: 80px;
+        --nav-size: 100px;
 
         --border-main: solid 2px;
         --focus-outline: solid 0.16rem;
         --border-main-ds: 0 0 0 1px var(--clr-stroke);
-        --border-radius: 16px;
+        --border-radius: 24px;
         --border-raidus-sm: 0.4rem;
+        --border-radius-round: 1e5px;
         --boxShadow-main: 0 11px 48px -19px;
 
         --pad-xxl: 192px;
         --pad-xl: 128px;
         --pad-lg: 96px;
         --pad-md: 48px;
-        --pad-sm: 24px;
-        --pad-xs: 16px;
+        --pad-sm: 20px;
+        --pad-xs: 12px;
         --pad-xxs: 8px;
+        --pad-xxxs: 6px;
 
         --pad-main: 29px;
         --pad-vrt: min(7vw, calc(var(--max-width) * 0.07));
@@ -52,6 +57,8 @@
 
         --header-height: 208px;
         --soon-height: min(30vw, calc(var(--max-width) * 0.3));
+
+        --active-translate-sm: 2.5px;
 
         --transition-50: 50ms ease;
         --transition-100: 100ms ease;
@@ -109,9 +116,11 @@
     @media only screen and (max-width: $breakpoint-tablet) {
         :root {
             --max-width: 800px;
-            --nav-size: 64px;
+            --nav-size: 95px;
 
-            --pad-md: 40px;
+            --border-radius: 22px;
+
+            // --pad-md: 40px;
 
             --soon-height: 40vw;
 
@@ -130,13 +139,12 @@
     @media only screen and (max-width: $breakpoint-mobile) {
         :root {
             --border-main: solid 2px;
-            --border-radius: 2vw;
 
-            --pad-xl: 28vw;
-            --pad-lg: 24vw;
-            --pad-sm: 5vw;
-            --pad-xs: 2vw;
-            --pad-xxs: 1.5vw;
+            // --pad-xl: 28vw;
+            // --pad-lg: 24vw;
+            // --pad-sm: 5vw;
+            // --pad-xs: 2vw;
+            // --pad-xxs: 1.5vw;
 
             --pad-main: 3vw;
             --pad-hrz: 5vw;

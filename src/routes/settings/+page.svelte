@@ -36,6 +36,11 @@
 <div class="placeholder"></div>
 
 <style lang="scss">
+    :global(.settings.wrapper) {
+        --pageClr-100: var(--clr-settings-100);
+        --pageClr-400: var(--clr-settings-400);
+    }
+
     .cityOpt {
         display: grid;
         grid-template: 

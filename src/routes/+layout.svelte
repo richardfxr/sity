@@ -3,9 +3,10 @@
     export let data;
 
     /* === IMPORTS ============================ */
+    import { page } from '$app/stores';
+    import { fly } from 'svelte/transition';
     import A11yMenu from '$lib/a11yMenu.svelte';
     import NavBar from '$lib/navBar.svelte';
-    import { fly } from 'svelte/transition';
 
     /* === CONSTANTS ========================== */
     // button options for A11yMenu
@@ -27,7 +28,7 @@
 <!-- accessibility menu -->
 <A11yMenu options={a11yMenuOptions} />
 
-<div class="wrapper">
+<div class="wrapper {$page.url.pathname.split("/")[1] === "" ? "home" : $page.url.pathname.split("/")[1]}">
     <!-- navigation bar -->
     <NavBar />
 
@@ -52,7 +53,7 @@
         --pageClr-100: var(--clr-100);
         --pageClr-0: var(--clr-0);
 
-        background-color: var(--clr-50);
+        background-color: var(--clr-0);
     }
 
     .wrapper {

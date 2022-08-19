@@ -81,6 +81,11 @@
 <div class="placeHolder"></div>
 
 <style lang="scss">
+    :global(.city.wrapper) {
+        --pageClr-100: var(--clr-city-100);
+        --pageClr-400: var(--clr-city-400);
+    }
+
     .cityOpt {
         display: grid;
         grid-template: 

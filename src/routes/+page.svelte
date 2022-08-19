@@ -5,7 +5,7 @@
     /* === IMPORTS ============================ */
     import { onMount } from 'svelte';
     import { onPageLoad } from '$lib/page.js';
-    import { curPage } from '../store/store.js';
+    import { curPage, hasCity } from '../store/store.js';
     import HeroIllus from '$lib/heroIllus.svelte';
     import SvgIcon from '$lib/svgIcon.svelte';
     import Button from '$lib/button.svelte';
@@ -36,7 +36,7 @@
 </svelte:head>
 
 
-<HeroIllus />
+<!-- <HeroIllus /> -->
 
 <div class="twoCol normalWidth" id="intro" aria-labelledby="pageHeading">
 
@@ -48,6 +48,9 @@
 
         <h1 id="pageHeading" bind:this={pageHeading} tabindex="-1">Recycling<br>— <span class="accent">demystified</span></h1>
         <p>A visual tour of the recycling journey - when to recycle, how to recycle, and where the recycling goes.</p>
+
+        <button on:click={() => hasCity.set(false)}>false</button>
+        <button on:click={() => hasCity.set(true)}>true</button>
     </div>
 
     <div class="content">
@@ -85,6 +88,11 @@
 
 
 <style lang="scss">
+    :global(.home.wrapper) {
+        --pageClr-100: var(--clr-home-100);
+        --pageClr-400: var(--clr-home-400);
+    }
+
     #intro {
         /* bottom padding to compoensate for SiteOptCards top offset */
         padding-bottom: var(--pad-xl);

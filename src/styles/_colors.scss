@@ -25,6 +25,47 @@ $light: (
     border: #272e00,           // border color
 
     shadow: rgba(0, 0, 0, 0.17),         // #000000 at 10% opacity
+
+    // navbar
+    nav-home-border: #1d7500,
+    nav-home-1-1: #e6e600,
+    nav-home-1-2: #dbb300,
+    nav-home-2-1: #9cd905,
+    nav-home-2-2: #5cc705,
+    nav-home-3-1: #69cf04,
+    nav-home-3-2: #24ad04,
+    nav-city-border: #005BA6,
+    nav-city-1-1: #1ee3c5,
+    nav-city-1-2: #0dc8d9,
+    nav-city-2-1: #3bd6ff,
+    nav-city-2-2: #1cabed,
+    nav-city-3-1: #21aeff,
+    nav-city-3-2: #2e89ff,
+    nav-recycle-border: #488A25,
+    nav-recycle-1-1: #ede207,
+    nav-recycle-1-2: #d6a800,
+    nav-recycle-2-1: #d6b600,
+    nav-recycle-2-2: #c28b15,
+    nav-recycle-3-1: #7ff042,
+    nav-recycle-3-2: #33cc61,
+    nav-recycle-4-1: #d9d704,
+    nav-recycle-4-2: #cfb529,
+    nav-recycle-5-1: #ceed18,
+    nav-recycle-5-2: #67c200,
+    nav-recycle-6-1: #7edb40,
+    nav-recycle-6-2: #2bc22c,
+    nav-about-border: #943427,
+    nav-about-1-1: #ff9e59,
+    nav-about-1-2: #ff643d,
+    nav-about-2-1: #ff7a85,
+    nav-about-2-2: #ff563d,
+    nav-about-3-1: #ff7a85,
+    nav-about-3-2: #ff563d,
+    nav-about-4-1: #e02222,
+    nav-about-4-2: #cf4915,
+    nav-settings-border: #9C5500,
+    nav-settings-1-1: #ffb808,
+    nav-settings-1-2: #ff6d24,
     
     //siteOptCard
     siteOpt-blue-350: #6CCEF5,    // siteOptCard blue bgColorHover
@@ -37,6 +78,26 @@ $light: (
     siteOpt-yellow-250: #F7E57C,  // siteOptCard yellow bgColor
 
     // === PAGE COLORS ========================
+
+    // home
+    home-100: #DEFFC4,
+    home-400: #6BCC1E,
+
+    // city
+    city-100: #C9F6FF,
+    city-400: #29B1CC,
+
+    // recycle
+    recycle-100: #E2FFAB,
+    recycle-400: #8AC415,
+
+    // about
+    about-100: #FFE7E3,
+    about-400: #E06A53,
+
+    // settings
+    settings-100: #FFEEC4,
+    settings-400: #CC9B1E,
 
     // vanilla
     vanilla-1000: #000000,
