@@ -157,14 +157,12 @@
 
         /* fixed positioning */
         position: fixed;
+        top: 0;
         bottom: 0;
         z-index: 10000;
         /* flex to push navigation bar to the bottom */
         display: flex;
-        align-items: flex-end;
 
-        /* overscroll */
-        max-height: 100vh;
         overflow: auto;
 
         ul {
@@ -176,8 +174,10 @@
             
             width: var(--nav-size);
             padding: var(--pad-xxs);
-            margin-bottom: var(--margin-bottom);
-            margin-left: max(calc((100vw - var(--max-width)) / 2), var(--pad-sm));
+            margin: auto
+                    0
+                    var(--margin-bottom)
+                    max(calc((100vw - var(--max-width)) / 2), var(--pad-sm));
             border-radius: calc(var(--border-radius) + var(--pad-xxs));
             background-color: var(--clr-0);
 
@@ -311,6 +311,7 @@
     @media (orientation: portrait) {
         #navBar {
             /* position changes */
+            top: unset;
             right: 0;
             left: 0;
 
